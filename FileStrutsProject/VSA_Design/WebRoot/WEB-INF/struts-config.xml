@@ -3,10 +3,26 @@
 
 <struts-config>
   <data-sources />
-  <form-beans />
+  <form-beans >
+    <form-bean name="loginForm" type="com.vsa.struts.form.LoginForm" />
+  </form-beans>
+
   <global-exceptions />
   <global-forwards />
-  <action-mappings />
+  <action-mappings >
+    <action
+      attribute="loginForm"
+      input="/login.jsp"
+      name="loginForm"
+      path="/login"
+      scope="request"
+      type="com.vsa.struts.action.LoginAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    
+
+  </action-mappings>
+
   <message-resources parameter="com.vsa.struts.ApplicationResources" />
 </struts-config>
 

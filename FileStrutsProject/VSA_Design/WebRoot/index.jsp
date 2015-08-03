@@ -23,8 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 <!--//fonts-->
    <script src="js/jquery.js"></script>
-   
-    <script src="js/uikit.min.js"></script>
+   <script src="js/uikit.min.js"></script>
 <script src="js/components/grid.min.js"></script>
 
 		  		 <!-- Bootstrap core JavaScript
