@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="VSA_Design"
+  id="myeclipse.1438581651153"
+  context-root="/VSA_Design"
+  j2ee-spec="5.0"
+  archive="VSA_Design.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
