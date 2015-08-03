@@ -282,6 +282,7 @@ img.zoom-img:hover {
 }
 .index-portfilio {
     padding: 5em 0 0;
+   
 }
 .index-portfilio h3 {
 font-family: 'Viga', sans-serif;
@@ -1820,6 +1821,7 @@ div#nivo-lightbox-demo img {
 	}
 	.content-team {
 	  padding: 0em 0 2em;
+	  
 	}
 	.ftr-logo {
 	  margin-top: .5em;
@@ -2624,5 +2626,8 @@ div#nivo-lightbox-demo img {
 	
 }
 .minh{
-		min-height:650px!important;
-	}
+	min-height:650px!important;
+}
+.team{
+	padding-top:5em
+}
