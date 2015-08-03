@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner banner5"> 
 	<div class="header">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" /></a>
+					<a href="index.jsp"><img src="images/logo.png" /></a>
 				</div>
 		<div class="navigation">
 			<nav class="navbar navbar-default">
@@ -59,12 +59,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav">
-						<li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="typography.html">Typrography</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li class="active"><a href="contact.html">Contact Us</a></li>
+						<li><a href="index.jsp">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="about.jsp">About</a></li>
+						<li><a href="typography.jsp">Typrography</a></li>
+						<li><a href="blog.jsp">Blog</a></li>
+						<li><a href="gallery.jsp">Gallery</a></li>
+						<li class="active"><a href="contact.jsp">Contact Us</a></li>
 					  </ul>
 			  <div class="clearfix"> </div>
 			</div><!-- /.navbar-collapse -->
@@ -110,11 +110,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <div class="col-md-3 ftr_navi ftr">
 					 <h3>Navigation</h3>
 					 <ul>
-						 <li><a href="index.html">Home</a></li>
-						 <li><a href="about.html">About</a></li>
-						 <li><a href="gallery.html">Gallery</a></li>						
-						 <li><a href="blog.html">Blog</a></li>
-						 <li><a href="contact.html">Contact</a></li>
+						 <li><a href="index.jsp">Home</a></li>
+						 <li><a href="about.jsp">About</a></li>
+						 <li><a href="gallery.jsp">Gallery</a></li>						
+						 <li><a href="blog.jsp">Blog</a></li>
+						 <li><a href="contact.jsp">Contact</a></li>
 					 </ul>
 				 </div>
 				 <div class="col-md-3 ftr_navi ftr">
@@ -135,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <a href="mailto:mail@mlampah.com">www.example.com</a>
 				 </div>
 				 <div class="col-md-3 ftr-logo">
-					  <a href="index.html"><img src="images/logo.png" alt=""/></a>
+					  <a href="index.jsp"><img src="images/logo.png" alt=""/></a>
 					 <p>© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 				 </div>
 				<div class="clearfix"> </div>
