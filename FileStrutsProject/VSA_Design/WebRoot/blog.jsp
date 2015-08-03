@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner banner5"> 
 	<div class="header">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" /></a>
+					<a href="index.jsp"><img src="images/logo.png" /></a>
 				</div>
 		<div class="navigation">
 			<nav class="navbar navbar-default">
@@ -59,12 +59,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav">
-						<li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="typography.html">Typrography</a></li>
-						<li class="active"><a href="blog.html">Blog</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="index.jsp">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="about.jsp">About</a></li>
+						<li><a href="typography.jsp">Typrography</a></li>
+						<li class="active"><a href="blog.jsp">Blog</a></li>
+						<li><a href="gallery.jsp">Gallery</a></li>
+						<li><a href="contact.jsp">Contact Us</a></li>
 					  </ul>
 			  <div class="clearfix"> </div>
 			</div><!-- /.navbar-collapse -->
@@ -89,11 +89,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3 class="tittle">Blogs</h3>
 			 <div class="news-article">
 			  <div class="col-md-6 article-post">
-				<a href="single.html" ><img src="images/a2.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a2.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-						 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+						 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -104,10 +104,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -115,11 +115,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!--2-->					
 				 <div class="col-md-6 article-post">
-				<a href="single.html" ><img src="images/a3.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a3.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-							 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+							 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -130,10 +130,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -141,11 +141,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!--3-->					
 				 <div class="col-md-6 article-post">
-				<a href="single.html" ><img src="images/a4.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a4.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-							 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+							 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -156,10 +156,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -167,11 +167,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 				<!--4-->					
 				 <div class="col-md-6 article-post">
-				<a href="single.html" ><img src="images/a5.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a5.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-						 	 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+						 	 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -182,10 +182,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -193,11 +193,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!--5-->					
 				 <div class="col-md-6 article-post">
-				<a href="single.html" ><img src="images/a6.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a6.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-						 	 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+						 	 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -208,10 +208,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -219,11 +219,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 				<!--6-->					
 				 <div class="col-md-6 article-post lost">
-				<a href="single.html" ><img src="images/a1.jpg" alt="img07"/></a>
+				<a href="single.jsp" ><img src="images/a1.jpg" alt="img07"/></a>
 				<div class="col-md-3 post-meta">
 					<div class="meta-icon">
 						<div class="pic">
-						 	 <a href="single.html" > <i class="glyphicon glyphicon-picture"></i></a>
+						 	 <a href="single.jsp" > <i class="glyphicon glyphicon-picture"></i></a>
 						</div>
 					</div>
 					<ul class="ad-info">
@@ -234,10 +234,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				  </div>
 				<div class="col-md-9 post-details">
-					<a href="single.html"><h3 class="pg-blog">To Protect Humanity</h3></a>
+					<a href="single.jsp"><h3 class="pg-blog">To Protect Humanity</h3></a>
 					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 					<div>
-						<a class="blog hvr-shutter-out-horizontal" href="single.html" role="button">Read More</a>
+						<a class="blog hvr-shutter-out-horizontal" href="single.jsp" role="button">Read More</a>
 					</div>
 				</div>
 				<!--post-details-->	
@@ -270,11 +270,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <div class="col-md-3 ftr_navi ftr">
 					 <h3>Navigation</h3>
 					 <ul>
-						 <li><a href="index.html">Home</a></li>
-						 <li><a href="about.html">About</a></li>
-						 <li><a href="gallery.html">Gallery</a></li>						
-						 <li><a href="blog.html">Blog</a></li>
-						 <li><a href="contact.html">Contact</a></li>
+						 <li><a href="index.jsp">Home</a></li>
+						 <li><a href="about.jsp">About</a></li>
+						 <li><a href="gallery.jsp">Gallery</a></li>						
+						 <li><a href="blog.jsp">Blog</a></li>
+						 <li><a href="contact.jsp">Contact</a></li>
 					 </ul>
 				 </div>
 				 <div class="col-md-3 ftr_navi ftr">
@@ -295,7 +295,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <a href="mailto:mail@mlampah.com">www.example.com</a>
 				 </div>
 				 <div class="col-md-3 ftr-logo">
-					  <a href="index.html"><img src="images/logo.png" alt=""/></a>
+					  <a href="index.jsp"><img src="images/logo.png" alt=""/></a>
 					 <p>© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 				 </div>
 				<div class="clearfix"> </div>
