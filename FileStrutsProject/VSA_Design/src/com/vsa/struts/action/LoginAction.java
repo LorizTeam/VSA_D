@@ -4,6 +4,9 @@
  */
 package com.vsa.struts.action;
 
+import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -11,7 +14,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.vsa.struts.form.LoginForm;
-
+import com.vsa.struts.data.DBuser;
 /** 
  * MyEclipse Struts
  * Creation date: 08-03-2015
@@ -34,7 +37,26 @@ public class LoginAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		LoginForm loginForm = (LoginForm) form;// TODO Auto-generated method stub
-		return null;
+		LoginForm loginForm = (LoginForm) form;
+		String forwardText= "";
+		// TODO Auto-generated method stub
+		
+		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
+		DBuser dbuser = new DBuser();
+		try {
+			List userList = dbuser.checklogin(username, password);
+			if(userList.size() >= 1){
+				forwardText = "success";
+			}else{
+				forwardText = "unsuccess";
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return mapping.findForward(forwardText);
 	}
 }

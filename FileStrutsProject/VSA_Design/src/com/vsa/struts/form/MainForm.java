@@ -14,9 +14,9 @@ import org.apache.struts.action.ActionMapping;
  * Creation date: 08-03-2015
  * 
  * XDoclet definition:
- * @struts.form name="loginForm"
+ * @struts.form name="mainForm"
  */
-public class LoginForm extends ActionForm {
+public class MainForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
@@ -27,9 +27,6 @@ public class LoginForm extends ActionForm {
 	 * @param request
 	 * @return ActionErrors
 	 */
-	private String InputUsername,InputPassword;
-	
-
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		// TODO Auto-generated method stub
@@ -43,20 +40,5 @@ public class LoginForm extends ActionForm {
 	 */
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		// TODO Auto-generated method stub
-	}
-	public String getInputUsername() {
-		return InputUsername;
-	}
-
-	public void setInputUsername(String inputUsername) {
-		InputUsername = inputUsername;
-	}
-
-	public String getInputPassword() {
-		return InputPassword;
-	}
-
-	public void setInputPassword(String inputPassword) {
-		InputPassword = inputPassword;
 	}
 }

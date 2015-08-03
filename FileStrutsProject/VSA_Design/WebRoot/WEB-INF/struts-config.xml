@@ -5,6 +5,7 @@
   <data-sources />
   <form-beans >
     <form-bean name="loginForm" type="com.vsa.struts.form.LoginForm" />
+    <form-bean name="mainForm" type="com.vsa.struts.form.MainForm" />
   </form-beans>
 
   <global-exceptions />
@@ -17,6 +18,22 @@
       path="/login"
       scope="request"
       type="com.vsa.struts.action.LoginAction">
+      <forward
+        name="unsuccess"
+        path="/login.jsp"
+        redirect="true" />
+      <forward
+        name="success"
+        path="/main.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="mainForm"
+      input="/main.jsp"
+      name="mainForm"
+      path="/main"
+      scope="request"
+      type="com.vsa.struts.action.MainAction">
       <set-property property="cancellable" value="true" />
     </action>
     

@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="utf-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
- 
+<% %>
 <html> 
 	<head>
 		<title>Login Page</title>
@@ -40,10 +40,30 @@
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<!-- Add JavaScript End -->
-	<div class="row"></div>
-		<html:form action="/login">
-			
-		</html:form>
+	<div class="container">
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+	</div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<html:form action="/login">
+			<div class="form-signing">
+				<h2 class="form-signing-heading">Please Sign in</h2>
+				<div class="row"></div>
+				<input type="text" id="InputUsername" name="InputUsername" class="form-control" placeholder ="Username"/>
+				<input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder ="Password"/>
+				<div class="col-xs-4 col-md-4"></div>
+				<button type="submit" class="btn btn-primary">Sign in</button>
+			</div>
+			</html:form>
+		</div>
+		<div class="col-md-4"></div>
+		
+	
+		
 	</body>
 </html>
 
