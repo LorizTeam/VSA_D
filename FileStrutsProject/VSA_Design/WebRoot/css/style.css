@@ -2631,3 +2631,17 @@ div#nivo-lightbox-demo img {
 .team{
 	padding-top:5em
 }
+.aw1{
+	background-image: url('images/award (1).jpg') 50% 50% no-repeat; /* 50% 50% centers image in div */
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  	width:250px;
+  	height:250px;
+}
+.aw2{
+	background-image: url('images/award (2).jpg') 50% 50% no-repeat; /* 50% 50% centers image in div */
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  	width:250px;
+  	height:250px;
+}
