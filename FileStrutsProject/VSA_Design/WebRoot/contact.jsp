@@ -44,34 +44,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--header-->
 <div class="banner banner5"> 
 	<div class="header">
-				<div class="logo">
-					<a href="index.jsp"><img src="images/logo.png" /></a>
-				</div>
-		<div class="navigation">
-			<nav class="navbar navbar-default">
-				<div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"> </span>
-						<span class="icon-bar"> </span>
-						<span class="icon-bar"> </span>
-					  </button>
+			<div class="logo">
+				<a href="index.jsp"><img src="images/vsa logo2.png" /></a>
+			</div>
+
+			<div class="navigation ">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"> </span> <span class="icon-bar"> </span> <span
+								class="icon-bar"> </span>
+						</button>
 					</div>
-					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					  <ul class="nav navbar-nav">
-						<li><a href="index.jsp">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about.jsp">About</a></li>
-						<li><a href="typography.jsp">Typrography</a></li>
-						<li><a href="blog.jsp">Blog</a></li>
-						<li><a href="gallery.jsp">Gallery</a></li>
-						<li class="active"><a href="contact.jsp">Contact Us</a></li>
-					  </ul>
-			  <div class="clearfix"> </div>
-			</div><!-- /.navbar-collapse -->
-		</nav>
-	</div>
-	<div class="clearfix"> </div>
-</div>
+					<div class="collapse navbar-collapse nav-wil "
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav ">
+							<li><a href="#">Interior Design</a></li>
+							<li><a href="#">Engineering Design</a></li>
+							<li><a href="#">Design Development</a></li>
+							<li><a href="contact.jsp">Contact Us</a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<!-- /.navbar-collapse -->
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 			  <!-- script-for-menu -->
 		 <script>
 				$("span.menu").click(function(){
@@ -106,42 +108,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--/contact-->	 
 <!--footer-->
 <div class="footer">
-			 <div class="container">				 	
-				 <div class="col-md-3 ftr_navi ftr">
-					 <h3>Navigation</h3>
-					 <ul>
-						 <li><a href="index.jsp">Home</a></li>
-						 <li><a href="about.jsp">About</a></li>
-						 <li><a href="gallery.jsp">Gallery</a></li>						
-						 <li><a href="blog.jsp">Blog</a></li>
-						 <li><a href="contact.jsp">Contact</a></li>
-					 </ul>
-				 </div>
-				 <div class="col-md-3 ftr_navi ftr">
-					 <h3>Members</h3>
-					 <ul>
-						 <li><a href="#">Customer Support</a></li>
-						 <li><a href="#">Platinum Support</a></li>
-						 <li><a href="#">Gold Support</a></li>						
-						 <li><a href="#">Standard Support</a></li>
-						 <li><a href="#">Training</a></li>
-					 </ul>
-				 </div>
-				 <div class="col-md-3 get_in_touch ftr">
-					  <h3>Get In Touch</h3>
-					  <p>Ola-ola street jump,</p>
-					  <p>260-14 City, Country</p>
-					  <p>+62 000-0000-00</p>
-					  <a href="mailto:mail@mlampah.com">www.example.com</a>
-				 </div>
-				 <div class="col-md-3 ftr-logo">
-					  <a href="index.jsp"><img src="images/logo.png" alt=""/></a>
-					 <p>© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-				 </div>
-				<div class="clearfix"> </div>
-			 </div>
-		  </div>
-<!--/footer-->
+		<div class="container">
+			<div class="col-md-3 ftr_navi ftr">
+				<h3>Navigation</h3>
+				<ul>
+					<li><a href="index.jsp">Home</a></li>
+					<li><a href="about.jsp">About</a></li>
+					<li><a href="gallery.jsp">Gallery</a></li>
+					<li><a href="blog.jsp">Blog</a></li>
+					<li><a href="contact.jsp">Contact</a></li>
+				</ul>
+			</div>
+
+
+			<div class="col-md-5 get_in_touch ftr text-center">
+				<h3>Contact</h3>
+				<p>Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
+					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
+					Phayathai District, Bangkok 10400, Thailand</p>
+				<br>
+				<p>Tel. +66 2618 4316 Fax. +66 2618 4315</p>
+				<br> <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
+			</div>
+			<div class="col-md-1 ftr_navi ftr"></div>
+			<div class="col-md-3 ftr-logo">
+				<a href="index.jsp"><img src="images/vsa logo2.png"
+					class="img-responsive" alt="" /></a>
+				<p>
+					© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!--/footer-->
 <script type="text/javascript">
 		$(document).ready(function() {
 				/*
