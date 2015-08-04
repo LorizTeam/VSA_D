@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlowViewLayout Version="1.2">
   <StrutsActivity path="/login.do" location="150,60" dimension="219,96" />
-  <StrutsActivity path="/main.do" location="950,50" dimension="216,96" />
+  <StrutsActivity path="/main.do" location="660,180" dimension="216,96" />
   <StrutsActivity path="/login.jsp" location="570,75" dimension="80,51" />
-  <StrutsActivity path="/main.jsp" location="810,225" dimension="80,51" />
+  <StrutsActivity path="/main.jsp" location="435,225" dimension="80,51" />
   <StrutsTransition id="/login.do,unsuccess,/login.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="369,78" />
@@ -18,16 +18,15 @@
   </StrutsTransition>
   <StrutsTransition id="/main.jsp,null,/main.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="890,250" />
-      <AbsolutePoint location="1058,250" />
-      <AbsolutePoint location="1058,146" />
+      <AbsolutePoint location="515,250" />
+      <AbsolutePoint location="660,250" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/login.do,success,/main.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="259,156" />
       <AbsolutePoint location="259,250" />
-      <AbsolutePoint location="810,250" />
+      <AbsolutePoint location="435,250" />
     </AutomaticBendpoints>
   </StrutsTransition>
 </FlowViewLayout>

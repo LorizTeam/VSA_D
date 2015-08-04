@@ -15,6 +15,10 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.vsa.struts.form.LoginForm;
 import com.vsa.struts.data.DBuser;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 /** 
  * MyEclipse Struts
  * Creation date: 08-03-2015
@@ -39,6 +43,7 @@ public class LoginAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		LoginForm loginForm = (LoginForm) form;
 		String forwardText= "";
+		HttpSession session = request.getSession();
 		// TODO Auto-generated method stub
 		
 		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
@@ -47,6 +52,7 @@ public class LoginAction extends Action {
 			List userList = dbuser.checklogin(username, password);
 			if(userList.size() >= 1){
 				forwardText = "success";
+				session.setAttribute("username", username);
 			}else{
 				forwardText = "unsuccess";
 				request.setAttribute("alert","1");
