@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse nav-wil " id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav " >
 							<li><a href="index.jsp">Interior Design</a></li>
-							<li><a href="about.jsp">Engineering Design</a></li>
+							<li><a href="gallery.jsp">Engineering Design</a></li>
 							<li><a href="typography.jsp">Design Development</a></li>
 							<li><a href="contact.jsp">Contact Us</a></li>
 						  </ul>
@@ -127,7 +127,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				amet sollicitudin ante. Aenean imperdiet aliquet hendreritunc interdum ullamcorper lec tuset pellentesqu enim interdum atuspendisse malesuada dignissim.</p>
 	</div>
 </div>
-
+<div class="welcome-bottom">
+	<div class="container">
+		<div class="col-md-6 wel-img">
+			<a href="single.html" class="mask">
+				     <img src="images/wlb.jpg" class="img-responsive zoom-img" alt="">
+				</a>
+		</div>
+		<div class="col-md-6 wel-text">
+			<p>Dolor nunc vule putateulr ips dol consec.Donec sem ertet laciniate ultricie upie disse utes comete dolo lectus. 
+				fgilla itollicil tua ludin dolor nec met quam accumsan. Dolore condime netus lullam utlacus adipiscing ipsum molestie
+				 euismod lore estibulum vel libero ipsum sit
+				amet sollicitudin ante. Aenean imperdiet aliquet hendreritunc interdum ullamcorper lec tuset pellentesqu enim 
+				interdum atuspendisse malesuada dignissim.amet sollicitudin ante. Aenean imperdiet .</p>
+		</div>
+	</div>
+</div>
 <!--grid-hover-->
 <div class="index-portfilio">
 <div class="container">
@@ -140,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <li data-uk-filter="y2010"><a href="">2010</a></li>		    
 			    <li data-uk-filter="y2013"><a href="">2013</a></li>
 			    <li data-uk-filter="y2014"><a href="">2014</a></li>
-			 
+			 c
 			</ul>
                <div class="grid uk-grid minh"  data-uk-grid="{controls: '#fillpro',gutter:0.1}">
 					<figure class="effect-layla" data-uk-filter="y2009" >
