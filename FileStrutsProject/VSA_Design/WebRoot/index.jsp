@@ -155,7 +155,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <li data-uk-filter="y2010"><a href="">2010</a></li>		    
 			    <li data-uk-filter="y2013"><a href="">2013</a></li>
 			    <li data-uk-filter="y2014"><a href="">2014</a></li>
-			 c
 			</ul>
                <div class="grid uk-grid minh"  data-uk-grid="{controls: '#fillpro',gutter:0.1}">
 					<figure class="effect-layla" data-uk-filter="y2009" >
