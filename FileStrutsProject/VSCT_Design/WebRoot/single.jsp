@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Realia a Real Estates and Builders Category Flat Bootstarp responsive Website Template | Single :: w3layouts</title>
+<title>VSCT Engineering Design | Single</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Realia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
