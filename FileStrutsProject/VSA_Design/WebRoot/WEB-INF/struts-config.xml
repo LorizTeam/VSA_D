@@ -20,12 +20,10 @@
       type="com.vsa.struts.action.LoginAction">
       <forward
         name="unsuccess"
-        path="/login.jsp"
-        redirect="true" />
+        path="/login.jsp"/>
       <forward
         name="success"
-        path="/main.jsp"
-        redirect="true" />
+        path="/main.jsp"/>
     </action>
     <action
       attribute="mainForm"

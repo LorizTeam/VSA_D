@@ -1,7 +1,8 @@
 <%@ page language="java" pageEncoding="utf-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-<% %>
+<%@ page import="com.vsa.struts.form.LoginForm" %>
+<!DOCTYPE html>
 <html> 
 	<head>
 		<title>Login Page</title>
@@ -15,6 +16,7 @@
 	<!-- Add CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="metro-ui/build/css/metro-icons.css">
 	<!-- Add CSS End -->
 	<!-- Add JavaScript -->
 	<script src="js/components/lightbox.js"></script>
@@ -51,19 +53,18 @@
 		<div class="col-md-4">
 			<html:form action="/login">
 			<div class="form-signing">
-				<h2 class="form-signing-heading">Please Sign in</h2>
+				<h2 class="form-signing-heading">Please Sign in . .</h2>
 				<div class="row"></div>
 				<input type="text" id="InputUsername" name="InputUsername" class="form-control" placeholder ="Username"/>
 				<input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder ="Password"/>
 				<div class="col-xs-4 col-md-4"></div>
-				<button type="submit" class="btn btn-primary">Sign in</button>
+				<button type="submit" class="btn btn-primary form-control">Sign in</button>
+				<%if(request.getAttribute("alert") != null){%>
+				<div class="alert alert-success text-center" role="alert"><span class="mif-warning mif-ani-flash mif-ani-fast fg-red mif-2x"></span>&nbsp;&nbsp;&nbsp;Username or Password Incorrect</div>
+				<%} %>
 			</div>
 			</html:form>
 		</div>
 		<div class="col-md-4"></div>
-		
-	
-		
 	</body>
 </html>
-

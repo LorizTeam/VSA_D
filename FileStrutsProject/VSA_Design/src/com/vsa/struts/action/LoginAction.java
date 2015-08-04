@@ -49,6 +49,7 @@ public class LoginAction extends Action {
 				forwardText = "success";
 			}else{
 				forwardText = "unsuccess";
+				request.setAttribute("alert","1");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

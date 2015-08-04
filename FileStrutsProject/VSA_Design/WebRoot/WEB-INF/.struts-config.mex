@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlowViewLayout Version="1.2">
   <StrutsActivity path="/login.do" location="150,60" dimension="219,96" />
-  <StrutsActivity path="/login.jsp" location="570,75" dimension="80,51" />
   <StrutsActivity path="/main.do" location="950,50" dimension="216,96" />
+  <StrutsActivity path="/login.jsp" location="570,75" dimension="80,51" />
   <StrutsActivity path="/main.jsp" location="810,225" dimension="80,51" />
   <StrutsTransition id="/login.do,unsuccess,/login.jsp,1" routingType="0">
     <AutomaticBendpoints>
