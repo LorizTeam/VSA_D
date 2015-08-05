@@ -7,6 +7,7 @@ package com.vsa.struts.action;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -16,9 +17,7 @@ import org.apache.struts.action.ActionMapping;
 import com.vsa.struts.form.LoginForm;
 import com.vsa.struts.data.DBuser;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 /** 
  * MyEclipse Struts
  * Creation date: 08-03-2015

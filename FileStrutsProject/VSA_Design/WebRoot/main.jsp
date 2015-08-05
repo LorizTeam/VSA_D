@@ -10,5 +10,6 @@
 	</head>
 	<body>
 		<%@ include file="menubar.jsp" %>
+		
 	</body>
 </html>

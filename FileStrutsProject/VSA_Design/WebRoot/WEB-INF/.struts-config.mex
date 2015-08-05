@@ -4,16 +4,38 @@
   <StrutsActivity path="/main.do" location="660,180" dimension="216,96" />
   <StrutsActivity path="/login.jsp" location="570,75" dimension="80,51" />
   <StrutsActivity path="/main.jsp" location="435,225" dimension="80,51" />
+  <StrutsActivity path="/signout.do" location="950,150" dimension="230,96" />
   <StrutsTransition id="/login.do,unsuccess,/login.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="369,78" />
       <AbsolutePoint location="570,78" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/menubar.jsp,null,/signout.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="536,340" />
+      <AbsolutePoint location="1065,340" />
+      <AbsolutePoint location="1065,246" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/main.jsp,null,/signout.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="475,225" />
+      <AbsolutePoint location="475,165" />
+      <AbsolutePoint location="950,165" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/login.jsp,null,/login.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="570,108" />
       <AbsolutePoint location="369,108" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/signout.do,success,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1065,150" />
+      <AbsolutePoint location="1065,100" />
+      <AbsolutePoint location="650,100" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/main.jsp,null,/main.do,2" routingType="0">

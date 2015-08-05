@@ -34,6 +34,17 @@
       type="com.vsa.struts.action.MainAction">
       <set-property property="cancellable" value="true" />
     </action>
+    <action
+      attribute="mainForm"
+      input="/main.jsp"
+      name="mainForm"
+      path="/signout"
+      scope="request"
+      type="com.vsa.struts.action.SignoutAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/login.jsp" />
+    </action>
+    
     
 
   </action-mappings>

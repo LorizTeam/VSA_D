@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            </li>
 	        </ul>
 	        <div class="app-bar-element place-right">
-	        <a href="main.jsp" class="app-bar-element branding"><span class="mif-switch"></span>&nbsp;&nbsp;Sign out</a>
+	        <a href="signout.do" class="app-bar-element branding"><span class="mif-switch"></span>&nbsp;&nbsp;Sign out</a>
 	        </div>
             </div>
 		</html:form>
