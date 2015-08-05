@@ -18,7 +18,7 @@
 	            <li data-flexorderorigin="1" data-flexorder="2" class="">
 	                <a href="" class="dropdown-toggle">Project</a>
 	                <ul class="d-menu" data-role="dropdown" style="display: none;">
-	                    <li><a href="">New project</a></li>
+	                    <li><a href="createproject.jsp">New project</a></li>
 	                    <li class="divider"></li>
 	                    <li><a href="">Edit Project</a></li>
 	                </ul>
@@ -59,3 +59,5 @@
 			  		}
 		  		}
 				%>
+				<br/><br/><br/><br/>
+				

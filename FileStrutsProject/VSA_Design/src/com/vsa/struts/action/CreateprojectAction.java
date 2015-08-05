@@ -4,14 +4,20 @@
  */
 package com.vsa.struts.action;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.jsp.jstl.core.Config;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.vsa.struts.form.CreateprojectForm;
-
+import com.geekonjava.fileupload.FileUploading;
+	
 /** 
  * MyEclipse Struts
  * Creation date: 08-05-2015
@@ -34,7 +40,21 @@ public class CreateprojectAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		CreateprojectForm createprojectForm = (CreateprojectForm) form;// TODO Auto-generated method stub
+		CreateprojectForm createprojectForm = (CreateprojectForm) form;
+		
+		// TODO Auto-generated method stub
+		String imagepath= getServlet().getServletContext().getRealPath("/")+"upload\\";
+		
+		ArrayList<String> imagename =  new ArrayList<String>();
+		imagename.add(createprojectForm.getImage1().getFileName());
+		imagename.add(createprojectForm.getImage2().getFileName());
+		imagename.add(createprojectForm.getImage3().getFileName());
+		
+		FileUploading.UploadFile(imagepath, 
+				imagename, 
+				request);
+		
+		
 		return null;
 	}
 }

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.upload.FormFile;
 
 /** 
  * MyEclipse Struts
@@ -41,4 +42,46 @@ public class CreateprojectForm extends ActionForm {
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		// TODO Auto-generated method stub
 	}
+	private FormFile image1,image2,image3;
+	private String submit,fileName;
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public FormFile getImage1() {
+		return image1;
+	}
+
+	public void setImage1(FormFile image1) {
+		this.image1 = image1;
+	}
+
+	public FormFile getImage2() {
+		return image2;
+	}
+
+	public void setImage2(FormFile image2) {
+		this.image2 = image2;
+	}
+
+	public FormFile getImage3() {
+		return image3;
+	}
+
+	public void setImage3(FormFile image3) {
+		this.image3 = image3;
+	}
+
+	public String getSubmit() {
+		return submit;
+	}
+
+	public void setSubmit(String submit) {
+		this.submit = submit;
+	}
+		
 }
