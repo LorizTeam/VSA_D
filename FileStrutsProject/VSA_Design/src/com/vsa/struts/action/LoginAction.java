@@ -52,6 +52,7 @@ public class LoginAction extends Action {
 			if(userList.size() >= 1){
 				forwardText = "success";
 				session.setAttribute("username", username);
+				session.setAttribute("userList", userList);
 			}else{
 				forwardText = "unsuccess";
 				request.setAttribute("alert","1");

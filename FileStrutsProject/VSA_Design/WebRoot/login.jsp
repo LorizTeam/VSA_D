@@ -53,7 +53,7 @@
 		<div class="col-md-4">
 			<html:form action="/login">
 			<div class="form-signing">
-				<h2 class="form-signing-heading">Please Sign in . .</h2>
+				<h2 class="form-signing-heading text-center">Please Sign in . .</h2>
 				<div class="row"></div>
 				<input type="text" id="InputUsername" name="InputUsername" class="form-control" placeholder ="Username"/>
 				<input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder ="Password"/>

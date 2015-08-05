@@ -1,8 +1,8 @@
-<%@ page language="java" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-<%@ page import="com.vsa.struts.form.MainForm"  %>
 <%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="com.vsa.struts.form.DetailuserForm"  %>
 <!DOCTYPE html>
 <html> 
 	<head>
