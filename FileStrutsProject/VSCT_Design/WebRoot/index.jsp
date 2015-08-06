@@ -40,8 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="menu">MENU</span>
 					<ul class="nav1 cl-effect-1">
 						<li><a href="index.jsp">Home</a></li>
-						<li><a href="about.jsp">About</a></li>
-						<li><a href="contact.jsp">Contact</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#about-team">About</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<!-- script-for-menu -->
 						<script>
@@ -175,7 +176,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //services -->
 	<!-- works -->
-	<div class="work">
+	<div id="work" class="work">
 		<!-- container -->
 		<div class="container">
 			<div class="work-info">
@@ -311,7 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="about">
 		<div class="about-info">
 			<h3>About</h3>
-			<p>Nullam tincidunt</p>
+			<p>VSCT Engineering</p>
 		</div>
 		<div class="about-top">
 			<!-- container -->
@@ -335,7 +336,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- //container -->
 		</div>
-		<div class="about-team">
+		<div id="about-team" class="about-team">
 			<!-- container -->
 			<div class="container">
 				<h4>Work Team</h4>
@@ -370,8 +371,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- //container -->
 		</div>
-		<div class="advantages">
-			<!-- container -->
+	<!--	<div class="advantages">
+			
 			<div class="container">
 				<h4>Advantages</h4>
 				<div class="advantages-grids">
@@ -408,16 +409,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				</div>
 			</div>
-			<!-- //container -->
-		</div>
+			
+		</div> -->
 	<!-- //about -->
 		<!-- contact -->
-	<div class="contact">
+	<div id="contact" class="contact">
 		<!-- container -->
 		<div class="container">
 			<div class="contact-info">
 				<h3>Contact</h3>
-				<p>Nullam tincidunt</p>
+				<p>VSCT Engineering</p>
 			</div>
 			<div class="map footer-middle">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d240864.0847430341!2d-99.14361259999998!3d19.390733650000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1435920110979" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -581,7 +582,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		});
 	</script>
-
+	<script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->

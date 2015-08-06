@@ -2622,3 +2622,12 @@ div#nivo-lightbox-demo img {
 	width: 250px;
 	height: 250px;
 }
+.stick-nav section{
+	background: rgba(255, 255, 255, 0.95);
+	z-index:111111111;
+}
+.stick-nav  a{
+	z-index:111111111111;
+	
+}
+

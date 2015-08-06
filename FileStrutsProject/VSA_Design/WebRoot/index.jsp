@@ -31,7 +31,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery.js"></script>
 <script src="js/uikit.min.js"></script>
 <script src="js/components/grid.min.js"></script>
-
+<script src="js/components/sticky.min.js"></script>
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<!--header-->
-	<div class="banner">
+	<div id="home" class="banner">
 
 
 		<div class="header">
@@ -137,8 +137,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<div class="clearfix"></div>
+	
+	<div class="stick-nav uk-sticky-placeholder" style="height: 52px;">
+		<section data-uk-sticky="{top:-100}" class="uk-panel uk-panel-box row" style="margin: 0px;">
+			<div class="col-md-3 col-sm-3"></div>
+			<div class="collapse navbar-collapse nav-wil col-md-6 col-sm-6"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav ">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#award">Award</a></li>
+							<li><a href="contact.jsp">Contact Us</a></li>
+						</ul>
+						<div class="clearfix"></div>
+			</div>
+		</section>
 	</div>
+	<div class="clearfix"></div>
+	
+
 	<!--/header-->
 	<div class="welcome">
 		<div class="container">
@@ -172,7 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--grid-hover-->
-	<div class="index-portfilio">
+	<div id="work" class="index-portfilio">
 		<div class="container">
 			<h3>OUR WORK</h3>
 			<p class="index-p">Dolor nunc vule putateulr ips dol consec.Donec
@@ -253,7 +271,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--grid-hover-->
 	<!--index-team-->
-	<div class="content-team">
+	<div id="team" class="content-team">
 		<div class="container team">
 			<h3 class="m_1">Our team</h3>
 			<p class="content-t">Dolor nunc vule putateulr ips dol
@@ -298,7 +316,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--/index-team-->
 	<!--Award-->
-	<div class="content-team">
+	<div id="award" class="content-team">
 		<div class="container team">
 			<h3 class="m_1">Award</h3>
 			<p class="content-t">The BCI Asia Top 10 Awards provides an
@@ -403,5 +421,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!---->
 	</div>
 	<!--footer-starts-->
+	<script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
 </body>
 </html>

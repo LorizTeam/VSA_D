@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="about-grids">
 					<div class="col-md-4 about-grid">
-						<img src="images/a1.jpg" alt="" />
+						<img src="images" alt="" />
 					</div>
 					<div class="col-md-8 about-grid">
 						<h4>Donec elit enim, egestas sed malesuada et ornare et lectus at leo nec purus viverra lobortis</h4>
@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Work Team</h4>
 				<div class="team-grids">
 					<div class="col-md-3 team-grid">
-						<img src="images/t1.jpg" alt="">
+						<img src="images/" alt="">
 						<h6>Jain Smith</h6>
 						<p> Curabitur orci massa convallis id mauris sed venenatis porttitor at leo nec purus</p>
 					</div>
