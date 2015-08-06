@@ -34,7 +34,7 @@ html, body{
   width: 50%;
 }
 .banner-right{
-  background: url(../images/2.jpg) no-repeat 0px 0px;
+  background: url(../images/project/2.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height: 600px;
   float:left;
@@ -568,10 +568,13 @@ ul.social-slide li i.mac{
 }
 /*-- footer --*/
 .footer{
-  background: url(../images/footer.jpg) no-repeat 0px 0px;
+  	
   background-size: cover;
+ 	background-color: rgba(0,0,0,0.7);
   min-height: 540px;
-}
+ 
+}	 
+
 .footer-left{
   background: rgba(66, 57, 58, 0.7);
   padding: 5em 1em;
@@ -755,7 +758,7 @@ color: #FFFFFF;
   width: 100%;
 }
 .team-grid h6 {
-  font-size: 1.5em;
+  font-size: 1em;
   color: #FF6A4A;
   margin: 1em 0 1em 0;
   text-transform: capitalize;
@@ -834,6 +837,31 @@ color: #FFFFFF;
   text-transform: uppercase;
   border-bottom: 1px ridge rgba(150, 150, 150, 0.33);
   width: 16%;
+}
+
+.typography-info1 {
+  text-align: center;
+ 
+}
+.typography-info1 h3.type{
+  color: #ff6a4a;
+  font-size: 4em;
+  margin: 0;
+  font-family: Comfortaa-Regular;
+}
+.typography-info1 a{
+  text-decoration: none;
+  
+}
+.typography-info1 p {
+  color: #ADADAD;
+  font-size: 1em;
+  margin: .8em auto;
+  line-height: 1.8em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(150, 150, 150, 1);
+  width: 40%;
 }
 .grid_4{
 	background:#fff;
@@ -1000,6 +1028,9 @@ h1.t-button,h2.t-button,h3.t-button,h4.t-button,h5.t-button {
 	position: relative;
 	margin: 0;
 	padding: 0;
+}
+.da-thumbs img{
+	height: 200px;
 }
 .da-thumbs li {
   float: left;
@@ -2123,4 +2154,17 @@ span.menu {
 	.label {
 		padding: 0px 6px;
 	}
+}
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 14px;
+	right: 3%;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	border: none;
+	text-indent: 100%;
+	background: url("../images/to-top1.png") no-repeat 0px 0px;
 }

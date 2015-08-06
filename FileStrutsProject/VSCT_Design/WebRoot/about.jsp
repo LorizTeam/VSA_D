@@ -26,17 +26,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="banner">
 		<div class="col-md-6 banner-left">
 			<div class="banner-left-grids">
-				<div class="logo">
-					<a href="index.jsp"><img src="images/logo.png" alr="" /></a>
+				<div class="typography-info1">
+					<a href="index.jsp"><h3 class="type">VSCT</h3>
+					<p>Engineering Design</p></a>
 				</div>
+
+				
 				<div class="top-nav">
 					<span class="menu">MENU</span>
 					<ul class="nav1 cl-effect-1">
 						<li><a href="index.jsp">Home</a></li>
 						<li><a href="about.jsp">About</a></li>
-						<li><a href="typography.jsp">Typography</a></li>
-						<li><a href="gallery.jsp">Gallery</a></li>
-						<li><a href="blog.jsp">Blog</a></li>
 						<li><a href="contact.jsp">Contact</a></li>
 					</ul>
 					<!-- script-for-menu -->
@@ -54,10 +54,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-6 banner-right">
 			<div class="address">
 				<h5>CALL US NOW:</h5>
-				<h4>(012) 345 6789</h4>
-				<p>Chicago, 123 South Street, 
-					New York, GM 45678
-					e-mail: example@mail.com
+				<h4>+66 2618 4316</h4>
+				<p> No.9 Prachanimit lane,Phayathai District, Bangkok 10400, Thailand  
+					e-mail: studiovsct@gmail.com
 				</p>
 			</div>
 		</div>
