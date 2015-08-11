@@ -43,13 +43,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--header-->
 <div class="banner banner5"> 
-	<div class="header">
-			<div class="logo">
-				<a href="index.jsp"><img src="images/vsa logo2.png" /></a>
-			</div>
+	<div class="header width-page">
+			
 
 			<div class="navigation ">
-				<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default ">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed"
 							data-toggle="collapse"
@@ -59,17 +57,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="icon-bar"> </span>
 						</button>
 					</div>
-					<div class="collapse navbar-collapse nav-wil "
-						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav ">
-							<li><a href="#">Interior Design</a></li>
-							<li><a href="#">Engineering Design</a></li>
-							<li><a href="#">Design Development</a></li>
-							<li><a href="contact.jsp">Contact Us</a></li>
+				
+					<div class="collapse navbar-collapse nav-wil container-center"
+						id="bs-example-navbar-collapse-1" >
+						<ul class="nav navbar-nav  top-nav">
+							<li class="l"><a href="index.jsp">Home</a></li>
+							<li><a href="typography.jsp">Work</a></li>
+							<li><a href="contact.jsp">Team</a></li>
+							<li><a href="contact.jsp">Award</a></li>
+							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
 					<!-- /.navbar-collapse -->
+
 				</nav>
 			</div>
 			<div class="clearfix"></div>
