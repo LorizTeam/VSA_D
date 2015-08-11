@@ -39,7 +39,6 @@ ul {
 	width: 17%;
 }
 .header {
-	padding-top: 0em;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -53,7 +52,7 @@ ul {
 	background: #000;
 }
 .header-right-text h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
 	font-size: 1.1em;
 	margin: 15px 0 9px;
@@ -63,14 +62,14 @@ ul {
 	text-decoration: none !important;
 }
 .header-right-text h3 span {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0 12px;
 	color: #339966;
 	font-weight: 600;
 	font-size: 1em;
 }
 .header-right-text h3  i {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 100;
 	font-size: .9em;
 	font-style: normal;
@@ -78,9 +77,10 @@ ul {
 }
 .navigation {
 	float: left;
-	padding: 2.5em 0 1.7em 1em;
-	width: 83%;
+	padding: 0px;
+	width: 100%;
 	background: rgba(255, 255, 255, 0.95);
+	max-height: 40px;
 }
 .nav-wil {
 	padding: 0;
@@ -89,13 +89,13 @@ ul {
 	float: left !important;
 }
 .navbar-default .navbar-nav > li > a {
-	color: #000;
-	font-size: 16px;
-	padding: 0;
+	color: #6E6E6E !important;
+	font-size: 14px;
+	padding: 10px 0px !important;
+	letter-spacing: 5px;
 }
 .nav > li {
-	font-family: 'Viga', sans-serif;
-	margin: 0 27px 0 !important;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 .nav > li > a:hover {
 	color: #06c0ba !important;
@@ -124,7 +124,7 @@ ul.nav.navbar-nav li a.active {
 .navbar-default {
 	background-color: rgba(255, 255, 255, 0);
 	border-color: rgba(255, 255, 255, 0);
-	margin-bottom: 0;
+	margin: 0;
 }
 .grid__item.color-11:hover {
 	box-sizing: 0;
@@ -151,7 +151,7 @@ ul.nav.navbar-nav li a.active {
 	margin: 0;
 }
 .rslides h2 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #06c0ba;
 	font-size: 2.6em;
 	width: 80%;
@@ -241,7 +241,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	text-align: center;
 }
 .welcome h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	font-size: 2.5em;
 	margin-bottom: .6em;
@@ -289,7 +289,7 @@ img.zoom-img:hover {
 	padding: 5em 0 0;
 }
 .index-portfilio h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	font-size: 2.5em;
 	color: #444444;
@@ -481,7 +481,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 	padding: 0em 0 5em;
 }
 h3.m_1 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	font-size: 2.5em;
 	color: #444444;
@@ -493,7 +493,7 @@ h3.m_1 {
 	margin: 0;
 }
 .team-top  h6 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 1em 0 0.8em;
 	font-size: 1.3em;
 	color: #000;
@@ -629,7 +629,7 @@ ul.social-icons li a:hover {
 	padding: 0;
 }
 .get_in_touch h3, .ftr_navi h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 2px;
 	font-size: 1.4em;
 	margin-bottom: .5em;
@@ -703,7 +703,7 @@ ul.social-icons li a:hover {
 	padding: 3em 0;
 }
 .about h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	font-size: 3em;
 	color: #000;
@@ -769,7 +769,7 @@ span.in-sed {
 	padding: 1em 0;
 }
 .in-profile h4, .our-mission h4, .team-set h4 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0 0 1em;
 	font-size: 2em;
 	color: #000;
@@ -789,7 +789,7 @@ span.in-sed {
 /*--/about-page--*/
 /*--trypography-page--*/
 h3.typos {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	font-size: 3em;
 	color: #000;
@@ -824,7 +824,7 @@ section#tables {
 	text-decoration: none;
 }
 .grid_3 h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin-bottom: .7em;
 	text-align: left;
 	font-size: 2.5em;
@@ -859,7 +859,7 @@ section#tables {
 	border-top: none !important;
 }
 #tables h1 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #06c0ba;
 }
 .tab-content > .active {
@@ -1181,7 +1181,7 @@ a#myTabDrop1 {
 	padding: 3em 0;
 }
 h3.tittle {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	font-size: 3em;
 	color: #000;
@@ -1199,7 +1199,7 @@ h3.tittle {
 	text-align: center;
 	font-size: 2em;
 	color: #1f1e23;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin-bottom: 1.5em;
 }
 .article-post {
@@ -1209,7 +1209,7 @@ h3.tittle {
 .post-details h4, .post-details a h4 {
 	font-size: 1.6em;
 	color: #1f1e23;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin-top: 0.5em;
 	padding: 0.3em 0 0.1em 0;
 	font-weight: 400;
@@ -1398,12 +1398,12 @@ img.zoom-img {
 	color: #1f1e23;
 	font-size: 2em;
 	font-weight: 400;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5em;
 }
 .single h2 {
 	margin-bottom: .5em;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 3em;
 	color: #000;
 	font-weight: 600;
@@ -1444,7 +1444,7 @@ ul.social-share li span {
 	font-size: 1.2em;
 	margin: 0 1em 0 0;
 	font-weight: 400;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 ul.social-share li  i {
 	background: url(../images/icons.png) no-repeat -77px 0;
@@ -1467,7 +1467,7 @@ ul.social-share li  i.message {
 	color: #1f1e23;
 	font-size: 2em;
 	font-weight: 400;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5em;
 }
 .single-middle {
@@ -1520,7 +1520,7 @@ p.smith a {
 	color: #06c0ba;
 	font-weight: 500;
 	font-size: 1.2em;
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 .code-in {
 	padding: 0 0 0.5em;
@@ -1603,7 +1603,7 @@ p.reply i {
 }
 /*--gallery-page--*/
 .portfolio h2 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	font-size: 3em;
 	color: #000;
@@ -1658,7 +1658,7 @@ div#nivo-lightbox-demo img {
 	padding: 3em 0;
 }
 .contact h2 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	font-size: 3em;
 	color: #000;
@@ -1667,10 +1667,10 @@ div#nivo-lightbox-demo img {
 	margin-bottom: .6em;
 }
 .contact h3 {
-	font-family: 'Viga', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #00B198;
 	font-size: 4em;
-	font-weight: 400;
+	font-weight: 400;	
 	text-align: center;
 	margin-top: 0.5em;
 }
@@ -1735,7 +1735,7 @@ div#nivo-lightbox-demo img {
 /*----responsive-menu-start--*/
 @media (max-width: 1440px) {
 	.navigation {
-		padding: 2em 0 1.6em 1em;
+		padding: 0px;
 	}
 	.slider {
 		height: 677px;
@@ -1769,7 +1769,7 @@ div#nivo-lightbox-demo img {
 		height: 396px;
 	}
 	.navigation {
-		padding: 1.5em 0 1.2em 1em;
+		padding: 0px;
 	}
 	.logo {
 		padding: .5em 1em 1.2em 1em;
@@ -1859,8 +1859,8 @@ div#nivo-lightbox-demo img {
 		width: 30%;
 	}
 	.navigation {
-		padding: 30px 0px 27px 10px;
-		width: 70%;
+		padding:0px ;
+		width: 100%;
 	}
 	.welcome {
 		padding: 3em 0 4em;
@@ -1999,8 +1999,8 @@ div#nivo-lightbox-demo img {
 		width: 30%;
 	}
 	.navigation {
-		padding: 30px 0px 27px 10px;
-		width: 70%;
+		padding: 0px;
+		width: 100%;
 	}
 	.welcome {
 		padding: 3em 0 4em;
@@ -2129,8 +2129,8 @@ div#nivo-lightbox-demo img {
 }
 @media (max-width: 640px) {
 	.navigation {
-		padding: 2px 0px 12px 10px;
-		width: 70%;
+		padding: 0px;
+		width: 100%;
 	}
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 		background-color: #06c0ba !important;
@@ -2254,8 +2254,8 @@ div#nivo-lightbox-demo img {
 		min-height: 360px;
 	}
 	.navigation {
-		padding: 3px 0px 3px 10px;
-		width: 70%;
+		padding: 0px;
+		width: 100%;
 	}
 	.navbar-toggle {
 		margin-top: 8px !important;
@@ -2381,8 +2381,8 @@ div#nivo-lightbox-demo img {
 		width: 46%;
 	}
 	.navigation {
-		padding: 7px 0px 5px 10px;
-		width: 54%;
+		padding: 0px;
+		width: 100%;
 	}
 	.slider {
 		padding: 14% 0 0;
@@ -2626,4 +2626,22 @@ div#nivo-lightbox-demo img {
 	background-repeat: no-repeat;
 	width: 250px;
 	height: 250px;
+}
+
+.container-center{
+	  margin-left: 15% !important;
+  	  margin-right: 15% !important;
+  	  width: 70%;
+}
+.width-page{	
+	width: 100% !important;
+}
+.top-nav{
+	width:100%;
+}
+.top-nav li{
+	width:20%;
+	text-align: center;
+	margin-left:auto !important;
+	margin-right:auto !important;
 }
