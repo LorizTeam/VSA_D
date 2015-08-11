@@ -3,9 +3,14 @@
  * Template path: templates/java/JavaClass.vtl
  */
 package com.vsa.struts.action;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,8 +20,9 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import com.vsa.struts.form.CreateprojectForm;
-import com.geekonjava.fileupload.FileUploading;
+import org.apache.struts.upload.FormFile;
+
+//import com.vsa.struts.form.CreateprojectForm;
 	
 /** 
  * MyEclipse Struts
@@ -39,22 +45,70 @@ public class CreateprojectAction extends Action {
 	 * @return ActionForward
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response) {
-		CreateprojectForm createprojectForm = (CreateprojectForm) form;
+			HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+//		CreateprojectForm createprojectForm = (CreateprojectForm) form;
 		
 		// TODO Auto-generated method stub
-		String imagepath= getServlet().getServletContext().getRealPath("/")+"upload\\";
-		
-		ArrayList<String> imagename =  new ArrayList<String>();
-		imagename.add(createprojectForm.getImage1().getFileName());
-		imagename.add(createprojectForm.getImage2().getFileName());
-		imagename.add(createprojectForm.getImage3().getFileName());
-		
-		FileUploading.UploadFile(imagepath, 
-				imagename, 
-				request);
-		
-		
-		return null;
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		Date date = new Date();
+//		String[] imagepath = createprojectForm.getImage();
+		String imagepath = (String) request.getParameter("image");
+		String tb_projectyear = (String) request.getParameter("tb_projectyear");
+		// Keep path to upload
+//		String imagepath1 = null;
+//		String imagepath2 = null;
+//		String imagepath3 = null;
+//		String nameimage1 = null,nameimage2 = null,nameimage3 = null;
+//		byte[] bnameimage1 = createprojectForm.getImage1().getFileName().getBytes(),
+//		bnameimage2 = createprojectForm.getImage2().getFileName().getBytes(),
+//		bnameimage3 = createprojectForm.getImage3().getFileName().getBytes();
+//		try {
+//			nameimage1 = new String(bnameimage1,"utf-8");
+//			nameimage2 = new String(bnameimage2,"utf-8");
+//			nameimage3 = new String(bnameimage3,"utf-8");
+//		} catch (UnsupportedEncodingException e2) {
+//			// TODO Auto-generated catch block
+//			e2.printStackTrace();
+//		}
+//		imagepath1 = getServlet().getServletContext().getRealPath("/")+"upload\\"+dateFormat.format(date)+"-"+nameimage1;
+//		imagepath2 = getServlet().getServletContext().getRealPath("/")+"upload\\"+dateFormat.format(date)+"-"+nameimage2;
+//		imagepath3 = getServlet().getServletContext().getRealPath("/")+"upload\\"+dateFormat.format(date)+"-"+nameimage3;
+//		// Keep path to upload End
+//		FileOutputStream outputStream = null;
+//		try {
+//			// Create IO for upload
+//				outputStream = new FileOutputStream(new File(imagepath1));
+//				outputStream = new FileOutputStream(new File(imagepath2));
+//				outputStream = new FileOutputStream(new File(imagepath3));
+//			// Create IO for upload End
+//			// Upload Image
+//			if(createprojectForm.getImage1() != null){
+//				outputStream.write(createprojectForm.getImage1().getFileData());
+//			}
+//			if(createprojectForm.getImage2() != null){
+//				outputStream.write(createprojectForm.getImage2().getFileData());
+//			}
+//			if(createprojectForm.getImage3() != null){
+//				outputStream.write(createprojectForm.getImage3().getFileData());
+//			}
+//			// Upload Image End
+//			if(outputStream != null)
+//				outputStream.close();
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		imagename.add("image1");
+//		imagename.add("image2");
+//		imagename.add("image3");
+//		
+//		FileUploading.UploadFile(imagepath, 
+//				imagename, 
+//				request);
+		return mapping.findForward("success");
 	}
 }

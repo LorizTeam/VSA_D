@@ -4,6 +4,11 @@
  */
 package com.vsa.struts.form;
 
+import java.io.File;
+import java.text.Normalizer.Form;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
@@ -21,6 +26,28 @@ public class CreateprojectForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
+	private String bu_no,bu_name;
+	public String getBu_no() {
+		return bu_no;
+	}
+
+	public void setBu_no(String buNo) {
+		bu_no = buNo;
+	}
+
+	public String getBu_name() {
+		return bu_name;
+	}
+
+	public void setBu_name(String buName) {
+		bu_name = buName;
+	}
+
+	public CreateprojectForm(String buNo, String buName) {
+		// TODO Auto-generated constructor stub
+		this.bu_no = buNo;
+		this.bu_name = buName;
+	}
 
 	/** 
 	 * Method validate
@@ -28,60 +55,49 @@ public class CreateprojectForm extends ActionForm {
 	 * @param request
 	 * @return ActionErrors
 	 */
-	public ActionErrors validate(ActionMapping mapping,
-			HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	/** 
 	 * Method reset
 	 * @param mapping
 	 * @param request
 	 */
-	public void reset(ActionMapping mapping, HttpServletRequest request) {
-		// TODO Auto-generated method stub
-	}
-	private FormFile image1,image2,image3;
-	private String submit,fileName;
-	public String getFileName() {
-		return fileName;
-	}
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-
-	public FormFile getImage1() {
-		return image1;
-	}
-
-	public void setImage1(FormFile image1) {
-		this.image1 = image1;
-	}
-
-	public FormFile getImage2() {
-		return image2;
-	}
-
-	public void setImage2(FormFile image2) {
-		this.image2 = image2;
-	}
-
-	public FormFile getImage3() {
-		return image3;
-	}
-
-	public void setImage3(FormFile image3) {
-		this.image3 = image3;
-	}
-
-	public String getSubmit() {
-		return submit;
-	}
-
-	public void setSubmit(String submit) {
-		this.submit = submit;
-	}
+//	private List formFile = new ArrayList();
+//	private List<File> image = new ArrayList<File>();
+//	private FormFile[] image1;
+//	
+//	private String[] fileName;
+//	private String submit;
+//	
+//	public List getFormFile() {
+//		return formFile;
+//	}
+//
+//	public void setFormFile(List formFile) {
+//		this.formFile = formFile;
+//	}
+//
+//	public List<File> getImage() {
+//		return (List<File>) image;
+//	}
+//
+//	public void setImage(List<File> image) {
+//		this.image = image;
+//	}
+//
+//	public String[] getFileName() {
+//		return fileName;
+//	}
+//
+//	public void setFileName(String[] fileName) {
+//		this.fileName = fileName;
+//	}
+//
+//	public String getSubmit() {
+//		return submit;
+//	}
+//
+//	public void setSubmit(String submit) {
+//		this.submit = submit;
+//	}
 		
 }

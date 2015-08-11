@@ -54,6 +54,15 @@
       scope="request"
       type="com.vsa.struts.action.CreateprojectAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/createprojectStart.do" />
+    </action>
+    <action
+      attribute="createprojectForm"
+      name="createprojectForm"
+      path="/createprojectStart"
+      scope="request"
+      type="com.vsa.struts.action.CreateprojectStartAction">
+      <forward name="success" path="/createproject.jsp" />
     </action>
     
     
