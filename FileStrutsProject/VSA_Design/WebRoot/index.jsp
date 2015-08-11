@@ -40,9 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		scaleToFit : "both",
 		centerStage : "horizontal",
 		minW : "50px",
-		maxW : "1024px",
-		width : "1021px",
-		height : "600px"
+		maxW : "760px",
+		width : "760px",
+		height : "500px"
 	}, {
 		dom : []
 	}, {
