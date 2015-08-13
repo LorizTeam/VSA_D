@@ -2,8 +2,8 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ page import="javax.servlet.http.HttpSession" %>
-<%@ page import="com.vsa.struts.form.DetailuserForm"  %>
-<%@ page import="com.vsa.struts.form.CreateproformForm"  %>
+<%@ page import="com.smict.struts.form.UserForm"  %>
+<%@ page import="com.smict.struts.form.CreateprojectForm"  %>
 <%@ page import="java.util.*" %>
 <html> 
 	<head>
@@ -33,7 +33,7 @@
 							    	<% if (request.getAttribute("buList") != null) {
 											List buList = (List)request.getAttribute("buList");
 											for (Iterator iter = buList.iterator(); iter.hasNext();) {
-									  			CreateproformForm createproject = (CreateproformForm) iter.next();
+									  			CreateprojectForm createproject = (CreateprojectForm) iter.next();
 									 %>
 							        <option value="<%=createproject.getBu_no() %>"><%=createproject.getBu_name() %></option>
 							        <%

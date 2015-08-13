@@ -26,7 +26,7 @@
 	         <% if (session.getAttribute("userList") != null) {
 					List userList = (List)session.getAttribute("userList");
 					for (Iterator iter = userList.iterator(); iter.hasNext();) {
-			  			DetailuserForm detailUser = (DetailuserForm) iter.next();
+			  			UserForm detailUser = (UserForm) iter.next();
 			  		
 			  		if(detailUser.getPosition_name().equals("Admin")){
 			  		

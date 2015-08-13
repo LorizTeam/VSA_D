@@ -20,9 +20,50 @@ public class CreateprojectForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
-	
+	private String bu_no,bu_name,slt_bu,tb_projectname,tb_projectyear;
+	public String getSlt_bu() {
+		return slt_bu;
+	}
+
+	public void setSlt_bu(String sltBu) {
+		slt_bu = sltBu;
+	}
+
+	public String getTb_projectname() {
+		return tb_projectname;
+	}
+
+	public void setTb_projectname(String tbProjectname) {
+		tb_projectname = tbProjectname;
+	}
+
+	public String getTb_projectyear() {
+		return tb_projectyear;
+	}
+
+	public void setTb_projectyear(String tbProjectyear) {
+		tb_projectyear = tbProjectyear;
+	}
 	public CreateprojectForm(String buNo, String buName) {
 		// TODO Auto-generated constructor stub
+		this.bu_no = buNo;
+		this.bu_name = buName;
+	}
+
+	public String getBu_no() {
+		return bu_no;
+	}
+
+	public void setBu_no(String buNo) {
+		bu_no = buNo;
+	}
+
+	public String getBu_name() {
+		return bu_name;
+	}
+
+	public void setBu_name(String buName) {
+		bu_name = buName;
 	}
 
 	/** 
