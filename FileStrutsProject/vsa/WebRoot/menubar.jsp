@@ -6,7 +6,6 @@
 	<script type="text/javascript" src="metro-ui/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="metro-ui/build/js/metro.js"></script>
 	<!-- Add metro-ui CSS And JavaScript End -->
-
 	<% if(session.getAttribute("username") == null)
 			response.sendRedirect("login.jsp");
 	%>

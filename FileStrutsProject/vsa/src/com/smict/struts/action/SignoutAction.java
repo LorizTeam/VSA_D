@@ -4,9 +4,7 @@
  */
 package com.smict.struts.action;
 
-import java.io.IOException;
-import java.util.List;
-
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -14,17 +12,16 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.smict.struts.data.DBProject;
-import com.smict.struts.form.UploadForm;
 
 /** 
  * MyEclipse Struts
- * Creation date: 08-13-2015
+ * Creation date: 08-05-2015
  * 
  * XDoclet definition:
- * @struts.action validate="true"
+ * @struts.action path="/signout" name="mainForm" input="/main.jsp" scope="request" validate="true"
+ * @struts.action-forward name="success" path="/login.jsp"
  */
-public class CreateprojectStartAction extends Action {
+public class SignoutAction extends Action {
 	/*
 	 * Generated Methods
 	 */
@@ -39,20 +36,10 @@ public class CreateprojectStartAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		UploadForm createprojectForm = (UploadForm) form;
-		DBProject dbproject = new DBProject();
-		String forwardText = "";
-		// TODO Auto-generated method stub
-		try {
-			List buList = dbproject.bu_nameList();
-			request.setAttribute("buList", buList);
-			forwardText = "success";
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
-		return mapping.findForward(forwardText);
+		HttpSession session = request.getSession();
+		// TODO Auto-generated method stub
+		session.invalidate();
+		return mapping.findForward("success");
 	}
 }

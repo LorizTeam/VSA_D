@@ -6,8 +6,8 @@
   <form-beans >
     <form-bean name="loginForm" type="com.smict.struts.form.LoginForm" />
     <form-bean name="userForm" type="com.smict.struts.form.UserForm" />
-    <form-bean name="createprojectForm" type="com.smict.struts.form.CreateprojectForm" />
-
+	<form-bean name="createprojectForm" type="com.smict.struts.form.UploadForm"/>
+    <form-bean name="businessForm" type="com.smict.struts.form.BusinessForm" />
   </form-beans>
 
   <global-exceptions />
@@ -21,21 +21,28 @@
       scope="request"
       type="com.smict.struts.action.LoginAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/main.jsp" />
     </action>
+    
     <action
-      attribute="createprojectForm"
-      input="createproject.jsp"
-      name="createprojectForm"
-      path="/createproject"
+      input="/main.jsp"
+      path="/signout"
       scope="request"
-      type="com.smict.struts.action.CreateprojectAction">
-      <set-property property="cancellable" value="true" />
+      type="com.smict.struts.action.SignoutAction">
+      <forward name="success" path="/login.jsp" />
+    </action>
+    
+    <action
+      name="createprojectForm" path="/createproject" input="/createproject.jsp"
+      type="com.smict.struts.action.CreateprojectAction"
+	  scope="session" 
+	  validate="true">
+	  <forward name="success" path="/main.jsp"/> 
     </action>
     <action path="/createprojectStart" type="com.smict.struts.action.CreateprojectStartAction">
-      <set-property property="cancellable" value="true" />
-      <forward name="success" path="createproject.jsp" />
+      <forward name="success" path="/createproject.jsp" />
     </action>
-
+	
   </action-mappings>
 
   <message-resources parameter="com.smict.struts.ApplicationResources" />

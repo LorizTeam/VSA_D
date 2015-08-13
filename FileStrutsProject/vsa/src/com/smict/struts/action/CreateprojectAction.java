@@ -4,13 +4,28 @@
  */
 package com.smict.struts.action;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import com.smict.struts.form.CreateprojectForm;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.upload.FormFile;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.smict.struts.data.DBProject;
+import com.smict.struts.form.UploadForm;
 
 /** 
  * MyEclipse Struts
@@ -34,7 +49,57 @@ public class CreateprojectAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		CreateprojectForm createprojectForm = (CreateprojectForm) form;// TODO Auto-generated method stub
-		return null;
+		UploadForm uploadForm = (UploadForm) form;// TODO Auto-generated method stub
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		Date date = new Date();
+		//Create Folder By Projectname
+		FileOutputStream outputStream = null;
+		File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+request.getParameter("tb_projectname"));
+		newFolder.mkdir();
+//		FormFile countpic = uploadForm.getUploadedFile();
+		//Upload Pic follow folder create
+//		String filePath = newFolder+"\\"+uploadForm.getUploadedFile().getFileName();
+		List picture = new ArrayList();
+		picture.add(uploadForm.getUploadedFile().getFileName().length());
+		int namelength = uploadForm.getUploadedFile().getFileName().length();
+		String filePath = newFolder+"\\"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+		try {
+			outputStream = new FileOutputStream(new File(filePath));
+			outputStream.write(uploadForm.getUploadedFile().getFileData());			
+		} catch (Exception e) {
+			ActionErrors errors = new ActionErrors();
+			errors.add("uploadedFile",new ActionMessage("errors.file.save",uploadForm.getUploadedFile().getFileName()));
+			saveErrors(request,errors);
+		}finally{
+			if(outputStream != null)
+				try {
+					outputStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		String project_name = request.getParameter("tb_projectname"),
+			   project_year = request.getParameter("tb_projectyear"),
+			   slc_bu = request.getParameter("slc_bu"),
+			   pic_path = "/upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+		DBProject dbpro = new DBProject();
+		try {
+			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(getErrors(request) == null ||getErrors(request).size() == 0){
+			uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());
+			return mapping.findForward("success");
+		}
+		else
+			return mapping.getInputForward();
 	}
 }

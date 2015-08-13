@@ -25,6 +25,11 @@ public class UserForm extends ActionForm {
 	public UserForm(String username, String password, String name,
 			String surname, String positionName) {
 		// TODO Auto-generated constructor stub
+		this.username = username;
+		this.password = password;
+		this.name = name;
+		this.surname = surname;
+		this.position_name = positionName;
 	}
 
 	/** 
