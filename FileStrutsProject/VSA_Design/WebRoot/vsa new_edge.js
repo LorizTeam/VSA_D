@@ -31,7 +31,7 @@
                             id: 'vsalogo',
                             display: 'none',
                             type: 'image',
-                            rect: ['0px', '469px', '236px', '178px', 'auto', 'auto'],
+                            rect: ['12px', '422px', '236px', '178px', 'auto', 'auto'],
                             opacity: 0,
                             fill: ["rgba(0,0,0,0)",im+"vsalogo.png",'0px','0px'],
                             filter: [0, 0, 0, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
@@ -40,38 +40,31 @@
                             id: 'vsctlogo',
                             display: 'none',
                             type: 'image',
-                            rect: ['143px', '478px', '432px', '147px', 'auto', 'auto'],
+                            rect: ['418px', '430px', '432px', '147px', 'auto', 'auto'],
                             opacity: 0,
                             fill: ["rgba(0,0,0,0)",im+"vsctlogo.png",'0px','0px'],
                             filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
                         },
                         {
-                            id: 'wvslogo_stroke2',
-                            type: 'image',
-                            rect: ['484px', '482px', '343px', '122px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"wvslogo%20stroke.png",'0px','0px']
-                        },
-                        {
                             id: 'plzlogo',
                             display: 'none',
                             type: 'image',
-                            rect: ['822px', '484px', '188px', '111px', 'auto', 'auto'],
+                            rect: ['800px', '436px', '188px', '111px', 'auto', 'auto'],
                             opacity: 0.20512799918652,
                             fill: ["rgba(0,0,0,0)",im+"plzlogo.png",'0px','0px'],
                             filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
                         },
                         {
                             id: 'vsalogo2',
-                            display: 'block',
                             type: 'image',
-                            rect: ['-2px', '468px', '240px', '180px', 'auto', 'auto'],
+                            rect: ['0px', '430px', '256px', '192px', 'auto', 'auto'],
                             overflow: 'hidden',
                             fill: ["rgba(0,0,0,0)",im+"vsalogo.png",'0px','0px']
                         },
                         {
                             id: 'architect',
                             type: 'image',
-                            rect: ['22px', '470px', '240px', '144px', 'auto', 'auto'],
+                            rect: ['57px', '462px', '164px', '99px', 'auto', 'auto'],
                             overflow: 'visible',
                             opacity: 1,
                             fill: ["rgba(0,0,0,0)",im+"architect.png",'0px','0px'],
@@ -80,25 +73,26 @@
                         {
                             id: 'drawing3',
                             type: 'image',
-                            rect: ['761px', '470px', '240px', '144px', 'auto', 'auto'],
+                            rect: ['791px', '461px', '164px', '99px', 'auto', 'auto'],
+                            opacity: 1,
                             fill: ["rgba(0,0,0,0)",im+"drawing3.png",'0px','0px']
                         },
                         {
                             id: 'plzlogo2',
                             type: 'image',
-                            rect: ['779px', '469px', '205px', '122px', 'auto', 'auto'],
+                            rect: ['778px', '443px', '205px', '122px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"plzlogo.png",'0px','0px']
                         },
                         {
                             id: 'vsa_logo_black22',
                             type: 'image',
-                            rect: ['641px', '209px', '449px', '299px', 'auto', 'auto'],
+                            rect: ['656px', '188px', '372px', '248px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"vsa%20logo%20black2.png",'0px','0px']
                         },
                         {
                             id: 'engineerin',
                             type: 'image',
-                            rect: ['282px', '470px', '240px', '144px', 'auto', 'auto'],
+                            rect: ['552px', '461px', '164px', '99px', 'auto', 'auto'],
                             opacity: 1,
                             fill: ["rgba(0,0,0,0)",im+"engineerin.png",'0px','0px'],
                             filter: [0, 0, 1, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
@@ -106,22 +100,30 @@
                         {
                             id: 'vsctlogo2',
                             type: 'image',
-                            rect: ['262px', '522px', '256px', '39px', 'auto', 'auto'],
+                            rect: ['511px', '491px', '256px', '39px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"vsctlogo2.png",'0px','0px']
                         },
                         {
                             id: 'interior',
                             type: 'image',
-                            rect: ['531px', '470px', '240px', '144px', 'auto', 'auto'],
+                            rect: ['292px', '462px', '164px', '99px', 'auto', 'auto'],
                             opacity: 1,
                             fill: ["rgba(0,0,0,0)",im+"interior.png",'0px','0px'],
                             filter: [0, 0, 1, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
                         },
                         {
-                            id: 'wvslogo_stroke22',
+                            id: 'wvs',
                             type: 'image',
-                            rect: ['532px', '518px', '218px', '40px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"wvslogo%20stroke2.png",'0px','0px']
+                            rect: ['309px', '467px', '129px', '49px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"wvs.png",'0px','0px']
+                        },
+                        {
+                            id: 'wvsCopy',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['309px', '479px', '129px', '49px', 'auto', 'auto'],
+                            opacity: 1,
+                            fill: ["rgba(0,0,0,0)",im+"wvs.png",'0px','0px']
                         }
                     ],
                     style: {
@@ -141,32 +143,32 @@
                         [
                             "eid35",
                             "filter.contrast",
-                            5189,
-                            476,
+                            5382,
+                            374,
                             "linear",
                             "${vsctlogo}",
                             '1',
                             '0'
                         ],
                         [
-                            "eid377",
-                            "opacity",
-                            3500,
-                            802,
+                            "eid579",
+                            "display",
+                            0,
+                            0,
                             "linear",
-                            "${wvslogo_stroke2}",
-                            '0',
-                            '1'
+                            "${wvsCopy}",
+                            'none',
+                            'none'
                         ],
                         [
-                            "eid378",
-                            "opacity",
-                            5664,
-                            421,
+                            "eid578",
+                            "display",
+                            7336,
+                            0,
                             "linear",
-                            "${wvslogo_stroke2}",
-                            '1',
-                            '0'
+                            "${wvsCopy}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid448",
@@ -179,20 +181,10 @@
                             '1'
                         ],
                         [
-                            "eid484",
-                            "top",
-                            7336,
-                            0,
-                            "linear",
-                            "${drawing3}",
-                            '470px',
-                            '470px'
-                        ],
-                        [
                             "eid117",
                             "opacity",
-                            2792,
-                            802,
+                            3500,
+                            630,
                             "linear",
                             "${vsctlogo}",
                             '0',
@@ -201,8 +193,8 @@
                         [
                             "eid498",
                             "opacity",
-                            3594,
-                            1116,
+                            4130,
+                            876,
                             "linear",
                             "${vsctlogo}",
                             '1',
@@ -211,8 +203,8 @@
                         [
                             "eid499",
                             "opacity",
-                            4710,
-                            954,
+                            5006,
+                            749,
                             "linear",
                             "${vsctlogo}",
                             '0.99',
@@ -221,10 +213,40 @@
                         [
                             "eid44",
                             "opacity",
-                            5664,
-                            421,
+                            5755,
+                            330,
                             "linear",
                             "${vsctlogo}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid312",
+                            "opacity",
+                            5842,
+                            671,
+                            "linear",
+                            "${engineerin}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid565",
+                            "opacity",
+                            2698,
+                            802,
+                            "linear",
+                            "${wvs}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid566",
+                            "opacity",
+                            5778,
+                            307,
+                            "linear",
+                            "${wvs}",
                             '1',
                             '0'
                         ],
@@ -259,14 +281,34 @@
                             '0px'
                         ],
                         [
-                            "eid506",
+                            "eid500",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${vsctlogo2}",
+                            "${vsalogo2}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid631",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid525",
+                            "width",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '164px',
+                            '164px'
                         ],
                         [
                             "eid37",
@@ -279,14 +321,14 @@
                             '0'
                         ],
                         [
-                            "eid483",
+                            "eid604",
                             "left",
-                            7336,
+                            6000,
                             0,
                             "linear",
-                            "${drawing3}",
-                            '761px',
-                            '761px'
+                            "${vsalogo}",
+                            '12px',
+                            '12px'
                         ],
                         [
                             "eid352",
@@ -319,24 +361,24 @@
                             '1'
                         ],
                         [
-                            "eid376",
-                            "filter.contrast",
-                            5282,
-                            382,
+                            "eid649",
+                            "opacity",
+                            7336,
+                            0,
                             "linear",
-                            "${wvslogo_stroke2}",
+                            "${interior}",
                             '1',
-                            '0'
+                            '1'
                         ],
                         [
-                            "eid482",
+                            "eid533",
                             "top",
                             7336,
                             0,
                             "linear",
                             "${architect}",
-                            '470px',
-                            '470px'
+                            '462px',
+                            '462px'
                         ],
                         [
                             "eid382",
@@ -347,6 +389,16 @@
                             "${vsalogo}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid568",
+                            "filter.contrast",
+                            5500,
+                            278,
+                            "linear",
+                            "${wvs}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid238",
@@ -365,36 +417,6 @@
                             0,
                             "linear",
                             "${engineerin}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid402",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${drawing3}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid244",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${vsctlogo}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid248",
-                            "display",
-                            2792,
-                            0,
-                            "linear",
-                            "${vsctlogo}",
                             'none',
                             'block'
                         ],
@@ -419,144 +441,54 @@
                             'block'
                         ],
                         [
-                            "eid479",
-                            "left",
-                            7336,
-                            0,
-                            "linear",
-                            "${interior}",
-                            '531px',
-                            '531px'
-                        ],
-                        [
-                            "eid512",
+                            "eid506",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${plzlogo2}",
+                            "${vsctlogo2}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid403",
+                            "eid580",
                             "display",
-                            0,
+                            7336,
                             0,
                             "linear",
-                            "${drawing3}",
+                            "${vsctlogo2}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid404",
-                            "display",
-                            5843,
-                            0,
+                            "eid402",
+                            "opacity",
+                            5842,
+                            671,
                             "linear",
                             "${drawing3}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid485",
-                            "left",
-                            7336,
-                            0,
-                            "linear",
-                            "${engineerin}",
-                            '282px',
-                            '282px'
-                        ],
-                        [
-                            "eid310",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${architect}",
                             '0',
                             '1'
                         ],
                         [
-                            "eid449",
-                            "left",
-                            5121,
-                            1031,
-                            "linear",
-                            "${vsa_logo_black22}",
-                            '314px',
-                            '641px'
-                        ],
-                        [
-                            "eid458",
-                            "left",
-                            6152,
-                            0,
-                            "linear",
-                            "${vsa_logo_black22}",
-                            '641px',
-                            '641px'
-                        ],
-                        [
-                            "eid509",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${wvslogo_stroke22}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid486",
-                            "top",
-                            7336,
-                            0,
-                            "linear",
-                            "${engineerin}",
-                            '470px',
-                            '470px'
-                        ],
-                        [
-                            "eid481",
-                            "left",
-                            7336,
-                            0,
-                            "linear",
-                            "${architect}",
-                            '22px',
-                            '22px'
-                        ],
-                        [
-                            "eid500",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${vsalogo2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid312",
+                            "eid653",
                             "opacity",
-                            5842,
-                            671,
+                            6513,
+                            823,
                             "linear",
-                            "${engineerin}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid354",
-                            "filter.contrast",
-                            5189,
-                            476,
-                            "linear",
-                            "${vsalogo}",
+                            "${drawing3}",
                             '1',
-                            '0'
+                            '0.99000000953674'
+                        ],
+                        [
+                            "eid524",
+                            "height",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '99px',
+                            '99px'
                         ],
                         [
                             "eid13",
@@ -579,14 +511,144 @@
                             '0'
                         ],
                         [
-                            "eid480",
-                            "top",
+                            "eid244",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${vsctlogo}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid248",
+                            "display",
+                            3500,
+                            0,
+                            "linear",
+                            "${vsctlogo}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid654",
+                            "display",
                             7336,
                             0,
                             "linear",
-                            "${interior}",
-                            '470px',
-                            '470px'
+                            "${vsctlogo}",
+                            'block',
+                            'block'
+                        ],
+                        [
+                            "eid635",
+                            "height",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            '192px',
+                            '192px'
+                        ],
+                        [
+                            "eid403",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${drawing3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid404",
+                            "display",
+                            5843,
+                            0,
+                            "linear",
+                            "${drawing3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid621",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${drawing3}",
+                            'block',
+                            'block'
+                        ],
+                        [
+                            "eid636",
+                            "width",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            '256px',
+                            '256px'
+                        ],
+                        [
+                            "eid572",
+                            "left",
+                            5006,
+                            1494,
+                            "linear",
+                            "${vsa_logo_black22}",
+                            '314px',
+                            '662px'
+                        ],
+                        [
+                            "eid532",
+                            "left",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '57px',
+                            '57px'
+                        ],
+                        [
+                            "eid310",
+                            "opacity",
+                            5842,
+                            671,
+                            "linear",
+                            "${architect}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid512",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${plzlogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid650",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${plzlogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid354",
+                            "filter.contrast",
+                            5189,
+                            476,
+                            "linear",
+                            "${vsalogo}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid230",

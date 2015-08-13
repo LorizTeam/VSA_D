@@ -21,7 +21,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.$("engineerin").show();
          
          
-         sym.$("wvslogo_stroke22").hide();
+         sym.$("wvsCopy").hide();
          sym.$("interior").show();
          
          sym.$("drawing3").show(); 
@@ -39,11 +39,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${vsalogo2}", "click", function(sym, e) {
-         window.open("2.html", "_blank");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4710, function(sym, e) {
          // insert code here
@@ -76,7 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.$("architect").show();
          
          
-         sym.$("wvslogo_stroke22").hide();
+         sym.$("wvsCopy").hide();
          sym.$("interior").show();
          
          sym.$("drawing3").show(); 
@@ -87,7 +83,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${interior}", "mouseover", function(sym, e) {
          sym.$("interior").hide();
-         sym.$("wvslogo_stroke22").show();
+         sym.$("wvsCopy").show();
          
          
          sym.$("vsctlogo2").hide();
@@ -104,20 +100,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${wvslogo_stroke22}", "mouseout", function(sym, e) {
-         sym.$("wvslogo_storke22").hide(); 
-         sym.$("interior").show();
-         
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${wvslogo_stroke22}", "click", function(sym, e) {
-         window.open("wvs.html", "_blank");
-         
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${plzlogo2}", "click", function(sym, e) {
          window.open("2.html", "_blank");
@@ -146,8 +131,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.$("architect").show();
          
          
-         sym.$("wvslogo_stroke22").hide();
+         sym.$("wvsCopy").hide();
          sym.$("interior").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${wvsCopy}", "click", function(sym, e) {
+         window.open("wvs.html", "_blank");
+         
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${wvsCopy}", "mouseover", function(sym, e) {
+         sym.$("wvsCopy").show(); 
+         sym.$("interior").hide();
+         
+         
 
       });
       //Edge binding end

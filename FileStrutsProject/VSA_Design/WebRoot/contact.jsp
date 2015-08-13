@@ -42,9 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!--header-->
-<div class="banner banner5"> 
+<div class=""> 
 	<div class="header width-page">
-			
 
 			<div class="navigation ">
 				<nav class="navbar navbar-default ">
@@ -62,9 +61,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						id="bs-example-navbar-collapse-1" >
 						<ul class="nav navbar-nav  top-nav">
 							<li class="l"><a href="index.jsp">Home</a></li>
-							<li><a href="typography.jsp">Work</a></li>
-							<li><a href="contact.jsp">Team</a></li>
-							<li><a href="contact.jsp">Award</a></li>
+							<li><a href="index.jsp">Work</a></li>
+							<li><a href="index.jsp">Team</a></li>
+							<li><a href="index.jsp">Award</a></li>
 							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 						<div class="clearfix"></div>
@@ -89,8 +88,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--contact-->
 <div class="contact">
 	<div class="container"> 
+	<br>
 		<h2>Contact</h2>
 		 <div class="contact-content">
+		 <p class="index-p">Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
+					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
+					Phayathai District, Bangkok 10400, Thailand</p>
        							<form>
 							    	<input type="text" class="textbox" value=" Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
 							    	<input type="text" class="textbox" value="Your E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}">
@@ -103,38 +106,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					              </div>
 								</form>
 							</div>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578265.0941403757!2d-98.9828708842255!3d39.41170802696131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1407515822047"> </iframe>
+							<iframe src="https://www.google.com/maps/d/embed?mid=zcosWbQxGNqI.kQrjPAXK9d3U" width="640" height="480"></iframe>
  						</div>	
  					</div>	        	
 <!--/contact-->	 
 <!--footer-->
 <div class="footer">
-		<div class="container">
-			<div class="col-md-3 ftr_navi ftr">
-				<h3>Navigation</h3>
-				<ul>
-					<li><a href="index.jsp">Home</a></li>
-					<li><a href="about.jsp">About</a></li>
-					<li><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="blog.jsp">Blog</a></li>
-					<li><a href="contact.jsp">Contact</a></li>
-				</ul>
-			</div>
-
-
-			<div class="col-md-5 get_in_touch ftr text-center">
-				<h3>Contact</h3>
-				<p>Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
-					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
-					Phayathai District, Bangkok 10400, Thailand</p>
-				<br>
-				<p>Tel. +66 2618 4316 Fax. +66 2618 4315</p>
-				<br> <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
-			</div>
-			<div class="col-md-1 ftr_navi ftr"></div>
-			<div class="col-md-3 ftr-logo">
-				<a href="index.jsp"><img src="images/vsa logo2.png"
-					class="img-responsive" alt="" /></a>
+		<div class="container-center">
+			
+			<div class="col-md-12 get_in_touch ftr text-center">
+				<p>Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a></p>						
 				<p>
 					© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>

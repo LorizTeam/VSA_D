@@ -281,13 +281,13 @@ img.zoom-img:hover {
 }
 .wel-text p {
 	font-size: 1em;
-	line-height: 1.9em;
-	padding-top: 2.6em;
+	line-height: 2em;
+	padding-top: 0em;
 	color: #999;
-	text-indent: 25px;
+	text-indent: 30px;
 	word-spacing: 3px;
 	letter-spacing: 1.5px;
-
+	text-align: left;
     
 }
 .index-portfilio {
@@ -626,7 +626,7 @@ ul.social-icons li a:hover {
 /*--footer--*/
 .footer {
 	border-top: 1.5px solid #eee;
-	padding: 4em 0;
+	padding: 1em 0;
 	background-color: #242424;
 }
 .ftr {
@@ -669,7 +669,7 @@ ul.social-icons li a:hover {
 	text-decoration: none;
 }
 .ftr-logo {
-	margin-top: 2em;
+	
 }
 .ftr-logo a:hover {
 	text-decoration: none;
@@ -2635,9 +2635,9 @@ div#nivo-lightbox-demo img {
 }
 
 .container-center{
-	  margin-left: 15% !important;
-  	  margin-right: 15% !important;
-  	  width: 70%;
+	  margin-left: 10% !important;
+  	  margin-right: 10% !important;
+  	  width: 80% !important; 
 }
 .width-page{	
 	width: 100% !important;
@@ -2650,4 +2650,9 @@ div#nivo-lightbox-demo img {
 	text-align: center;
 	margin-left:auto !important;
 	margin-right:auto !important;
+}
+#project figure img{ 
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
 }

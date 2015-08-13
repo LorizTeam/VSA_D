@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/uikit.min.css" />
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,7 +18,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	content="Frederick Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript">
+	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
 </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
@@ -87,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<!--header-->
-	<div>
+	<div id="header">
 
 
 		<div class="header width-page">
@@ -103,14 +108,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="icon-bar"> </span>
 						</button>
 					</div>
-				
+
 					<div class="collapse navbar-collapse nav-wil container-center"
-						id="bs-example-navbar-collapse-1" >
+						id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav  top-nav">
-							<li class="l"><a href="index.jsp">Home</a></li>
-							<li><a href="typography.jsp">Work</a></li>
-							<li><a href="contact.jsp">Team</a></li>
-							<li><a href="contact.jsp">Award</a></li>
+							<li class="l"><a href="#Stage">Home</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#award">Award</a></li>
 							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 						<div class="clearfix"></div>
@@ -136,112 +141,153 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<br>
 	<br>
-	<div class="welcome">
-		<div class="container">
+	<div class="welcome container-center">
+		<div class="container-center">
 			<h3>Vorrarat Supachocke Architect(VSa)</h3>
+			<br>
+			<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by
+					Vorrat Foythong and Supachoke Kittipatmeta.</p>
+				<br>
 			
-		</div>
-	</div>
-	<div class="welcome-bottom">
-		<div class="container">
+			
+		
 			<div class="col-md-6 wel-img">
 				<a href="single.html" class="mask"> <img src="images/wlb.jpg"
 					class="img-responsive zoom-img" alt="">
 				</a>
 			</div>
 			<div class="col-md-6 wel-text">
-				<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by Vorrat Foythong and Supachoke Kittipatmeta.</p>
-				<p>The main of our Architecture concerning about site context, project's character and project's
-					requirement are combined to produce the architectural design which is able <b>BALANCE</b>
-					the client's need and environment.
+				
+				<p>
+					The main of our Architecture concerning about site context,
+					project's character and project's requirement are combined to
+					produce the architectural design which is able <b>BALANCE</b> the
+					client's need and environment.
 				</p>
 			</div>
 		</div>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<!--grid-hover-->
-	<div class="index-portfilio">
-		<div class="container">
+	<div id="work" class="index-portfilio">
+		<div class="container-center">
 			<h3>OUR WORK</h3>
 			<p class="index-p">Dolor nunc vule putateulr ips dol consec.Donec
 				sem ertet laciniate ultricie upie disse utes comete dolo lectus.
 				fgilla itollicil tua ludin dolor nec met quam accumsan.</p>
-			<ul id="fillpro" class="nav nav-pills ">
-				<li data-uk-filter=""><a href="">ALL</a></li>
-				<li data-uk-filter="y2009"><a href="">2009</a></li>
-				<li data-uk-filter="y2010"><a href="">2010</a></li>
-				<li data-uk-filter="y2013"><a href="">2013</a></li>
-				<li data-uk-filter="y2014"><a href="">2014</a></li>
-			</ul>
-			<div class="grid uk-grid minh"
-				data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-				<figure class="effect-layla" data-uk-filter="y2009">
-					<img src="images/project/4.jpg" alt="img06" />
-					<figcaption>
-						<h2>
-							Baan Sukhumvit <span>2009</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<figure class="effect-layla" data-uk-filter="y2009">
-					<img src="images/project/3.jpg" alt="img03" />
-					<figcaption>
-						<h2>
-							Sara Pisitkun <span>2009</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<figure class="effect-layla" data-uk-filter="y2010">
-					<img src="images/project/1.jpg" alt="img03" />
-					<figcaption>
-						<h2>
-							teach tech Office<span>2010</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<figure class="effect-layla" data-uk-filter="y2013">
-					<img src="images/project/2.jpg" alt="img03" />
-					<figcaption>
-						<h2>
-							casa seaside Rayong <span>2013</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<figure class="effect-layla" data-uk-filter="y2013">
-					<img src="images/project/5.jpg" alt="img03" />
-					<figcaption>
-						<h2>
-							KITTIPATMETA HOUSE <span>2013</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<figure class="effect-layla" data-uk-filter="y2014">
-					<img src="images/project/6.jpg" alt="img03" />
-					<figcaption>
-						<h2>
-							the trust amata <span>2014</span>
-						</h2>
-						<p>When Layla appears, she brings an eternal summer along.</p>
-						<a href="#">View more</a>
-					</figcaption>
-				</figure>
-				<div class="clearfix"></div>
-			</div>
+			<!-- project and fillter -->
+			<article class=" artic container-center " id="project">
+				<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
+					<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
+					<li data-uk-filter="corporate"><a href="">Corporate</a></li>
+					<li data-uk-filter="residential"><a href="">Residential</a></li>
+					<li data-uk-filter="commercial"><a href="">Commercial</a></li>
+					<form class="uk-form">
+
+						<select>
+							<option selected>Sort by</option>
+							<option data-uk-sort="my-category:desc">YEAR</option>
+							<option data-uk-sort="my-category">NONE</option>
+						</select>
+					</form>
+				</ul>
+				<section class="uk-grid"
+					data-uk-grid="{controls: '#fillpro',gutter:0.1}">
+					<figure data-uk-filter="corporate" data-my-category="1992"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/2.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								corporate</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="residential" data-my-category="1995"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/3.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								residential</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="commercial" data-my-category="1999"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/4.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								commercial</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="residential" data-my-category="2015"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/5.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								residential</figcaption> </a>
+					</figure>
+
+					<figure data-uk-filter="residential" data-my-category="2015"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/5.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								residential</figcaption> </a>
+					</figure>
+
+					<figure data-uk-filter="commercial" data-my-category="1999"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/4.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								commercial</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="residential" data-my-category="1995"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/3.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								residential</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="corporate" data-my-category="1992"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/2.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								corporate</figcaption> </a>
+					</figure>
+					<figure data-uk-filter="corporate" data-my-category="1992"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#my-id'}"><img
+							class="uk-overlay-scale" src="images/project/2.jpg" >
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								corporate</figcaption> </a>
+					</figure>
+					
+				</section>
+			</article>
+			<!-- project and fillter -->
 		</div>
 	</div>
+	
 	<!--grid-hover-->
 	<!--index-team-->
-	<div class="content-team">
-		<div class="container team">
+	<div id="team" class="content-team">
+		<div class="container-center team">
 			<h3 class="m_1">Our team</h3>
 			<p class="content-t">Dolor nunc vule putateulr ips dol
 				consec.Donec sem ertet laciniate ultricie upie disse utes comete
@@ -285,8 +331,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--/index-team-->
 	<!--Award-->
-	<div class="content-team">
-		<div class="container team">
+	<div id="award" class="content-team">
+		<div class="container-center team">
 			<h3 class="m_1">Award / Published</h3>
 			<p class="content-t">The BCI Asia Top 10 Awards provides an
 				overview of the regional building and construction industry by
@@ -335,32 +381,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/Award-->
 	<!--footer-->
 	<div class="footer">
-		<div class="container">
-			<div class="col-md-3 ftr_navi ftr">
-				<h3>Navigation</h3>
-				<ul>
-					<li><a href="index.jsp">Home</a></li>
-					<li><a href="about.jsp">About</a></li>
-					<li><a href="gallery.jsp">Gallery</a></li>
-					<li><a href="blog.jsp">Blog</a></li>
-					<li><a href="contact.jsp">Contact</a></li>
-				</ul>
-			</div>
-
-
-			<div class="col-md-5 get_in_touch ftr text-center">
-				<h3>Contact</h3>
-				<p>Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
-					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
-					Phayathai District, Bangkok 10400, Thailand</p>
-				<br>
-				<p>Tel. +66 2618 4316 Fax. +66 2618 4315</p>
-				<br> <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
-			</div>
-			<div class="col-md-1 ftr_navi ftr"></div>
-			<div class="col-md-3 ftr-logo">
-				<a href="index.jsp"><img src="images/vsa logo2.png"
-					class="img-responsive" alt="" /></a>
+		<div class="container-center">
+			
+			<div class="col-md-12 get_in_touch ftr text-center">
+				<p>Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a></p>						
 				<p>
 					© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>
@@ -373,8 +397,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$(document).ready(function() {
 			/*
 			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
+			container-centerID: 'toTop', // fading element id
+			container-centerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
 			easingType: 'linear' 
 			};
@@ -384,7 +408,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		});
 	</script>
-
+	<script>
+			$(function() {
+				$('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+							$('html,body').animate({
+								scrollTop : target.offset().top
+							}, 1000);
+							return false;
+						}
+					}
+				});
+			});
+		</script>
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->
