@@ -138,14 +138,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<div class="welcome">
 		<div class="container">
-			<h3>Vorrarat Supachocke Architect(VSA)</h3>
-			<p>Dolor nunc vule putateulr ips dol consec.Donec sem ertet
-				laciniate ultricie upie disse utes comete dolo lectus. fgilla
-				itollicil tua ludin dolor nec met quam accumsan. Dolore condime
-				netus lullam utlacus adipiscing ipsum molestie euismod lore
-				estibulum vel libero ipsum sit amet sollicitudin ante. Aenean
-				imperdiet aliquet hendreritunc interdum ullamcorper lec tuset
-				pellentesqu enim interdum atuspendisse malesuada dignissim.</p>
+			<h3>Vorrarat Supachocke Architect(VSa)</h3>
+			
 		</div>
 	</div>
 	<div class="welcome-bottom">
@@ -156,14 +150,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</div>
 			<div class="col-md-6 wel-text">
-				<p>Dolor nunc vule putateulr ips dol consec.Donec sem ertet
-					laciniate ultricie upie disse utes comete dolo lectus. fgilla
-					itollicil tua ludin dolor nec met quam accumsan. Dolore condime
-					netus lullam utlacus adipiscing ipsum molestie euismod lore
-					estibulum vel libero ipsum sit amet sollicitudin ante. Aenean
-					imperdiet aliquet hendreritunc interdum ullamcorper lec tuset
-					pellentesqu enim interdum atuspendisse malesuada dignissim.amet
-					sollicitudin ante. Aenean imperdiet .</p>
+				<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by Vorrat Foythong and Supachoke Kittipatmeta.</p>
+				<p>The main of our Architecture concerning about site context, project's character and project's
+					requirement are combined to produce the architectural design which is able <b>BALANCE</b>
+					the client's need and environment.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -296,7 +287,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--Award-->
 	<div class="content-team">
 		<div class="container team">
-			<h3 class="m_1">Award</h3>
+			<h3 class="m_1">Award / Published</h3>
 			<p class="content-t">The BCI Asia Top 10 Awards provides an
 				overview of the regional building and construction industry by
 				recognizing the top architectural firms and developers that had the
