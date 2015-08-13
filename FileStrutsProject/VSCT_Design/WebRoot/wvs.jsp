@@ -201,7 +201,7 @@
 		<br><br>
 		<div class=" uk-grid ">
 			<div class="uk-width-1-10 uk-container-center">
-			<a href="index.html" ><img src="images/vsa logo black.png"  /></a>
+			<a href="index.jsp" ><img src="images/vsa logo black.png"  /></a>
 			</div>
 		</div>	
 		<br>
