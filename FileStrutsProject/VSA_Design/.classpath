@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-1.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javax.servlet.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javax.servlet.jsp.jstl.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jstl-impl.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org-apache-commons-codec.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

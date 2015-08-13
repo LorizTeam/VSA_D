@@ -6,6 +6,8 @@
   <form-beans >
     <form-bean name="loginForm" type="com.vsa.struts.form.LoginForm" />
     <form-bean name="mainForm" type="com.vsa.struts.form.MainForm" />
+    <form-bean name="createprojectForm" type="com.vsa.struts.form.CreateprojectForm" />
+    <form-bean name="createproformForm" type="com.vsa.struts.form.CreateproformForm" />
   </form-beans>
 
   <global-exceptions />
@@ -36,7 +38,7 @@
       type="com.vsa.struts.action.MainAction">
       <set-property property="cancellable" value="true" />
     </action>
-<<<<<<< HEAD
+
     <action
       attribute="mainForm"
       input="/main.jsp"
@@ -47,29 +49,16 @@
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/login.jsp" />
     </action>
-    <action
-      attribute="createprojectForm"
-      input="/createproject.jsp"
-      name="createprojectForm"
-      path="/createproject"
+    <action name="createproformForm" path="/createproject" input="/createproject.jsp"
       scope="request"
       type="com.vsa.struts.action.CreateprojectAction">
-      <set-property property="cancellable" value="true" />
-      <forward name="success" path="/createprojectStart.do" />
+      <forward name="success" path="/createproject.jsp" />
     </action>
-    <action
-      attribute="createprojectForm"
-      name="createprojectForm"
-      path="/createprojectStart"
+    <action name="createproformForm" path="/createprojectStart"
       scope="request"
       type="com.vsa.struts.action.CreateprojectStartAction">
       <forward name="success" path="/createproject.jsp" />
     </action>
-    
-=======
->>>>>>> origin/master
-    
-
   </action-mappings>
 
   <message-resources parameter="com.vsa.struts.ApplicationResources" />

@@ -4,20 +4,14 @@
  */
 package com.vsa.struts.form;
 
-import java.io.File;
-import java.text.Normalizer.Form;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
 /** 
  * MyEclipse Struts
- * Creation date: 08-05-2015
+ * Creation date: 08-12-2015
  * 
  * XDoclet definition:
  * @struts.form name="createprojectForm"
@@ -26,7 +20,31 @@ public class CreateprojectForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
+	private static final long serialVersionUID = 2025885369419610335L;
+	/** 
+	 * Method reset
+	 * @param mapping
+	 * @param request
+	 */
 	private String bu_no,bu_name;
+	private FormFile uploadedFile = null;
+	private String fileName = null;
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public FormFile getUploadedFile() {
+		return uploadedFile;
+	}
+
+	public void setUploadedFile(FormFile uploadedFile) {
+		this.uploadedFile = uploadedFile;
+	}
 	public String getBu_no() {
 		return bu_no;
 	}
@@ -48,56 +66,7 @@ public class CreateprojectForm extends ActionForm {
 		this.bu_no = buNo;
 		this.bu_name = buName;
 	}
-
-	/** 
-	 * Method validate
-	 * @param mapping
-	 * @param request
-	 * @return ActionErrors
-	 */
-
-	/** 
-	 * Method reset
-	 * @param mapping
-	 * @param request
-	 */
-//	private List formFile = new ArrayList();
-//	private List<File> image = new ArrayList<File>();
-//	private FormFile[] image1;
-//	
-//	private String[] fileName;
-//	private String submit;
-//	
-//	public List getFormFile() {
-//		return formFile;
-//	}
-//
-//	public void setFormFile(List formFile) {
-//		this.formFile = formFile;
-//	}
-//
-//	public List<File> getImage() {
-//		return (List<File>) image;
-//	}
-//
-//	public void setImage(List<File> image) {
-//		this.image = image;
-//	}
-//
-//	public String[] getFileName() {
-//		return fileName;
-//	}
-//
-//	public void setFileName(String[] fileName) {
-//		this.fileName = fileName;
-//	}
-//
-//	public String getSubmit() {
-//		return submit;
-//	}
-//
-//	public void setSubmit(String submit) {
-//		this.submit = submit;
-//	}
-		
+	public void reset(ActionMapping mapping, HttpServletRequest request) {
+		// TODO Auto-generated method stub
+	}
 }

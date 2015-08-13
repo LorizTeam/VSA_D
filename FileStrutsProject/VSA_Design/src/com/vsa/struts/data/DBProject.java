@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import com.vsa.struts.data.DBConnect;
+import com.vsa.struts.form.CreateproformForm;
 import com.vsa.struts.form.CreateprojectForm;
 
 
@@ -26,7 +27,7 @@ public class DBProject {
 		while(rs.next()){
 			bu_no = rs.getString("bu_no");
 			bu_name = rs.getString("bu_name");
-			buList.add(new CreateprojectForm(bu_no,bu_name));
+			buList.add(new CreateproformForm(bu_no,bu_name));
 		}
 		return buList;
 	}

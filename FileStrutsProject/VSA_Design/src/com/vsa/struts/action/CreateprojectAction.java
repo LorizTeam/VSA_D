@@ -12,16 +12,27 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.jstl.core.Config;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
 import org.apache.struts.upload.FormFile;
 
+import org.apache.commons.fileupload.*;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import com.vsa.struts.form.CreateprojectForm;
+import com.geekonjava.fileupload.FileUploading;
+import java.util.ArrayList;
+import java.util.HashMap;
 //import com.vsa.struts.form.CreateprojectForm;
 	
 /** 
@@ -44,15 +55,24 @@ public class CreateprojectAction extends Action {
 	 * @param response
 	 * @return ActionForward
 	 */
+	
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 //		CreateprojectForm createprojectForm = (CreateprojectForm) form;
-		
+		FileOutputStream outputStream = null;
 		// TODO Auto-generated method stub
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 		Date date = new Date();
+//		String namepic = createprojectForm.getUploadedFile().getFileName();
 //		String[] imagepath = createprojectForm.getImage();
-		String imagepath = (String) request.getParameter("image");
+//		Object imagepath = request.getParameter("image");
+		String imagepath = getServlet().getServletContext().getRealPath("/")+"upload\\";
+		ArrayList<String> imagename = new ArrayList<String>();
+	    imagename.add("img1");
+	    ArrayList<String> dataname = new ArrayList<String>();
+	      dataname.add("tb_projectname");
+	    HashMap map = FileUploading.UploadFile(imagepath,imagename,request);
+	   
 		String tb_projectyear = (String) request.getParameter("tb_projectyear");
 		// Keep path to upload
 //		String imagepath1 = null;
