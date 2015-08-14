@@ -8,6 +8,8 @@
     <form-bean name="userForm" type="com.smict.struts.form.UserForm" />
 	<form-bean name="createprojectForm" type="com.smict.struts.form.UploadForm"/>
     <form-bean name="businessForm" type="com.smict.struts.form.BusinessForm" />
+    <form-bean name="editprojectForm" type="com.smict.struts.form.EditprojectForm" />
+    <form-bean name="afterchooseForm" type="com.smict.struts.form.AfterchooseForm" />
   </form-beans>
 
   <global-exceptions />
@@ -33,14 +35,34 @@
     </action>
     
     <action
-      name="createprojectForm" path="/createproject" input="/createproject.jsp"
-      type="com.smict.struts.action.CreateprojectAction"
-	  scope="session" 
-	  validate="true">
-	  <forward name="success" path="/main.jsp"/> 
+      attribute="createprojectForm"
+      input="/createproject.jsp"
+      name="createprojectForm"
+      path="/createproject"
+      type="com.smict.struts.action.CreateprojectAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/afterchoose.jsp" />
     </action>
     <action path="/createprojectStart" type="com.smict.struts.action.CreateprojectStartAction">
       <forward name="success" path="/createproject.jsp" />
+    </action>
+    <action
+      attribute="editprojectForm"
+      input="/editproject.jsp"
+      name="editprojectForm"
+      path="/editproject"
+      scope="request"
+      type="com.smict.struts.action.EditprojectAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="afterchooseForm"
+      input="/afterchoose.jsp"
+      name="afterchooseForm"
+      path="/afterchoose"
+      scope="request"
+      type="com.smict.struts.action.AfterchooseAction">
+      <set-property property="cancellable" value="true" />
     </action>
 	
   </action-mappings>

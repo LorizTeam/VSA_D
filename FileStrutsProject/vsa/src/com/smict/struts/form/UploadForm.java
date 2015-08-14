@@ -62,8 +62,6 @@ public class UploadForm extends ActionForm {
 			if(!uploadedFile.getContentType().equalsIgnoreCase("image/jpeg") && !uploadedFile.getContentType().equalsIgnoreCase("image/jpg")
 					&& !uploadedFile.getContentType().equalsIgnoreCase("image/pjpeg"))
 				errors.add("uploadedFile", new ActionMessage("errors.file.type", uploadedFile.getFileName(),uploadedFile.getContentType()));
-			if(uploadedFile.getFileSize() > 50000)
-				errors.add("uploadedFile", new ActionMessage("errors.file.size",uploadedFile.getFileName(),uploadedFile.getFileSize()));
 		}
 		return errors;
 	}

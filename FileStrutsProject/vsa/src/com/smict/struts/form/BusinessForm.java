@@ -27,7 +27,12 @@ public class BusinessForm extends ActionForm {
 	 * @param request
 	 * @return ActionErrors
 	 */
+	//for createproject.jsp
 	private String bu_no,bu_name;
+	
+	//for afterchoose.jsp
+	private String pj_no,pj_name,pj_year,pj_typename,pic_path,pic_statusname;
+	
 	
 	public BusinessForm(){}
 	public BusinessForm(String forwhat,String bu_no,String bu_name){
@@ -37,6 +42,12 @@ public class BusinessForm extends ActionForm {
 		}
 	}
 	
+	public BusinessForm(String forwhat, String pjNo, String pjName,
+			String pjYear, String pjTypename, String buName, String picPath,
+			String picstatusName) {
+		// TODO Auto-generated constructor stub
+		
+	}
 	public String getBu_no() {
 		return bu_no;
 	}
@@ -52,7 +63,42 @@ public class BusinessForm extends ActionForm {
 	public void setBu_name(String buName) {
 		bu_name = buName;
 	}
-
+	public String getPj_no() {
+		return pj_no;
+	}
+	public void setPj_no(String pjNo) {
+		pj_no = pjNo;
+	}
+	public String getPj_name() {
+		return pj_name;
+	}
+	public void setPj_name(String pjName) {
+		pj_name = pjName;
+	}
+	public String getPj_year() {
+		return pj_year;
+	}
+	public void setPj_year(String pjYear) {
+		pj_year = pjYear;
+	}
+	public String getPj_typename() {
+		return pj_typename;
+	}
+	public void setPj_typename(String pjTypename) {
+		pj_typename = pjTypename;
+	}
+	public String getPic_path() {
+		return pic_path;
+	}
+	public void setPic_path(String picPath) {
+		pic_path = picPath;
+	}
+	public String getPic_statusname() {
+		return pic_statusname;
+	}
+	public void setPic_statusname(String picStatusname) {
+		pic_statusname = picStatusname;
+	}
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		// TODO Auto-generated method stub

@@ -82,11 +82,13 @@ public class CreateprojectAction extends Action {
 		String project_name = request.getParameter("tb_projectname"),
 			   project_year = request.getParameter("tb_projectyear"),
 			   slc_bu = request.getParameter("slc_bu"),
+			   slc_typepj = request.getParameter("slc_typepj"),
 			   pic_path = "/upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 		DBProject dbpro = new DBProject();
 		try {
-			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path);
-			
+			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
+			List Listforafterchoose = dbpro.afterchoose_edit(project_name);
+			request.setAttribute("Listforafterchoose", Listforafterchoose);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

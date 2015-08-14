@@ -1,11 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-<%@ page import="javax.servlet.http.HttpSession" %>
-<%@ page import="com.smict.struts.form.UserForm"  %>
+<%@ include file="defaultimport.jsp" %>
 <%@ page import="com.smict.struts.form.BusinessForm"  %>
-<%@ page import="java.util.*"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,14 +11,15 @@
 	<%@ include file="menubar.jsp" %>
 	<script type="text/javascript">
 		$(document).ready(function() {
-            $('#call').click(function ()
+            $('#slc_bu').change(function ()
             {
                 $.ajax({
                     type: "post",
-                    url: "testme", //this is my servlet
-                    data: "input=" +$('#ip').val()+"&output="+$('#op').val(),
-                    success: function(msg){      
-                            $('#output').append(msg);
+                    url: "ajax_slc_pjtype.jsp", //this is my servlet
+                    data: {slc_bu:$('#slc_bu').val()},
+                    success: function(result){      
+                            $('#slc_typepj').html(result);
+//								alert(result);
                     }
                 });
             });
@@ -39,7 +34,8 @@
                     	<div class="row cells2" >
                     		<div class="cell">
 	                    		Select Your Business <div class="input-control select text success" >
-								    <select name="slc_bu">
+								    <select name="slc_bu" id="slc_bu">
+								    	<option value=null>Please Choose Business</option>
 								    	<% if (request.getAttribute("buList") != null) {
 												List buList = (List)request.getAttribute("buList");
 												for (Iterator iter = buList.iterator(); iter.hasNext();) {
@@ -54,31 +50,35 @@
 								</div>
                     		</div>
                     		<div class="cell">
-                    			Select Type Project <div class="input-control select text success" >
+                    			Select Project Type <div class="input-control select text success" >
 								    <select name="slc_typepj" id="slc_typepj">
+								    	<option value=null>Please Choose Business First</option>
 								    </select>
 								</div>
                     		</div>
                     		
                     	</div>
-                    	<div class="row" >
-                    		Project Name <div class="input-control text success" data-role="input" >
-							    <input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" required>
-							    <button class="button helper-button clear"><span class="mif-cross"></span></button>
+                    	<div class="row cells2" >
+                    		<div class="cell" >
+	                    		Project Name <div class="input-control text success" data-role="input" >
+											    <input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" required>
+											    <button class="button helper-button clear"><span class="mif-cross"></span></button>
+											</div>
 							</div>
-							&emsp;
-							Project Year <div class="input-control text success" data-role="input" >
-							    <input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" required>
-							    <button class="button helper-button clear"><span class="mif-cross"></span></button>
-							</div>
+							<div class="cell" >
+								Project Year <div class="input-control text success" data-role="input" >
+											    <input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" required>
+											    <button class="button helper-button clear"><span class="mif-cross"></span></button>
+											</div>
+                    		</div>
                     	</div>
                     	<div class="row">
 							Select Image : <div class="input-control file text success" data-role="input">
-								    <html:file property="uploadedFile"/><br/>
-								    <button class="button"><span class="mif-folder fg-red"></span></button>
-							</div>
+												<html:file property="uploadedFile"/><br/>
+												<button class="button"><span class="mif-folder fg-red"></span></button>
+											</div>
 						</div>
-						<div class="row">
+						<div class="row align-center">
 							<button type="submit" name="submit" id="submit" class="button success">Create</button>
 						</div>
                     </div>
