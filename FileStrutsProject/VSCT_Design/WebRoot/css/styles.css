@@ -4,6 +4,12 @@
   font-weight: 400;
   src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
 }
+#project figure  img{ 
+	width: 100% !important;
+	height: 250px!important;
+	overflow: hidden!important;
+}
+
 .width-page{
 	width: 100%;
 }
@@ -15,10 +21,10 @@ html{
 }
 
 .container{
-	width: 90%;
-	margin-left:5%;
-	margin-right:5%;
-	z-index: 0!important;
+	width: 70%;
+	margin-left:15%;
+	margin-right:15%;
+	
 }
 
 .fixnav{
@@ -45,30 +51,30 @@ nav a{
 	bottom: 0px;
 	height:50px;
 	min-width: 800px;
+	z-index: 1111;
 }
 .icon-head{
-	margin-top:20px;
-	margin-bottom:20px;
-}
+	padding:50px;
 
 .header{
 	margin-top:20px;
 }
 
-.artic{
-	margin-bottom:50px;
-	margin-top:50px;
+.divarti{
+	margin-bottom:50px!important;
+	margin-top:50px!important;
 }
 #contact,#people{
 	z-index: -1;
 }
 .footer{
-	margin:70px 0px 0px;!important;
+	margin:70px 0px 0px;
 	
 	width: 100%;
 	
 }
 #people{
+	margin-top:50px;
 	background-color: #E0E0EB;
 }
 

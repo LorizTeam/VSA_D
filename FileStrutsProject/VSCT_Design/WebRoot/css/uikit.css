@@ -43,13 +43,13 @@ a:hover {
  */
 a,
 .uk-link {
-  color: #0077dd;
+  color: #FF9933;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover,
 .uk-link:hover {
-  color: #005599;
+  color: #FF6600;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -2094,7 +2094,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-subnav > * > :hover,
 .uk-subnav > * > :focus {
-  color: #0077dd;
+  color: #FF9933;
   text-decoration: none;
 }
 /*
@@ -2113,7 +2113,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 .uk-subnav-line > :nth-child(n+2):before {
   margin-right: 10px;
-  border-left: 1px solid #dddddd;
+ 
 }
 /* Modifier: 'subnav-pill'
  ========================================================================== */
@@ -2128,7 +2128,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-subnav-pill > * > :hover,
 .uk-subnav-pill > * > :focus {
   background: #eeeeee;
-  color: #444444;
+  color: #FF9933;
   text-decoration: none;
   /* 2 */
   outline: none;
@@ -2138,7 +2138,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  * `li` needed for higher specificity to override hover
  */
 .uk-subnav-pill > .uk-active > * {
-  background: #00a8e6;
+  background: #FF9933;
   color: #ffffff;
 }
 /* Disabled state
@@ -5638,7 +5638,7 @@ a.uk-thumbnail:focus {
 /* Modifier `uk-overlay-background`
  ========================================================================== */
 .uk-overlay-background {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.78);
 }
 /* Modifier `uk-overlay-image`
  ========================================================================== */

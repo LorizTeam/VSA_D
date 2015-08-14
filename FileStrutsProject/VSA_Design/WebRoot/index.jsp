@@ -10,7 +10,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/uikit.min.css" />
+<link rel="stylesheet" href="css/uikit.css" />
+
+
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
-<script src="js/components/lightbox.js" type="text/javascript"></script>
+
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400'
 	rel='stylesheet' type='text/css'>
@@ -40,35 +42,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	visibility: hidden;
 }
 </style>
-<script type="text/javascript">
-	AdobeEdge.loadComposition('vsa%20new', 'EDGE-1385226', {
-		scaleToFit : "both",
-		centerStage : "horizontal",
-		minW : "50px",
-		maxW : "760px",
-		width : "760px",
-		height : "500px"
-	}, {
-		dom : []
-	}, {
-		dom : [
 
-		],
-		style : {
-			'${symbolSelector}' : {
-				isStage : true,
-				rect : [ undefined, undefined, '1024px', '768px' ],
-				fill : [ "rgba(255,255,255,1)" ]
-			}
-		}
-	});
-</script>
 <!--Adobe Edge Runtime End-->
 
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/uikit.min.js" type="text/javascript"></script>
 <script src="js/components/grid.min.js" type="text/javascript"></script>
-
+<link rel="stylesheet" href="fotorama.css" />
+<script src="fotorama.js" type="text/javascript"></script>
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -126,17 +107,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<div id="Stage" class="EDGE-1385226"></div>
+		
 
 	</div>
 	<div class="clearfix"></div>
 	<div></div>
 	<!--/header-->
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
 	<br>
 	<br>
 	<br>
@@ -424,6 +401,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 		</script>
+		<!-- This is the modal -->
+	<div id="my-id" class="uk-modal">
+		<div class="uk-modal-dialog">
+			
+			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
+				data-loop="true">
+				<img src="images/project/2.jpg" alt="" /> <img
+					src="images/project/3.jpg" alt="" /> <img src="images/project/4.jpg"
+					alt="" /> <img src="images/project/5.jpg" alt="" />
+			</div>
+
+		</div>
+	</div>
+	<!-- This is the modal -->
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->
