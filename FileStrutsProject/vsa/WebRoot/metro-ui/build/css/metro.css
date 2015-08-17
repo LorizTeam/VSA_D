@@ -17408,3 +17408,8 @@ p [data-hint] {
   -webkit-flex: 0 0 1000px;
   flex: 0 0 1000px;
 }
+.img-responsive{
+display:block;
+max-width:100%;
+height:auto;
+}

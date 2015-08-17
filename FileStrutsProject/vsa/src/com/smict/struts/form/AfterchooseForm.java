@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.upload.FormFile;
 
 /** 
  * MyEclipse Struts
@@ -20,6 +21,48 @@ public class AfterchooseForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
+	private FormFile uploadedFile1,uploadedFile2,uploadedFile3,uploadedFile4;
+	
+
+	private String filename;
+	public FormFile getUploadedFile3() {
+		return uploadedFile3;
+	}
+
+	public void setUploadedFile3(FormFile uploadedFile3) {
+		this.uploadedFile3 = uploadedFile3;
+	}
+
+	public FormFile getUploadedFile4() {
+		return uploadedFile4;
+	}
+
+	public void setUploadedFile4(FormFile uploadedFile4) {
+		this.uploadedFile4 = uploadedFile4;
+	}
+	public FormFile getUploadedFile1() {
+		return uploadedFile1;
+	}
+
+	public void setUploadedFile1(FormFile uploadedFile1) {
+		this.uploadedFile1 = uploadedFile1;
+	}
+
+	public FormFile getUploadedFile2() {
+		return uploadedFile2;
+	}
+
+	public void setUploadedFile2(FormFile uploadedFile2) {
+		this.uploadedFile2 = uploadedFile2;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 
 	/** 
 	 * Method validate

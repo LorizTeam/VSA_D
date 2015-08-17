@@ -59,8 +59,8 @@ public class CreateprojectAction extends Action {
 //		FormFile countpic = uploadForm.getUploadedFile();
 		//Upload Pic follow folder create
 //		String filePath = newFolder+"\\"+uploadForm.getUploadedFile().getFileName();
-		List picture = new ArrayList();
-		picture.add(uploadForm.getUploadedFile().getFileName().length());
+//		List picture = new ArrayList();
+//		picture.add(uploadForm.getUploadedFile().getFileName().length());
 		int namelength = uploadForm.getUploadedFile().getFileName().length();
 		String filePath = newFolder+"\\"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 		try {
@@ -83,7 +83,8 @@ public class CreateprojectAction extends Action {
 			   project_year = request.getParameter("tb_projectyear"),
 			   slc_bu = request.getParameter("slc_bu"),
 			   slc_typepj = request.getParameter("slc_typepj"),
-			   pic_path = "/upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+			   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+		project_year = "y"+project_year;
 		DBProject dbpro = new DBProject();
 		try {
 			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
@@ -99,6 +100,18 @@ public class CreateprojectAction extends Action {
 		
 		if(getErrors(request) == null ||getErrors(request).size() == 0){
 			uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());
+			DBProject dbproject = new DBProject();
+			List buList = null;
+			try {
+				buList = dbproject.bu_nameList();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			request.setAttribute("buList", buList);
 			return mapping.findForward("success");
 		}
 		else

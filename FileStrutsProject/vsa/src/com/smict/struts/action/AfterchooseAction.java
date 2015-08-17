@@ -39,14 +39,7 @@ public class AfterchooseAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		AfterchooseForm afterchooseForm = (AfterchooseForm) form;// TODO Auto-generated method stub
 		List testchk = new ArrayList();
-//		String[] namechk = new String[6];
-//		for(int i = 1 ; i<=5;i++){
-//			
-//			namechk[i] = "chk"+i;
-//		}
-		for(int i = 1 ; i<=5;i++){
-			testchk.add(request.getParameter("chk"+i));
-		}
+		String rdo = request.getParameter("rdo");
 		
 		return null;
 	}
