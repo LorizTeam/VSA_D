@@ -75,9 +75,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--header-->
 	<div id="header">
 
-
+		<!-- Social icon -->
+				<div class="fix-social">
+					<ul>
+						<li><a href="#"><img class="img-responsive" src="images/face-icon-color.png"></a></li>
+						<li><a href="#"><img class="img-responsive" src="images/google-icon-color.png"></a></li>
+						<li><a href="#"><img class="img-responsive" src="images/tweet-icon-color.png"></a></li>
+						
+					</ul>
+				</div>
+			<!-- Social icon -->
 		<div class="header width-page">
-
+			
 			<div class="navigation ">
 				<nav class="navbar navbar-default ">
 					<div class="navbar-header">

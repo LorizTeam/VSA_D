@@ -2656,3 +2656,16 @@ div#nivo-lightbox-demo img {
 	height: 250px;
 	overflow: hidden;
 }
+.fix-social{
+	position: fixed;
+	top: 5em;
+	right: 0px;
+	width: 5%;
+}
+.fix-social ul{
+	text-decoration: none;
+	list-style: none;
+}
+.fix-social ul li a:hover{
+	opacity: 0.5;
+}
