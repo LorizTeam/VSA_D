@@ -221,16 +221,6 @@
                             '0'
                         ],
                         [
-                            "eid312",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${engineerin}",
-                            '0',
-                            '1'
-                        ],
-                        [
                             "eid565",
                             "opacity",
                             2698,
@@ -281,34 +271,24 @@
                             '0px'
                         ],
                         [
-                            "eid500",
-                            "display",
-                            0,
-                            0,
+                            "eid13",
+                            "opacity",
+                            4166,
+                            773,
                             "linear",
-                            "${vsalogo2}",
-                            'block',
-                            'none'
+                            "${plzlogo}",
+                            '0',
+                            '1'
                         ],
                         [
-                            "eid631",
-                            "display",
-                            7336,
-                            0,
+                            "eid45",
+                            "opacity",
+                            5664,
+                            421,
                             "linear",
-                            "${vsalogo2}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid525",
-                            "width",
-                            7336,
-                            0,
-                            "linear",
-                            "${architect}",
-                            '164px',
-                            '164px'
+                            "${plzlogo}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid37",
@@ -319,16 +299,6 @@
                             "${plzlogo}",
                             '1',
                             '0'
-                        ],
-                        [
-                            "eid604",
-                            "left",
-                            6000,
-                            0,
-                            "linear",
-                            "${vsalogo}",
-                            '12px',
-                            '12px'
                         ],
                         [
                             "eid352",
@@ -391,16 +361,6 @@
                             'block'
                         ],
                         [
-                            "eid568",
-                            "filter.contrast",
-                            5500,
-                            278,
-                            "linear",
-                            "${wvs}",
-                            '1',
-                            '0'
-                        ],
-                        [
                             "eid238",
                             "display",
                             0,
@@ -419,46 +379,6 @@
                             "${engineerin}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid214",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${architect}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid217",
-                            "display",
-                            5843,
-                            0,
-                            "linear",
-                            "${architect}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid506",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${vsctlogo2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid580",
-                            "display",
-                            7336,
-                            0,
-                            "linear",
-                            "${vsctlogo2}",
-                            'none',
-                            'none'
                         ],
                         [
                             "eid402",
@@ -491,26 +411,6 @@
                             '99px'
                         ],
                         [
-                            "eid13",
-                            "opacity",
-                            4166,
-                            773,
-                            "linear",
-                            "${plzlogo}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid45",
-                            "opacity",
-                            5664,
-                            421,
-                            "linear",
-                            "${plzlogo}",
-                            '1',
-                            '0'
-                        ],
-                        [
                             "eid244",
                             "display",
                             0,
@@ -539,6 +439,26 @@
                             "${vsctlogo}",
                             'block',
                             'block'
+                        ],
+                        [
+                            "eid568",
+                            "filter.contrast",
+                            5500,
+                            278,
+                            "linear",
+                            "${wvs}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid525",
+                            "width",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '164px',
+                            '164px'
                         ],
                         [
                             "eid635",
@@ -591,6 +511,16 @@
                             '256px'
                         ],
                         [
+                            "eid354",
+                            "filter.contrast",
+                            5189,
+                            476,
+                            "linear",
+                            "${vsalogo}",
+                            '1',
+                            '0'
+                        ],
+                        [
                             "eid572",
                             "left",
                             5006,
@@ -599,26 +529,6 @@
                             "${vsa_logo_black22}",
                             '314px',
                             '662px'
-                        ],
-                        [
-                            "eid532",
-                            "left",
-                            7336,
-                            0,
-                            "linear",
-                            "${architect}",
-                            '57px',
-                            '57px'
-                        ],
-                        [
-                            "eid310",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${architect}",
-                            '0',
-                            '1'
                         ],
                         [
                             "eid512",
@@ -641,14 +551,104 @@
                             'none'
                         ],
                         [
-                            "eid354",
-                            "filter.contrast",
-                            5189,
-                            476,
+                            "eid312",
+                            "opacity",
+                            5842,
+                            671,
+                            "linear",
+                            "${engineerin}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid532",
+                            "left",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '57px',
+                            '57px'
+                        ],
+                        [
+                            "eid310",
+                            "opacity",
+                            5842,
+                            671,
+                            "linear",
+                            "${architect}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid500",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid631",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid506",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${vsctlogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid580",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsctlogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid214",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${architect}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid217",
+                            "display",
+                            5843,
+                            0,
+                            "linear",
+                            "${architect}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid604",
+                            "left",
+                            6000,
+                            0,
                             "linear",
                             "${vsalogo}",
-                            '1',
-                            '0'
+                            '12px',
+                            '12px'
                         ],
                         [
                             "eid230",

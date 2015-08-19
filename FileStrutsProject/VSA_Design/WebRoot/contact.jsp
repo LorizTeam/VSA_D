@@ -42,9 +42,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!--header-->
-<div class=""> 
+<div class="header"> 
+<!-- Social icon -->
+		
+		<!-- Social icon -->
 	<div class="header width-page">
-
+			
 			<div class="navigation ">
 				<nav class="navbar navbar-default ">
 					<div class="navbar-header">
@@ -55,8 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="icon-bar"> </span> <span class="icon-bar"> </span> <span
 								class="icon-bar"> </span>
 						</button>
-					</div>
-				
+					</div>				
 					<div class="collapse navbar-collapse nav-wil container-center"
 						id="bs-example-navbar-collapse-1" >
 						<ul class="nav navbar-nav  top-nav">

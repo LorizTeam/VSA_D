@@ -20,11 +20,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	content="Frederick Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript">
-	
-	
+
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
 </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
@@ -76,17 +73,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="header">
 
 		<!-- Social icon -->
-				<div class="fix-social">
-					<ul>
-						<li><a href="#"><img class="img-responsive" src="images/face-icon-color.png"></a></li>
-						<li><a href="#"><img class="img-responsive" src="images/google-icon-color.png"></a></li>
-						<li><a href="#"><img class="img-responsive" src="images/tweet-icon-color.png"></a></li>
-						
-					</ul>
-				</div>
-			<!-- Social icon -->
+		<div class="fix-social">
+			<ul>
+				<li><a href="#"><img class="img-responsive"
+						src="images/face-icon-color.png"></a></li>
+				<li><a href="#"><img class="img-responsive"
+						src="images/google-icon-color.png"></a></li>
+				<li><a href="#"><img class="img-responsive"
+						src="images/tweet-icon-color.png"></a></li>
+
+			</ul>
+		</div>
+		<!-- Social icon -->
 		<div class="header width-page">
-			
+
 			<div class="navigation ">
 				<nav class="navbar navbar-default ">
 					<div class="navbar-header">
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		
+
 
 	</div>
 	<div class="clearfix"></div>
@@ -132,18 +132,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Vorrarat Supachocke Architect(VSa)</h3>
 			<br>
 			<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by
-					Vorrat Foythong and Supachoke Kittipatmeta.</p>
-				<br>
-			
-			
-		
+				Vorrat Foythong and Supachoke Kittipatmeta.</p>
+			<br>
+
+
+
 			<div class="col-md-6 wel-img">
 				<a href="single.html" class="mask"> <img src="images/wlb.jpg"
 					class="img-responsive zoom-img" alt="">
 				</a>
 			</div>
 			<div class="col-md-6 wel-text">
-				
+
 				<p>
 					The main of our Architecture concerning about site context,
 					project's character and project's requirement are combined to
@@ -158,7 +158,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<br>
 	<br>
-	<br><br>
+	<br>
+	<br>
 	<br>
 	<br>
 	<br>
@@ -192,7 +193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg" >
+							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								corporate</figcaption> </a>
@@ -200,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="residential" data-my-category="1995"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/3.jpg" >
+							class="uk-overlay-scale" src="images/project/3.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								residential</figcaption> </a>
@@ -208,7 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="commercial" data-my-category="1999"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/4.jpg" >
+							class="uk-overlay-scale" src="images/project/4.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								commercial</figcaption> </a>
@@ -216,7 +217,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="residential" data-my-category="2015"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/5.jpg" >
+							class="uk-overlay-scale" src="images/project/5.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								residential</figcaption> </a>
@@ -225,7 +226,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="residential" data-my-category="2015"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/5.jpg" >
+							class="uk-overlay-scale" src="images/project/5.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								residential</figcaption> </a>
@@ -234,7 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="commercial" data-my-category="1999"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/4.jpg" >
+							class="uk-overlay-scale" src="images/project/4.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								commercial</figcaption> </a>
@@ -242,7 +243,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="residential" data-my-category="1995"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/3.jpg" >
+							class="uk-overlay-scale" src="images/project/3.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								residential</figcaption> </a>
@@ -250,7 +251,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg" >
+							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								corporate</figcaption> </a>
@@ -258,18 +259,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<figure data-uk-filter="corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg" >
+							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								corporate</figcaption> </a>
 					</figure>
-					
+
 				</section>
 			</article>
 			<!-- project and fillter -->
 		</div>
 	</div>
-	
+
 	<!--grid-hover-->
 	<!--index-team-->
 	<div id="team" class="content-team">
@@ -368,11 +369,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--footer-->
 	<div class="footer">
 		<div class="container-center">
-			
+
 			<div class="col-md-12 get_in_touch ftr text-center">
-				<p>Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a></p>						
 				<p>
-					Â© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
+					Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a
+						href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
+				</p>
+				<p>
+					© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>
 			</div>
 			<div class="clearfix"></div>
@@ -395,30 +399,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<script>
-			$(function() {
-				$('a[href*=#]:not([href=#])').click(function() {
-					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-						var target = $(this.hash);
-						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-						if (target.length) {
-							$('html,body').animate({
-								scrollTop : target.offset().top
-							}, 1000);
-							return false;
-						}
-					}
-				});
-			});
-		</script>
-		<!-- This is the modal -->
+		$(function() {
+			$('a[href*=#]:not([href=#])')
+					.click(
+							function() {
+								if (location.pathname.replace(/^\//, '') == this.pathname
+										.replace(/^\//, '')
+										&& location.hostname == this.hostname) {
+									var target = $(this.hash);
+									target = target.length ? target
+											: $('[name=' + this.hash.slice(1)
+													+ ']');
+									if (target.length) {
+										$('html,body').animate({
+											scrollTop : target.offset().top
+										}, 1000);
+										return false;
+									}
+								}
+							});
+		});
+	</script>
+	<!-- This is the modal -->
 	<div id="my-id" class="uk-modal">
 		<div class="uk-modal-dialog">
-			
+
 			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
 				data-loop="true">
 				<img src="images/project/2.jpg" alt="" /> <img
-					src="images/project/3.jpg" alt="" /> <img src="images/project/4.jpg"
-					alt="" /> <img src="images/project/5.jpg" alt="" />
+					src="images/project/3.jpg" alt="" /> <img
+					src="images/project/4.jpg" alt="" /> <img
+					src="images/project/5.jpg" alt="" />
 			</div>
 
 		</div>
