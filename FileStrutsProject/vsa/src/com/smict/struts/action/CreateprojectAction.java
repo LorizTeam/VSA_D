@@ -85,25 +85,19 @@ public class CreateprojectAction extends Action {
 			   slc_typepj = request.getParameter("slc_typepj"),
 			   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 		project_year = "y"+project_year;
-		DBProject dbpro = new DBProject();
-		try {
-			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
-			List Listforafterchoose = dbpro.afterchoose_edit(project_name);
-			request.setAttribute("Listforafterchoose", Listforafterchoose);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		
 		if(getErrors(request) == null ||getErrors(request).size() == 0){
 			uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());
 			DBProject dbproject = new DBProject();
 			List buList = null;
+			List Listforafterchoose = null;
+			List pj_typeList = null;
 			try {
 				buList = dbproject.bu_nameList();
+				dbproject.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
+				Listforafterchoose = dbproject.afterchoose_edit(project_name);
+				pj_typeList = dbproject.pj_typeList(slc_bu);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -112,6 +106,11 @@ public class CreateprojectAction extends Action {
 				e.printStackTrace();
 			}
 			request.setAttribute("buList", buList);
+			request.setAttribute("slc_bu", slc_bu);
+			request.setAttribute("project_name", project_name);
+			request.setAttribute("project_year", project_year);
+			request.setAttribute("slc_typepj", pj_typeList);
+			request.setAttribute("Listforafterchoose", Listforafterchoose);
 			return mapping.findForward("success");
 		}
 		else

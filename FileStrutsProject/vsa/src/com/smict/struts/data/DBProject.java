@@ -35,6 +35,24 @@ public class DBProject {
 		rs.close();
 		return buList;
 	}
+	public List pj_typeList(String bu_no) throws IOException, Exception{
+		List pjtypeList = new ArrayList();
+		String pj_typeno ="",pj_typename="";
+		conn = dbcon.getConnectMYSql();
+		String sqlQuery = "select * from project_type where bu_no = '"+bu_no+"' order by pj_typename";
+		pStmt = conn.createStatement();
+		rs=pStmt.executeQuery(sqlQuery);
+		String forwhat ="slc_pjtype";
+		while(rs.next()){
+			pj_typeno = rs.getString("pj_typeno");
+			pj_typename = rs.getString("pj_typename");
+			pjtypeList.add(new BusinessForm(forwhat,pj_typeno,pj_typename));
+		}
+		conn.close();
+		pStmt.close();
+		rs.close();
+		return pjtypeList;
+	}
 	
 	public void insproject_todb(String project_name,String project_year,String bu_no,String pic_path, String pj_typeno) throws IOException, Exception{
 		conn = dbcon.getConnectMYSql();
@@ -91,5 +109,30 @@ public class DBProject {
 			Listforafterchoose.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,pj_typename,bu_name,pic_path,picstatus_name));
 		}
 		return Listforafterchoose;
+	}
+	
+	public List projectList() throws IOException, Exception{
+		List projectList = new ArrayList();
+		String pj_no ="",pj_name="";
+		conn = dbcon.getConnectMYSql();
+		String sqlQuery = "SELECT " +
+				"project.pj_no, " +
+				"project.pj_name " +
+				"FROM " +
+				"project " +
+				"GROUP BY project.pj_name " +
+				"ORDER BY project.pj_no";
+		pStmt = conn.createStatement();
+		rs=pStmt.executeQuery(sqlQuery);
+		String forwhat ="List_project";
+		while(rs.next()){
+			pj_no = rs.getString("pj_no");
+			pj_name = rs.getString("pj_name");
+			projectList.add(new BusinessForm(forwhat,pj_no,pj_name));
+		}
+		conn.close();
+		pStmt.close();
+		rs.close();
+		return projectList;
 	}
 }

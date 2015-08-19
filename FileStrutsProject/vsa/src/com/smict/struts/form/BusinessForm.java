@@ -31,7 +31,8 @@ public class BusinessForm extends ActionForm {
 	private String bu_no,bu_name;
 	
 	//for afterchoose.jsp
-	private String pj_no,pj_name,pj_year,pj_typename,pic_path,pic_statusname;
+	private String pj_no,pj_name,pj_year,pj_typename,pj_typeno,pic_path,pic_statusname;
+	
 	
 	
 	public BusinessForm(){}
@@ -39,6 +40,12 @@ public class BusinessForm extends ActionForm {
 		if(forwhat.equals("slc_bu")){
 			this.bu_no = bu_no;
 			this.bu_name = bu_name;
+		}else if(forwhat.equals("slc_pjtype")){
+			this.pj_typeno = bu_no;
+			this.pj_typename = bu_name;
+		}else if(forwhat.equals("List_project")){
+			this.pj_no = bu_no;
+			this.pj_name = bu_name;
 		}
 	}
 	
@@ -46,7 +53,22 @@ public class BusinessForm extends ActionForm {
 			String pjYear, String pjTypename, String buName, String picPath,
 			String picstatusName) {
 		// TODO Auto-generated constructor stub
+		if(forwhat.equals("afterchoose")){
+			this.bu_name = buName;
+			this.pj_no = pjNo;
+			this.pj_name = pjName;
+			this.pj_year = pjYear;
+			this.pj_typename = pjTypename;
+			this.pic_path = picPath;
+			this.pic_statusname = picstatusName;
+		}
 		
+	}
+	public String getPj_typeno() {
+		return pj_typeno;
+	}
+	public void setPj_typeno(String pjTypeno) {
+		pj_typeno = pjTypeno;
 	}
 	public String getBu_no() {
 		return bu_no;

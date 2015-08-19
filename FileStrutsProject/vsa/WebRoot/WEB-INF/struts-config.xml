@@ -10,6 +10,7 @@
     <form-bean name="businessForm" type="com.smict.struts.form.BusinessForm" />
     <form-bean name="editprojectForm" type="com.smict.struts.form.EditprojectForm" />
     <form-bean name="afterchooseForm" type="com.smict.struts.form.AfterchooseForm" />
+    <form-bean name="projectForm" type="com.smict.struts.form.ProjectForm" />
   </form-beans>
 
   <global-exceptions />
@@ -63,6 +64,15 @@
       scope="request"
       type="com.smict.struts.action.AfterchooseAction">
       <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="projectForm"
+      name="projectForm"
+      path="/editprojectStart"
+      scope="request"
+      type="com.smict.struts.action.EditprojectStartAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/editproject.jsp" />
     </action>
 	
   </action-mappings>
