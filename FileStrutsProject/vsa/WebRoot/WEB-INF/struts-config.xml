@@ -14,7 +14,9 @@
   </form-beans>
 
   <global-exceptions />
-  <global-forwards />
+  <global-forwards >
+  	<forward name="nologin"  path="/login.jsp"/>
+  </global-forwards>
   <action-mappings >
     <action
       attribute="loginForm"
@@ -55,6 +57,7 @@
       scope="request"
       type="com.smict.struts.action.EditprojectAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/afterchoose.jsp" />
     </action>
     <action
       attribute="afterchooseForm"
@@ -64,6 +67,7 @@
       scope="request"
       type="com.smict.struts.action.AfterchooseAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/afterchoose.jsp" />
     </action>
     <action
       attribute="projectForm"

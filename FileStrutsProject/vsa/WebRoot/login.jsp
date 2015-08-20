@@ -1,10 +1,11 @@
-<%@ page language="java" pageEncoding="utf-8"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@ include file="defaultimport.jsp" %>
 <%@ page import="com.smict.struts.form.LoginForm" %>
 <!DOCTYPE html>
 <html> 
 	<head>
+	<% if(session.getAttribute("username") != null)
+			response.sendRedirect("main.jsp");
+	%>
 		<title>Login Page</title>
 	</head>
 	<body>
@@ -43,11 +44,11 @@
 	<script src="js/bootstrap.js"></script>
 	<!-- Add JavaScript End -->
 	<div class="container">
-		<div class="row">Â </div>
-		<div class="row">Â </div>
-		<div class="row">Â </div>
-		<div class="row">Â </div>
-		<div class="row">Â </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
+		<div class="row"> </div>
 	</div>
 		<div class="col-md-4"></div>
 		<div class="col-md-4">

@@ -7,9 +7,7 @@
 	<body>
 	<%@ include file="menubar.jsp" %>
 	<% 
-		String 	slc_fromcreate = (String) request.getAttribute("slc_bu"),
-				project_name = (String) request.getAttribute("project_name"),
-				project_year = (String) request.getAttribute("project_year");
+		
 		Iterator<?> itertest = null;
 		Iterator<?> iter=null;
 		List<?> buList = null;
@@ -49,6 +47,7 @@
         });
 	</script>
 		<html:form action="/afterchoose" enctype="multipart/form-data" method="POST">
+		<input type="hidden" name="pj_no" id="pj_no" value="<%=createproject1.getPj_no() %>"/>
 		<div class="grid container page-content">
 			<div class="row cells12 align-left">
 				<div class="cell"></div>
@@ -102,7 +101,7 @@
 								    	<% if (buList != null) {
 												for (iter = buList.iterator(); iter.hasNext();) {
 										  			BusinessForm createproject = (BusinessForm) iter.next();
-										  			if(slc_fromcreate.equals(createproject.getBu_no())){
+										  			if(createproject1.getBu_name().equals(createproject.getBu_name())){
 										  			
 										 %>
 								        <option value="<%=createproject.getBu_no() %>" selected><%=createproject.getBu_name() %></option>

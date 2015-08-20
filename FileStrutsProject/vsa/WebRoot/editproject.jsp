@@ -70,6 +70,9 @@
 								           
 								        </tbody>
 								    </table>
+								    <div class="row align-center">
+										<button type="submit" name="submit" id="submit" class="button success">Edit</button>
+									</div>
 							    </div>
 							</div>
 						</div>

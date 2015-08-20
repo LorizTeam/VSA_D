@@ -9,10 +9,23 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import java.util.Date;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.smict.struts.data.DBProject;
+import com.smict.struts.data.DBUpload;
 import com.smict.struts.form.AfterchooseForm;
 
 /** 
@@ -37,10 +50,126 @@ public class AfterchooseAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		AfterchooseForm afterchooseForm = (AfterchooseForm) form;// TODO Auto-generated method stub
+		AfterchooseForm afterchooseForm = (AfterchooseForm) form;
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss-SSS");
+		FileOutputStream outputStream = null;
+		DBProject dbproject = new DBProject();
+		String project_name = request.getParameter("tb_projectname"),
+		   project_year = request.getParameter("tb_projectyear"),
+		   bu_no = request.getParameter("slc_bu"),
+		   pj_typeno = request.getParameter("slc_typepj"),
+		   pj_no = request.getParameter("pj_no");
+		// TODO Auto-generated method stub
 		List testchk = new ArrayList();
-		String rdo = request.getParameter("rdo");
+		String forwardText = "";
+		List<?> buList = null;
+		List<?> Listforafterchoose = null;
+		List<?> pj_typeList = null;
 		
-		return null;
+		HttpSession session = request.getSession();
+		if(session.getAttribute("username") == null){
+			forwardText = "nologin";
+		}else{
+			if(request.getParameter("upload") != null){
+				try {
+					if(afterchooseForm.getUploadedFile1() != null){
+						Date date = new Date();
+						
+						   
+						int namelength = afterchooseForm.getUploadedFile1().getFileName().length();
+						String filePath = getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name+"\\"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
+						outputStream = new FileOutputStream(new File(filePath));
+						outputStream.write(afterchooseForm.getUploadedFile1().getFileData());
+						
+						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
+						try {
+							dbproject.inspicpath_todb(project_name, pic_path);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					if(afterchooseForm.getUploadedFile2() != null){
+						Date date = new Date();
+						
+						int namelength = afterchooseForm.getUploadedFile2().getFileName().length();
+						String filePath = getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name+"\\"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
+						outputStream = new FileOutputStream(new File(filePath));
+						outputStream.write(afterchooseForm.getUploadedFile2().getFileData());
+						
+						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
+						try {
+							dbproject.inspicpath_todb(project_name, pic_path);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					if(afterchooseForm.getUploadedFile3() != null){
+						Date date = new Date();
+						
+						int namelength = afterchooseForm.getUploadedFile3().getFileName().length();
+						String filePath = getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name+"\\"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
+						outputStream = new FileOutputStream(new File(filePath));
+						outputStream.write(afterchooseForm.getUploadedFile3().getFileData());
+						
+						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
+						try {
+							dbproject.inspicpath_todb(project_name, pic_path);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					if(afterchooseForm.getUploadedFile4() != null){
+						Date date = new Date();
+						
+						int namelength = afterchooseForm.getUploadedFile4().getFileName().length();
+						String filePath = getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name+"\\"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
+						outputStream = new FileOutputStream(new File(filePath));
+						outputStream.write(afterchooseForm.getUploadedFile4().getFileData());
+						
+						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
+						try {
+							dbproject.inspicpath_todb(project_name, pic_path);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					
+					try {
+						
+						// ข้อมูลของ Dropdownlist Start
+						buList = dbproject.bu_nameList();
+						pj_typeList = dbproject.pj_typeList(bu_no);
+						// ข้อมูลของ Dropdownlist End
+						//ข้อมูลรายลเอียด Project และรูปภาพ Start
+						Listforafterchoose = dbproject.afterchoose_edit(project_name);
+						//ข้อมูลรายลเอียด Project และรูปภาพ End
+						
+						request.setAttribute("buList", buList);
+						request.setAttribute("slc_typepj", pj_typeList);
+						request.setAttribute("Listforafterchoose", Listforafterchoose);
+						
+						
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				forwardText = "success";
+			}
+			
+			String rdo = request.getParameter("rdo");
+		}
+		return mapping.findForward(forwardText);
 	}
 }

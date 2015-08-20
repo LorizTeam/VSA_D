@@ -9,6 +9,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -40,21 +42,26 @@ public class EditprojectStartAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		
-		DBProject dbpro = new DBProject();
-		String forwardText = "success";
-		List projectList = null;
-		try {
-			projectList =dbpro.projectList();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		HttpSession session = request.getSession();
+		String forwardText = "";
+		if(session.getAttribute("username") == null){
+			forwardText = "nologin";
+		}else{
+			DBProject dbpro = new DBProject();
+			forwardText = "success";
+			List projectList = null;
+			try {
+				projectList =dbpro.projectList();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			request.setAttribute("projectList", projectList);
 		}
-		
-		request.setAttribute("projectList", projectList);
 		return mapping.findForward(forwardText);
 	}
 }

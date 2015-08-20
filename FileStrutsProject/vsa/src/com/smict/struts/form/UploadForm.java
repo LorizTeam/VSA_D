@@ -5,6 +5,8 @@
 package com.smict.struts.form;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
@@ -56,12 +58,13 @@ public class UploadForm extends ActionForm {
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
-		if(uploadedFile.getFileSize() == 0)
-			errors.add("uploadedFile", new ActionMessage("errors.file.notselected"));
-		if(errors.isEmpty()){
-			if(!uploadedFile.getContentType().equalsIgnoreCase("image/jpeg") && !uploadedFile.getContentType().equalsIgnoreCase("image/jpg")
-					&& !uploadedFile.getContentType().equalsIgnoreCase("image/pjpeg"))
-				errors.add("uploadedFile", new ActionMessage("errors.file.type", uploadedFile.getFileName(),uploadedFile.getContentType()));
+			if(uploadedFile.getFileSize() == 0)
+				errors.add("uploadedFile", new ActionMessage("errors.file.notselected"));
+			if(errors.isEmpty()){
+				if(!uploadedFile.getContentType().equalsIgnoreCase("image/jpeg") && !uploadedFile.getContentType().equalsIgnoreCase("image/jpg")
+						&& !uploadedFile.getContentType().equalsIgnoreCase("image/pjpeg"))
+					errors.add("uploadedFile", new ActionMessage("errors.file.type", uploadedFile.getFileName(),uploadedFile.getContentType()));
+			
 		}
 		return errors;
 	}

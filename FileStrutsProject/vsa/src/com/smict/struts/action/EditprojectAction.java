@@ -6,12 +6,18 @@ package com.smict.struts.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.smict.struts.form.EditprojectForm;
 
+import com.smict.struts.data.DBProject;
+
+import java.io.IOException;
+import java.util.List;
 /** 
  * MyEclipse Struts
  * Creation date: 08-14-2015
@@ -34,7 +40,41 @@ public class EditprojectAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		EditprojectForm editprojectForm = (EditprojectForm) form;// TODO Auto-generated method stub
-		return null;
+		EditprojectForm editprojectForm = (EditprojectForm) form;
+		String forwardText = "";
+		HttpSession session = request.getSession();
+		if(session.getAttribute("username") == null){
+			forwardText = "nologin";
+		}else{
+			if(request.getParameter("submit") != null){
+				String pj_no = (String) request.getParameter("rdo");
+				DBProject dbproject = new DBProject();
+				List<?> buList = null;
+				List<?> Listforafterchoose = null;
+				List<?> pj_typeList = null;
+				try {
+					// ข้อมูลของ Dropdownlist Start
+					buList = dbproject.bu_nameList();
+					String bu_no = dbproject.getbuno_fordetailproject(pj_no);
+					pj_typeList = dbproject.pj_typeList(bu_no);
+					// ข้อมูลของ Dropdownlist End
+					//ข้อมูลรายลเอียด Project และรูปภาพ Start
+					Listforafterchoose = dbproject.afterchoose_editbypjno(pj_no);
+					//ข้อมูลรายลเอียด Project และรูปภาพ End
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				request.setAttribute("buList", buList);
+				request.setAttribute("slc_typepj", pj_typeList);
+				request.setAttribute("Listforafterchoose", Listforafterchoose);
+				forwardText = "success";
+			}
+		}
+		// TODO Auto-generated method stub
+		return mapping.findForward(forwardText);
 	}
 }
