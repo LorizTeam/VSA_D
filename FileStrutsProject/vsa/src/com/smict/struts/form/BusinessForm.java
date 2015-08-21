@@ -41,9 +41,6 @@ public class BusinessForm extends ActionForm {
 		}else if(forwhat.equals("slc_pjtype")){
 			this.pj_typeno = bu_no;
 			this.pj_typename = bu_name;
-		}else if(forwhat.equals("List_project")){
-			this.pj_no = bu_no;
-			this.pj_name = bu_name;
 		}
 	}
 	
@@ -60,6 +57,17 @@ public class BusinessForm extends ActionForm {
 			this.pic_path = picPath;
 			this.picstatus_name = picstatusName;
 			this.pic_typename = picTypename;
+		}
+	}
+	public BusinessForm(String forwhat, String pjNo, String pjName,
+			String pjYear, String buName, String pjTypename) {
+		// TODO Auto-generated constructor stub
+		if(forwhat.equals("List_project")){
+			this.pj_no = pjNo;
+			this.pj_name =pjName;
+			this.pj_year =pjYear;
+			this.pj_typename =pjTypename;
+			this.bu_name =buName;
 		}
 	}
 	public String getPicstatus() {

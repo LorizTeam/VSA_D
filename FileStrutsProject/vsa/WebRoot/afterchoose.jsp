@@ -161,14 +161,16 @@
                     	</div>
 	           		</div>
 	           		<div class="row align-center">
-	           			<table class="table striped hovered cell-hovered border bordered">
+	           			<table class="table striped hovered cell-hovered border bordered align-center">
 	           				<tr>
 	           					<th>Image</th>
 	           					<th>Select Head</th>
+	           					<th>Picture Staus</th>
 	           				</tr>
 	           				<%	
 	           					List<?> detailList1 = masterdetailList;
 	           					itertest = detailList1.iterator();
+	           					int i = 0;
 	           					while(itertest.hasNext()){
 	           						BusinessForm createproject2 = (BusinessForm) itertest.next();
 	           				%>
@@ -176,16 +178,40 @@
 	           					<td>
 	           						<div class="image-container image-format-sd" style="width: 150px;height: 150px;">
                             			<div class="frame"><img src="<%=createproject2.getPic_path() %>"></div>
+                            			<input type="hidden" name="picpath" id="picpath" value="<%=createproject2.getPic_path() %>"/>
                         			</div>
                         		</td>
 	           					<td>
 	           						<label class="input-control radio small-check">
-									    <input type="radio" name="rdo" value="<%=createproject2.getPic_path() %>">
+	           						<%
+	           							if(createproject2.getPic_typename().equals("Head")){
+	           						%>
+	           								<input type="radio" name="rdo" value="<%=createproject2.getPic_path() %>" checked>
+	           						<%
+	           							}else{
+	           						%>
+	           								<input type="radio" name="rdo" value="<%=createproject2.getPic_path() %>">
+	           						<%
+	           							}
+	           						 %>
+									    
+									    <span class="check"></span>
+									</label>
+	           					</td>
+	           					<td>
+	           						<label class="switch">
+	           						<%
+	           							if(createproject2.getPicstatus_name().equals("enable")){
+	           							
+	           							}
+	           						 %>
+									    <input type="checkbox" name="chk_picstatus<%=i %>">
 									    <span class="check"></span>
 									</label>
 	           					</td>
 	           				</tr>
 	           				<%
+	           					i++;
 	           					}
 	           				%>
 	           			</table>

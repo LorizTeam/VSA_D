@@ -89,6 +89,13 @@ public class DBProject {
 		pStmt.execute(sqlQuery);
 	}
 	
+	public void insdetailpicpath_todb(String pj_no,String pic_path) throws IOException, Exception{
+		conn = dbcon.getConnectMYSql();
+		String sqlQuery="insert into picpath (pic_path,picstatus,pic_typeno,pj_no) values ('"+pic_path+"',1,1,'"+pj_no+"')";
+		pStmt = conn.createStatement();
+		pStmt.execute(sqlQuery);
+	}
+	
 	public List afterchoose_edit(String pj_name) throws IOException, Exception{
 		List Listforafterchoose = new ArrayList();
 		String sqlQuery = "SELECT " +
@@ -108,7 +115,7 @@ public class DBProject {
 				"INNER JOIN business AS e ON e.bu_no = a.bu_no " +
 				"INNER JOIN pic_type AS f ON f.pic_typeno = c.pic_typeno " +
 				"where " +
-				"a.pj_name = '"+pj_name+"' " +
+				"a.pj_name = '"+pj_name+"' and d.picstatus = 1 " +
 				"order by c.pic_path";
 		conn = dbcon.getConnectMYSql();
 		pStmt = conn.createStatement();
@@ -196,22 +203,19 @@ public class DBProject {
 	
 	public List projectList() throws IOException, Exception{
 		List projectList = new ArrayList();
-		String pj_no ="",pj_name="";
+		String pj_no ="",pj_name="",pj_year="",bu_name="",pj_typename="";
 		conn = dbcon.getConnectMYSql();
-		String sqlQuery = "SELECT " +
-				"project.pj_no, " +
-				"project.pj_name " +
-				"FROM " +
-				"project " +
-				"GROUP BY project.pj_name " +
-				"ORDER BY project.pj_no";
+		String sqlQuery = "SELECT * FROM `vshowprojectlist`";
 		pStmt = conn.createStatement();
 		rs=pStmt.executeQuery(sqlQuery);
 		String forwhat ="List_project";
 		while(rs.next()){
 			pj_no = rs.getString("pj_no");
 			pj_name = rs.getString("pj_name");
-			projectList.add(new BusinessForm(forwhat,pj_no,pj_name));
+			pj_year = rs.getString("pj_year");
+			bu_name = rs.getString("bu_name");
+			pj_typename = rs.getString("pj_typename");
+			projectList.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,bu_name,pj_typename));
 		}
 		conn.close();
 		pStmt.close();
@@ -224,15 +228,22 @@ public class DBProject {
 		conn = dbcon.getConnectMYSql();
 		String sqlQuery = "UPDATE picpath a " +
 				"INNER JOIN project b on (a.pj_no = b.pj_no) " +
-				"set a.pic_status = " +
+				"set a.pic_typeno = " +
 				"CASE " +
-				"WHEN a.pic_path = '"+pic_path+"' THEN 1 " +
-				"ELSE 0 " +
+				"WHEN a.pic_path = '"+pic_path+"' THEN 2 " +
+				"ELSE 1 " +
 				"END " +
 				",b.pj_name = '"+pj_name+"',b.pj_year = '"+pj_year+"',b.bu_no = '"+bu_no+"' ,b.pj_typeno = '"+pj_typeno+"' " +
 				"where b.pj_no = '"+pj_no+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
 		return projectList = afterchoose_edit(pj_name);
+	}
+	
+	public void disable_picstatus(String pic_path) throws IOException, Exception{
+		conn = dbcon.getConnectMYSql();
+		String sqlQuery = "update picpath set picstatus = 2 where pic_path = '"+pic_path+"'";
+		pStmt = conn.createStatement();
+		pStmt.execute(sqlQuery);
 	}
 }
