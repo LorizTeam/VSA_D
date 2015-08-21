@@ -6,6 +6,31 @@
 	</head>
 	<body>
 	<%@ include file="menubar.jsp" %>
+	<% 
+		
+		Iterator<?> itertest = null;
+		Iterator<?> iter=null;
+		List<?> buList = null;
+		List<?> slc_typepj=null;
+
+		if (request.getAttribute("slc_typepj") != null) {
+			 slc_typepj = (List<?>)request.getAttribute("slc_typepj");
+		}
+		
+		if (request.getAttribute("buList") != null) {
+			 buList = (List<?>)request.getAttribute("buList");
+		}
+		
+		List<?> masterdetailList = null;
+		if (request.getAttribute("Listforafterchoose") != null) {
+			masterdetailList = (List<?>)request.getAttribute("Listforafterchoose");
+		}
+		
+		List<?> detailList = masterdetailList;
+		itertest = detailList.iterator();
+		BusinessForm createproject1 = (BusinessForm) itertest.next();
+						
+	%>
 	<script type="text/javascript">
 		$(document).ready(function() {
             $('#slc_bu').change(function ()
@@ -19,10 +44,10 @@
                     }
                 });
             });
-
         });
 	</script>
 		<html:form action="/afterchoose" enctype="multipart/form-data" method="POST">
+		<input type="hidden" name="pj_no" id="pj_no" value="<%=createproject1.getPj_no() %>"/>
 		<div class="grid container page-content">
 			<div class="row cells12 align-left">
 				<div class="cell"></div>
@@ -73,13 +98,19 @@
 	                    		Select Your Business <div class="input-control select text success" >
 								    <select name="slc_bu" id="slc_bu">
 								    	<option value=null>Please Choose Business</option>
-								    	<% if (request.getAttribute("buList") != null) {
-												List buList = (List)request.getAttribute("buList");
-												for (Iterator iter = buList.iterator(); iter.hasNext();) {
+								    	<% if (buList != null) {
+												for (iter = buList.iterator(); iter.hasNext();) {
 										  			BusinessForm createproject = (BusinessForm) iter.next();
+										  			if(createproject1.getBu_name().equals(createproject.getBu_name())){
+										  			
+										 %>
+								        <option value="<%=createproject.getBu_no() %>" selected><%=createproject.getBu_name() %></option>
+								        <%
+										  			}else{
 										 %>
 								        <option value="<%=createproject.getBu_no() %>"><%=createproject.getBu_name() %></option>
 								        <%
+										  			}
 										  		}
 				  							}
 								    	 %>
@@ -90,6 +121,25 @@
                     			Select Project Type <div class="input-control select text success" >
 								    <select name="slc_typepj" id="slc_typepj">
 								    	<option value=null>Please Choose Business First</option>
+								    	<%
+								    		if(request.getAttribute("slc_typepj") != null){
+								    			iter = slc_typepj.iterator();
+								    			while(iter.hasNext()){
+								    				BusinessForm for_slc_typepj = (BusinessForm) iter.next();
+								    				if(for_slc_typepj.getPj_typename().equals(createproject1.getPj_typename())){
+								    	%>
+								    					<option value="<%=for_slc_typepj.getPj_typeno()%>" selected><%=for_slc_typepj.getPj_typename()%></option>
+								    	<%
+								    				}else{
+								    	%>
+								    					<option value="<%=for_slc_typepj.getPj_typeno()%>"><%=for_slc_typepj.getPj_typename()%></option>
+								    	<%
+								    				}
+								    	
+								    			}
+								    		}
+								    	 %>
+								    	
 								    </select>
 								</div>
                     		</div>
@@ -98,13 +148,13 @@
 	           			<div class="cell">
 	           			
 	           				Project Name <div class="input-control text success" data-role="input" >
-											    <input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" required>
+											    <input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" value="<%=createproject1.getPj_name() %>" required>
 											    <button class="button helper-button clear"><span class="mif-cross"></span></button>
 											</div>
 						</div>
 						<div class="cell" >
 							Project Year <div class="input-control text success" data-role="input" >
-											<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" required>
+											<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year().substring(1) %>" required>
 											<button class="button helper-button clear"><span class="mif-cross"></span></button>
 										</div>
 										<!--  -->
@@ -116,36 +166,28 @@
 	           					<th>Image</th>
 	           					<th>Select Head</th>
 	           				</tr>
+	           				<%	
+	           					List<?> detailList1 = masterdetailList;
+	           					itertest = detailList1.iterator();
+	           					while(itertest.hasNext()){
+	           						BusinessForm createproject2 = (BusinessForm) itertest.next();
+	           				%>
 	           				<tr>
 	           					<td>
 	           						<div class="image-container image-format-sd" style="width: 150px;height: 150px;">
-                            			<div class="frame"><img src="upload/AKATSUKI 13/2015-08-17 16-47-35.jpg"></div>
+                            			<div class="frame"><img src="<%=createproject2.getPic_path() %>"></div>
                         			</div>
                         		</td>
 	           					<td>
 	           						<label class="input-control radio small-check">
-									    <input type="radio" name="rdo" value="upload/AKATSUKI 13/2015-08-17 16-47-35.jpg">
+									    <input type="radio" name="rdo" value="<%=createproject2.getPic_path() %>">
 									    <span class="check"></span>
 									</label>
 	           					</td>
 	           				</tr>
-	           				<tr>
-	           					<td>
-	           						<div class="image-container image-format-sd" style="width: 150px;height: 150px;" >
-                            			<div class="frame"><img  src="upload/AKATSUKI 12/2015-08-17 16-31-59.jpg"></div>
-                        			</div>
-                        		</td>
-	           					<td>
-	           						<label class="input-control radio small-check">
-									    <input type="radio" name="rdo" value="upload/AKATSUKI 12/2015-08-17 16-31-59.jpg">
-									    <span class="check"></span>
-									</label>
-	           					</td>
-	           				</tr>
-	           				<tr>
-	           					<td>Image</td>
-	           					<td>Select Head</td>
-	           				</tr>
+	           				<%
+	           					}
+	           				%>
 	           			</table>
 	           		</div>
 	           		<div class="row align-center">
