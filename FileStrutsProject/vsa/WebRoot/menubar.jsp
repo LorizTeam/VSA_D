@@ -3,9 +3,11 @@
 	<link rel="stylesheet" href="metro-ui/build/css/metro.css">
 	<link rel="stylesheet" href="metro-ui/build/css/metro-responsive.css">
 	<link rel="stylesheet" href="metro-ui/build/css/metro-icons.css">
+	<link rel="stylesheet" href="css/mycss.css">
 	<script type="text/javascript" src="metro-ui/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="metro-ui/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="metro-ui/build/js/metro.js"></script>
+	
 	<!-- Add metro-ui CSS And JavaScript End -->
 	<% if(session.getAttribute("username") == null)
 			response.sendRedirect("login.jsp");
@@ -14,7 +16,7 @@
 	        <a class="app-bar-element branding" href="index.jsp">VSA Group</a>
 	        <span class="app-bar-divider"></span>
 	        <ul class="app-bar-menu">
-	            <li data-flexorderorigin="0" data-flexorder="1"><a href="main.jsp">Main Dashboard</a></li>
+	            <li data-flexorderorigin="0" data-flexorder="1"><a href="main.jsp">Dashboard</a></li>
 	            <li data-flexorderorigin="1" data-flexorder="2" class="">
 	                <a href="" class="dropdown-toggle">Project</a>
 	                <ul class="d-menu" data-role="dropdown" style="display: none;">
