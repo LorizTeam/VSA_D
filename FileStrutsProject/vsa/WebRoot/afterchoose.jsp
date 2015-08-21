@@ -194,7 +194,6 @@
 	           						<%
 	           							}
 	           						 %>
-									    
 									    <span class="check"></span>
 									</label>
 	           					</td>
@@ -202,10 +201,15 @@
 	           						<label class="switch">
 	           						<%
 	           							if(createproject2.getPicstatus_name().equals("enable")){
-	           							
+	           						%>
+	           								<input type="checkbox" name="chk_picstatus<%=i %>" checked>
+	           						<%
+	           							}else{
+	           						%>
+	           								<input type="checkbox" name="chk_picstatus<%=i %>">
+	           						<%
 	           							}
 	           						 %>
-									    <input type="checkbox" name="chk_picstatus<%=i %>">
 									    <span class="check"></span>
 									</label>
 	           					</td>
