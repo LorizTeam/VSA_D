@@ -61,16 +61,22 @@
       <AbsolutePoint location="281,75" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/afterchoose.do,success,/afterchoose.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="402,576" />
+      <AbsolutePoint location="402,630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="nologin;6,null,/login.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="0,0" />
       <AbsolutePoint location="1045,385" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/afterchoose.do,success,/afterchoose.jsp,1" routingType="0">
+  <StrutsTransition id="/login.do,unsuccess,/main.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="402,576" />
-      <AbsolutePoint location="402,630" />
+      <AbsolutePoint location="165,98" />
+      <AbsolutePoint location="990,175" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/signout.do,success,/login.jsp,1" routingType="0">

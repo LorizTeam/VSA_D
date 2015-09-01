@@ -53,9 +53,10 @@ public class LoginAction extends Action {
 				forwardText = "success";
 				session.setAttribute("username", username);
 				session.setAttribute("userList", userList);
+				session.setAttribute("alert","0");
 			}else{
 				forwardText = "unsuccess";
-				request.setAttribute("alert","1");
+				session.setAttribute("alert","1");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

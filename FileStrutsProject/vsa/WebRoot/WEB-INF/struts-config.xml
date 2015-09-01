@@ -27,6 +27,7 @@
       type="com.smict.struts.action.LoginAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/main.jsp" />
+      <forward name="unsuccess" path="/main.jsp" />
     </action>
     
     <action
