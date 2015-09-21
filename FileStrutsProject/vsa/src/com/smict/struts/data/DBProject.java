@@ -9,6 +9,7 @@ import java.util.List;
 import com.smict.struts.data.DBConnect;
 import com.smict.struts.form.BusinessForm;
 import com.smict.struts.form.UploadForm;
+import com.smict.struts.form.IndexVSAForm;
 
 
 public class DBProject {
@@ -252,5 +253,57 @@ public class DBProject {
 		String sqlQuery = "update picpath set picstatus = 1 where pic_path = '"+pic_path+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+	}
+	
+	public List Get_HeaderProjectForIndex(String bu_name) {
+		List indexList = new ArrayList();
+		try {
+			conn = dbcon.getConnectMYSql();
+			String pj_name="",pj_year="",pj_typename="",pic_path="";
+			String sqlQuery = "select * from `index` " +
+			"where bu_name = '"+bu_name+"' " +
+			"group by pj_name";
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				pj_name = rs.getString("pj_name");
+				pj_year = rs.getString("pj_year");
+				pj_typename = rs.getString("pj_typename");
+				pic_path = rs.getString("pic_path");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return indexList;
+	}
+	public List Get_PictureProjectForIndex(String bu_name,String pj_name) {
+		List indexList = new ArrayList();
+		try {
+			conn = dbcon.getConnectMYSql();
+			String pj_year="",pj_typename="",pic_path="";
+			String sqlQuery = "select * from `index` " +
+			"where bu_name = '"+bu_name+"' and pj_name = '"+pj_name+"'";
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				pj_name = rs.getString("pj_name");
+				pj_year = rs.getString("pj_year");
+				pj_typename = rs.getString("pj_typename");
+				pic_path = rs.getString("pic_path");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return indexList;
 	}
 }
