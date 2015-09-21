@@ -21,7 +21,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/kitit.css" />
+<link rel="stylesheet" href="css/csskit2.css" />
 <link rel="stylesheet" href="css/uikit.css" />
 
 
@@ -85,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="header">
 
 		<!-- Social icon -->
-		<div class="fix-social">
+		<div class="fix-social" >
 			<ul>
 				<li><a href="#"><img class="img-responsive"
 						src="images/face-icon-color.png"></a></li>
@@ -188,9 +189,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<article class=" artic container-center " id="project">
 				<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
 					<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
-					<li data-uk-filter="corporate"><a href="">Corporate</a></li>
-					<li data-uk-filter="residential"><a href="">Residential</a></li>
-					<li data-uk-filter="commercial"><a href="">Commercial</a></li>
+					<li data-uk-filter="Corporate"><a href="">Corporate</a></li>
+					<li data-uk-filter="Residential"><a href="">Residential</a></li>
+					<li data-uk-filter="Commercial"><a href="">Commercial</a></li>
 					<form class="uk-form">
 
 						<select>
@@ -202,124 +203,140 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 				<section class="uk-grid"
 					data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-					<figure data-uk-filter="corporate" data-my-category="1992"
+					<figure data-uk-filter="Corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								corporate</figcaption> </a>
+								Corporate</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="residential" data-my-category="1995"
+					<figure data-uk-filter="Residential" data-my-category="1995"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/3.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								residential</figcaption> </a>
+								Residential</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="commercial" data-my-category="1999"
+					<figure data-uk-filter="Commercial" data-my-category="1999"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/4.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								commercial</figcaption> </a>
+								Commercial</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="residential" data-my-category="2015"
+					<figure data-uk-filter="Residential" data-my-category="2015"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/5.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								residential</figcaption> </a>
+								Residential</figcaption> </a>
 					</figure>
 
-					<figure data-uk-filter="residential" data-my-category="2015"
+					<figure data-uk-filter="Residential" data-my-category="2015"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/5.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								residential</figcaption> </a>
+								Residential</figcaption> </a>
 					</figure>
 
-					<figure data-uk-filter="commercial" data-my-category="1999"
+					<figure data-uk-filter="Commercial" data-my-category="1999"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/4.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								commercial</figcaption> </a>
+								Commercial</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="residential" data-my-category="1995"
+					<figure data-uk-filter="Residential" data-my-category="1995"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/3.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								residential</figcaption> </a>
+								Residential</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="corporate" data-my-category="1992"
+					<figure data-uk-filter="Corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								corporate</figcaption> </a>
+								Corporate</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="corporate" data-my-category="1992"
+					<figure data-uk-filter="Corporate" data-my-category="1992"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/2.jpg">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								corporate</figcaption> </a>
+								Corporate</figcaption> </a>
 					</figure>
-					<% 
-						if(indexList != null){
-							indexHeadIter = indexList.listIterator();
+					<% 		DBProject dbpj = new DBProject();
+							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
 							while(indexHeadIter.hasNext()){
 								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
 								
 					%>
 					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'<%=vsaform.getPj_name() %>'}"><img
+						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_name() %>'}"><img
 							class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								<%=vsaform.getPj_typename() %></figcaption> </a>
 					</figure>
-					<div id="<%=vsaform.getPj_name() %>" class="uk-modal">
-						<div class="uk-modal-dialog">
-							<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-								data-loop="true">
-								
-								<%
-									DBProject dbpj = new DBProject();
-									indexPicIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
-									while(indexPicIter.hasNext()){
-										IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
-										
-								%>
-									<img src="<%=vsapicform.getPic_path() %>" alt="" />
-								<%
-									}
-								 %>
-							</div>
-						</div>
-					</div>
 					<%							
 							}
-						}
 					 %>
-
 				</section>
 			</article>
 			<!-- project and fillter -->
 		</div>
 	</div>
+	<!-- This is the modal -->
+	<div id="my-id" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
+				data-loop="true">
+				<img src="images/project/2.jpg" alt="" /> <img
+					src="images/project/3.jpg" alt="" /> <img
+					src="images/project/4.jpg" alt="" /> <img
+					src="images/project/5.jpg" alt="" />
+			</div>
+
+		</div>
+	</div>
+	<%
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+		while(indexHeadIter.hasNext()){
+		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
+	%>
+		<div id="<%=vsaform.getPj_name() %>" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
+				data-loop="true"  data-ratio="16/9" data-width="100%">
+				<%
+					indexPicIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
+					while(indexPicIter.hasNext()){
+					IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
+				%>
+					<img src="<%=vsapicform.getPic_path() %>" alt="" />
+				<%
+					}
+				 %>
+			</div>
+		</div>
+	</div>
+	<%
+		}
+	 %>
+	<!-- This is the modal -->
 
 	<!--grid-hover-->
 	<!--index-team-->
@@ -470,20 +487,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 		});
 	</script>
-	<!-- This is the modal -->
-	<div id="my-id" class="uk-modal">
-		<div class="uk-modal-dialog">
-			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-				data-loop="true">
-				<img src="images/project/2.jpg" alt="" /> <img
-					src="images/project/3.jpg" alt="" /> <img
-					src="images/project/4.jpg" alt="" /> <img
-					src="images/project/5.jpg" alt="" />
-			</div>
 
-		</div>
-	</div>
-	<!-- This is the modal -->
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->

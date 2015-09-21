@@ -261,7 +261,7 @@ public class DBProject {
 			conn = dbcon.getConnectMYSql();
 			String pj_name="",pj_year="",pj_typename="",pic_path="";
 			String sqlQuery = "select * from `index` " +
-			"where bu_name = '"+bu_name+"' " +
+			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' " +
 			"group by pj_name";
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
@@ -287,7 +287,8 @@ public class DBProject {
 			conn = dbcon.getConnectMYSql();
 			String pj_year="",pj_typename="",pic_path="";
 			String sqlQuery = "select * from `index` " +
-			"where bu_name = '"+bu_name+"' and pj_name = '"+pj_name+"'";
+			"where bu_name = '"+bu_name+"' and pj_name = '"+pj_name+"' and picstatus = '1' " +
+			"order by pic_typeno desc";
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
 			while(rs.next()){

@@ -39,7 +39,7 @@ public class IndexVSAAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		IndexVSAForm indexVSAForm = (IndexVSAForm) form;// TODO Auto-generated method stub
 		DBProject dbpj = new DBProject();
-		List indexList = dbpj.Get_HeaderProjectForIndex("VSA");
+		List indexList = dbpj.Get_HeaderProjectForIndex("WVS");
 		request.setAttribute("indexList", indexList);
 		return mapping.findForward("success");
 	}
