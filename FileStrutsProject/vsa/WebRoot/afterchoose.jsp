@@ -154,10 +154,9 @@
 						</div>
 						<div class="cell" >
 							Project Year <div class="input-control text success" data-role="input" >
-											<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year().substring(1) %>" required>
+											<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year() %>" required>
 											<button class="button helper-button clear"><span class="mif-cross"></span></button>
 										</div>
-										<!--  -->
                     	</div>
 	           		</div>
 	           		<div class="row align-center">
@@ -225,12 +224,8 @@
 					</div>
 	          	</div>
 	          	<div class="cell"></div>
-	          	
 			</div>
-			
 		</div>
-		
-			
 		</html:form>
 	</body>
 </html>

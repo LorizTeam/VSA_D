@@ -61,7 +61,7 @@ public class AfterchooseAction extends Action {
 		   pj_typeno = request.getParameter("slc_typepj"),
 		   pj_no = request.getParameter("pj_no");
 		if(!project_year.substring(0, 1).equals("y")){
-			project_year = "y"+project_year;
+			project_year = project_year;
 		}
 		// TODO Auto-generated method stub
 		List testchk = new ArrayList();

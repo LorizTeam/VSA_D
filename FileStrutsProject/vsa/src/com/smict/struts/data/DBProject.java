@@ -259,7 +259,7 @@ public class DBProject {
 		List indexList = new ArrayList();
 		try {
 			conn = dbcon.getConnectMYSql();
-			String pj_name="",pj_year="",pj_typename="",pic_path="";
+			String pj_name="",pj_year="",pj_typename="",pic_path="",pj_no="";
 			String sqlQuery = "select * from `index` " +
 			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' " +
 			"group by pj_name";
@@ -270,7 +270,8 @@ public class DBProject {
 				pj_year = rs.getString("pj_year");
 				pj_typename = rs.getString("pj_typename");
 				pic_path = rs.getString("pic_path");
-				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+				pj_no = rs.getString("pj_no");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path,pj_no));
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -285,7 +286,7 @@ public class DBProject {
 		List indexList = new ArrayList();
 		try {
 			conn = dbcon.getConnectMYSql();
-			String pj_year="",pj_typename="",pic_path="";
+			String pj_year="",pj_typename="",pic_path="",pj_no="";
 			String sqlQuery = "select * from `index` " +
 			"where bu_name = '"+bu_name+"' and pj_name = '"+pj_name+"' and picstatus = '1' " +
 			"order by pic_typeno desc";
@@ -296,7 +297,8 @@ public class DBProject {
 				pj_year = rs.getString("pj_year");
 				pj_typename = rs.getString("pj_typename");
 				pic_path = rs.getString("pic_path");
-				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+				pj_no = rs.getString("pj_no");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path,pj_no));
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

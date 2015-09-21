@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html> 
 	<head>
-
 		<title>JSP for MainForm form</title>		
 	</head>
 	<body class="container-fluid">

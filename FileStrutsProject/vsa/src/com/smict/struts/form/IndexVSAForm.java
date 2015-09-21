@@ -20,7 +20,7 @@ public class IndexVSAForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
-	private String pj_name,pj_year,pj_typename,pic_path;
+	private String pj_no,pj_name,pj_year,pj_typename,pic_path;
 
 	/** 
 	 * Method validate
@@ -32,11 +32,12 @@ public class IndexVSAForm extends ActionForm {
 	}
 	
 	public IndexVSAForm(String pj_name, String pj_year, String pj_typename,
-			String pic_path) {
+			String pic_path, String pj_no) {
 		this.pj_name = pj_name;
 		this.pj_year = pj_year;
 		this.pj_typename = pj_typename;
 		this.pic_path = pic_path;
+		this.pj_no = pj_no;
 	}
 
 	public ActionErrors validate(ActionMapping mapping,
@@ -52,6 +53,13 @@ public class IndexVSAForm extends ActionForm {
 	 */
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		// TODO Auto-generated method stub
+	}
+	public String getPj_no() {
+		return pj_no;
+	}
+
+	public void setPj_no(String pjNo) {
+		pj_no = pjNo;
 	}
 	public String getPj_name() {
 		return pj_name;

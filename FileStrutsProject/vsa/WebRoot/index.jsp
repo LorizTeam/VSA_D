@@ -1,14 +1,16 @@
 <%@ include file="defaultimport.jsp" %>
 <%@ page import="com.smict.struts.form.IndexVSAForm"%>
 <%@ page import="com.smict.struts.data.DBProject"%>
+<%@ page import="com.smict.struts.form.BusinessForm"%>
 <%	
 	ListIterator<?> indexHeadIter = null;
 	ListIterator<?> indexPicIter = null;
+	ListIterator<?> typeIter = null;
 	List<?> indexList = null;	
 	if(request.getAttribute("indexList") != null){
 		indexList = (List<?>)request.getAttribute("indexList");
 	}
-	int i = 0;
+	
  %>
 <!--
 Author: W3layouts
@@ -189,11 +191,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<article class=" artic container-center " id="project">
 				<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
 					<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
-					<li data-uk-filter="Corporate"><a href="">Corporate</a></li>
-					<li data-uk-filter="Residential"><a href="">Residential</a></li>
-					<li data-uk-filter="Commercial"><a href="">Commercial</a></li>
+					<%	DBProject dbpjtype = new DBProject();
+						typeIter = dbpjtype.pj_typeList("1").listIterator();
+						while(typeIter.hasNext()){
+							BusinessForm buform = (BusinessForm) typeIter.next();
+					%>
+							<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
+					<%
+						}
+					 %>
 					<form class="uk-form">
-
 						<select>
 							<option selected>Sort by</option>
 							<option data-uk-sort="my-category:desc">YEAR</option>
@@ -203,93 +210,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 				<section class="uk-grid"
 					data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-					<figure data-uk-filter="Corporate" data-my-category="1992"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Corporate</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Residential" data-my-category="1995"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/3.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Residential</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Commercial" data-my-category="1999"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/4.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Commercial</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Residential" data-my-category="2015"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/5.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Residential</figcaption> </a>
-					</figure>
-
-					<figure data-uk-filter="Residential" data-my-category="2015"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/5.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Residential</figcaption> </a>
-					</figure>
-
-					<figure data-uk-filter="Commercial" data-my-category="1999"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/4.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Commercial</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Residential" data-my-category="1995"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/3.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Residential</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Corporate" data-my-category="1992"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Corporate</figcaption> </a>
-					</figure>
-					<figure data-uk-filter="Corporate" data-my-category="1992"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#my-id'}"><img
-							class="uk-overlay-scale" src="images/project/2.jpg">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								Corporate</figcaption> </a>
-					</figure>
 					<% 		DBProject dbpj = new DBProject();
-							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+							indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA").listIterator();
 							while(indexHeadIter.hasNext()){
 								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
-								
 					%>
 					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_name() %>'}"><img
-							class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
+						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
+						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								<%=vsaform.getPj_typename() %></figcaption> </a>
+								<%=vsaform.getPj_name() %></figcaption> </a>
 					</figure>
 					<%							
 							}
@@ -300,39 +232,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- This is the modal -->
-	<div id="my-id" class="uk-modal">
-		<div class="uk-modal-dialog">
-			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-				data-loop="true">
-				<img src="images/project/2.jpg" alt="" /> <img
-					src="images/project/3.jpg" alt="" /> <img
-					src="images/project/4.jpg" alt="" /> <img
-					src="images/project/5.jpg" alt="" />
-			</div>
-
-		</div>
-	</div>
 	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA").listIterator();
 		while(indexHeadIter.hasNext()){
 		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
 	%>
-		<div id="<%=vsaform.getPj_name() %>" class="uk-modal">
-		<div class="uk-modal-dialog">
-			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-				data-loop="true"  data-ratio="16/9" data-width="100%">
-				<%
-					indexPicIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
-					while(indexPicIter.hasNext()){
-					IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
-				%>
-					<img src="<%=vsapicform.getPic_path() %>" alt="" />
-				<%
-					}
-				 %>
+		<div id="<%=vsaform.getPj_no() %>" class="uk-modal">
+			<div class="uk-modal-dialog">
+				<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
+					data-loop="true"  data-ratio="16/9" data-width="100%">
+					<%
+						indexPicIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
+						while(indexPicIter.hasNext()){
+						IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
+					%>
+						<img src="<%=vsapicform.getPic_path() %>" alt="" />
+					<%
+						}
+					 %>
+				</div>
 			</div>
 		</div>
-	</div>
 	<%
 		}
 	 %>
@@ -369,8 +289,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							alt=""></a>
 						<div class="mask">
 							<ul class="social-icons">
-								<li><a href="#"><span class="facebook"> </span></a></li>
-								<li><a href="#"><span class="twitter"> </span></a></li>
+								<li>c<a href="#"><span class="facebook"> </span></a></li>
+								<li>pa<a href="#"><span class="twitter"> </span></a></li>
 								<li>&quot;<a href="#"><span class="thumb"> </span></a></li>
 							</ul>
 						</div>

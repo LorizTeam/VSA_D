@@ -14,7 +14,7 @@
 			response.sendRedirect("login.jsp");
 	%>
 		<div class="app-bar fixed-top navy" data-role="appbar">
-	        <a class="app-bar-element branding" href="index.jsp">VSA Group</a>
+	        <a class="app-bar-element branding" href="vsa new.html">VSA Group</a>
 	        <span class="app-bar-divider"></span>
 	        <ul class="app-bar-menu">
 	            <li data-flexorderorigin="0" data-flexorder="1"><a href="main.jsp">Main Dashboard</a></li>
