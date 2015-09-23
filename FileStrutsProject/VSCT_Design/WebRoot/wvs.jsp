@@ -8,10 +8,25 @@
 <link rel="stylesheet" href="css/styles.css" />
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/uikit.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="fotorama.css" />
 <script src="fotorama.js" type="text/javascript"></script>
 <script src="js/components/grid.min.js" type="text/javascript"></script>
 <script src="js/components/lightbox.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+	function initialize(){
+		var mapCanvas = document.getElementById('map');
+		var mapOption = {
+			center: new google.maps.LatLng(13.789178, 100.541967),
+			zoom: 17,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas, mapOption);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </head>
 <body id="home">
 
@@ -219,31 +234,58 @@
 			<br>
 		</div>
 	</div>
-	<div class="block" id="contact">
-
-		<div class="uk-text-center">
-			<h1>CONTACT</h1>
-			<br> <br> <br>
-			<h3>Soi Pradipat 10, Pradipat Road, Samsen Nai, Phaya Thai
-				Bangkok 10400</h3>
-			<br>
-			<h2>
-				+66(0)2 618 4318 <br> <br> wvs2556@gmail.com
-			</h2>
-		</div>
-		<br> <br> <br>
-		<div class=" uk-grid ">
-			<div class="uk-width-1-10 uk-container-center">
-				<a href="index.jsp"><img src="images/vsa logo black.png" alt="" /></a>
+	<footer>
+		<div class="block" id="contact">
+		<div class="uk-grid">
+			<div class="uk-width-1-1 uk-text-center">
+				<h1>CONTACT</h1>
+				<br> <br> <br>
+			</div>
+			<div class="uk-width-1-2" style="margin-left: 10%;">
+				<form action="#">
+				<input id="name" type="text" placeholder="Name" class="frm-control">
+				<br> <br>
+				<input type="email" placeholder="E-mail" class="frm-control">
+				<br> <br>		
+				<div class="uk-form-row">
+				    <textarea class="frm-control" cols="uk-form-large" rows="" placeholder="Message" style="width: 70%;"></textarea>
+				</div>
+				<br> <br>
+				<button class="uk-button" type="button" name="send" value="send" >Send</button>
+				</form>
+				<hr width="74%" />
+				<div class="center-footpic">
+					<a href="index.jsp"><img src="images/vsa logo black.png" alt="" width="10%" height="10%"/></a>
+				</div>
+			</div>
+			<div class="uk-width-1-3" style="margin-left: -5%;">
+				<span class="fa fa-building-o fa-2x dropcaps opacity5"></span>
+				<label class="opacity7">
+					Soi Pradipat 10, Pradipat Road, Samsen Nai,
+					<br/>Phaya Thai Bangkok 10400 
+				</label>
+				<br/><br/>
+				<span class="fa fa-phone fa-2x dropcap-oneline opacity5"></span>
+				<label class="opacity7">
+					+66(0)2 618 4318
+				</label>
+				<br/><br/>
+				<span class="fa fa-envelope-o fa-2x dropcap-oneline opacity5"></span>
+				<label class="opacity7">
+					wvs2556@gmail.com
+				</label>
+				<br/><br/>
+				<div id="map"></div>
+				<a id="btn-location" class="uk-button uk-width-1-1" href="https://goo.gl/Kqeuon"><span class="fa fa-map-marker fa-2x"></span> Click Here for Map</a>
 			</div>
 		</div>
-		<br>
-		<div class="footer uk-text-center">
-			<p>Design by WVS Interior Design</p>
+
+			<div class="footer uk-text-center">
+				<p>Design by WVS Interior Design</p>
+			</div>
+	
 		</div>
-
-	</div>
-
+	</footer>
 	<!-- This is the modal -->
 	<div id="my-id" class="uk-modal">
 		<div class="uk-modal-dialog">
