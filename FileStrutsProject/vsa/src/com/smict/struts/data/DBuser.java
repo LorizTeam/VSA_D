@@ -35,5 +35,4 @@ public class DBuser {
 		}
 		return userList;
 	}
-
 }

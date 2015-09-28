@@ -60,7 +60,8 @@
 				<input type="password" id="InputPassword" name="InputPassword" class="form-control" placeholder ="Password"/>
 				<div class="col-xs-4 col-md-4"></div>
 				<button type="submit" class="btn btn-primary form-control">Sign in</button>
-				<%if(request.getAttribute("alert") != null){%>
+				<%String alert = (String) session.getAttribute("alert");
+				if(session.getAttribute("alert") != null){%>
 				<div class="alert alert-success text-center" role="alert"><span class="mif-warning mif-ani-flash mif-ani-fast fg-red mif-2x"></span>&nbsp;&nbsp;&nbsp;Username or Password Incorrect</div>
 				<%} %>
 			</div>

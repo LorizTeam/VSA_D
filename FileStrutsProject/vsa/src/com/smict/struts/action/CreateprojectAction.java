@@ -56,7 +56,7 @@ public class CreateprojectAction extends Action {
 			return mapping.findForward("nologin");
 		}else{
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-			Date date = new Date();
+			Date date = new Date();	
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
 			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+request.getParameter("tb_projectname"));
@@ -89,8 +89,6 @@ public class CreateprojectAction extends Action {
 				   slc_bu = request.getParameter("slc_bu"),
 				   slc_typepj = request.getParameter("slc_typepj"),
 				   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
-			project_year = "y"+project_year;
-			
 			
 			if(getErrors(request) == null ||getErrors(request).size() == 0){
 				uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());

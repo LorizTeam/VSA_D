@@ -9,6 +9,7 @@ import java.util.List;
 import com.smict.struts.data.DBConnect;
 import com.smict.struts.form.BusinessForm;
 import com.smict.struts.form.UploadForm;
+import com.smict.struts.form.IndexVSAForm;
 
 
 public class DBProject {
@@ -69,7 +70,7 @@ public class DBProject {
 			pj_no = rs.getString("pj_no");
 		}
 		
-		sqlQuery="insert into picpath (pic_path,pic_status,pj_no) values ('"+pic_path+"','1','"+pj_no+"')";
+		sqlQuery="insert into picpath (pic_path,picstatus,pic_typeno,pj_no) values ('"+pic_path+"',1,2,"+pj_no+")";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
 	}
@@ -115,7 +116,7 @@ public class DBProject {
 				"INNER JOIN business AS e ON e.bu_no = a.bu_no " +
 				"INNER JOIN pic_type AS f ON f.pic_typeno = c.pic_typeno " +
 				"where " +
-				"a.pj_name = '"+pj_name+"' and d.picstatus = 1 " +
+				"a.pj_name = '"+pj_name+"' " +
 				"order by c.pic_path";
 		conn = dbcon.getConnectMYSql();
 		pStmt = conn.createStatement();
@@ -156,7 +157,7 @@ public class DBProject {
 				"INNER JOIN business AS e ON e.bu_no = a.bu_no " +
 				"INNER JOIN pic_type AS f ON f.pic_typeno = c.pic_typeno " +
 				"where " +
-				"a.pj_no = '"+pj_no+"' and d.picstatus = 1 " +
+				"a.pj_no = '"+pj_no+"' " +
 				"order by c.pic_path";
 		conn = dbcon.getConnectMYSql();
 		pStmt = conn.createStatement();
@@ -171,6 +172,7 @@ public class DBProject {
 			pj_typename = rs.getString("pj_typename");
 			bu_name = rs.getString("bu_name");
 			pic_path = rs.getString("pic_path");
+			picstatus_name = rs.getString("picstatus_name");
 			pic_typename = rs.getString("pic_typename");
 			Listforafterchoose.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,pj_typename,bu_name,pic_path,picstatus_name,pic_typename));
 		}
@@ -245,5 +247,64 @@ public class DBProject {
 		String sqlQuery = "update picpath set picstatus = 2 where pic_path = '"+pic_path+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+	}
+	public void enable_picstatus(String pic_path) throws IOException, Exception{
+		conn = dbcon.getConnectMYSql();
+		String sqlQuery = "update picpath set picstatus = 1 where pic_path = '"+pic_path+"'";
+		pStmt = conn.createStatement();
+		pStmt.execute(sqlQuery);
+	}
+	
+	public List Get_HeaderProjectForIndex(String bu_name) {
+		List indexList = new ArrayList();
+		try {
+			conn = dbcon.getConnectMYSql();
+			String pj_name="",pj_year="",pj_typename="",pic_path="";
+			String sqlQuery = "select * from `index` " +
+			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' " +
+			"group by pj_name";
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				pj_name = rs.getString("pj_name");
+				pj_year = rs.getString("pj_year");
+				pj_typename = rs.getString("pj_typename");
+				pic_path = rs.getString("pic_path");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return indexList;
+	}
+	public List Get_PictureProjectForIndex(String bu_name,String pj_name) {
+		List indexList = new ArrayList();
+		try {
+			conn = dbcon.getConnectMYSql();
+			String pj_year="",pj_typename="",pic_path="";
+			String sqlQuery = "select * from `index` " +
+			"where bu_name = '"+bu_name+"' and pj_name = '"+pj_name+"' and picstatus = '1' " +
+			"order by pic_typeno desc";
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				pj_name = rs.getString("pj_name");
+				pj_year = rs.getString("pj_year");
+				pj_typename = rs.getString("pj_typename");
+				pic_path = rs.getString("pic_path");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return indexList;
 	}
 }

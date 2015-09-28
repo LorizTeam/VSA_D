@@ -144,7 +144,6 @@ public class AfterchooseAction extends Action {
 					}
 					
 					try {
-						
 						// ข้อมูลของ Dropdownlist Start
 						buList = dbproject.bu_nameList();
 						pj_typeList = dbproject.pj_typeList(bu_no);
@@ -152,10 +151,6 @@ public class AfterchooseAction extends Action {
 						//ข้อมูลรายลเอียด Project และรูปภาพ Start
 						Listforafterchoose = dbproject.afterchoose_edit(project_name);
 						//ข้อมูลรายลเอียด Project และรูปภาพ End
-						
-						
-						
-						
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -179,14 +174,16 @@ public class AfterchooseAction extends Action {
 				String[] picpath = request.getParameterValues("picpath");
 //				String[] chk_picstatus = request.getParameterValues("chk_picstatus");
 //				List chk_picstatus= new ArrayList();
-				
-				String a = null;
 				for(int i = 0; i <picpath.length;i++){
 //					chk_picstatus.add(request.getParameter("chk_picstatus"+i));
 					String chk_picstatus = request.getParameter("chk_picstatus"+i);
-					if(chk_picstatus == null){
+					
 						try {
-							dbproject.disable_picstatus(picpath[i].toString());
+							if(chk_picstatus == null){
+								dbproject.disable_picstatus(picpath[i].toString());
+							}else{
+								dbproject.enable_picstatus(picpath[i].toString());
+							}
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -194,7 +191,7 @@ public class AfterchooseAction extends Action {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-					}
+					
 				}
 				String rdo = request.getParameter("rdo");
 				try {
@@ -217,7 +214,6 @@ public class AfterchooseAction extends Action {
 				request.setAttribute("Listforafterchoose", Listforafterchoose);
 				forwardText = "success";
 			}
-			
 		}
 		return mapping.findForward(forwardText);
 	}

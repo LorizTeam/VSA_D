@@ -55,7 +55,7 @@ nav a{
 }
 .icon-head{
 	padding:50px;
-
+}
 .header{
 	margin-top:20px;
 }
@@ -85,4 +85,67 @@ nav a{
 }
 #work,#project{
 	min-height: 600px;
+}
+#map{
+	width: 400px;
+	height:300px;
+}
+.frm-control{
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	padding: 10px;
+	width:70%;
+}
+.frm-control:hover{
+	border: 1px solid rgba(83, 138, 255, 0.9);
+}
+.frm-control:focus{
+	border: 1px solid rgba(83, 138, 255, 0.9);
+	box-shadow: 1px 1px 10px rgba(83, 138, 255, 0.3);
+}
+.dropcaps{
+	float: left;
+	padding-top: 6px;
+	padding-right: 8px;
+	padding-left: 3px;	
+}
+.dropcap-oneline{
+	float: left;
+	padding-right: 8px;
+	padding-left: 3px;	
+}
+.center-footpic{
+	text-align: center;
+	margin-left: -32%;
+}
+.opacity5{
+	opacity:0.5;
+}
+.opacity7{
+	opacity:0.7;
+}
+@media screen and (max-width: 1100px){
+	#map{
+		width: 350px;
+		height: 250px;	
+	}
+	#btn-location{
+		display: none;
+	}
+hr{
+	width: 77%;
+}	
+}
+@media screen and (max-width: 768px){
+	#map{
+		display: none;	
+	}
+	#btn-location{
+		display: block;
+	}	
+}
+@media screen and (min-width: 1100px){
+	#btn-location{
+		display: none;
+	}
 }
