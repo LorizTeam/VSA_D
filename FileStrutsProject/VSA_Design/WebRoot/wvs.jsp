@@ -27,7 +27,7 @@
 		</div>
 	</nav>
 	<div class=" uk-grid icon-head">
-		<img src="images/wvs.png" class="uk-width-1-10 uk-container-center"
+		<img src="wvsimages/wvs.png" class="uk-width-1-10 uk-container-center"
 			alt="" />
 	</div>
 
@@ -35,9 +35,9 @@
 		<div class="fotorama " data-width="100%" data-nav="false"
 			data-transition="crossfade" data-autoplay="3000" data-loop="true"
 			data-autoplay="true">
-			<img src="images/slide/2.jpg" alt="" /> <img src="images/slide/3.jpg"
-				alt="" /> <img src="images/slide/4.jpg" alt="" /> <img
-				src="images/slide/5.jpg" alt="" />
+			<img src="wvsimages/slide/2.jpg" alt="" /> <img src="wvsimages/slide/3.jpg"
+				alt="" /> <img src="wvsimages/slide/4.jpg" alt="" /> <img
+				src="wvsimages/slide/5.jpg" alt="" />
 		</div>
 	</div>
 
@@ -51,7 +51,7 @@
 
 		<div class="uk-grid">
 			<div class="uk-width-1-2 uk-text-center">
-				<img src="images/slide/1.jpg" alt="" />
+				<img src="wvsimages/slide/1.jpg" alt="" />
 			</div>
 
 			<div class="uk-width-1-2 uk-text-center">
@@ -107,7 +107,7 @@
 			<figure data-uk-filter="corporate" data-my-category="1992"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"> <img
-					class="uk-overlay-scale" src="images/slide/2.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						corporate</figcaption>
@@ -116,7 +116,7 @@
 			<figure data-uk-filter="residential" data-my-category="1995"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/3.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -124,7 +124,7 @@
 			<figure data-uk-filter="commercial" data-my-category="1999"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/4.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						commercial</figcaption> </a>
@@ -132,7 +132,7 @@
 			<figure data-uk-filter="residential" data-my-category="2015"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/5.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -141,7 +141,7 @@
 			<figure data-uk-filter="residential" data-my-category="2015"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/5.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -150,7 +150,7 @@
 			<figure data-uk-filter="commercial" data-my-category="1999"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/4.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						commercial</figcaption> </a>
@@ -158,7 +158,7 @@
 			<figure data-uk-filter="residential" data-my-category="1995"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/3.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -166,7 +166,7 @@
 			<figure data-uk-filter="corporate" data-my-category="1992"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/2.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						corporate</figcaption> </a>
@@ -174,7 +174,7 @@
 			<figure data-uk-filter="corporate" data-my-category="1992"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/2.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						corporate</figcaption> </a>
@@ -182,7 +182,7 @@
 			<figure data-uk-filter="residential" data-my-category="1995"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/3.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -190,7 +190,7 @@
 			<figure data-uk-filter="commercial" data-my-category="1999"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/4.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						commercial</figcaption> </a>
@@ -198,7 +198,7 @@
 			<figure data-uk-filter="residential" data-my-category="2015"
 				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="images/slide/5.jpg" alt="">
+					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
 					<figcaption
 						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 						residential</figcaption> </a>
@@ -234,7 +234,7 @@
 		<br> <br> <br>
 		<div class=" uk-grid ">
 			<div class="uk-width-1-10 uk-container-center">
-				<a href="index.jsp"><img src="images/vsa logo black.png" alt="" /></a>
+				<a href="index.jsp"><img src="wvsimages/vsa logo black.png" alt="" /></a>
 			</div>
 		</div>
 		<br>
@@ -250,9 +250,9 @@
 			<a class="uk-modal-close uk-close"></a>
 			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
 				data-loop="true">
-				<img src="images/slide/2.jpg" alt="" /> <img
-					src="images/slide/3.jpg" alt="" /> <img src="images/slide/4.jpg"
-					alt="" /> <img src="images/slide/5.jpg" alt="" />
+				<img src="wvsimages/slide/2.jpg" alt="" /> <img
+					src="wvsimages/slide/3.jpg" alt="" /> <img src="wvsimages/slide/4.jpg"
+					alt="" /> <img src="wvsimages/slide/5.jpg" alt="" />
 			</div>
 
 		</div>

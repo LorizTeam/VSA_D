@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="VSCT_Design"
+  name="WVS_Design"
   id="myeclipse.1438679435128"
   context-root="/VSCT_Design"
   j2ee-spec="5.0"
-  archive="VSCT_Design.war">
+  archive="WVS_Design.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
