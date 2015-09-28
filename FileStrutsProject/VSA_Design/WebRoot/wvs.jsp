@@ -8,11 +8,12 @@
 <link rel="stylesheet" href="wvscss/styles.css" />
 <script src="wvsjs/jquery.js" type="text/javascript"></script>
 <script src="wvsjs/uikit.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="fotorama.css" />
 <script src="fotorama.js" type="text/javascript"></script>
 <script src="wvsjs/components/grid.min.js" type="text/javascript"></script>
 <script src="wvsjs/components/lightbox.min.js" type="text/javascript"></script>
-</head>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script>
 	function initialize(){
