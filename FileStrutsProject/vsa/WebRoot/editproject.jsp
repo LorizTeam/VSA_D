@@ -3,6 +3,12 @@
 <html> 
 	<head>
 		<title>Choose Project For Edit</title>
+		<style>
+			.app-bar .app-bar-element > .button {
+			    margin-top: 0.5rem !important;
+			}
+		</style>
+	</head>
 	<body>
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"></link>
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css" type="text/css"></link>
@@ -24,7 +30,7 @@
 			<div class="grid container page-content">
 				<div class="row cells12 align-left">
 					<div class="cell"></div>
-		           	<div class="cell debug colspan9">
+		           	<div class="cell debug colspan10">
 		           		<div class="row align-center" ><h4>Choose Project For Edit</h4></div>
 						<div class="row cell">
 							<div class="cell">

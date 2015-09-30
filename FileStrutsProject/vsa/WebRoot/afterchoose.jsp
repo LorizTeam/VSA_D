@@ -3,6 +3,12 @@
 <html> 
 	<head>
 		<title>For Change Detail Project</title>
+		
+	<style>
+		.app-bar .app-bar-element > .button {
+		    margin-top: 0.5rem !important;
+		}
+	</style>
 	</head>
 	<body>
 	<%@ include file="menubar.jsp" %>
@@ -29,7 +35,10 @@
 		List<?> detailList = masterdetailList;
 		itertest = detailList.iterator();
 		BusinessForm createproject1 = (BusinessForm) itertest.next();
-						
+		String alert = null;
+		if(request.getAttribute("alert") != null){
+			alert = (String)request.getAttribute("alert");
+		}
 	%>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -51,7 +60,7 @@
 		<div class="grid container page-content">
 			<div class="row cells12 align-left">
 				<div class="cell"></div>
-	           	<div class="cell debug colspan9">
+	           	<div class="cell debug colspan10">
 	           		<div class="row align-center" ><h4>Upload Image</h4></div>
 					<div class="row cells2">
 	           			<div class="cell">
@@ -85,14 +94,15 @@
 						<button type="submit" name="upload" id="upload" class="button success">upload</button>
 					</div>
 	           	</div>
-	          	<div class="cell"></div>
+	           	<div class="cell"></div>
 			</div>
 		</div>
 		<div class="grid container page-content">
 			<div class="row cells12 align-left">
 				<div class="cell"></div>
-	           	<div class="cell debug colspan9">
+	           	<div class="cell debug colspan10">
 	           		<div class="row align-center" ><h4>Edit Project Details</h4></div>
+	           		
 	           		<div class="row cells2" >
                     		<div class="cell">
 	                    		Select Your Business <div class="input-control select text success" >
@@ -158,13 +168,20 @@
 											<button class="button helper-button clear"><span class="mif-cross"></span></button>
 										</div>
                     	</div>
-	           		</div>
+	           		</div><%
+	           			if(alert != null){
+	           			%>
+	           				<div class="row align-center" ><span class="tag alert"><%=alert %></span></div>
+	           			<%
+	           			}
+	           		 	%>
 	           		<div class="row align-center">
 	           			<table class="table striped hovered cell-hovered border bordered align-center">
 	           				<tr>
 	           					<th>Image</th>
 	           					<th>Select Head</th>
 	           					<th>Picture Staus</th>
+	           					<th>Delete Pictures</th>
 	           				</tr>
 	           				<%	
 	           					List<?> detailList1 = masterdetailList;
@@ -209,6 +226,12 @@
 	           						<%
 	           							}
 	           						 %>
+									    <span class="check"></span>
+									</label>
+	           					</td>
+	           					<td>
+	           						<label class="input-control checkbox">
+									    <input type="checkbox" name="chkbtn<%=i %>">
 									    <span class="check"></span>
 									</label>
 	           					</td>

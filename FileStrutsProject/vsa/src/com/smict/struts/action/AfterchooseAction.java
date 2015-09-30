@@ -7,6 +7,9 @@ package com.smict.struts.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -16,6 +19,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -26,7 +33,9 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
 import com.smict.struts.data.DBProject;
-import com.smict.struts.data.DBUpload;
+import com.smict.struts.data.DBuser;
+import com.smict.struts.data.EncryptandDecrypt;
+import com.smict.struts.data.Pictures;
 import com.smict.struts.form.AfterchooseForm;
 
 /** 
@@ -52,14 +61,31 @@ public class AfterchooseAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		AfterchooseForm afterchooseForm = (AfterchooseForm) form;
+		DBuser dbuser = new DBuser();
+		EncryptandDecrypt clsEnDe = new EncryptandDecrypt();
+		
+		String alert = null;
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss-SSS");
 		FileOutputStream outputStream = null;
 		DBProject dbproject = new DBProject();
+		Pictures cls_pic = new Pictures();
+		String input = null,key = null,iv = null;
+		input = "Hello World";
+		key = "BaXsEr5";
+		iv = "aKixAq8O";
+		String text="Test Encrypt";
+		
+		if(input != null){
+			clsEnDe.Encrypt(input);
+			clsEnDe.Decrypt(input);
+		}
+		
 		String project_name = request.getParameter("tb_projectname"),
 		   project_year = request.getParameter("tb_projectyear"),
 		   bu_no = request.getParameter("slc_bu"),
 		   pj_typeno = request.getParameter("slc_typepj"),
 		   pj_no = request.getParameter("pj_no");
+		
 		if(!project_year.substring(0, 1).equals("y")){
 			project_year = project_year;
 		}
@@ -172,15 +198,26 @@ public class AfterchooseAction extends Action {
 			
 			if(request.getParameter("submit") != null){
 				String[] picpath = request.getParameterValues("picpath");
+				
 //				String[] chk_picstatus = request.getParameterValues("chk_picstatus");
 //				List chk_picstatus= new ArrayList();
+				//วนเพื่อทำการ ลบ หรือว่าเปลี่ยนสถานะรูปภาพ
 				for(int i = 0; i <picpath.length;i++){
-//					chk_picstatus.add(request.getParameter("chk_picstatus"+i));
 					String chk_picstatus = request.getParameter("chk_picstatus"+i);
+					String chkbtn_del = chkbtn_del = request.getParameter("chkbtn"+i);
 					
 						try {
-							if(chk_picstatus == null){
+							if(chkbtn_del != null){
+								
+								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no);
+								
+								if(keep_alert != null){
+									alert = keep_alert;
+								}
+								
+							}else if(chk_picstatus == null){
 								dbproject.disable_picstatus(picpath[i].toString());
+								
 							}else{
 								dbproject.enable_picstatus(picpath[i].toString());
 							}
@@ -193,14 +230,18 @@ public class AfterchooseAction extends Action {
 						}
 					
 				}
-				String rdo = request.getParameter("rdo");
+				
 				try {
 					// ข้อมูลของ Dropdownlist Start
+					String rdo = request.getParameter("rdo");
 					buList = dbproject.bu_nameList();
 					pj_typeList = dbproject.pj_typeList(bu_no);
+					
 					// ข้อมูลของ Dropdownlist End
-					//อัพเดทข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Start
+					//อัพเดทข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Start รูปไหนที่มีการกดปุ่ม Radio button จะอัพเดทให้เป็น Head
+					
 					Listforafterchoose = dbproject.editproject(rdo, pj_no, project_name, project_year, bu_no, pj_typeno);
+					
 					//ข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit End
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -212,6 +253,7 @@ public class AfterchooseAction extends Action {
 				request.setAttribute("buList", buList);
 				request.setAttribute("slc_typepj", pj_typeList);
 				request.setAttribute("Listforafterchoose", Listforafterchoose);
+				request.setAttribute("alert", alert);
 				forwardText = "success";
 			}
 		}
