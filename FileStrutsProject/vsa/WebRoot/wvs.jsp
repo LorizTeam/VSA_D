@@ -43,7 +43,7 @@
 	</nav>
 	<div class=" uk-grid icon-head">
 		<img src="wvsimages/wvs.png" class="uk-width-1-10 uk-container-center"
-			alt="" style="height: auto;"/>
+			alt="" style="height: 100%;"/>
 	</div>
 
 	<div class="uk-container-center uk-width-3-5">
