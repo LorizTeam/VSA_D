@@ -191,7 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 				<section class="uk-grid"
 					data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-					<figure data-uk-filter="corporate" data-my-category="1992"
+					<figure data-uk-filter="corporate" data-my-category="2012-05-02"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/2.jpg">
@@ -199,7 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								corporate</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="residential" data-my-category="1995"
+					<figure data-uk-filter="residential" data-my-category="2012-05-01"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/3.jpg">
@@ -207,7 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								residential</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="commercial" data-my-category="1999"
+					<figure data-uk-filter="commercial" data-my-category="2012-05-05"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/4.jpg">
@@ -215,7 +215,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								commercial</figcaption> </a>
 					</figure>
-					<figure data-uk-filter="residential" data-my-category="2015"
+					<figure data-uk-filter="residential" data-my-category="2012-05-04"
 						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#my-id'}"><img
 							class="uk-overlay-scale" src="images/project/5.jpg">
