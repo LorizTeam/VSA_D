@@ -26,7 +26,10 @@ html{
 	margin-right:15%;
 	
 }
-
+.img-responsive{
+	width:100%;
+	height:auto;
+}
 .fixnav{
 	position: fixed;
 	top:0px;
