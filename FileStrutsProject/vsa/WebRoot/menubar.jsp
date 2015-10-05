@@ -18,7 +18,8 @@
 	        <span class="app-bar-divider"></span>
 	        <ul class="app-bar-menu">
 	            <li data-flexorderorigin="0" data-flexorder="1"><a href="main.jsp">Main Dashboard</a></li>
-	            <li data-flexorderorigin="1" data-flexorder="2" class="">
+	            <li data-flexorderorigin="1" data-flexorder="1"><a href="nortifications.jsp">Nortifications</a></li>
+	            <li data-flexorderorigin="2" data-flexorder="2" class="">
 	                <a href="" class="dropdown-toggle">Project</a>
 	                <ul class="d-menu" data-role="dropdown" style="display: none;">
 	                    <li><a href="createprojectStart.do">New project</a></li>
@@ -34,7 +35,7 @@
 			  		if(detailUser.getPosition_name().equals("Admin")){
 			  		
 			  %>
-	            <li data-flexorderorigin="2" data-flexorder="1" >
+	            <li data-flexorderorigin="3" data-flexorder="1" >
 	            	<a href="" class="dropdown-toggle">Managed User</a>
 	            	<ul class="d-menu" data-role="dropdown" style="display: none;">
 	                    <li><a href="">Create User</a></li>
