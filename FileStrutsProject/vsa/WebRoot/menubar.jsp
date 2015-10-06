@@ -38,7 +38,7 @@
 	            <li data-flexorderorigin="3" data-flexorder="1" >
 	            	<a href="" class="dropdown-toggle">Managed User</a>
 	            	<ul class="d-menu" data-role="dropdown" style="display: none;">
-	                    <li><a href="">Create User</a></li>
+	                    <li><a href="createuser.jsp">Create User</a></li>
 	                    <li class="divider"></li>
 	                    <li><a href="">Edit User</a></li>
 	                </ul>

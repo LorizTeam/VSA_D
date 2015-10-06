@@ -106,4 +106,11 @@ public class DBuser {
 //		java.security.Security.addProvider(new sun.security.provider.Sun());
 		return null;
 	}
+	
+	public boolean Createuser(String firstname,String lastname,String username,String position){
+		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		
+		
+		return true;
+	}
 }

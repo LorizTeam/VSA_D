@@ -24,11 +24,10 @@
   </head>
   
   <body>
+  <%@ include file="menubar.jsp" %>
   <%
-  		
-  		
   		NortificationsData nortiData = new NortificationsData();
-  		iterate = nortiData.select_Nortifications_Header("1","1").iterator();
+  		iterate = nortiData.select_Nortifications_Header("","").iterator();
   		while(iterate.hasNext()){
   			NortificationsForm nortiForm = (NortificationsForm) iterate.next();
   	%>
@@ -41,10 +40,9 @@
   		<%=nortiForm.getBu_no() %><br/>
   		<%=nortiForm.getBu_name() %><br/>
   		<%=nortiForm.getTimestamp() %><br/>
-  		
+  		____________________________________<br/>
   	<%
   		}
    %>
-    This a struts page. <br>
   </body>
 </html>

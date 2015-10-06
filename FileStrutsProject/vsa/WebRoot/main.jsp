@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html> 
 	<head>
-		<title>JSP for MainForm form</title>		
+		<title>Main Backend</title>		
 	</head>
 	<body class="container-fluid">
 		<%@ include file="menubar.jsp" %>

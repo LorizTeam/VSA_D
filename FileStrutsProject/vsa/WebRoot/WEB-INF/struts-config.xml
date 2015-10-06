@@ -13,6 +13,7 @@
     <form-bean name="projectForm" type="com.smict.struts.form.ProjectForm" />
     <form-bean name="indexVSAForm" type="com.smict.struts.form.IndexVSAForm" />
     <form-bean name="nortificationsForm" type="com.smict.struts.form.NortificationsForm" />
+    <form-bean name="createuserForm" type="com.smict.struts.form.CreateuserForm" />
   </form-beans>
 
   <global-exceptions />
@@ -89,6 +90,15 @@
       type="com.smict.struts.action.IndexVSAAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/index.jsp" />
+    </action>
+    <action
+      attribute="createuserForm"
+      input="/createuser.jsp"
+      name="createuserForm"
+      path="/createuser"
+      scope="request"
+      type="com.smict.struts.action.CreateuserAction">
+      <set-property property="cancellable" value="true" />
     </action>
 	
   </action-mappings>

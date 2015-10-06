@@ -76,8 +76,17 @@ public class AfterchooseAction extends Action {
 		String text="Test Encrypt";
 		
 		if(input != null){
-			clsEnDe.Encrypt(input);
+			byte[] bbb = clsEnDe.EncryptReturnByte(input);
 			clsEnDe.Decrypt(input);
+			
+			String aaa = clsEnDe.EncryptReturnString(input);
+			
+			try {
+				clsEnDe.DecryptreceiveStringEncrypte(aaa);
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		String project_name = request.getParameter("tb_projectname"),
