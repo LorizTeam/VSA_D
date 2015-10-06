@@ -12,6 +12,7 @@
     <form-bean name="afterchooseForm" type="com.smict.struts.form.AfterchooseForm" />
     <form-bean name="projectForm" type="com.smict.struts.form.ProjectForm" />
     <form-bean name="indexVSAForm" type="com.smict.struts.form.IndexVSAForm" />
+    <form-bean name="nortificationsForm" type="com.smict.struts.form.NortificationsForm" />
   </form-beans>
 
   <global-exceptions />

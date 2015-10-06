@@ -15,9 +15,9 @@
   <StrutsActivity path="/afterchoose.jsp" location="375,630" dimension="115,51" />
   <StrutsActivity path="/createproject.jsp" location="650,150" dimension="122,51" />
   <StrutsActivity path="/editproject.jsp" location="765,615" dimension="110,51" />
+  <StrutsActivity path="/index.jsp" location="650,450" dimension="81,51" />
   <StrutsActivity path="/FileUpload.jsp" location="950,450" dimension="109,51" />
   <StrutsActivity path="createproject.jsp" location="495,270" dimension="117,51" />
-  <StrutsActivity path="/index.jsp" />
   <StrutsTransition id="/indexVSA.do,success,/index.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="175,698" />

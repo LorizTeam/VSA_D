@@ -1,14 +1,12 @@
 <%@ include file="defaultimport.jsp" %>
+<%@page import="com.smict.struts.data.NortificationsData"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
-<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
-<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
-
-
+<%@ page import = "com.smict.struts.form.NortificationsForm"%>
+<%Iterator<?> iterate = null;
+  List<?> Nortifications = null; %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html:html lang="true">
+<html>
   <head>
     <html:base />
     
@@ -26,6 +24,27 @@
   </head>
   
   <body>
+  <%
+  		
+  		
+  		NortificationsData nortiData = new NortificationsData();
+  		iterate = nortiData.select_Nortifications_Header("1","1").iterator();
+  		while(iterate.hasNext()){
+  			NortificationsForm nortiForm = (NortificationsForm) iterate.next();
+  	%>
+  		<%=nortiForm.getNorti_id() %><br/>
+  		<%=nortiForm.getNorti_from() %><br/>
+  		<%=nortiForm.getNorti_email() %><br/>
+  		<%=nortiForm.getNorti_message() %><br/>
+  		<%=nortiForm.getNorti_s() %><br/>
+  		<%=nortiForm.getNorti_sname() %><br/>
+  		<%=nortiForm.getBu_no() %><br/>
+  		<%=nortiForm.getBu_name() %><br/>
+  		<%=nortiForm.getTimestamp() %><br/>
+  		
+  	<%
+  		}
+   %>
     This a struts page. <br>
   </body>
-</html:html>
+</html>
