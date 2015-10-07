@@ -20,8 +20,8 @@ public class UserForm extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
-	private String username,password,name,surname,position_name;
-	
+	private String username,password,name,surname,position_no,position_name;
+
 	public UserForm(String username, String password, String name,
 			String surname, String positionName) {
 		// TODO Auto-generated constructor stub
@@ -30,6 +30,14 @@ public class UserForm extends ActionForm {
 		this.name = name;
 		this.surname = surname;
 		this.position_name = positionName;
+	}
+
+	public UserForm(String forwhat, String s1, String s2) {
+		if(forwhat.equals("GetPosition")){
+			this.position_no =  s1;
+			this.position_name = s2;
+		}
+		
 	}
 
 	/** 
@@ -51,6 +59,13 @@ public class UserForm extends ActionForm {
 	 */
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		// TODO Auto-generated method stub
+	}
+	public String getPosition_no() {
+		return position_no;
+	}
+
+	public void setPosition_no(String positionNo) {
+		position_no = positionNo;
 	}
 	public String getUsername() {
 		return username;

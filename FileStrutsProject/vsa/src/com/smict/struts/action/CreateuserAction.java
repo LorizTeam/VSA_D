@@ -13,6 +13,8 @@ import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.DBuser;
 import com.smict.struts.form.CreateuserForm;
+
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /** 
@@ -39,24 +41,22 @@ public class CreateuserAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		CreateuserForm createuserForm = (CreateuserForm) form;
 		DBuser dbuser = new DBuser();
-		
-		String firstname = request.getParameter(""),
-				lastname = request.getParameter(""),
-				username = request.getParameter(""),
-				position =	request.getParameter("");
-		
-		if(firstname.equals("") || lastname.equals("")){
-			
-		}else if(username.equals("")){
-			
-		}else if(position.equals("")){
-			
-		}else{
-			
-			
-			
+		String forwardText = "success";
+		String firstname = null, lastname = null, username = null, position = null;
+		try {
+			firstname = new String (request.getParameter("tb_firstname").getBytes("ISO-8859-1"),"UTF-8");
+			lastname = new String (request.getParameter("tb_lastname").getBytes("ISO-8859-1"),"UTF-8");
+			username = request.getParameter("tb_username");
+			position = request.getParameter("slc_position");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
-		return null;
+		boolean insert_success = dbuser.Createuser(firstname, lastname, username, position);
+		if(!insert_success){
+			forwardText = "false";
+		}
+		return mapping.findForward(forwardText);
 	}
 }

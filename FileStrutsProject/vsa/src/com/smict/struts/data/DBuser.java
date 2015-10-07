@@ -37,7 +37,9 @@ public class DBuser {
 	public List checklogin(String user,String pass) throws IOException, Exception{
 		List userList = new ArrayList();
 		String username = "",password ="",name="",surname="",position_name="";
-		conn = dbcon.getConnectMYSql();
+		
+			conn = dbcon.getConnectMYSql();
+		
 		String sqlQuery = "select member.username," +
 				"member.`password`," +
 				"member.`name`," +
@@ -53,6 +55,14 @@ public class DBuser {
 			surname = rs.getString("surname");
 			position_name = rs.getString("position_name");
 			userList.add(new UserForm(username,password,name,surname,position_name));
+		}
+		
+		try {
+			if (rs != null) 	  rs.close();
+			if (conn != null)  conn.close();
+			if (pStmt != null) pStmt.close();
+		} catch (SQLException e) {
+			e.getMessage();
 		}
 		return userList;
 	}
@@ -109,8 +119,67 @@ public class DBuser {
 	
 	public boolean Createuser(String firstname,String lastname,String username,String position){
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		boolean insert_success = true;
+		String DefaultPassword = "12345";
+		String password = EncAndDec.EncryptReturnString(DefaultPassword);
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "insert into member (username,password,name,surname,position_no) " +
+					"values " +
+					"('"+username+"','"+password+"','"+firstname+"','"+lastname+"','"+position+"')";
+			
+			pStmt = conn.createStatement();
+			int i = pStmt.executeUpdate(sqlQuery);
+			if(i <= 0){
+				insert_success = false;
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		
-		return true;
+		return insert_success;
+	}
+	
+	public List GetPosition (String receive_position_name){
+		List GetPositionList =new ArrayList ();
+		String forwhat = "GetPosition";
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "SELECT " +
+					"a.position_no, " +
+					"a.position_name " +
+					"FROM " +
+					"position AS a ";
+			if(!receive_position_name.equals("") && receive_position_name != null)
+				sqlQuery += "where position_name like '%"+receive_position_name+"%'";
+			
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				GetPositionList.add(new UserForm(forwhat,rs.getString("position_no"),rs.getString("position_name")));
+			}
+			rs.close();
+			conn.close();
+			pStmt.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				if (rs != null) 	  rs.close();
+				if (conn != null)  conn.close();
+				if (pStmt != null) pStmt.close();
+			} catch (SQLException e) {
+				e.getMessage();
+			}
+		}
+		return GetPositionList;
 	}
 }

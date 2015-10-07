@@ -20,7 +20,11 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<style>
+		.app-bar .app-bar-element > .button {
+		    margin-top: 0.5rem !important;
+		}
+	</style>
   </head>
   
   <body>

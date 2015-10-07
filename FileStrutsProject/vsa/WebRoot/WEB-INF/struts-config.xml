@@ -99,6 +99,18 @@
       scope="request"
       type="com.smict.struts.action.CreateuserAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/main.jsp" />
+    </action>
+    <action
+      attribute="loginForm"
+      input="/changepassword_byself.jsp"
+      name="loginForm"
+      path="/changepassword_byself"
+      scope="request"
+      type="com.smict.struts.action.Changepassword_byselfAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="false" path="/changepassword_byself.jsp" />
+      <forward name="success" path="/main.jsp" />
     </action>
 	
   </action-mappings>

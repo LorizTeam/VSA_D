@@ -69,25 +69,25 @@ public class AfterchooseAction extends Action {
 		FileOutputStream outputStream = null;
 		DBProject dbproject = new DBProject();
 		Pictures cls_pic = new Pictures();
-		String input = null,key = null,iv = null;
-		input = "Hello World";
-		key = "BaXsEr5";
-		iv = "aKixAq8O";
-		String text="Test Encrypt";
-		
-		if(input != null){
-			byte[] bbb = clsEnDe.EncryptReturnByte(input);
-			clsEnDe.Decrypt(input);
-			
-			String aaa = clsEnDe.EncryptReturnString(input);
-			
-			try {
-				clsEnDe.DecryptreceiveStringEncrypte(aaa);
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+//		String input = null,key = null,iv = null;
+//		input = "Hello World";
+//		key = "BaXsEr5";
+//		iv = "aKixAq8O";
+//		String text="Test Encrypt";
+//		
+//		if(input != null){
+//			byte[] bbb = clsEnDe.EncryptReturnByte(input);
+//			clsEnDe.Decrypt(input);
+//			
+//			String aaa = clsEnDe.EncryptReturnString(input);
+//			
+//			try {
+//				clsEnDe.DecryptreceiveStringEncrypte(aaa);
+//			} catch (UnsupportedEncodingException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 		
 		String project_name = request.getParameter("tb_projectname"),
 		   project_year = request.getParameter("tb_projectyear"),
