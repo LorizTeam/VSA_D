@@ -41,22 +41,32 @@ public class LoginAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		LoginForm loginForm = (LoginForm) form;// TODO Auto-generated method stub
+		LoginForm loginForm = (LoginForm) form;
+		DBuser dbuser = new DBuser();
 		String forwardText= "";
 		HttpSession session = request.getSession();
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		// TODO Auto-generated method stub
 		
 		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
-		password = EncAndDec.EncryptReturnString(password);
-		DBuser dbuser = new DBuser();
+		
 		try {
-			List userList = dbuser.checklogin(username, password);
+			
+			String Encryptpassword = EncAndDec.EncryptReturnString(password);
+			List userList = dbuser.checklogin(username,Encryptpassword);
 			if(userList.size() >= 1){
-				forwardText = "success";
-				session.setAttribute("username", username);
-				session.setAttribute("userList", userList);
-				session.setAttribute("alert","0");
+				
+				if(dbuser.CheckUserPasswordEasy(Encryptpassword)){
+					forwardText = "easypassword";
+					session.setAttribute("username", username);
+					session.setAttribute("userList", userList);
+					session.setAttribute("alert","0");
+				}else{
+					forwardText = "success";
+					session.setAttribute("username", username);
+					session.setAttribute("userList", userList);
+					session.setAttribute("alert","0");
+				}
 			}else{
 				forwardText = "unsuccess";
 				session.setAttribute("alert","1");

@@ -121,7 +121,7 @@ public class DBuser {
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		boolean insert_success = true;
 		String DefaultPassword = "12345";
-		byte[] password = EncAndDec.EncryptReturnByte(DefaultPassword);
+		String password = EncAndDec.EncryptReturnString(DefaultPassword);
 		try {
 			conn = dbcon.getConnectMYSql();
 			String sqlQuery = "insert into member (username,password,name,surname,position_no) " +
@@ -183,12 +183,22 @@ public class DBuser {
 		return GetPositionList;
 	}
 	
-	public boolean CheckUserPasswordEasy(String username , String password){
-		
+	public boolean CheckUserPasswordEasy(String password){
+		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		String EncryptPassword = EncAndDec.EncryptReturnString("12345");
+		String PasswordFromDB="";
+		boolean EasyPassword = false;
+		if(EncryptPassword.equals(password)){
+			EasyPassword = true;
+		}
+		return EasyPassword;
+	}
+	public boolean ChangePasswordEasy(String username,String password){
 		
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "select * from member where username = '"+username+"' and password = '"+password+"'";
+			String sqlQuery = "";
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -197,6 +207,8 @@ public class DBuser {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 		return true;
 	}
 }
