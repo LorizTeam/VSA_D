@@ -27,16 +27,79 @@ public class BusinessForm extends ActionForm {
 	 * @param request
 	 * @return ActionErrors
 	 */
+	//for createproject.jsp
 	private String bu_no,bu_name;
+	
+	//for afterchoose.jsp
+	private String pj_no,pj_name,pj_year,pj_typename,pj_typeno,pic_path,picstatus,picstatus_name,pic_typeno,pic_typename;
 	
 	public BusinessForm(){}
 	public BusinessForm(String forwhat,String bu_no,String bu_name){
 		if(forwhat.equals("slc_bu")){
 			this.bu_no = bu_no;
 			this.bu_name = bu_name;
+		}else if(forwhat.equals("slc_pjtype")){
+			this.pj_typeno = bu_no;
+			this.pj_typename = bu_name;
 		}
 	}
 	
+	public BusinessForm(String forwhat, String pjNo, String pjName,
+			String pjYear, String pjTypename, String buName, String picPath,
+			String picstatusName, String picTypename) {
+		// TODO Auto-generated constructor stub
+		if(forwhat.equals("afterchoose")){
+			this.bu_name = buName;
+			this.pj_no = pjNo;
+			this.pj_name = pjName;
+			this.pj_year = pjYear;
+			this.pj_typename = pjTypename;
+			this.pic_path = picPath;
+			this.picstatus_name = picstatusName;
+			this.pic_typename = picTypename;
+		}
+	}
+	public BusinessForm(String forwhat, String pjNo, String pjName,
+			String pjYear, String buName, String pjTypename) {
+		// TODO Auto-generated constructor stub
+		if(forwhat.equals("List_project")){
+			this.pj_no = pjNo;
+			this.pj_name =pjName;
+			this.pj_year =pjYear;
+			this.pj_typename =pjTypename;
+			this.bu_name =buName;
+		}
+	}
+	public String getPicstatus() {
+		return picstatus;
+	}
+	public void setPicstatus(String picstatus) {
+		this.picstatus = picstatus;
+	}
+	public String getPicstatus_name() {
+		return picstatus_name;
+	}
+	public void setPicstatus_name(String picstatusName) {
+		picstatus_name = picstatusName;
+	}
+	public String getPic_typeno() {
+		return pic_typeno;
+	}
+	public void setPic_typeno(String picTypeno) {
+		pic_typeno = picTypeno;
+	}
+	public String getPic_typename() {
+		return pic_typename;
+	}
+	public void setPic_typename(String picTypename) {
+		pic_typename = picTypename;
+	}
+	public String getPj_typeno() {
+		return pj_typeno;
+	}
+	public void setPj_typeno(String pjTypeno) {
+		pj_typeno = pjTypeno;
+	}
 	public String getBu_no() {
 		return bu_no;
 	}
@@ -52,7 +115,36 @@ public class BusinessForm extends ActionForm {
 	public void setBu_name(String buName) {
 		bu_name = buName;
 	}
-
+	public String getPj_no() {
+		return pj_no;
+	}
+	public void setPj_no(String pjNo) {
+		pj_no = pjNo;
+	}
+	public String getPj_name() {
+		return pj_name;
+	}
+	public void setPj_name(String pjName) {
+		pj_name = pjName;
+	}
+	public String getPj_year() {
+		return pj_year;
+	}
+	public void setPj_year(String pjYear) {
+		pj_year = pjYear;
+	}
+	public String getPj_typename() {
+		return pj_typename;
+	}
+	public void setPj_typename(String pjTypename) {
+		pj_typename = pjTypename;
+	}
+	public String getPic_path() {
+		return pic_path;
+	}
+	public void setPic_path(String picPath) {
+		pic_path = picPath;
+	}
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		// TODO Auto-generated method stub

@@ -17,6 +17,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.smict.struts.form.LoginForm;
 import com.smict.struts.data.DBuser;
+import com.smict.struts.data.EncryptandDecrypt;
 
 /** 
  * MyEclipse Struts
@@ -43,9 +44,11 @@ public class LoginAction extends Action {
 		LoginForm loginForm = (LoginForm) form;// TODO Auto-generated method stub
 		String forwardText= "";
 		HttpSession session = request.getSession();
+		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		// TODO Auto-generated method stub
 		
 		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
+		password = EncAndDec.EncryptReturnString(password);
 		DBuser dbuser = new DBuser();
 		try {
 			List userList = dbuser.checklogin(username, password);
@@ -53,9 +56,10 @@ public class LoginAction extends Action {
 				forwardText = "success";
 				session.setAttribute("username", username);
 				session.setAttribute("userList", userList);
+				session.setAttribute("alert","0");
 			}else{
 				forwardText = "unsuccess";
-				request.setAttribute("alert","1");
+				session.setAttribute("alert","1");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -8,10 +8,18 @@
     <form-bean name="userForm" type="com.smict.struts.form.UserForm" />
 	<form-bean name="createprojectForm" type="com.smict.struts.form.UploadForm"/>
     <form-bean name="businessForm" type="com.smict.struts.form.BusinessForm" />
+    <form-bean name="editprojectForm" type="com.smict.struts.form.EditprojectForm" />
+    <form-bean name="afterchooseForm" type="com.smict.struts.form.AfterchooseForm" />
+    <form-bean name="projectForm" type="com.smict.struts.form.ProjectForm" />
+    <form-bean name="indexVSAForm" type="com.smict.struts.form.IndexVSAForm" />
+    <form-bean name="nortificationsForm" type="com.smict.struts.form.NortificationsForm" />
+    <form-bean name="createuserForm" type="com.smict.struts.form.CreateuserForm" />
   </form-beans>
 
   <global-exceptions />
-  <global-forwards />
+  <global-forwards >
+  	<forward name="nologin"  path="/login.jsp"/>
+  </global-forwards>
   <action-mappings >
     <action
       attribute="loginForm"
@@ -22,6 +30,7 @@
       type="com.smict.struts.action.LoginAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/main.jsp" />
+      <forward name="unsuccess" path="/main.jsp" />
     </action>
     
     <action
@@ -33,14 +42,75 @@
     </action>
     
     <action
-      name="createprojectForm" path="/createproject" input="/createproject.jsp"
-      type="com.smict.struts.action.CreateprojectAction"
-	  scope="session" 
-	  validate="true">
-	  <forward name="success" path="/main.jsp"/> 
+      attribute="createprojectForm"
+      input="/createproject.jsp"
+      name="createprojectForm"
+      path="/createproject"
+      type="com.smict.struts.action.CreateprojectAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/afterchoose.jsp" />
     </action>
     <action path="/createprojectStart" type="com.smict.struts.action.CreateprojectStartAction">
       <forward name="success" path="/createproject.jsp" />
+    </action>
+    <action
+      attribute="editprojectForm"
+      input="/editproject.jsp"
+      name="editprojectForm"
+      path="/editproject"
+      scope="request"
+      type="com.smict.struts.action.EditprojectAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/afterchoose.jsp" />
+    </action>
+    <action
+      attribute="afterchooseForm"
+      input="/afterchoose.jsp"
+      name="afterchooseForm"
+      path="/afterchoose"
+      scope="request"
+      type="com.smict.struts.action.AfterchooseAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/afterchoose.jsp" />
+    </action>
+    <action
+      attribute="projectForm"
+      name="projectForm"
+      path="/editprojectStart"
+      scope="request"
+      type="com.smict.struts.action.EditprojectStartAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/editproject.jsp" />
+    </action>
+    <action
+      attribute="indexVSAForm"
+      name="indexVSAForm"
+      path="/indexVSA"
+      scope="request"
+      type="com.smict.struts.action.IndexVSAAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/index.jsp" />
+    </action>
+    <action
+      attribute="createuserForm"
+      input="/createuser.jsp"
+      name="createuserForm"
+      path="/createuser"
+      scope="request"
+      type="com.smict.struts.action.CreateuserAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/main.jsp" />
+    </action>
+    <action
+      attribute="loginForm"
+      input="/changepassword_byself.jsp"
+      name="loginForm"
+      path="/changepassword_byself"
+      scope="request"
+      type="com.smict.struts.action.Changepassword_byselfAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="false" path="/changepassword_byself.jsp" />
+      <forward name="success" path="/main.jsp" />
     </action>
 	
   </action-mappings>

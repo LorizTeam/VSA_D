@@ -1,0 +1,20 @@
+.accordion .in {
+  padding: 20px 10px; }
+  .accordion .in h1 {
+    font-size: 30px; }
+  .accordion .in h2 {
+    font-size: 25px;
+    color: #474747; }
+  .accordion .in h3 {
+    font-size: 20px;
+    color: #6A6A6A; }
+  .accordion .in p {
+    font-size: 17px;
+    color: #6A6A6A; }
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=mycss.css.map */

@@ -10,6 +10,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
@@ -50,56 +51,76 @@ public class CreateprojectAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		UploadForm uploadForm = (UploadForm) form;// TODO Auto-generated method stub
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		Date date = new Date();
-		//Create Folder By Projectname
-		FileOutputStream outputStream = null;
-		File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+request.getParameter("tb_projectname"));
-		newFolder.mkdir();
-//		FormFile countpic = uploadForm.getUploadedFile();
-		//Upload Pic follow folder create
-//		String filePath = newFolder+"\\"+uploadForm.getUploadedFile().getFileName();
-		List picture = new ArrayList();
-		picture.add(uploadForm.getUploadedFile().getFileName().length());
-		int namelength = uploadForm.getUploadedFile().getFileName().length();
-		String filePath = newFolder+"\\"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
-		try {
-			outputStream = new FileOutputStream(new File(filePath));
-			outputStream.write(uploadForm.getUploadedFile().getFileData());			
-		} catch (Exception e) {
-			ActionErrors errors = new ActionErrors();
-			errors.add("uploadedFile",new ActionMessage("errors.file.save",uploadForm.getUploadedFile().getFileName()));
-			saveErrors(request,errors);
-		}finally{
-			if(outputStream != null)
+		HttpSession session = request.getSession();
+		if(session.getAttribute("username") == null){
+			return mapping.findForward("nologin");
+		}else{
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+			Date date = new Date();	
+			
+			File foldertest = new File(getServlet().getServletContext().getRealPath("/")+"upload");
+			if(!foldertest.exists()){
+				foldertest.mkdir();
+				System.out.print("Create Folder"+foldertest);
+			}
+			//Create Folder By Projectname
+			FileOutputStream outputStream = null;
+			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+request.getParameter("tb_projectname"));
+			newFolder.mkdir();
+	//		FormFile countpic = uploadForm.getUploadedFile();
+			//Upload Pic follow folder create
+	//		String filePath = newFolder+"\\"+uploadForm.getUploadedFile().getFileName();
+	//		List picture = new ArrayList();
+	//		picture.add(uploadForm.getUploadedFile().getFileName().length());
+			int namelength = uploadForm.getUploadedFile().getFileName().length();
+			String filePath = newFolder+"\\"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+			try {
+				outputStream = new FileOutputStream(new File(filePath));
+				outputStream.write(uploadForm.getUploadedFile().getFileData());			
+			} catch (Exception e) {
+				ActionErrors errors = new ActionErrors();
+				errors.add("uploadedFile",new ActionMessage("errors.file.save",uploadForm.getUploadedFile().getFileName()));
+				saveErrors(request,errors);
+			}finally{
+				if(outputStream != null)
+					try {
+						outputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+			String project_name = request.getParameter("tb_projectname"),
+				   project_year = request.getParameter("tb_projectyear"),
+				   slc_bu = request.getParameter("slc_bu"),
+				   slc_typepj = request.getParameter("slc_typepj"),
+				   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+			
+			if(getErrors(request) == null ||getErrors(request).size() == 0){
+				uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());
+				DBProject dbproject = new DBProject();
+				List<?> buList = null;
+				List<?> Listforafterchoose = null;
+				List<?> pj_typeList = null;
 				try {
-					outputStream.close();
+					buList = dbproject.bu_nameList();
+					dbproject.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
+					Listforafterchoose = dbproject.afterchoose_edit(project_name);
+					pj_typeList = dbproject.pj_typeList(slc_bu);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
+				request.setAttribute("buList", buList);
+				request.setAttribute("slc_typepj", pj_typeList);
+				request.setAttribute("Listforafterchoose", Listforafterchoose);
+				return mapping.findForward("success");
+			}
+			else
+				return mapping.getInputForward();
 		}
-		String project_name = request.getParameter("tb_projectname"),
-			   project_year = request.getParameter("tb_projectyear"),
-			   slc_bu = request.getParameter("slc_bu"),
-			   pic_path = "/upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
-		DBProject dbpro = new DBProject();
-		try {
-			dbpro.insproject_todb(project_name, project_year, slc_bu, pic_path);
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		if(getErrors(request) == null ||getErrors(request).size() == 0){
-			uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());
-			return mapping.findForward("success");
-		}
-		else
-			return mapping.getInputForward();
 	}
 }
