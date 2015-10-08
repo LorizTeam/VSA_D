@@ -182,4 +182,21 @@ public class DBuser {
 		}
 		return GetPositionList;
 	}
+	
+	public boolean CheckUserPasswordEasy(String username , String password){
+		
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "select * from member where username = '"+username+"' and password = '"+password+"'";
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
 }
