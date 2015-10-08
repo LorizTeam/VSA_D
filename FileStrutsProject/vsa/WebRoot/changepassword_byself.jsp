@@ -4,7 +4,9 @@
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
-
+<% if(session.getAttribute("username") == null)
+			response.sendRedirect("login.jsp");
+%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html:html lang="true">
@@ -40,19 +42,27 @@
 	        <div class="cell debug colspan10">
 	        <form action="createprojectStart.do" method="POST" data-role="validator" data-on-submit="submit" novalidate="novalidate" id="formchangepassword">
 		        <div class="row">
-		        Username&nbsp;&nbsp;<div class="input-control text success" data-role="input" >
-							<input type="text" class="form-control" name="tb_cusernme" id="tb_cusernme" placeholder="Username"
-							data-validate-hint="This field can not be empty" data-validate-func="required"">
-							<button class="button helper-button clear"><span class="mif-cross"></span></button>
+		        Username&nbsp;&nbsp;<div class="input-control">
+		        <% if (session.getAttribute("userList") != null) {
+					List<?> userList = (List)session.getAttribute("userList");
+						for (Iterator iter = userList.iterator(); iter.hasNext();) {
+				  			UserForm detailUser = (UserForm) iter.next();
+				 %>
+				 		<input type="text"  readonly value="<%=detailUser.getUsername() %>">
+				 <%
+				  		}
+			  		}
+			  	 %>
+							
 						</div>
 		        </div>
 		        <div class="row">
-		        Password&nbsp;&nbsp;<div class="input-control text success" data-role="input" >
+		        New Password&nbsp;&nbsp;<div class="input-control text success" data-role="input" >
 							<input type="password" class="form-control" name="tb_cpassword" id="tb_cpassword" placeholder="Password" required>
 							<button class="button helper-button clear"><span class="mif-cross"></span></button>
 						</div>
 		        </div>
-		        Confirm Password&nbsp;&nbsp;<div class="input-control text success" data-role="input" id="div_confirmpassword" >
+		        New Confirm Password&nbsp;&nbsp;<div class="input-control text success" data-role="input" id="div_confirmpassword" >
 							<input type="password" class="form-control" name="tb_confirmpassword" id="tb_confirmpassword" placeholder="Confirm Password" required>
 							<button class="button helper-button clear"><span class="mif-cross"></span></button>
 							<span style="display:none" id="1234">
@@ -83,10 +93,7 @@ $(document).ready(function(){
 	    	$("#div_confirmpassword").addClass("success");
 	    }
     });
-});
-</script>
-<script>
-$(document).ready(function(){    
+    
     $("form").submit(function(event){
     	if($("#tb_cpassword").val() != $("#tb_confirmpassword").val() ){
     		event.preventDefault();
