@@ -67,7 +67,7 @@
 	    					<h5><small>ลำดับที่ <%=nortiForm.getNorti_id() %> (<%=nortiForm.getBu_name() %>)</small></h5>
 	    				</div>
 	    				<div class="uk-width-1-2">
-	    					<h5><small><span class="mif-location-city"></span><%=nortiForm.getTimestamp() %></small></h5>	 
+	    					<h5><small><span class="mif-alarm"></span><%=nortiForm.getTimestamp() %></small></h5>	 
 	    				</div>   				
 	    			</div>
   					
