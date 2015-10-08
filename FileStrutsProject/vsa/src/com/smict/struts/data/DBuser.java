@@ -121,7 +121,7 @@ public class DBuser {
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		boolean insert_success = true;
 		String DefaultPassword = "12345";
-		String password = EncAndDec.EncryptReturnString(DefaultPassword);
+		byte[] password = EncAndDec.EncryptReturnByte(DefaultPassword);
 		try {
 			conn = dbcon.getConnectMYSql();
 			String sqlQuery = "insert into member (username,password,name,surname,position_no) " +
