@@ -57,79 +57,82 @@
 	</script>
 		<html:form action="/afterchoose" enctype="multipart/form-data" method="POST">
 		<input type="hidden" name="pj_no" id="pj_no" value="<%=createproject1.getPj_no() %>"/>
-		<div class="grid container page-content">
-			<div class="row cells12 align-left">
-				<div class="cell"></div>
-	           	<div class="cell debug colspan10">
-	           		<div class="row align-center" ><h4>Upload Image</h4></div>
-					<div class="row cells2">
-	           			<div class="cell">
-	           				Select Image 1 : <div class="input-control file text success" data-role="input">
-												<html:file property="uploadedFile1"/><br/>
-												<button class="button"><span class="mif-folder fg-red"></span></button>
-											</div>
-	           			</div>
-	           			<div class="cell">
-	           				Select Image 2 : <div class="input-control file text success" data-role="input">
-												<html:file property="uploadedFile2"/><br/>
-												<button class="button"><span class="mif-folder fg-red"></span></button>
-											</div>
-	           			</div>
-	           		</div>
-	           		<div class="row cells2">
-	           			<div class="cell">
-	           				Select Image 3 : <div class="input-control file text success" data-role="input">
-												<html:file property="uploadedFile3"/><br/>
-												<button class="button"><span class="mif-folder fg-red"></span></button>
-											</div>
-	           			</div>
-	           			<div class="cell">
-	           				Select Image 4 : <div class="input-control file text success" data-role="input">
-												<html:file property="uploadedFile4"/><br/>
-												<button class="button"><span class="mif-folder fg-red"></span></button>
-											</div>
-	           			</div>
-	           		</div>
-	           		<div class="row align-center">
-						<button type="submit" name="upload" id="upload" class="button success">upload</button>
+		<div class="grid">
+			<div class="row cells12">
+				<div class="cell colspan4 offset1  window">
+					<div class="window-caption  bg-brown fg-white">
+						<span class="window-caption-icon"><span class="mif-upload"></span></span>
+						<span class="window-caption-title">Upload Image</span>
 					</div>
-	           	</div>
-	           	<div class="cell"></div>
-			</div>
-		</div>
-		<div class="grid container page-content">
-			<div class="row cells12 align-left">
-				<div class="cell"></div>
-	           	<div class="cell debug colspan10">
-	           		<div class="row align-center" ><h4>Edit Project Details</h4></div>
-	           		
-	           		<div class="row cells2" >
-                    		<div class="cell">
-	                    		Select Your Business <div class="input-control select text success" >
-								    <select name="slc_bu" id="slc_bu">
-								    	<option value=null>Please Choose Business</option>
+					<div class="window-content">
+					<h2><small>Select Image</small></h2>
+					<ul class="step-list">
+						<li>
+							<div class="input-control file" data-role="input" style="width:100%;">
+								<html:file property="uploadedFile1"/>
+								<button class="button text fg-brown"><span class="mif-folder"></span></button>
+							</div>
+						</li>
+						<li>
+							<div class="input-control file" data-role="input" style="width:100%;">
+								<html:file property="uploadedFile2"/>
+								<button class="button text fg-brown"><span class="mif-folder"></span></button>
+							</div>
+						</li>
+						<li>
+							<div class="input-control file" data-role="input" style="width:100%;">
+								<html:file property="uploadedFile3"/>
+								<button class="button text fg-brown"><span class="mif-folder"></span></button>
+							</div>
+						</li>
+						<li>
+							<div class="input-control file" data-role="input" style="width:100%;">
+								<html:file property="uploadedFile4"/>
+								<button class="button text fg-brown"><span class="mif-folder"></span></button>
+							</div>
+						</li>
+					</ul>
+						<div class="row align-center">
+						<button type="submit" name="upload" id="upload" class="button success"><span class="mif-upload"></span> upload</button>
+					</div>
+					<hr class="bg-brown"/>
+					</div>
+				</div>
+				
+				<div class="cell colspan6  window">
+					<div class="window-caption  bg-brown fg-white">
+						<span class="window-caption-icon"><span class="mif-cog"></span></span>
+						<span class="window-caption-title">Edit Project Detail</span>
+					</div>
+					<div class="window-content row cells2">
+						<div class="cell">
+							<h3><small>Company</small></h3>
+							<div class="input-control select "  style="width:100%;">
+								<select name="slc_bu" id="slc_bu">
+									<option value=null>Please Choose Business</option>
 								    	<% if (buList != null) {
 												for (iter = buList.iterator(); iter.hasNext();) {
 										  			BusinessForm createproject = (BusinessForm) iter.next();
 										  			if(createproject1.getBu_name().equals(createproject.getBu_name())){
 										  			
 										 %>
-								        <option value="<%=createproject.getBu_no() %>" selected><%=createproject.getBu_name() %></option>
+								 	<option value="<%=createproject.getBu_no() %>" selected><%=createproject.getBu_name() %></option>
 								        <%
-										  			}else{
+										}else{
 										 %>
-								        <option value="<%=createproject.getBu_no() %>"><%=createproject.getBu_name() %></option>
+								 	<option value="<%=createproject.getBu_no() %>"><%=createproject.getBu_name() %></option>
 								        <%
-										  			}
+										}
 										  		}
 				  							}
 								    	 %>
-								    </select>
-								</div>
-                    		</div>
-                    		<div class="cell">
-                    			Select Project Type <div class="input-control select text success" >
-								    <select name="slc_typepj" id="slc_typepj">
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<h3><small>Project Type</small></h3>
+							<div class="input-control select"  style="width:100%;">
+								 <select name="slc_typepj" id="slc_typepj">
 								    	<option value=null>Please Choose Business First</option>
 								    	<%
 								    		if(request.getAttribute("slc_typepj") != null){
@@ -150,25 +153,37 @@
 								    		}
 								    	 %>
 								    	
-								    </select>
-								</div>
-                    		</div>
-                    </div>
-	           		<div class="row cells2">
-	           			<div class="cell">
-	           			
-	           				Project Name <div class="input-control text success" data-role="input" >
-											    <input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" value="<%=createproject1.getPj_name() %>" required>
-											    <button class="button helper-button clear"><span class="mif-cross"></span></button>
-											</div>
+								   </select>
+							</div>
 						</div>
-						<div class="cell" >
-							Project Year <div class="input-control text success" data-role="input" >
-											<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year() %>" required>
-											<button class="button helper-button clear"><span class="mif-cross"></span></button>
-										</div>
-                    	</div>
-	           		</div><%
+						<div class="row cells2">
+							<div class="cell">
+								<h3><small>Project Name</small></h3>
+								<div class="input-control" data-role="input"  style="width:100%;" >
+									<input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" value="<%=createproject1.getPj_name() %>" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+							</div>
+							<div class="cell">
+								<h3><small>Project Year</small></h3>	
+								<div class="input-control" data-role="input"  style="width:100%;" >
+									<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year() %>" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+							</div>
+						</div>
+							<hr class="bg-brown"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+		<div class="grid container page-content">
+			<div class="row cells12 align-left">
+				<div class="cell"></div>
+	           	<div class="cell colspan10">
+<%
 	           			if(alert != null){
 	           			%>
 	           				<div class="row align-center" ><span class="tag alert"><%=alert %></span></div>
