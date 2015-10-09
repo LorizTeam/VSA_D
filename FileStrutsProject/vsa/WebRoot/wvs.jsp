@@ -255,7 +255,7 @@
 				</form>
 				<hr width="74%" />
 				<div class="center-footpic">
-					<a href="index.jsp"><img src="wvsimages/vsa logo black.png" alt="" width="10%" height="10%"/></a>
+					<a href="vsa new.html"><img src="wvsimages/vsa logo black.png" alt="" width="10%" height="10%"/></a>
 				</div>
 			</div>
 			<div class="uk-width-1-3" style="margin-left: -5%;">

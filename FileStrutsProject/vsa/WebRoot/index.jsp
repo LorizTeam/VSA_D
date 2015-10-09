@@ -152,12 +152,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-			<div class="col-md-6 wel-img">
+			<div class="col-md-6 col-lg-6 wel-img">
 				<a href="single.html" class="mask"> <img src="images/wlb.jpg"
 					class="img-responsive zoom-img" alt="">
 				</a>
 			</div>
-			<div class="col-md-6 wel-text">
+			<div class="col-md-6 col-lg-6 wel-text">
 
 				<p>
 					The main of our Architecture concerning about site context,
