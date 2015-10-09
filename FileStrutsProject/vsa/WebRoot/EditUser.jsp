@@ -47,6 +47,16 @@
 				<div class="cell"></div>
 		           	<div class="cell debug colspan10">
 		           		<div class="row align-center" ><h4>Choose User For Edit</h4></div>
+		           		<%String alert = null;
+						if(request.getAttribute("alert") != null){
+								alert = (String)request.getAttribute("alert");
+							}
+						if(alert != null){
+	           			%>
+	           				<div class="row align-center" ><span class="tag alert"><%=alert %></span></div>
+	           			<%
+	           			}
+	           		 	%>
 						<div class="row cell">
 							<div class="cell">
 								<div class="dataTable_wrapper">

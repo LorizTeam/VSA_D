@@ -43,7 +43,7 @@ public class Changepassword_byselfAction extends Action {
 		String username = request.getParameter("tb_cusernme"),
 		password = request.getParameter("tb_cpassword");
 		DBuser dbuser = new DBuser();
-		if(!dbuser.ChangePasswordEasy(username, password)){
+		if(!dbuser.ChangePasswordFromEasy(username, password)){
 			forwardText = "false";
 		}
 		return mapping.findForward(forwardText);

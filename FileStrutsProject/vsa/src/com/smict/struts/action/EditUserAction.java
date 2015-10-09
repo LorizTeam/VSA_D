@@ -48,6 +48,7 @@ public class EditUserAction extends Action {
 				request.setAttribute("detailuserList",detailuserList);
 			}else{
 				request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
+				forwardText = "false";
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

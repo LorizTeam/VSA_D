@@ -199,13 +199,53 @@ public class DBuser {
 		}
 		return EasyPassword;
 	}
-	public boolean ChangePasswordEasy(String username,String password){
+	public boolean ChangePasswordFromEasy(String username,String password){
 		boolean ChangePasswordEasy = false;
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		password = EncAndDec.EncryptReturnString(password);
 		try {
 			conn = dbcon.getConnectMYSql();
 			String sqlQuery = "update member set username ='"+username+"', password ='"+password+"' where username='"+username+"' ";
+			pStmt = conn.createStatement();
+			int i = 0;
+			i = pStmt.executeUpdate(sqlQuery);
+			if(i >= 1){
+				ChangePasswordEasy = true;
+			}
+			if (rs != null) 	  rs.close();
+			if (conn != null)  conn.close();
+			if (pStmt != null) pStmt.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				if (rs != null) 	  rs.close();
+				if (conn != null)  conn.close();
+				if (pStmt != null) pStmt.close();
+			} catch (SQLException e) {
+				e.getMessage();
+			}
+		}
+		return ChangePasswordEasy;
+	}
+	
+	public boolean EditUser(String username,String name,String surname,String position_no,String changepasstoeasy){
+		boolean ChangePasswordEasy = false;
+		//Password Deault is 12345
+		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		String passwordDefault = EncAndDec.EncryptReturnString("12345");
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "update member set username ='"+username+"',name = '"+name+"',surname = '"+surname+"',position_no = '"+position_no+"' " ;
+			if(changepasstoeasy.equals("on")){
+				sqlQuery+=", password ='"+passwordDefault+"' ";
+			}
+			sqlQuery += "where username='"+username+"' ";
 			pStmt = conn.createStatement();
 			int i = 0;
 			i = pStmt.executeUpdate(sqlQuery);

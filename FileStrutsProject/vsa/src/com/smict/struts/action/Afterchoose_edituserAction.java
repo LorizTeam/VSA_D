@@ -10,7 +10,8 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import com.smict.struts.form.UserForm;
+
+import com.smict.struts.data.DBuser;
 
 /** 
  * MyEclipse Struts
@@ -34,7 +35,19 @@ public class Afterchoose_edituserAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		UserForm userForm = (UserForm) form;// TODO Auto-generated method stub
-		return null;
+		DBuser dbuser = new DBuser();
+		
+		String username = request.getParameter("tb_username"),
+		name = request.getParameter("tb_firstname"),
+		surname = request.getParameter("tb_lastname"),
+		position_no = request.getParameter("slc_position"),
+		chk_resetpassword = request.getParameter("chk_resetpassword"),
+		forwardText = "success";
+		
+		if(!dbuser.EditUser(username, name, surname, position_no, chk_resetpassword)){
+			request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
+			forwardText = "false";
+		}
+		return mapping.findForward(forwardText);
 	}
 }

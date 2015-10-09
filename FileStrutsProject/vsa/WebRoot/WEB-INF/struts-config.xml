@@ -121,6 +121,7 @@
       type="com.smict.struts.action.EditUserAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/afterchoose_edituser.jsp" />
+      <forward name="false" path="/EditUser.jsp" />
     </action>
     <action
       input="/afterchoose_edituser.jsp"
@@ -129,6 +130,8 @@
       scope="request"
       type="com.smict.struts.action.Afterchoose_edituserAction">
       <set-property property="cancellable" value="true" />
+      <forward name="success" path="/EditUser.jsp" />
+      <forward name="false" path="/afterchoose_edituser.jsp" />
     </action>
 	
   </action-mappings>

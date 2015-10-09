@@ -44,7 +44,7 @@
 		        		UserForm userForm = (UserForm) iterateuser.next();
 		        	%>
 		        	
-		           	<form action="/afterchoose_edituser" method="POST">
+		           	<form action="afterchoose_edituser.do" method="POST">
 		           		<div class="row">
 		           			
 		           			<label class="input-control checkbox">
@@ -59,7 +59,7 @@
 				        <div class="row" >
 				        	<div class="cell">
 				        		<div class="input-control text success" data-role="input" >
-									<input type="text" class="form-control" name="tb_username" id="tb_username" placeholder="Username" value="<%=userForm.getUsername() %>" disabled>
+									<input type="text" class="form-control" name="tb_username" id="tb_username" placeholder="Username" value="<%=userForm.getUsername() %>" readonly="readonly">
 									<button class="button helper-button clear"><span class="mif-cross"></span></button>
 								</div>
 				        	</div>
