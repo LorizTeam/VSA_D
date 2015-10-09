@@ -26,7 +26,7 @@
 			    $('#tb_choosepj').DataTable();
 			} );
 		</script>
-		<html:form action="/editproject">
+		<html:form action="/editproject" method="POST">
 			<div class="grid container page-content">
 				<div class="row cells12 align-left">
 					<div class="cell"></div>
@@ -73,7 +73,7 @@
 								                <td><%=project.getPj_typename() %></td>
 								                <td>
 								                	<label class="input-control radio small-check">
-													    <input type="radio" name="rdo" value="<%=project.getPj_no() %>">
+													    <input type="radio" name="rdo" value="<%=project.getPj_no() %>" required>
 													    <span class="check"></span>
 													</label>
 												</td>

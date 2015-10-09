@@ -34,7 +34,7 @@ public class DBuser {
 	ResultSet rs	= null;
 	
 	
-	public List checklogin(String user,String pass) throws IOException, Exception{
+	public List checkuser(String user,String pass) throws IOException, Exception{
 		List userList = new ArrayList();
 		String username = "",password ="",name="",surname="",position_name="";
 		
@@ -45,7 +45,13 @@ public class DBuser {
 				"member.`name`," +
 				"member.surname," +
 				"position.position_name from member INNER JOIN position ON position.position_no = member.position_no " +
-				"where username = '"+user+"' and password = '"+pass+"'";
+				"where " ;
+				if(!user.equals(""))
+					sqlQuery+="username = '"+user+"' and ";
+				if(!pass.equals(""))			
+					sqlQuery+="password = '"+pass+"' and ";
+				
+				sqlQuery+=" username <> ''";
 		pStmt =conn.createStatement();
 		rs = pStmt.executeQuery(sqlQuery);
 		while(rs.next()){
@@ -124,9 +130,9 @@ public class DBuser {
 		String password = EncAndDec.EncryptReturnString(DefaultPassword);
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "insert into member (username,password,name,surname,position_no) " +
+			String sqlQuery = "insert into member (username,password,name,surname,position_no,Create_Time) " +
 					"values " +
-					"('"+username+"','"+password+"','"+firstname+"','"+lastname+"','"+position+"')";
+					"('"+username+"','"+password+"','"+firstname+"','"+lastname+"','"+position+"',now())";
 			
 			pStmt = conn.createStatement();
 			int i = pStmt.executeUpdate(sqlQuery);
@@ -162,9 +168,9 @@ public class DBuser {
 			while(rs.next()){
 				GetPositionList.add(new UserForm(forwhat,rs.getString("position_no"),rs.getString("position_name")));
 			}
-			rs.close();
-			conn.close();
-			pStmt.close();
+			if (rs != null) 	  rs.close();
+			if (conn != null)  conn.close();
+			if (pStmt != null) pStmt.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -194,21 +200,36 @@ public class DBuser {
 		return EasyPassword;
 	}
 	public boolean ChangePasswordEasy(String username,String password){
-		
+		boolean ChangePasswordEasy = false;
+		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		password = EncAndDec.EncryptReturnString(password);
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "";
-			
-			
+			String sqlQuery = "update member set username ='"+username+"', password ='"+password+"' where username='"+username+"' ";
+			pStmt = conn.createStatement();
+			int i = 0;
+			i = pStmt.executeUpdate(sqlQuery);
+			if(i >= 1){
+				ChangePasswordEasy = true;
+			}
+			if (rs != null) 	  rs.close();
+			if (conn != null)  conn.close();
+			if (pStmt != null) pStmt.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			try {
+				if (rs != null) 	  rs.close();
+				if (conn != null)  conn.close();
+				if (pStmt != null) pStmt.close();
+			} catch (SQLException e) {
+				e.getMessage();
+			}
 		}
-		
-		
-		return true;
+		return ChangePasswordEasy;
 	}
 }

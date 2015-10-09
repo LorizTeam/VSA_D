@@ -29,7 +29,7 @@
 	            	<ul class="d-menu" data-role="dropdown" style="display: none;">
 	                    <li><a href="createuser.jsp">Create User</a></li>
 	                    <li class="divider"></li>
-	                    <li><a href="">Edit User</a></li>
+	                    <li><a href="EditUser.jsp">Edit User</a></li>
 	                </ul>
 	            </li>
 	          <%} %>

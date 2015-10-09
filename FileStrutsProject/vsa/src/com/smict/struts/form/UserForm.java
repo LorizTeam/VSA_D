@@ -39,27 +39,6 @@ public class UserForm extends ActionForm {
 		}
 		
 	}
-
-	/** 
-	 * Method validate
-	 * @param mapping
-	 * @param request
-	 * @return ActionErrors
-	 */
-	public ActionErrors validate(ActionMapping mapping,
-			HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	/** 
-	 * Method reset
-	 * @param mapping
-	 * @param request
-	 */
-	public void reset(ActionMapping mapping, HttpServletRequest request) {
-		// TODO Auto-generated method stub
-	}
 	public String getPosition_no() {
 		return position_no;
 	}

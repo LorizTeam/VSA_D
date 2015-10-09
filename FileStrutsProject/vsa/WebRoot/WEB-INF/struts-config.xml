@@ -5,7 +5,7 @@
   <data-sources />
   <form-beans >
     <form-bean name="loginForm" type="com.smict.struts.form.LoginForm" />
-    <form-bean name="userForm" type="com.smict.struts.form.UserForm" />
+    <form-bean name="auserForm" type="com.smict.struts.form.UserForm" />
 	<form-bean name="createprojectForm" type="com.smict.struts.form.UploadForm"/>
     <form-bean name="businessForm" type="com.smict.struts.form.BusinessForm" />
     <form-bean name="editprojectForm" type="com.smict.struts.form.EditprojectForm" />
@@ -112,6 +112,23 @@
       <set-property property="cancellable" value="true" />
       <forward name="false" path="/changepassword_byself.jsp" />
       <forward name="success" path="/main.jsp" />
+    </action>
+    <action
+      input="/edituser.jsp"
+      name="loginForm"
+      path="/editUser"
+      scope="request"
+      type="com.smict.struts.action.EditUserAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/afterchoose_edituser.jsp" />
+    </action>
+    <action
+      input="/afterchoose_edituser.jsp"
+      name="loginForm"
+      path="/afterchoose_edituser"
+      scope="request"
+      type="com.smict.struts.action.Afterchoose_edituserAction">
+      <set-property property="cancellable" value="true" />
     </action>
 	
   </action-mappings>

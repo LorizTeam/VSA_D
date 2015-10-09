@@ -4,6 +4,9 @@
  */
 package com.smict.struts.action;
 
+import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -13,16 +16,14 @@ import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.DBuser;
 import com.smict.struts.form.LoginForm;
-
 /** 
  * MyEclipse Struts
- * Creation date: 10-07-2015
+ * Creation date: 10-08-2015
  * 
  * XDoclet definition:
- * @struts.action path="/changepassword_byself" name="loginForm" input="/changepassword_byself.jsp" scope="request" validate="true"
- * @struts.action-forward name="success" path="/login.jsp"
+ * @struts.action path="/editUser" name="userForm" input="/edituser.jsp" scope="request" validate="true"
  */
-public class Changepassword_byselfAction extends Action {
+public class EditUserAction extends Action {
 	/*
 	 * Generated Methods
 	 */
@@ -37,14 +38,23 @@ public class Changepassword_byselfAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		LoginForm loginForm = (LoginForm) form;
-		String forwardText = "success";
-		
-		String username = request.getParameter("tb_cusernme"),
-		password = request.getParameter("tb_cpassword");
 		DBuser dbuser = new DBuser();
-		if(!dbuser.ChangePasswordEasy(username, password)){
-			forwardText = "false";
+		List<?> detailuserList = null;
+		String forwardText ="success";
+		String username = request.getParameter("rdo");
+		try {
+			detailuserList =dbuser.checkuser(username, "");
+			if(detailuserList != null){
+				request.setAttribute("detailuserList",detailuserList);
+			}else{
+				request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return mapping.findForward(forwardText);
 	}

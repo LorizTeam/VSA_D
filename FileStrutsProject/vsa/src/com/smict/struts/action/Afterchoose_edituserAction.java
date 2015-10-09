@@ -10,19 +10,16 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-
-import com.smict.struts.data.DBuser;
-import com.smict.struts.form.LoginForm;
+import com.smict.struts.form.UserForm;
 
 /** 
  * MyEclipse Struts
- * Creation date: 10-07-2015
+ * Creation date: 10-09-2015
  * 
  * XDoclet definition:
- * @struts.action path="/changepassword_byself" name="loginForm" input="/changepassword_byself.jsp" scope="request" validate="true"
- * @struts.action-forward name="success" path="/login.jsp"
+ * @struts.action path="/afterchoose_edituser" name="userForm" input="/afterchoose_edituser.jsp" scope="request" validate="true"
  */
-public class Changepassword_byselfAction extends Action {
+public class Afterchoose_edituserAction extends Action {
 	/*
 	 * Generated Methods
 	 */
@@ -37,15 +34,7 @@ public class Changepassword_byselfAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		LoginForm loginForm = (LoginForm) form;
-		String forwardText = "success";
-		
-		String username = request.getParameter("tb_cusernme"),
-		password = request.getParameter("tb_cpassword");
-		DBuser dbuser = new DBuser();
-		if(!dbuser.ChangePasswordEasy(username, password)){
-			forwardText = "false";
-		}
-		return mapping.findForward(forwardText);
+		UserForm userForm = (UserForm) form;// TODO Auto-generated method stub
+		return null;
 	}
 }

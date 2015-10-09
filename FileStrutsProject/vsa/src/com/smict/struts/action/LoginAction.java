@@ -53,7 +53,7 @@ public class LoginAction extends Action {
 		try {
 			
 			String Encryptpassword = EncAndDec.EncryptReturnString(password);
-			List userList = dbuser.checklogin(username,Encryptpassword);
+			List userList = dbuser.checkuser(username,Encryptpassword);
 			if(userList.size() >= 1){
 				
 				if(dbuser.CheckUserPasswordEasy(Encryptpassword)){
