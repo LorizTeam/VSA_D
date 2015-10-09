@@ -4,6 +4,8 @@
  */
 package com.smict.struts.action;
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -37,13 +39,20 @@ public class Afterchoose_edituserAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		DBuser dbuser = new DBuser();
 		
+		
 		String username = request.getParameter("tb_username"),
 		name = request.getParameter("tb_firstname"),
 		surname = request.getParameter("tb_lastname"),
 		position_no = request.getParameter("slc_position"),
 		chk_resetpassword = request.getParameter("chk_resetpassword"),
 		forwardText = "success";
-		
+		try {
+			name = new String (name.getBytes("ISO-8859-1"),"UTF-8");
+			surname = new String (surname.getBytes("ISO-8859-1"),"UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(!dbuser.EditUser(username, name, surname, position_no, chk_resetpassword)){
 			request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
 			forwardText = "false";
