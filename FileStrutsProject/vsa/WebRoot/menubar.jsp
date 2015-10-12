@@ -2,7 +2,9 @@
 	<% if(session.getAttribute("username") == null)
 			response.sendRedirect("login.jsp");
 	%>
-		<div class="app-bar fixed-top navy" data-role="appbar">
+		<div class="app-bar fixed-top navy grid" data-role="appbar" style="margin-top:0;">
+			<div class="row cells12">
+			<div class="cell colspan11 offset1">
 	        <a class="app-bar-element branding" href="vsa new.html">VSA Group</a>
 	        <span class="app-bar-divider"></span>
 	        <ul class="app-bar-menu">
@@ -47,6 +49,8 @@
 		                <a class="button" href="signout.do"><span class="mif-switch"></span>&nbsp;&nbsp;Signout</a>
 		            </div>
 	        </div>
+	       	</div>
+	       	</div>
             </div>
             	<%
 			  		}

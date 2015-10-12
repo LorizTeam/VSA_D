@@ -21,84 +21,70 @@
 				projectList = (List<?>) request.getAttribute("projectList");
 			}
 		 %>
-		<script type="text/javascript">
-			$(document).ready(function() {
-			    $('#tb_choosepj').DataTable();
-			} );
-		</script>
+		
 		<html:form action="/editproject" method="POST">
-			<div class="grid container page-content">
-				<div class="row cells12 align-left">
-					<div class="cell"></div>
-		           	<div class="cell debug colspan10">
-		           		<div class="row align-center" ><h4>Choose Project For Edit</h4></div>
-						<div class="row cell">
-							<div class="cell">
-								<div class="dataTable_wrapper">
-									<table id="tb_choosepj" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-								        <thead>
-								            <tr>
-								                <th>Project No.</th>
-								                <th>Business Name</th>
-								                <th>Project Year</th>
-								                <th>Project Name</th>
-								                <th>Project Type name</th>
-								                <th>Choose Edit</th>
-								            </tr>
-								        </thead>
-								 
-								        <tfoot>
-								            <tr>
-								                <th>Project No.</th>
-								                <th>Business Name</th>
-								                <th>Project Year</th>
-								                <th>Project Name</th>
-								                <th>Project Type name</th>
-								                <th>Choose Edit</th>
-								            </tr>
-								        </tfoot>
-								 
-								        <tbody>
-								        <%
-								        	if(projectList != null){
-								      			iter = projectList.iterator();
-								        		while(iter.hasNext()){
-								        			BusinessForm project = (BusinessForm) iter.next();
-								        %>
-								        	<tr>
-								                <td><%=project.getPj_no() %></td>
-								                <td><%=project.getBu_name() %></td>
-								                <td><%=project.getPj_year().substring(1) %></td>
-								                <td><%=project.getPj_name() %></td>
-								                <td><%=project.getPj_typename() %></td>
-								                <td>
-								                	<label class="input-control radio small-check">
-													    <input type="radio" name="rdo" value="<%=project.getPj_no() %>" required>
-													    <span class="check"></span>
-													</label>
-												</td>
-								            </tr>
-								        <%
-								        		}
-								        	}
-								         %>
-								           
-								        </tbody>
-								    </table>
-								    <div class="row align-center">
-										<button type="submit" name="submit" id="submit" class="button success">Edit</button>
-									</div>
-							    </div>
-							</div>
-						</div>
+		
+		<div class="grid">
+			<div class="row cells12">
+				<div class="cell colspan10 offset1 window">
+					<div class="window-caption  bg-cyan fg-white">
+						<span class="window-caption-icon"><span class="mif-widgets"></span></span>
+						<span class="window-caption-title">Edit Project</span>					
 					</div>
-					<div class="cell"></div>
+					<div class="window-content grid">
+						<div class="row align-center" ><h4>Choose Project For Edit</h4></div>						
+							<table id="tb_choosepj" class="table  table-bordered table-hover" >
+								<thead>
+									<tr>
+								        <th>Project No.</th>
+								        <th>Business Name</th>
+								        <th>Project Year</th>
+								        <th>Project Name</th>
+								        <th>Project Type name</th>
+								        <th>Choose Edit</th>
+								    </tr>
+							    </thead>
+								<tbody>
+								<% if(projectList != null){
+								    iter = projectList.iterator();
+								    while(iter.hasNext()){
+								        BusinessForm project = (BusinessForm) iter.next();%>
+								        <tr>
+								        	<td><%=project.getPj_no() %></td>
+								        	<td><%=project.getBu_name() %></td>
+								        	<td><%=project.getPj_year().substring(1) %></td>
+								        	<td><%=project.getPj_name() %></td>
+								        	<td><%=project.getPj_typename() %></td>
+								        	<td>
+								                <label class="input-control radio small-check">
+									                <input type="radio" name="rdo" value="<%=project.getPj_no() %>" required>
+													<span class="check"></span>
+												</label>
+											</td>
+										</tr>
+								  <% } } %>
+								 </tbody>
+							</table>
+							<div class="row align-center">
+								<button type="submit" name="submit" id="submit" class="button success"><span class="mif-pencil"></span> Edit</button>
+							</div>	
+					</div>
 				</div>
 			</div>
+		</div>
+		
 		</html:form>
 		<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.extend( $.fn.dataTable.defaults, {
+				    "searching": true,
+				    "ordering": false
+				} );
+			    $('#tb_choosepj').DataTable();
+			} );
+		</script>
 	</body>
 </html>
 
