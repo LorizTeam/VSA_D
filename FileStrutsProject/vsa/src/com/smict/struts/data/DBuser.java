@@ -123,11 +123,11 @@ public class DBuser {
 		return null;
 	}
 	
-	public boolean Createuser(String firstname,String lastname,String username,String position){
+	public boolean Createuser(String firstname,String lastname,String username,String position) throws Exception{
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
 		boolean insert_success = true;
 		String DefaultPassword = "12345";
-		String password = EncAndDec.EncryptReturnString(DefaultPassword);
+		String password = EncAndDec.Encrypt_Normal(DefaultPassword);
 		try {
 			conn = dbcon.getConnectMYSql();
 			String sqlQuery = "insert into member (username,password,name,surname,position_no,Create_Time) " +
@@ -189,9 +189,9 @@ public class DBuser {
 		return GetPositionList;
 	}
 	
-	public boolean CheckUserPasswordEasy(String password){
+	public boolean CheckUserPasswordEasy(String password) throws Exception{
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
-		String EncryptPassword = EncAndDec.EncryptReturnString("12345");
+		String EncryptPassword = EncAndDec.Encrypt_Normal("12345");
 		String PasswordFromDB="";
 		boolean EasyPassword = false;
 		if(EncryptPassword.equals(password)){
@@ -199,10 +199,10 @@ public class DBuser {
 		}
 		return EasyPassword;
 	}
-	public boolean ChangePasswordFromEasy(String username,String password){
+	public boolean ChangePasswordFromEasy(String username,String password) throws Exception{
 		boolean ChangePasswordEasy = false;
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
-		password = EncAndDec.EncryptReturnString(password);
+		password = EncAndDec.Encrypt_Normal(password);
 		try {
 			conn = dbcon.getConnectMYSql();
 			String sqlQuery = "update member set username ='"+username+"', password ='"+password+"' where username='"+username+"' ";
@@ -233,11 +233,11 @@ public class DBuser {
 		return ChangePasswordEasy;
 	}
 	
-	public boolean EditUser(String username,String name,String surname,String position_no,String changepasstoeasy){
+	public boolean EditUser(String username,String name,String surname,String position_no,String changepasstoeasy) throws Exception{
 		boolean ChangePasswordEasy = false;
 		//Password Deault is 12345
 		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
-		String passwordDefault = EncAndDec.EncryptReturnString("12345");
+		String passwordDefault = EncAndDec.Encrypt_Normal("12345");
 		
 		try {
 			conn = dbcon.getConnectMYSql();

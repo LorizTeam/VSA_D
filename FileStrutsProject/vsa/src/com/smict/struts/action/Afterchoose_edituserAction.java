@@ -53,9 +53,14 @@ public class Afterchoose_edituserAction extends Action {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(!dbuser.EditUser(username, name, surname, position_no, chk_resetpassword)){
-			request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
-			forwardText = "false";
+		try {
+			if(!dbuser.EditUser(username, name, surname, position_no, chk_resetpassword)){
+				request.setAttribute("alert","ไม่พบ User ที่ต้องการแก้ไข");
+				forwardText = "false";
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return mapping.findForward(forwardText);
 	}

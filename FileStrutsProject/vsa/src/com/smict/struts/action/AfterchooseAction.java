@@ -62,7 +62,12 @@ public class AfterchooseAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		AfterchooseForm afterchooseForm = (AfterchooseForm) form;
 		DBuser dbuser = new DBuser();
-		EncryptandDecrypt clsEnDe = new EncryptandDecrypt();
+		try {
+			EncryptandDecrypt clsEnDe = new EncryptandDecrypt();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		String alert = null;
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss-SSS");

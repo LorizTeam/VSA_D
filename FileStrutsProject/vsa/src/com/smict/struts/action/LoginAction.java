@@ -45,15 +45,27 @@ public class LoginAction extends Action {
 		DBuser dbuser = new DBuser();
 		String forwardText= "";
 		HttpSession session = request.getSession();
-		EncryptandDecrypt EncAndDec = new EncryptandDecrypt();
+		EncryptandDecrypt EncAndDec = null;
+		try {
+			EncAndDec = new EncryptandDecrypt();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		// TODO Auto-generated method stub
 		
 		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
 		
+//		String unencryptstring = "12345";
+//		System.out.println("unencryptstring :"+unencryptstring);
+//		String encryptedString = EncAndDec.Encrypt_Normal(unencryptstring);
+//		System.out.println("encryptedString :"+encryptedString);
+//		String decryptedString = EncAndDec.Decrypt_normal(encryptedString);
+//		System.out.println("decryptedString :"+decryptedString);
 		try {
 			
-			//String Encryptpassword = EncAndDec.EncryptReturnString(password);
-			String Encryptpassword = password;
+			String Encryptpassword = EncAndDec.Encrypt_Normal(password);
+//			String Encryptpassword = password;
 			List userList = dbuser.checkuser(username,Encryptpassword);
 			
 			if(userList.size() >= 1){

@@ -53,7 +53,13 @@ public class CreateuserAction extends Action {
 			e.printStackTrace();
 		}
 		
-		boolean insert_success = dbuser.Createuser(firstname, lastname, username, position);
+		boolean insert_success = true;
+		try {
+			insert_success = dbuser.Createuser(firstname, lastname, username, position);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(!insert_success){
 			forwardText = "false";
 		}
