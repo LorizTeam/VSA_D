@@ -58,10 +58,10 @@ public class CreateprojectAction extends Action {
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 			Date date = new Date();	
 			
-			File foldertest = new File(getServlet().getServletContext().getRealPath("/")+"upload");
-			if(!foldertest.exists()){
-				foldertest.mkdir();
-				System.out.print("Create Folder"+foldertest);
+			File folderupload = new File(getServlet().getServletContext().getRealPath("/")+"upload");
+			if(!folderupload.exists()){
+				folderupload.mkdir();
+				System.out.print("Create Folder"+folderupload);
 			}
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;

@@ -69,25 +69,6 @@ public class AfterchooseAction extends Action {
 		FileOutputStream outputStream = null;
 		DBProject dbproject = new DBProject();
 		Pictures cls_pic = new Pictures();
-//		String input = null,key = null,iv = null;
-//		input = "Hello World";
-//		key = "BaXsEr5";
-//		iv = "aKixAq8O";
-//		String text="Test Encrypt";
-//		
-//		if(input != null){
-//			byte[] bbb = clsEnDe.EncryptReturnByte(input);
-//			clsEnDe.Decrypt(input);
-//			
-//			String aaa = clsEnDe.EncryptReturnString(input);
-//			
-//			try {
-//				clsEnDe.DecryptreceiveStringEncrypte(aaa);
-//			} catch (UnsupportedEncodingException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
 		
 		String project_name = request.getParameter("tb_projectname"),
 		   project_year = request.getParameter("tb_projectyear"),
@@ -109,6 +90,7 @@ public class AfterchooseAction extends Action {
 		if(session.getAttribute("username") == null){
 			forwardText = "nologin";
 		}else{
+			//process
 			//Click Button upload--Start
 			if(request.getParameter("upload") != null){
 				try {
@@ -121,9 +103,14 @@ public class AfterchooseAction extends Action {
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile1().getFileData());
 						
+						if(outputStream != null)
+							outputStream.close();
+						
 						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
 						try {
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
+							
+								
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -137,9 +124,13 @@ public class AfterchooseAction extends Action {
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile2().getFileData());
 						
+						if(outputStream != null)
+							outputStream.close();
+						
 						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
 						try {
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
+							
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -153,9 +144,13 @@ public class AfterchooseAction extends Action {
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile3().getFileData());
 						
+						if(outputStream != null)
+							outputStream.close();
+						
 						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
 						try {
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
+							
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -169,9 +164,13 @@ public class AfterchooseAction extends Action {
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile4().getFileData());
 						
+						if(outputStream != null)
+							outputStream.close();
+						
 						String pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
 						try {
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
+							
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -205,6 +204,8 @@ public class AfterchooseAction extends Action {
 			}
 			//Click Button upload--End
 			
+			
+			//Click Button Submit
 			if(request.getParameter("submit") != null){
 				String[] picpath = request.getParameterValues("picpath");
 				
@@ -218,7 +219,7 @@ public class AfterchooseAction extends Action {
 						try {
 							if(chkbtn_del != null){
 								
-								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no);
+								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no,getServlet().getServletContext().getRealPath("/")+"upload\\");
 								
 								if(keep_alert != null){
 									alert = keep_alert;
@@ -265,6 +266,8 @@ public class AfterchooseAction extends Action {
 				request.setAttribute("alert", alert);
 				forwardText = "success";
 			}
+			//Click Button Submit End
+		//End Process	
 		}
 		return mapping.findForward(forwardText);
 	}

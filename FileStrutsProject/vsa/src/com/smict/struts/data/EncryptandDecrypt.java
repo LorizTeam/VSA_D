@@ -27,11 +27,11 @@ public class EncryptandDecrypt {
 			cipher.init(Cipher.ENCRYPT_MODE, key, iv);
 		
 			encrypted= cipher.doFinal(input.getBytes());
-			System.out.println("____EncryptReturnByte_______");
-			System.out.println("Encrypt String: "+new String(encrypted));
-			System.out.println("Encrypt byte: "+encrypted);
-			System.out.println("Return: "+encrypted);
-			System.out.println("___________");
+//			System.out.println("____EncryptReturnByte_______");
+//			System.out.println("Encrypt String: "+new String(encrypted));
+//			System.out.println("Encrypt byte: "+encrypted);
+//			System.out.println("Return: "+encrypted);
+//			System.out.println("___________");
 		
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
@@ -69,11 +69,11 @@ public class EncryptandDecrypt {
 			cipher.init(Cipher.DECRYPT_MODE, key, iv);
 		
 			decrypted= cipher.doFinal(encrypted);
-			System.out.println("____Decrypt_______");
-			System.out.println("Decrypted String: "+new String(decrypted));
-			System.out.println("Decrypted byte: "+decrypted);
-			System.out.println("Return: "+decrypted);
-			System.out.println("___________");
+//			System.out.println("____Decrypt_______");
+//			System.out.println("Decrypted String: "+new String(decrypted));
+//			System.out.println("Decrypted byte: "+decrypted);
+//			System.out.println("Return: "+decrypted);
+//			System.out.println("___________");
 		
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
@@ -99,8 +99,8 @@ public class EncryptandDecrypt {
 	}
 
 	public byte[] DecryptreceiveStringEncrypte(String EncryptString) throws UnsupportedEncodingException{
-	System.out.println("_____DecryptreceiveStringEncrypte______");
-	System.out.println("EncryptString :"+EncryptString);
+//	System.out.println("_____DecryptreceiveStringEncrypte______");
+//	System.out.println("EncryptString :"+EncryptString);
 	
 	byte[] keybyte = keyStr.getBytes();
 	byte[] ivbyte = ivStr.getBytes();
@@ -116,11 +116,11 @@ public class EncryptandDecrypt {
 	
 		decrypted= cipher.doFinal(encrypted);
 		
-		System.out.println("Decrypted String Round 1: "+new String(decrypted));
-		System.out.println("Decrypted byte Round 1: "+decrypted);
-		System.out.println("Return 1: "+new String(decrypted));
+//		System.out.println("Decrypted String Round 1: "+new String(decrypted));
+//		System.out.println("Decrypted byte Round 1: "+decrypted);
+//		System.out.println("Return 1: "+new String(decrypted));
 		cipher.init(Cipher.DECRYPT_MODE, key, iv);
-	System.out.println("_________________________________\t");
+//	System.out.println("_________________________________\t");
 	} catch (NoSuchAlgorithmException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -159,10 +159,10 @@ public class EncryptandDecrypt {
 		cipher.init(Cipher.ENCRYPT_MODE, key, iv);
 	
 		encrypted= cipher.doFinal(input.getBytes());
-		System.out.println("_____EncryptReturnString______");
-		System.out.println("Encrypt String Round: "+new String(encrypted));
-		System.out.println("Encrypt byte Round: "+encrypted);
-		System.out.println("Return : "+new String(encrypted));
+//		System.out.println("_____EncryptReturnString______");
+//		System.out.println("Encrypt String Round: "+new String(encrypted));
+//		System.out.println("Encrypt byte Round: "+encrypted);
+//		System.out.println("Return : "+new String(encrypted));
 		StrEncrypted = new String(encrypted, "ISO-8859-1");
 		
 //		// Decrypt
@@ -180,7 +180,7 @@ public class EncryptandDecrypt {
 //		System.out.println("Decrypted String Round 2: "+new String(decrypted));
 //		System.out.println("Decrypted byte Round 2: "+decrypted);
 //		System.out.println("Return : "+new String(decrypted));
-		System.out.println("_________________________________");
+//		System.out.println("_________________________________");
 		
 	} catch (NoSuchAlgorithmException e) {
 		// TODO Auto-generated catch block

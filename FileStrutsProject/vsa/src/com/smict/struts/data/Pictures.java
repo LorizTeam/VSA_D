@@ -1,4 +1,5 @@
 package com.smict.struts.data;
+import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ public class Pictures{
 	Statement pStmt = null;
 	ResultSet rs	= null;
 	
-	public String Del_picture(String pic_path,String pj_no){
+	public String Del_picture(String pic_path,String pj_no,String locate){
 		//ถ้าเจอว่ารูปที่ต้องการลบเปนรูป Header จะไม่สามารถลบได้
 		String alert = null;
 		
@@ -38,6 +39,21 @@ public class Pictures{
 				sqlQuery += "pic_path <> ''";
 				pStmt = conn.createStatement();
 				pStmt.executeUpdate(sqlQuery);
+				
+				String[] picpath = pic_path.split("/");
+				String path_delete_file = locate+picpath[1]+"\\"+picpath[2];
+				
+				File delete_pic = new File (path_delete_file);
+				
+				try{
+					if(delete_pic.exists()){
+						delete_pic.delete();
+					}
+				}catch (Exception e) {
+					// TODO: handle exception
+					e.printStackTrace();
+				}
+				
 			}
 			
 		} catch (IOException e) {
