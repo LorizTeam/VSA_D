@@ -24,7 +24,7 @@ public class NortificationsData {
 					"a.norti_id, " +
 					"a.norti_from, " +
 					"a.norti_email, " +
-					"a.norti_message," +
+					"substr(a.norti_message,1,30) as norti_message," +
 					"b.norti_s, " +
 					"b.norti_sname," +
 					"c.bu_no, " +

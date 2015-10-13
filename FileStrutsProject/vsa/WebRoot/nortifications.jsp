@@ -40,17 +40,20 @@
 	
   </head>
   
-  <body>&nbsp; 
-  <%@ include file="menubar.jsp" %> 
+  <body>&nbsp;<%@ include file="menubar.jsp" %> 
+  <a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a>
+  <a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a>
+  <a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a>
+  <a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a>
   	<div  id="fillnoti"> 	
   		<div class="uk-grid " >	 	
 			<div class="uk-width-9-10 uk-grid uk-container-center" >						
 				<ul  class="uk-tab uk-width-1-3" data-uk-tab >
-					<li class="uk-active" data-uk-filter=""><a href="">ทั้งหมด</a></li>
-					<li><a id="vsa" href="">VSa</a></li>
-					<li><a id="wvs" href="">WVS</a></li>		
-					<li><a id="vsct" href="">VSCT</a></li>
-					<li><a id="plz" href="">Palidzen</a></li>		
+					<li class="business uk-active" data-uk-filter=""><a href="">ทั้งหมด</a></li>
+					<li><a class="business" id="vsa" href="/nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+					<li><a class="business" id="wvs" href="/nortifications.jsp?bu_no=2">WVS</a></li>		
+					<li><a class="business" id="vsct" href="/nortifications.jsp?bu_no=3">VSCT</a></li>
+					<li><a class="business" id="plz" href="/nortifications.jsp?bu_no=4">Palidzen</a></li>		
 				</ul>
 			</div>
 		</div>		
@@ -67,13 +70,18 @@
 	</div>
  	 <div class="uk-grid ">	 	
 		<div class="uk-width-9-10 uk-grid uk-container-center">				
-			<div id="h_norti" class="uk-width-medium-1-3" style="overflow:auto;height:450px;" data-uk-grid="{controls: '#fillnoti',gutter:0.1}">
+			<div id="h_norti" class="uk-width-medium-1-3" style="overflow:auto;min-height:450px;max-height:450px;" data-uk-grid="{controls: '#fillnoti',gutter:0.1}">
   <%	NortificationsData nortiData = new NortificationsData();
-  		iterate = nortiData.select_Nortifications_Header("","").iterator();
+  		if(request.getParameter("bu_no") != null){
+  			iterate = nortiData.select_Nortifications_Header("",request.getParameter("bu_no")).iterator();
+  		}else{
+  			iterate = nortiData.select_Nortifications_Header("","").iterator();
+  		}
+  		
   		while(iterate.hasNext()){
   			NortificationsForm nortiForm = (NortificationsForm) iterate.next();
   %>
-  				<a onclick="showalert(<%=nortiForm.getNorti_id() %>)" data-uk-filter="s<%=nortiForm.getNorti_s()%>" class="uk-panel uk-panel-box uk-width-1-1" style="margin:0 0 5px;">
+  				<a onclick="Shownorti(<%=nortiForm.getNorti_id() %>)" data-uk-filter="s<%=nortiForm.getNorti_s()%>" class="uk-panel uk-panel-box uk-width-1-1 forclickdetail" style="margin:0 0 5px;">
   					<div class="uk-grid">
 	    				<div class="uk-width-1-2">
 	    					<h5><small>ลำดับที่ <%=nortiForm.getNorti_id() %> (<%=nortiForm.getBu_name() %>)</small></h5>
@@ -84,9 +92,9 @@
 	    			</div>
   					
   					<% if(nortiForm.getNorti_s().equals("1")){ %>
-					<div class="uk-panel-badge uk-badge uk-badge-danger"><%=nortiForm.getNorti_sname() %> !</div>
+					<div id="status" class="uk-panel-badge uk-badge uk-badge-danger"><%=nortiForm.getNorti_sname() %> !</div>
 					<%}else{%>
-					<div class="uk-panel-badge uk-badge uk-badge-success"><%=nortiForm.getNorti_sname() %> !</div>
+					<div id="status" class="uk-panel-badge uk-badge uk-badge-success"><%=nortiForm.getNorti_sname() %> !</div>
 					<%} %>
 					
 					<p><%=nortiForm.getNorti_message() %></p>		 			
@@ -127,7 +135,21 @@
    <script src="wvsjs/components/grid.min.js"></script>
    
   <script>
-		function showalert(message){
+  
+  		function Shownorti(message){
+  			show_deatil(message);
+  			update_and_showheader(message);
+  		}
+  		
+  		$(".forclickdetail").click(function(){
+  			
+  			$(this).find("#status").removeClass("uk-badge-danger");
+	    	$(this).find("#status").addClass("uk-badge-success");
+	    	$(this).find("#status").text("อ่านแล้ว !");
+	    	$(this).attr( "data-uk-filter", "s0" );
+  		});
+  		
+		function show_deatil(message){
 			$.ajax({
                     type: "post",
                     url: "json_nortification.jsp", //this is my servlet
@@ -146,6 +168,27 @@
 						$("#timestamp").html(obj.bu_no);
 						$("#bu_name").html(obj.bu_name);
 						$("#norti_sname").html(obj.norti_sname);
+                    }
+                });
+		}
+		
+		function update_and_showheader(message){
+			$(this).find("#status").removeClass("uk-badge-danger");
+	    	$(this).find("#status").addClass("uk-badge-success");
+	    	$(this).find("#status").text("อ่านแล้ว !");
+	    	$(this).attr( "data-uk-filter", "s0" );
+			$.ajax({
+                    type: "post",
+                    url: "ajax_header_nortification.jsp", //this is my servlet
+                    data: {id_nortification:message},
+                    async:true,
+                    success: function(result){
+                    	
+                     
+//                    	$('#showname').html(result);	
+//								alert(result);
+//						$("#h_norti").html(result);
+						//h_norti;
                     }
                 });
 		}
