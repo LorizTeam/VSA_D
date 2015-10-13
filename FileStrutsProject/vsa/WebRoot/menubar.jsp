@@ -37,16 +37,20 @@
 	          <%} %>
 	        </ul>
 	        <div class="app-bar-element place-right">
-				<button class="button rounded dropdown-toggle"><span class="mif-cog mif-1x"></span>&nbsp;
+				<a class=" dropdown-toggle fg-white"><span class="mif-user"></span>&nbsp;
 				
 			  		<%=detailUser.getName()%>
 			  	
-				</button>
+				</a>
 		            <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" data-role="dropdown" data-no-close="true" style="width: 220px; display: none;">
-		                <h1 class="text-light">Position</h1>
-		                <h1 class="text-light"><%=detailUser.getPosition_name()%></h1>
+		               	<blockquote>
+		               		<h3 class="text-light">Position</h3>	                
+		              	  	<h3><small class="text-light"><%=detailUser.getPosition_name()%></small></h3>
+		              	  	<a class="button danger bg-hover-darkRed" href="signout.do"><span class="mif-switch"></span>&nbsp;&nbsp;Signout</a>
+		               	</blockquote>
+		               
 
-		                <a class="button" href="signout.do"><span class="mif-switch"></span>&nbsp;&nbsp;Signout</a>
+		                
 		            </div>
 	        </div>
 	       	</div>
