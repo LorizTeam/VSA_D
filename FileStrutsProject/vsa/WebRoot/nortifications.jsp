@@ -37,11 +37,53 @@
 	<div class="uk-grid " >	 	
 			<div class="uk-width-9-10 uk-grid uk-container-center" >						
 				<ul  class="uk-tab uk-width-1-3"  >
-					<li class="business"><a href="">ทุกบริษัท</a></li>
-					<li><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
-					<li><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
-					<li><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
-					<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>		
+					<%
+						if(request.getParameter("bu_no") == null){
+					%>
+							<li class="uk-active"><a class="business" href="nortifications.jsp">ทุกบริษัท</a></li>
+							<li><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+							<li><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+							<li><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+							<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>
+					<%
+						}else if(request.getParameter("bu_no").equals("1")){
+					%>
+							<li ><a class="business" href="nortifications.jsp">ทุกบริษัท</a></li>
+							<li class="uk-active"><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+							<li><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+							<li><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+							<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>
+					<%	
+						}
+						else if(request.getParameter("bu_no").equals("2")){
+					%>
+							<li ><a class="business" href="nortifications.jsp">ทุกบริษัท</a></li>
+							<li ><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+							<li class="uk-active"><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+							<li><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+							<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>
+					<%	
+						}
+						else if(request.getParameter("bu_no").equals("3")){
+					%>
+							<li ><a class="business" href="nortifications.jsp">ทุกบริษัท</a></li>
+							<li ><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+							<li ><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+							<li class="uk-active"><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+							<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>
+					<%	
+						}
+						else if(request.getParameter("bu_no").equals("4")){
+					%>
+							<li ><a class="business" href="nortifications.jsp">ทุกบริษัท</a></li>
+							<li ><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+							<li ><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+							<li ><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+							<li class="uk-active"><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>
+					<%	
+						}
+					 %>
+							
 				</ul>
 			</div>
 	</div>	
