@@ -41,22 +41,18 @@
   </head>
   
   <body>&nbsp;<%@ include file="menubar.jsp" %> 
-  <a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a>
-  <a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a>
-  <a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a>
-  <a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a>
-  	<div  id="fillnoti"> 	
-  		<div class="uk-grid " >	 	
+	<div class="uk-grid " >	 	
 			<div class="uk-width-9-10 uk-grid uk-container-center" >						
-				<ul  class="uk-tab uk-width-1-3" data-uk-tab >
-					<li class="business uk-active" data-uk-filter=""><a href="">ทั้งหมด</a></li>
-					<li><a class="business" id="vsa" href="/nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
-					<li><a class="business" id="wvs" href="/nortifications.jsp?bu_no=2">WVS</a></li>		
-					<li><a class="business" id="vsct" href="/nortifications.jsp?bu_no=3">VSCT</a></li>
-					<li><a class="business" id="plz" href="/nortifications.jsp?bu_no=4">Palidzen</a></li>		
+				<ul  class="uk-tab uk-width-1-3"  >
+					<li class="business"><a href="">ทุกบริษัท</a></li>
+					<li><a class="business" id="vsa" href="nortifications.jsp?bu_no=1">VS<span class="fg-red">a</span></a></li>
+					<li><a class="business" id="wvs" href="nortifications.jsp?bu_no=2">WVS</a></li>		
+					<li><a class="business" id="vsct" href="nortifications.jsp?bu_no=3">VSCT</a></li>
+					<li><a class="business" id="plz" href="nortifications.jsp?bu_no=4">Palidzen</a></li>		
 				</ul>
 			</div>
-		</div>		
+	</div>	
+  	<div  id="fillnoti"> 				
   		<div class="uk-grid "style="margin-top:5px;">	 	
 			<div class="uk-width-9-10 uk-grid uk-container-center">						
 				<ul class="uk-subnav uk-subnav-pill uk-width-1-3">
@@ -65,8 +61,7 @@
 					<li id="read" data-uk-filter="s0"><a href="">อ่านแล้ว</a></li>				
 				</ul>
 			</div>
-		</div>
-		
+		</div>		
 	</div>
  	 <div class="uk-grid ">	 	
 		<div class="uk-width-9-10 uk-grid uk-container-center">				
@@ -104,25 +99,31 @@
 	    			</small></h3>
 	    			<hr/>   			
 				</a>	 	
-	
-  		
+
   	<%
   		}
    %>
    			</div>
 				
-				<div class="uk-width-medium-2-3">
+				<div class=" uk-width-medium-2-3 " >
+					<div class="window-caption  bg-cyan fg-white">
+						<span class="window-caption-icon"><span class="mif-apps"></span></span>
+						<span class="window-caption-title">Edit Project Detail</span>						
+					</div>
+					<div class="window-containt">
 					<!-- use message detail   nortiForm.getBu_no() -->
-					ID : <span id="norti_id"></span><br/>
-					from : <span id="norti_from"></span><br/>
-					email : <span id="norti_email"></span><br/>
-					message : <span id="norti_message"></span><br/>
-					norti_s : <span id="norti_s"></span><br/>
-					bu_no : <span id="bu_no"></span><br/>
-					timestamp : <span id="timestamp"></span><br/>
-					bu_name : <span id="bu_name"></span><br/>
-					norti_sname : <span id="norti_sname"></span><br/>
-					<!-- use message detail -->
+					<div class="uk-grid" style="margin-top:0;">								
+						<h4 class="uk-width-1-2"><small>ลำดับที่ <span id="norti_id"></span> - <span class="tag info" id="bu_name"></span></small></h4>
+						<h5 class="uk-width-1-2 align-right"><span class="tag success" id="norti_sname"></span></h5>
+					</div>	
+					<div class="uk-grid" style="margin-top:20;">
+						<h3 class="uk-width-1-2"><small><B><span id="norti_from"></span></B> <<span id="norti_email"></span>></small></h3>
+						<h4 class="uk-width-1-2 align-right"><small><span id="timestamp"></span> </small></h4>
+					</div>
+					
+					<hr/>
+					<h2><small><span id="norti_message"></span></small></h2>
+					</div>
 				</div>
 				
 				
@@ -165,7 +166,7 @@
 						$("#norti_message").html(obj.norti_message);
 						$("#norti_s").html(obj.norti_s);
 						$("#bu_no").html(obj.bu_no);
-						$("#timestamp").html(obj.bu_no);
+						$("#timestamp").html(obj.timestamp);
 						$("#bu_name").html(obj.bu_name);
 						$("#norti_sname").html(obj.norti_sname);
                     }
