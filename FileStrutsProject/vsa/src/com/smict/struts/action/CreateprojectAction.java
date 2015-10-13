@@ -7,6 +7,7 @@ package com.smict.struts.action;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -63,9 +64,17 @@ public class CreateprojectAction extends Action {
 				folderupload.mkdir();
 				System.out.print("Create Folder"+folderupload);
 			}
+			
+			String project_name = request.getParameter("tb_projectname");
+			try {
+				project_name=new String (project_name.getBytes("ISO-8859-1"),"UTF-8");
+			} catch (UnsupportedEncodingException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			};
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
-			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+request.getParameter("tb_projectname"));
+			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name);
 			newFolder.mkdir();
 	//		FormFile countpic = uploadForm.getUploadedFile();
 			//Upload Pic follow folder create
@@ -90,11 +99,12 @@ public class CreateprojectAction extends Action {
 						e.printStackTrace();
 					}
 			}
-			String project_name = request.getParameter("tb_projectname"),
-				   project_year = request.getParameter("tb_projectyear"),
+			String project_year = request.getParameter("tb_projectyear"),
 				   slc_bu = request.getParameter("slc_bu"),
 				   slc_typepj = request.getParameter("slc_typepj"),
 				   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+					
+			
 			
 			if(getErrors(request) == null ||getErrors(request).size() == 0){
 				uploadForm.setFileName(uploadForm.getUploadedFile().getFileName());

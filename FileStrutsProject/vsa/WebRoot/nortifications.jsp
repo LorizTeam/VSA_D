@@ -148,17 +148,19 @@
 					</div>
 					<div class="window-containt" style="padding:10px; min-height:350px;">
 					<!-- use message detail   nortiForm.getBu_no() -->
-					<div class="uk-grid" style="margin-top:10; ">								
+					<div class="detail">
+						<div class="uk-grid" style="margin-top:10; ">								
 						<h4 class="uk-width-1-2"><small>ลำดับที่ <span id="norti_id"></span> - <span class="tag info" id="bu_name"></span></small></h4>
 						<h5 class="uk-width-1-2 align-right"><span class="tag success"><span class="mif-checkmark"></span> <span id="norti_sname"></span></span></h5>
-					</div>	
-					<div class="uk-grid" style="margin-top:20;">
-						<h3 class="uk-width-2-3"> <small><span class="mif-contacts-mail fg-grayLight"></span> <B><span id="norti_from"></span></B> <<span id="norti_email"></span>></small></h3>
-						<h4 class="uk-width-1-3 align-right"><small><span class="mif-calendar fg-grayLigh"></span> <span id="timestamp"></span> </small></h4>
-					</div>
+						</div>	
+						<div class="uk-grid" style="margin-top:20;">
+							<h3 class="uk-width-2-3"> <small><span class="mif-contacts-mail fg-grayLight"></span> <B><span id="norti_from"></span></B> <<span id="norti_email"></span>></small></h3>
+							<h4 class="uk-width-1-3 align-right"><small><span class="mif-calendar fg-grayLigh"></span> <span id="timestamp"></span> </small></h4>
+						</div>
 					
-					<hr/>
-					<h2><small><span id="norti_message"></span></small></h2>
+						<hr/>
+						<h2><small><span style="line-height: 150%;" id="norti_message"></span></small></h2>
+					</div>
 					<!-- use message detail   nortiForm.getBu_no() -->
 					</div>
 					</div>
@@ -174,14 +176,17 @@
    <script src="wvsjs/components/grid.min.js"></script>
    
   <script>
-  
+  		$(document).ready(function (){
+  			$(".detail").hide();
+  		});
   		function Shownorti(message){
   			show_deatil(message);
   			update_and_showheader(message);
   		}
   		
   		$(".forclickdetail").click(function(){
-  			
+  			$(".detail").hide();
+  			$(".detail").fadeIn(1000);
   			$(this).find("#status").removeClass("uk-badge-danger");
 	    	$(this).find("#status").addClass("uk-badge-success");
 	    	$(this).find("#status").text("อ่านแล้ว !");

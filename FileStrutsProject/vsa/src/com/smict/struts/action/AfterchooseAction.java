@@ -63,12 +63,11 @@ public class AfterchooseAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		AfterchooseForm afterchooseForm = (AfterchooseForm) form;
 		DBuser dbuser = new DBuser();
-		try {
-			EncryptandDecrypt clsEnDe = new EncryptandDecrypt();
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		String forwardText = "";
+		try{
+			
+		
+		
 		
 		String alert = null;
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss-SSS");
@@ -81,13 +80,18 @@ public class AfterchooseAction extends Action {
 		   bu_no = request.getParameter("slc_bu"),
 		   pj_typeno = request.getParameter("slc_typepj"),
 		   pj_no = request.getParameter("pj_no");
-		
+		try {
+			project_name=new String (project_name.getBytes("ISO-8859-1"),"UTF-8");
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		};
 		if(!project_year.substring(0, 1).equals("y")){
 			project_year = project_year;
 		}
 		// TODO Auto-generated method stub
 		List testchk = new ArrayList();
-		String forwardText = "";
+		
 		List<?> buList = null;
 		List<?> Listforafterchoose = null;
 		List<?> pj_typeList = null;
@@ -274,6 +278,10 @@ public class AfterchooseAction extends Action {
 			}
 			//Click Button Submit End
 		//End Process	
+		}
+		}catch (Exception e) {
+			// TODO: handle exception
+			return mapping.findForward("");
 		}
 		return mapping.findForward(forwardText);
 	}
