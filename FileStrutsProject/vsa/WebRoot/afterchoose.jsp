@@ -132,14 +132,14 @@
 										<div class="row cells2">
 											<div class="cell">
 												<h3><small>Project Name</small></h3>
-												<div class="input-control" data-role="input"  style="width:100%;" >
+												<div class="input-control text" data-role="input"  style="width:100%;" >
 													<input type="text" class="form-control" name="tb_projectname" id="tb_projectname" placeholder="Project Name" value="<%=createproject1.getPj_name() %>" required>
 													<button class="button helper-button clear"><span class="mif-cross"></span></button>
 												</div>
 											</div>
 											<div class="cell">
 												<h3><small>Project Year</small></h3>	
-												<div class="input-control" data-role="input"  style="width:100%;" >
+												<div class="input-control text" data-role="input"  style="width:100%;" >
 													<input type="text" class="form-control" name="tb_projectyear" id="tb_projectyear" placeholder="Project Year" value="<%=createproject1.getPj_year() %>" required>
 													<button class="button helper-button clear"><span class="mif-cross"></span></button>
 												</div>

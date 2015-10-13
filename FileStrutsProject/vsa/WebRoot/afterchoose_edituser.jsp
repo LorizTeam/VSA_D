@@ -29,106 +29,101 @@
   </head>
   
   <body>
-  	<%@ include file="menubar.jsp" %>
-    <div class="grid container page-content">
-			<div class="row cells12 align-left">
-				<div class="cell"></div>
-		        <div class="cell debug colspan10">
-		        	<%List<?> UserList = null;
-		        	Iterator<?> iterateuser = null;
-		        	
+  	<%@ include file="cssinclude.jsp"%>
+  	
+  	<div class="grid">
+		<div class="row cells12">
+			<div class="cell colspan6 offset3 window">
+				<div class="window-caption  bg-cyan fg-white">
+					<span class="window-caption-icon"><span class="mif-user-check"></span></span>
+					<span class="window-caption-title">Edit user detail</span>
+					<a  href="EditUser.jsp"><span class="btn-close "></span></a>
+				</div>
+				<%	List<?> UserList = null;
+		        	Iterator<?> iterateuser = null;	
 		        	if(request.getAttribute("detailuserList") != null){
 		        		UserList = (List<?>) request.getAttribute("detailuserList");
 		        		iterateuser = UserList.iterator();
 		        		while(iterateuser.hasNext()){
-		        		UserForm userForm = (UserForm) iterateuser.next();
-		        	%>
-		        	
-		           	<form action="afterchoose_edituser.do" method="POST">
-		           		<div class="row">
-		           			
-		           			<label class="input-control checkbox">
-								<input type="checkbox" name="chk_resetpassword">
-								<span class="check"></span>
-							</label>
-							Reset Password to 12345
-		           		</div>
-		           		<div class="row">
-				        Edit Username
-				        </div>
-				        <div class="row" >
-				        	<div class="cell">
-				        		<div class="input-control text success" data-role="input" >
+		        		UserForm userForm = (UserForm) iterateuser.next();%>
+				<form action="afterchoose_edituser.do" method="POST" class="window-content grid">					
+						<div class="row cells12">
+							<div class="cell colspan2 align-right "><h5 class="caption">Name</h5></div>
+							<div class="cell colspan10 ">						
+								<div class="input-control text " data-role="input" >			
+									<input type="text" class="form-control" name="tb_firstname" id="tb_name" placeholder="First Name" value="<%=userForm.getName() %>" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+						        <div class="input-control text" data-role="input" >
+									<input type="text" class="form-control" name="tb_lastname" id="tb_lastname" placeholder="Last Name" value="<%=userForm.getSurname() %>" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+								
+							</div>	
+						</div>
+						<div class="row cells12"  style="margin-bottom:5px;">
+							<div class="cell colspan2 align-right "><h5 class="caption">Username</h5></div>
+							<div class="cell colspan10 ">
+								<div class="input-control text " data-role="input" >				        	
 									<input type="text" class="form-control" name="tb_username" id="tb_username" placeholder="Username" value="<%=userForm.getUsername() %>" readonly="readonly">
 									<button class="button helper-button clear"><span class="mif-cross"></span></button>
 								</div>
-				        	</div>
-				        </div>
-		           		<div class="row">
-		           			Name 
-		           		</div>
-		           		<div class="row cells2">
-		           			<div class="cell">
-				        		<div class="input-control text success" data-role="input" >
-									<input type="text" class="form-control" name="tb_firstname" id="tb_name" placeholder="First" value="<%=userForm.getName() %>" required>
-									<button class="button helper-button clear"><span class="mif-cross"></span></button>
-								</div>
-				        	</div>
-				        	<div class="cell">
-				        		<div class="input-control text success" data-role="input" >
-									<input type="text" class="form-control" name="tb_lastname" id="tb_lastname" placeholder="Last" value="<%=userForm.getSurname() %>" required>
-									<button class="button helper-button clear"><span class="mif-cross"></span></button>
-								</div>
-				        	</div>
-		           		</div>
-		           		<div class="row">
-				        Position
-				        </div>
-				        Select Project Type 
-				        <div class="input-control select text success" >
-							<select name="slc_position" id="slc_position">
-							<%
-								Iterator<?> iterate = null;
-								
-								DBuser dbuser = new DBuser();
-								iterate = dbuser.GetPosition("").iterator();
-								while(iterate.hasNext()){
-									UserForm userform_pos = (UserForm) iterate.next();
-									if(userForm.getPosition_name().equals(userform_pos.getPosition_name())){
-							%>
-								<option value="<%=userform_pos.getPosition_no() %>" selected><%=userform_pos.getPosition_name() %></option>
-							<%
-									}else{
-							%>
-								<option value="<%=userform_pos.getPosition_no() %>"><%=userform_pos.getPosition_name() %></option>
-							<%
-									}
-								}
-							 %>
-								
-							</select>
+							</div>
 						</div>
-						<%String alert = null;
-						if(request.getAttribute("alert") != null){
-								alert = (String)request.getAttribute("alert");
-							}
-						if(alert != null){
-	           			%>
-	           				<div class="row align-center" ><span class="tag alert"><%=alert %></span></div>
-	           			<%
-	           			}
-	           		 	%>
-		           		<div class="row align-center">
-							<button type="submit" name="submit" id="submit" class="button success">Create</button>
+						<div class="row cells12" style="margin-bottom:5px;">
+							<div class="cell colspan2 align-right "><h5 class="caption"> Permission</h5></div>
+							<div class="cell colspan10 ">
+								<div class="input-control select " >
+									<select name="slc_position" id="slc_position">
+									<%	Iterator<?> iterate = null;
+										DBuser dbuser = new DBuser();
+										iterate = dbuser.GetPosition("").iterator();
+										while(iterate.hasNext()){
+											UserForm userform_pos = (UserForm) iterate.next();
+											if(userForm.getPosition_name().equals(userform_pos.getPosition_name())){%>									
+											<option value="<%=userform_pos.getPosition_no() %>" selected><%=userform_pos.getPosition_name() %></option>
+									<% }else{%>
+										<option value="<%=userform_pos.getPosition_no() %>"><%=userform_pos.getPosition_name() %></option>
+									<%}
+									} %>
+										
+									</select>
+								</div>	
+							</div>
 						</div>
-		           	</form>
-		           	<%
-		        		}
-		        	}
-		        	 %>
-				</div>
-				<div class="cell"></div>
+						<div class="row align-center" style="margin-bottom:0;">	           		 		
+	           		 		<label class="input-control checkbox small-check">
+								<input type="checkbox" name="chk_resetpassword">
+								<span class="check"></span>
+								<span class="caption">Reset Password to 12345</span>				
+							</label>
+	           		 	</div>
+		           		<div class="row align-center ">		           			
+							<button type="submit" name="submit" id="submit" class="button success"><span class="mif-floppy-disk"></span> SAVE</button>
+							<a href="EditUser.jsp" class="button danger"><span class="mif-cross"></span> Cancel</a>
+						</div>	 	
+						<hr class="bg-cyan"/>							           			
+				</form>
+				 <% }
+				 } %>
+		        <!--  alert if user not found ,or deleted user -->
+				<%String alert = null;
+				if(request.getAttribute("alert") != null){ alert = (String)request.getAttribute("alert"); }
+				if(alert != null){ %>
+	           		<div class="row align-center padding10" >
+	           			<span class="tag alert padding10 margin10">
+	           				<span class="mif-not"></span> <%=alert %>
+	           			</span><br/>
+	           			<span class="margin10">
+	           				<a  href="EditUser.jsp">Back</a>
+	           			</span>
+	           			
+	           		</div>
+	           	<% } %>
+	           <!--  alert if user not found ,or deleted user -->	 
 			</div>
-		</div>         
+		</div>
+	</div>
+	
   </body>
 </html:html>

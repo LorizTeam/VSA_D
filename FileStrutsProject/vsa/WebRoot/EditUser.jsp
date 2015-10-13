@@ -51,6 +51,9 @@
 					</div>
 					<div class="window-content grid">
 						<div class="row align-center" ><h4>Choose User For Edit</h4></div>
+						<div class="row align-right">
+							<a href="createuser.jsp" class="button success"><span class="mif-user-plus"></span> CREATE</a>
+						</div>
 		           		<%String alert = null;
 						if(request.getAttribute("alert") != null){
 								alert = (String)request.getAttribute("alert");
@@ -104,7 +107,7 @@
 							</tbody>
 						</table>
 						<div class="row align-center">
-							<button type="submit" name="submit" id="submit" class="button success"><span class="mif-pencil"></span> Edit</button>
+							<button type="submit" name="submit" id="submit" class="button warning"><span class="mif-pencil"></span> Edit</button>
 						</div>
 					</div>
 				</div>

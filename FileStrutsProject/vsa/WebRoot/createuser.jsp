@@ -25,67 +25,72 @@
   
   <body>
     <%@ include file="menubar.jsp" %>
-    <div class="grid container upload-file ">
-	    <div class="row cells12 align-left">
-			<div class="cell"></div>
-	        <div class="cell debug colspan10">
-	        <html:form action="/createuser" method="POST">
-		        <div class="row">
-		        Name
-		        </div>
-		        <div class="row cells2" >
-		        	<div class="cell">
-		        		<div class="input-control text success" data-role="input" >
-							<input type="text" class="form-control" name="tb_firstname" id="tb_name" placeholder="First" required>
-							<button class="button helper-button clear"><span class="mif-cross"></span></button>
-						</div>
-		        	</div>
-		        	<div class="cell">
-		        		<div class="input-control text success" data-role="input" >
-							<input type="text" class="form-control" name="tb_lastname" id="tb_lastname" placeholder="Last" required>
-							<button class="button helper-button clear"><span class="mif-cross"></span></button>
-						</div>
-		        	</div>
-		        </div>
-		        <div class="row">
-		        Username
-		        </div>
-		        <div class="row" >
-		        	<div class="cell">
-		        		<div class="input-control text success" data-role="input" >
-							<input type="text" class="form-control" name="tb_username" id="tb_username" placeholder="Username" required>
-							<button class="button helper-button clear"><span class="mif-cross"></span></button>
-						</div>
-		        	</div>
-		        </div> 
-		        <div class="row">
-		        Position
-		        </div>
-		        Select Project Type 
-		        <div class="input-control select text success" >
-					<select name="slc_position" id="slc_position">
-					<%
-						Iterator<?> iterate = null;
-						
-						DBuser dbuser = new DBuser();
-						iterate = dbuser.GetPosition("").iterator();
-						while(iterate.hasNext()){
-							UserForm userform = (UserForm) iterate.next();
-					%>
-						<option value="<%=userform.getPosition_no() %>"><%=userform.getPosition_name() %></option>
-					<%
-						}
-					 %>
-						
-					</select>
+    
+    <div class="grid">
+		<div class="row cells12">
+			<div class="cell colspan6 offset3 window">
+				<div class="window-caption  bg-cyan fg-white">
+					<span class="window-caption-icon"><span class="mif-user-check"></span></span>
+					<span class="window-caption-title">Edit user detail</span>
+					<a  href="EditUser.jsp"><span class="btn-close "></span></a>
 				</div>
-				<div class="row align-center">
-					<button type="submit" name="submit" id="submit" class="button success">Create</button>
-				</div>
+				
+				<html:form action="/createuser" method="POST" styleClass="window-content grid">					
+						<div class="row cells12">
+							<div class="cell colspan2 align-right "><h5 class="caption">Name</h5></div>
+							<div class="cell colspan10 ">						
+								<div class="input-control text success" data-role="input" >
+									<input type="text" class="form-control" name="tb_firstname" id="tb_name" placeholder="First" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+								<div class="input-control text success" data-role="input" >
+									<input type="text" class="form-control" name="tb_lastname" id="tb_lastname" placeholder="Last" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+							</div>	
+						</div>
+						<div class="row cells12"  style="margin-bottom:5px;">
+							<div class="cell colspan2 align-right "><h5 class="caption">Username</h5></div>
+							<div class="cell colspan10 ">
+								<div class="input-control text success" data-role="input" >
+									<input type="text" class="form-control" name="tb_username" id="tb_username" placeholder="Username" required>
+									<button class="button helper-button clear"><span class="mif-cross"></span></button>
+								</div>
+							</div>
+						</div>
+						<div class="row cells12" style="margin-bottom:5px;">
+							<div class="cell colspan2 align-right "><h5 class="caption"> Permission</h5></div>
+							<div class="cell colspan10 ">
+								<div class="input-control select text success" >
+									<select name="slc_position" id="slc_position">
+									<%
+										Iterator<?> iterate = null;
+										
+										DBuser dbuser = new DBuser();
+										iterate = dbuser.GetPosition("").iterator();
+										while(iterate.hasNext()){
+											UserForm userform = (UserForm) iterate.next();
+									%>
+										<option value="<%=userform.getPosition_no() %>"><%=userform.getPosition_name() %></option>
+									<%
+										}
+									 %>
+										
+									</select>
+								</div>
+							</div>
+						</div>
+						
+		           		<div class="row align-center ">		           			
+							<button type="submit" name="submit" id="submit" class="button success"><span class="mif-user-plus"></span> CREATE</button>
+							<a href="EditUser.jsp" class="button danger"><span class="mif-cross"></span> Cancel</a>
+						</div>	 	
+						<hr class="bg-cyan"/>							           			
 				</html:form> 
-	        </div>
-	        <div class="cell"></div>
-	    </div>
-    </div>
+ 
+			</div>
+		</div>
+	</div>
+
   </body>
 </html:html>
