@@ -16,7 +16,7 @@
     	JSONObject obj=new JSONObject();
 
 		String id_nortification = request.getParameter("id_nortification");
-    	String sqlQuery = "SELECT a.norti_id,a.norti_from,a.norti_email,a.norti_message,a.norti_s,a.bu_no,a.`timestamp`,b.bu_name,c.norti_sname "+
+    	String sqlQuery = "SELECT a.norti_id,a.norti_from,a.norti_email,a.norti_message,a.norti_s,a.bu_no,DATE_FORMAT(`timestamp`,'%d-%m-%Y %T') as timestamp,b.bu_name,c.norti_sname "+
     	"FROM "+
     	"nortifications AS a "+
     	"INNER JOIN business AS b ON b.bu_no = a.bu_no "+

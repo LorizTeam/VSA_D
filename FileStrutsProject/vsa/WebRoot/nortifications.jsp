@@ -3,13 +3,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page import = "com.smict.struts.form.NortificationsForm"%>
 <%@page import="org.json.simple.JSONObject"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
-<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
-<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
-<% if(session.getAttribute("username") == null)
-			response.sendRedirect("login.jsp");
-%>
 <%Iterator<?> iterate = null;
   List<?> Nortifications = null; %>
  

@@ -29,7 +29,7 @@ public class NortificationsData {
 					"b.norti_sname," +
 					"c.bu_no, " +
 					"c.bu_name, " +
-					"a.`timestamp` " +
+					"DATE_FORMAT(`timestamp`,'%d-%m-%Y %T') as timestamp " +
 					"FROM " +
 					"nortifications AS a " +
 					"INNER JOIN norti_status AS b ON b.norti_s = a.norti_s " +
