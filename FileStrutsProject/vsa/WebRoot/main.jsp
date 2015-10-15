@@ -30,10 +30,10 @@
 									//pj_no = parameter rdo
 									//example /editprojectStart.do?rdo=<%=businssForm.getPj_no()
 									businssForm.getPj_no();
-								%><form action="editproject.do" method="POST">
+								%><form class="slide" action="editproject.do" method="POST">			
+									<button style="width:100%; padding:0; border:none;" type="submit"><img class="img-responsive" src="<%=businssForm.getPic_path() %>"/></button>
 									<input type="hidden" name="rdo" value="<%=businssForm.getPj_no() %>"/>
-									<input type="hidden" name="submit" value="<%=businssForm.getPj_no() %>"/>
-									<div class="slide"><button type="submit"><img src="<%=businssForm.getPic_path() %>"/></button></div>
+									<input type="hidden" name="submit" value="<%=businssForm.getPj_no() %>"/>								
 								  </form>
 								<%
 								}
