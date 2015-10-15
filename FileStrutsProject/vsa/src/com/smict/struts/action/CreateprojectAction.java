@@ -74,7 +74,7 @@ public class CreateprojectAction extends Action {
 			};
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
-			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload\\"+project_name);
+			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload/"+project_name);
 			newFolder.mkdir();
 	//		FormFile countpic = uploadForm.getUploadedFile();
 			//Upload Pic follow folder create
@@ -82,7 +82,7 @@ public class CreateprojectAction extends Action {
 	//		List picture = new ArrayList();
 	//		picture.add(uploadForm.getUploadedFile().getFileName().length());
 			int namelength = uploadForm.getUploadedFile().getFileName().length();
-			String filePath = newFolder+"\\"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+			String filePath = newFolder+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 			try {
 				outputStream = new FileOutputStream(new File(filePath));
 				outputStream.write(uploadForm.getUploadedFile().getFileData());			

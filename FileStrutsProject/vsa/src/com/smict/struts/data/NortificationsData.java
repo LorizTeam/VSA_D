@@ -65,4 +65,46 @@ public class NortificationsData {
 		
 		return nortificationsList;
 	}
+	
+	public List CountNotifications_NotRead(String bu_no,String noti_s){
+		//ดึงค่า การนับ Notifications ว่าของแต่ละบริษัทมีทั้งหมดเท่าไหร่
+		List CountNotifications_NotRead = new ArrayList();
+		String sqlQuery = null,forwhat = "CountNotifications_NotRead";
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			sqlQuery = "SELECT a.bu_no,COUNT(T1.norti_id) as count_noti_id " +
+					"FROM " +
+					"business AS a " +
+					"left JOIN " +
+					"( " +
+					"SELECT a.bu_no,b.norti_id from business a " +
+					"LEFT JOIN nortifications b on (a.bu_no = b.bu_no) " +
+					"where b.norti_s =";
+					if(!noti_s.equals(""))
+						sqlQuery += " '"+noti_s+"' " ;
+					
+					sqlQuery +=") as T1 on (a.bu_no = T1.bu_no) " ;
+					
+					if(!bu_no.equals(""))
+						sqlQuery += " where a.bu_no = '"+bu_no+"' " ;
+					
+					sqlQuery +="GROUP BY a.bu_no " +
+					"ORDER BY a.bu_no ";
+					
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				CountNotifications_NotRead.add(new NortificationsForm(forwhat,rs.getString("bu_no"),rs.getString("count_noti_id")));
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return CountNotifications_NotRead;
+	}
 }

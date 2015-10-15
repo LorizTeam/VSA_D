@@ -22,6 +22,8 @@ public class NortificationsForm extends ActionForm {
 	 */
 	private String norti_id,norti_from,norti_email,norti_message,norti_s,norti_sname,bu_no,bu_name,timestamp;
 	
+	private String count_noti_id;
+	
 	NortificationsForm() {}
 	public NortificationsForm(String forwhat, String s1, String s2,
 			String s3, String s4, String s5, String s6,
@@ -39,6 +41,18 @@ public class NortificationsForm extends ActionForm {
 		}
 	}
 
+	public NortificationsForm(String forwhat, String s1, String s2) {
+		if(forwhat.equals("CountNotifications_NotRead")){
+			this.bu_no = s1;
+			this.count_noti_id = s2;
+		}
+	}
+	public String getCount_noti_id() {
+		return count_noti_id;
+	}
+	public void setCount_noti_id(String countNotiId) {
+		count_noti_id = countNotiId;
+	}
 	public String getNorti_id() {
 		return norti_id;
 	}

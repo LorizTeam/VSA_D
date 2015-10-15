@@ -1,4 +1,6 @@
-<%@ include file="defaultimport.jsp" %>
+
+<%@page import="com.smict.struts.data.NortificationsData"%>
+<%@page import="com.smict.struts.form.NortificationsForm"%><%@ include file="defaultimport.jsp" %>
 <!DOCTYPE html>
 <html> 
 	<head>
@@ -43,41 +45,64 @@
 		                  
 				</div>
 				<div class="cell colspan4">
-					<div class="row"><h3>Notification</h3></div>	
+					<div class="row"><h3>Notification</h3></div>
+				<%
+					NortificationsData noti_data = new NortificationsData();
+					List notiList = noti_data.CountNotifications_NotRead("","1");
+					Iterator iterate = notiList.iterator();
+					while(iterate.hasNext()){
+					
+					NortificationsForm notiForm = (NortificationsForm) iterate.next();
+					
+						if(notiForm.getBu_no().equals("1")){
+					 %>	
 					<a href="nortifications.jsp?bu_no=1" class="tile bg-grayLight fg-white" data-role="tile">
 						<div class="tile-content iconic slide-left-2">														
 							<img  class="icon img-responsive" src="images/menulogo/vsa.png"/>
 							<div class="slide-over bg-red">
-								<span class="icon">5</span>
+								<span class="icon"><%=notiForm.getCount_noti_id() %></span>
 							</div>													
 							
 						</div>
 					</a>
+					<%
+						}else if (notiForm.getBu_no().equals("2")){
+					%>
 		            <a href="nortifications.jsp?bu_no=2" class="tile bg-grayLight fg-white" data-role="tile">
 		            	<div class="tile-content iconic slide-down-2">
 							<img  class="icon img-responsive" src="images/menulogo/wvs.png"/>
 							<div class="slide-over bg-orange">
-								<span class="icon">5</span>
+								<span class="icon"><%=notiForm.getCount_noti_id() %></span>
 							</div>	
 						</div>
 					</a>
-					<a href="nortifications.jsp?bu_no=4" class="tile  bg-grayLight fg-white" data-role="tile">
-		            	<div class="tile-content iconic slide-up-2">
-							<img  class="icon img-responsive" src="images/menulogo/plz.png"/>
-							<div class="slide-over bg-blue">
-								<span class="icon">5</span>
-							</div>							
-						</div>
-		            </a>
-		            <a href="nortifications.jsp?bu_no=3" class="tile  bg-grayLight fg-white" data-role="tile">
-		           		<div class="tile-content iconic slide-right-2">
+					<%
+						}else if (notiForm.getBu_no().equals("3")){
+					%>
+					<a href="nortifications.jsp?bu_no=3" class="tile  bg-grayLight fg-white" data-role="tile">
+		           		<div class="tile-content iconic slide-up-2">
 							<img  class="icon img-responsive" src="images/menulogo/vsct.png"/>
 							<div class="slide-over bg-darkRed">
-								<span class="icon">5</span>
+								<span class="icon"><%=notiForm.getCount_noti_id() %></span>
 							</div>	
 						</div>
 		           	</a>
-		            
+					
+		            <%
+						}else if (notiForm.getBu_no().equals("4")){
+					%>
+		            <a href="nortifications.jsp?bu_no=4" class="tile  bg-grayLight fg-white" data-role="tile">
+		            	<div class="tile-content iconic slide-right-2">
+							<img  class="icon img-responsive" src="images/menulogo/plz.png"/>
+							<div class="slide-over bg-blue">
+								<span class="icon"><%=notiForm.getCount_noti_id() %></span>
+							</div>							
+						</div>
+		            </a>
+		            <%
+		            	}
+		            }
+		            %>
 
 				</div>
 				<div class="cell colspan3">
@@ -87,7 +112,7 @@
 		            		<span class="mif-users icon"></span>   		
 		            	</div>
 		            </a>
-		            <a href="createuser.jsp" class="tile-small bg-lightOlive fg-white" data-role="tile">
+		            <a href="createuser.jsp" class="tile bg-lightOlive fg-white" data-role="tile">
 		            	<div class="tile-content iconic slide-up-2">
 		            		<span class="mif-user-plus icon"></span>
 		            		<div class="slide-over op-lightOlive text-large padding10 align-center">
