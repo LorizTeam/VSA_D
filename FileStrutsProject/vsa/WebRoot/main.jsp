@@ -1,30 +1,47 @@
 
 <%@page import="com.smict.struts.data.NortificationsData"%>
-<%@page import="com.smict.struts.form.NortificationsForm"%><%@ include file="defaultimport.jsp" %>
+<%@page import="com.smict.struts.form.NortificationsForm"%>
+<%@page import="com.smict.struts.data.DBProject"%>
+<%@page import="com.smict.struts.form.BusinessForm"%><%@ include file="defaultimport.jsp" %>
 <!DOCTYPE html>
 <html> 
 	<head>
 		<title>Main Backend</title>		
 	</head>
-	<body class="container-fluid fg-white tile-area-scheme-grayed">
+	<body class="container-fluid fg-white tile-area-scheme-grayed">&nbsp; 
 		<%@ include file="menubar.jsp" %>
 		
 		
 		<div class="grid ">
 			<div class="row cells12">
 				<div class="cell colspan4  offset1">
-					<div class="row"><h3>Project Gallery</h3></div>					
-					<a href="#" class="tile-wide bg-darkCyan" data-role="tile">
+					<div class="row"><h3>Project Gallery</h3></div>	
+								
+					<div class="tile-wide bg-darkCyan" data-role="tile">
 						<div class="tile-content ">
 							<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">
-		                        <div class="slide"><img src="images/a1.jpg"></div>
-		                        <div class="slide"><img src="images/a2.jpg"></div>
-		                        <div class="slide"><img src="images/a3.jpg"></div>
-		                        <div class="slide"><img src="images/a4.jpg"></div>
-		                        <div class="slide"><img src="images/a5.jpg"></div>
+		                        
+		                        <%
+								DBProject dbproject = new DBProject();
+								List new5_project = dbproject.projectList("5");
+								Iterator iter = new5_project.iterator();
+								while(iter.hasNext()){
+									BusinessForm businssForm = (BusinessForm) iter.next();
+									//pj_no = parameter rdo
+									//example /editprojectStart.do?rdo=<%=businssForm.getPj_no()
+									businssForm.getPj_no();
+								%><form action="editproject.do" method="POST">
+									<input type="hidden" name="rdo" value="<%=businssForm.getPj_no() %>"/>
+									<input type="hidden" name="submit" value="<%=businssForm.getPj_no() %>"/>
+									<div class="slide"><button type="submit"><img src="<%=businssForm.getPic_path() %>"/></button></div>
+								  </form>
+								<%
+								}
+								 %>			
+					 			
 	                        </div>
                         </div>
-					</a>
+					</div>
 		           
 		            <a href="createprojectStart.do" class="tile-small bg-blue fg-white" data-role="tile">
 		            	<div class="tile-content iconic slide-up-2">

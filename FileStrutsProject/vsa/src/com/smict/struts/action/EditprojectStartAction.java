@@ -51,7 +51,7 @@ public class EditprojectStartAction extends Action {
 			forwardText = "success";
 			List projectList = null;
 			try {
-				projectList =dbpro.projectList();
+				projectList =dbpro.projectList("");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

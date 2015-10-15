@@ -60,7 +60,7 @@ public class BusinessForm extends ActionForm {
 		}
 	}
 	public BusinessForm(String forwhat, String pjNo, String pjName,
-			String pjYear, String buName, String pjTypename) {
+			String pjYear, String buName, String pjTypename, String pic_path) {
 		// TODO Auto-generated constructor stub
 		if(forwhat.equals("List_project")){
 			this.pj_no = pjNo;
@@ -68,6 +68,7 @@ public class BusinessForm extends ActionForm {
 			this.pj_year =pjYear;
 			this.pj_typename =pjTypename;
 			this.bu_name =buName;
+			this.pic_path =pic_path;
 		}
 	}
 	public String getPicstatus() {

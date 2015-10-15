@@ -203,11 +203,14 @@ public class DBProject {
 		return bu_no;
 	}
 	
-	public List projectList() throws IOException, Exception{
+	public List projectList(String limit) throws IOException, Exception{
 		List projectList = new ArrayList();
-		String pj_no ="",pj_name="",pj_year="",bu_name="",pj_typename="";
+		String pj_no ="",pj_name="",pj_year="",bu_name="",pj_typename="",pic_path="";
 		conn = dbcon.getConnectMYSql();
 		String sqlQuery = "SELECT * FROM `vshowprojectlist`";
+		if(!limit.equals("")){
+			sqlQuery += "limit "+limit;
+		}
 		pStmt = conn.createStatement();
 		rs=pStmt.executeQuery(sqlQuery);
 		String forwhat ="List_project";
@@ -217,7 +220,8 @@ public class DBProject {
 			pj_year = rs.getString("pj_year");
 			bu_name = rs.getString("bu_name");
 			pj_typename = rs.getString("pj_typename");
-			projectList.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,bu_name,pj_typename));
+			pic_path = rs.getString("pic_path");
+			projectList.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,bu_name,pj_typename,pic_path));
 		}
 		conn.close();
 		pStmt.close();
