@@ -62,7 +62,6 @@ public class CreateprojectAction extends Action {
 			File folderupload = new File(getServlet().getServletContext().getRealPath("/")+"upload");
 			if(!folderupload.exists()){
 				folderupload.mkdir();
-				System.out.print("Create Folder"+folderupload);
 			}
 			
 			String project_name = request.getParameter("tb_projectname");
@@ -71,7 +70,7 @@ public class CreateprojectAction extends Action {
 			} catch (UnsupportedEncodingException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
-			};
+			}
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
 			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload/"+project_name);

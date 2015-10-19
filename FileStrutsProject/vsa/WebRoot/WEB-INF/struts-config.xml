@@ -14,6 +14,8 @@
     <form-bean name="indexVSAForm" type="com.smict.struts.form.IndexVSAForm" />
     <form-bean name="nortificationsForm" type="com.smict.struts.form.NortificationsForm" />
     <form-bean name="createuserForm" type="com.smict.struts.form.CreateuserForm" />
+    <form-bean name="awardForm" type="com.smict.struts.form.AwardForm" />
+    <form-bean name="detailawardForm" type="com.smict.struts.form.DetailawardForm" />
   </form-beans>
 
   <global-exceptions />
@@ -133,6 +135,25 @@
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/EditUser.jsp" />
       <forward name="false" path="/afterchoose_edituser.jsp" />
+    </action>
+    <action
+      input="/award.jsp"
+      name="awardForm"
+      path="/award"
+      scope="request"
+      type="com.smict.struts.action.AwardAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/award.jsp" />
+    </action>
+    <action
+      attribute="detailawardForm"
+      input="/award.jsp"
+      name="detailawardForm"
+      path="/detailaward"
+      scope="request"
+      type="com.smict.struts.action.AwardAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/award.jsp" />
     </action>
 	
   </action-mappings>

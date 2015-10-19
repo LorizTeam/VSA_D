@@ -73,6 +73,10 @@ public class DBProject {
 		sqlQuery="insert into picpath (pic_path,picstatus,pic_typeno,pj_no) values ('"+pic_path+"',1,2,"+pj_no+")";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+
+		conn.close();
+		pStmt.close();
+		
 	}
 	
 	public void inspicpath_todb(String project_name,String pic_path) throws IOException, Exception{
@@ -88,6 +92,9 @@ public class DBProject {
 		sqlQuery="insert into picpath (pic_path,picstatus,pic_typeno,pj_no) values ('"+pic_path+"',1,2,'"+pj_no+"')";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+
+		conn.close();
+		pStmt.close();
 	}
 	
 	public void insdetailpicpath_todb(String pj_no,String pic_path) throws IOException, Exception{
@@ -95,6 +102,9 @@ public class DBProject {
 		String sqlQuery="insert into picpath (pic_path,picstatus,pic_typeno,pj_no) values ('"+pic_path+"',1,1,'"+pj_no+"')";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+
+		conn.close();
+		pStmt.close();
 	}
 	
 	public List afterchoose_edit(String pj_name) throws IOException, Exception{
@@ -134,6 +144,10 @@ public class DBProject {
 			pic_typename = rs.getString("pic_typename");
 			Listforafterchoose.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,pj_typename,bu_name,pic_path,picstatus_name,pic_typename));
 		}
+
+		conn.close();
+		pStmt.close();
+		rs.close();
 		return Listforafterchoose;
 	}
 	
@@ -176,6 +190,10 @@ public class DBProject {
 			pic_typename = rs.getString("pic_typename");
 			Listforafterchoose.add(new BusinessForm(forwhat,pj_no,pj_name,pj_year,pj_typename,bu_name,pic_path,picstatus_name,pic_typename));
 		}
+
+		conn.close();
+		pStmt.close();
+		rs.close();
 		return Listforafterchoose;
 	}
 	
@@ -200,6 +218,10 @@ public class DBProject {
 		while(rs.next()){
 			bu_no = rs.getString("bu_no");
 		}
+
+		conn.close();
+		pStmt.close();
+		rs.close();
 		return bu_no;
 	}
 	
@@ -243,6 +265,8 @@ public class DBProject {
 				"where b.pj_no = '"+pj_no+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+		conn.close();
+		pStmt.close();
 		return projectList = afterchoose_edit(pj_name);
 	}
 	
@@ -251,12 +275,17 @@ public class DBProject {
 		String sqlQuery = "update picpath set picstatus = 2 where pic_path = '"+pic_path+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+		conn.close();
+		pStmt.close();
 	}
 	public void enable_picstatus(String pic_path) throws IOException, Exception{
 		conn = dbcon.getConnectMYSql();
 		String sqlQuery = "update picpath set picstatus = 1 where pic_path = '"+pic_path+"'";
 		pStmt = conn.createStatement();
 		pStmt.execute(sqlQuery);
+
+		conn.close();
+		pStmt.close();
 	}
 	
 	public List Get_HeaderProjectForIndex(String bu_name) {
@@ -277,12 +306,28 @@ public class DBProject {
 				pj_no = rs.getString("pj_no");
 				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path,pj_no));
 			}
+			conn.close();
+			pStmt.close();
+			rs.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			
+			try {
+				if(conn != null)
+					conn.close();
+				if(pStmt != null)
+					pStmt.close();
+				if(rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return indexList;
 	}
@@ -304,12 +349,28 @@ public class DBProject {
 				pj_no = rs.getString("pj_no");
 				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path,pj_no));
 			}
+			conn.close();
+			pStmt.close();
+			rs.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			
+				try {
+					if(conn != null)
+						conn.close();
+					if(pStmt != null)
+						pStmt.close();
+					if(rs != null)
+						rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		}
 		return indexList;
 	}

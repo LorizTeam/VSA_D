@@ -1,6 +1,10 @@
 <%@ include file="defaultimport.jsp" %>
 <%@ page import = "com.smict.struts.data.DBuser"  %>
 <%@ page import = "com.smict.struts.form.UserForm"  %>
+<% if(session.getAttribute("username") == null){
+		response.sendRedirect("login.jsp");
+	}else{
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html:html lang="true">
   <head>
@@ -94,3 +98,5 @@
 
   </body>
 </html:html>
+<%} %>
+
