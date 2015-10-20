@@ -419,25 +419,123 @@ div#nivo-lightbox-demo img {
 	width: 100%;
 	margin: 2em 0 0em 0
 }
+#project figure img{ 
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+	}
+.fix-social{
+	position: fixed;
+	top: 5em;
+	right: 0px;
+	width: 5%;
+}
+.fix-social ul{
+	text-decoration: none;
+	list-style: none;
+}
+.fix-social ul li a:hover{
+	opacity: 0.5;
+}
 /*--/contact-page--*/
 /*--/inner-pages--*/
 /*----responsive-menu-start--*/
+@media (max-width: 1920px) {
+	#project figure img{ 
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+	}
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 33.3333%;
+		float: left;
+	}
+	.rotate {
+		width:99.9%;
+		height: 99%;
+	}
+	.rotate i {
+		margin: 9.5em 0 0 14.5em;
+		background-size: 100%;
+	}
+	.fix-social{
+		width: 3.5%;
+	}
+
+}
 @media (max-width: 1440px) {
+	.fix-social{
+		width: 4%;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+	}
 	.navigation {
 		padding: 0px;
 	}
 	.slider {
 		height: 677px;
 	}
+		.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 33.3333%;
+		float: left;
+	}
+	.rotate {
+		height: 98%;
+	}
+	.rotate i {
+		margin: 6em 0 0 9.5em;
+		background-size: 60%;
+	}
 }
 @media (max-width: 1366px) {
+	.fix-social{
+		width: 5%;
+	}
 	.grid {
 		padding: 1em 1.3em 4em;
 	}
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 33.3333%;
+		float: left;
+	}
+	.rotate {
+		height: 98%;
+	}
+	.rotate i {
+		margin: 6em 0 0 9.5em;
+		background-size: 60%;
+	}
 }
 @media (max-width: 1280px) {
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 50%;
+		float: left;
+	}
+	.rotate {
+		width:99.7%;
+		height: 98.7%;
+	}
+	.rotate i {
+		margin: 9em 0 0 12.6em;
+		background-size: 70%;
+	}
 }
 @media (max-width: 1024px) {
+	.fix-social{
+		width: 7%;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 	.grid figure {
 		min-width: 447px;
 		height: 288px !important;
@@ -535,8 +633,28 @@ div#nivo-lightbox-demo img {
 		padding-left: 0px;
 		width: 88%;
 	}
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 50%;
+		float: left;
+	}
+	.rotate {
+		height: 98%;
+	}
+	.rotate i {
+		margin: 6em 0 0 9.5em;
+		background-size: 60%;
+	}
 }
 @media (max-width: 800px) {
+	.fix-social{
+		width: 8%;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 	.nav > li {
 		margin: 0 17px 0 !important;
 	}
@@ -553,6 +671,9 @@ div#nivo-lightbox-demo img {
 	}
 	.welcome {
 		padding: 3em 0 4em;
+	}
+	.welcome h3 {
+		line-height: 100%;
 	}
 	.welcome p {
 		font-size: .95em;
@@ -598,7 +719,7 @@ div#nivo-lightbox-demo img {
 	}
 	.wel-img {
 		padding-left: 2px;
-		width: 50%;
+		width: 100%;
 		float: left;
 	}
 	.wel-text p {
@@ -666,7 +787,7 @@ div#nivo-lightbox-demo img {
 	}
 	.work-grid {
 		padding: 3px 2px 0px 0px;
-		width: 33.3333%;
+		width: 50%;
 		float: left;
 	}
 	.rotate i {
@@ -677,6 +798,14 @@ div#nivo-lightbox-demo img {
 	}
 }
 @media (max-width: 768px) {
+	.fix-social{
+		width: 9%;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 	.nav > li {
 		margin: 0 17px 0 !important;
 	}
@@ -693,6 +822,9 @@ div#nivo-lightbox-demo img {
 	}
 	.welcome {
 		padding: 3em 0 4em;
+	}
+	.welcome h3 {
+		line-height: 100%;
 	}
 	.welcome p {
 		font-size: .95em;
@@ -738,7 +870,7 @@ div#nivo-lightbox-demo img {
 	}
 	.wel-img {
 		padding-left: 2px;
-		width: 50%;
+		width: 100%;
 		float: left;
 	}
 	.wel-text p {
@@ -807,7 +939,7 @@ div#nivo-lightbox-demo img {
 	}
 	.work-grid {
 		padding: 3px 2px 0px 0px;
-		width: 33.3333%;
+		width: 50%;
 		float: left;
 	}
 	.rotate i {
@@ -818,6 +950,17 @@ div#nivo-lightbox-demo img {
 	}
 }
 @media (max-width: 640px) {
+	.fix-social{
+		width: 10%;
+	}
+	.fix-social li{
+		margin-bottom:2px;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 	.navigation {
 		padding: 0px;
 		width: 100%;
@@ -928,17 +1071,38 @@ div#nivo-lightbox-demo img {
 	.contact {
 		padding: 2em 0;
 	}
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 50%;
+		float: left;
+	}
+	.rotate {
+		height: 98%;
+	}
 	.rotate i {
-		margin: 3em 0 0 6em;
+		margin: 4em 0 0 8em;
+		background-size: 60%;
 	}
 	.welcome h3 {
 		font-size: 2em;
+		line-height: 100%;
 	}
 	.index-portfilio h3 {
 		font-size: 2em;
 	}
 }
 @media (max-width: 480px) {
+	.fix-social{
+		width: 13%;
+	}
+	.fix-social li{
+		margin-bottom:2px;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+	}
 	.banner {
 		background: url(../images/banner.jpg) no-repeat -784px 0px;
 		min-height: 360px;
@@ -1031,11 +1195,31 @@ div#nivo-lightbox-demo img {
 	.single-middle {
 		margin-bottom: 3em;
 	}
+	.work-grid {
+		padding: 3px 2px 0px 0px;
+		width: 100%;
+		float: left;
+	}
+	.rotate {
+		height: 98%;
+	}
 	.rotate i {
-		margin: 2em 0 0 3.5em;
+		margin: 4em 0 0 8em;
+		background-size: 60%;
 	}
 }
 @media (max-width: 414px) {
+	.fix-social{
+		width: 15%;
+	}
+	.fix-social li{
+		margin-bottom:2px;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+	}
 	ul.callbacks_tabs.callbacks1_tabs {
 		top: 30%;
 		right: 21px;
@@ -1049,8 +1233,20 @@ div#nivo-lightbox-demo img {
 		width: 159px;
 		height: 169px;
 	}
+	
 }
 @media (max-width: 375px) {
+	.fix-social{
+		width: 17%;
+	}
+	.fix-social li{
+		margin-bottom:4px;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 	ul.callbacks_tabs.callbacks1_tabs {
 		top: 30%;
 		right: 21px;
@@ -1063,9 +1259,31 @@ div#nivo-lightbox-demo img {
 	.view .mask, .view .content {
 		width: 159px;
 		height: 169px;
+	}
+	.top-nav {
+		background-color:white;
+	}
+	.container-center{
+		margin-left: 2% !important;
+	  	margin-right: 2% !important;
+	  	width: 98% !important; 
 	}
 }
 @media (max-width: 320px) {
+	.fix-social{
+		width: 17%;
+	}
+	.fix-social li{
+		margin-bottom:5px;
+	}
+	#project figure img{ 
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
+	.top-nav {
+		background-color:white;
+	}
 	.logo {
 		padding: 12px 5px 19px 9px;
 		width: 46%;
@@ -1232,11 +1450,14 @@ div#nivo-lightbox-demo img {
 	}
 	.work-grid {
 		padding: 3px 2px 0px 0px;
-		width: 50%;
+		width: 100%;
 		float: left;
 	}
+	.rotate {
+		height: 98%;
+	}
 	.rotate i {
-		margin: 1.8em 0 0 3.5em;
+		margin: 3.5em 0 0 5.5em;
 		background-size: 60%;
 	}
 	.view-seventh h6 {
@@ -1292,11 +1513,14 @@ div#nivo-lightbox-demo img {
 	.view {
 		margin-bottom: 1.6em;
 	}
-	.rotate {
-		height: 96%;
+	.container-center{
+		margin-left: 2% !important;
+	  	margin-right: 2% !important;
+	  	width: 99% !important; 
 	}
 
 }
+
 .minh {
 	min-height: 650px !important;
 }
@@ -1319,9 +1543,9 @@ div#nivo-lightbox-demo img {
 }
 
 .container-center{
-	  margin-left: 10% !important;
-  	  margin-right: 10% !important;
-  	  width: 80% !important; 
+	margin-left: 10% !important;
+  	margin-right: 10% !important;
+  	width: 80% !important; 
 }
 .width-page{	
 	width: 100% !important;
@@ -1335,21 +1559,11 @@ div#nivo-lightbox-demo img {
 	margin-left:auto !important;
 	margin-right:auto !important;
 }
-#project figure img{ 
-	width: 100%;
-	height: 250px;
-	overflow: hidden;
+
+
+.red{
+	color:#E60000;
 }
-.fix-social{
-	position: fixed;
-	top: 5em;
-	right: 0px;
-	width: 5%;
-}
-.fix-social ul{
-	text-decoration: none;
-	list-style: none;
-}
-.fix-social ul li a:hover{
-	opacity: 0.5;
+.red0-5{
+	color:#EB3333;
 }

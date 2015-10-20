@@ -135,29 +135,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	</div>
 	<div class="clearfix"></div>
-	<div></div>
+	
 	<!--/header-->
 
-	<br>
-	<br>
-	<br>
+	<br class="hidden-xs hidden-sm">
+	<br class="hidden-xs hidden-sm">
+	<br class="hidden-xs hidden-sm">
 	<br>
 	<div class="welcome container-center">
 		<div class="container-center">
-			<h3>Vorrarat Supachocke Architect(VSa)</h3>
+			<h3>Vorrarat Supachocke Architect(VS<span class="red">a</span>)</h3>
 			<br>
 			<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by
 				Vorrat Foythong and Supachoke Kittipatmeta.</p>
 			<br>
-
-
-
-			<div class="col-md-6 col-lg-6 wel-img">
-				<a href="single.html" class="mask"> <img src="images/wlb.jpg"
+			<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
+				<a href="#" class="mask"> <img src="images/wlb.jpg"
 					class="img-responsive zoom-img" alt="">
 				</a>
 			</div>
-			<div class="col-md-6 col-lg-6 wel-text">
+			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">
 
 				<p>
 					The main of our Architecture concerning about site context,
@@ -166,20 +164,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					client's need and environment.
 				</p>
 			</div>
+			</div>
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
+
 	<!--grid-hover-->
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
@@ -267,54 +256,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				consec.Donec sem ertet laciniate ultricie upie disse utes comete
 				dolo lectus. fgilla itollicil tua ludin dolor nec met quam accumsan.</p>
 			<div class="team-left">
-				<div class="col-sm-3 hidden-xs team-top"></div>
-				<div class="col-sm-3 team-top team-in">
-					<div class="view view-seventh">
-						<a href="#"><img class="img-responsive" src="images/t2.jpg"
-							alt=""></a>
-						<div class="mask">
-							<ul class="social-icons">
-								<li><a href="#"><span class="facebook"> </span></a></li>
-								<li><a href="#"><span class="twitter"> </span></a></li>
-								<li><a href="#"><span class="thumb"> </span></a></li>
-							</ul>
-						</div>
-						<h6>VORRARAT &nbsp; FOYTONG</h6>
-
-					</div>
-				</div>
-				<div class="col-sm-3 team-top">
-					<div class="view view-seventh">
-						<a href="#"><img class="img-responsive" src="images/t1.jpg"
-							alt=""></a>
-						<div class="mask">
-							<ul class="social-icons">
-								<li>c<a href="#"><span class="facebook"> </span></a></li>
-								<li>pa<a href="#"><span class="twitter"> </span></a></li>
-								<li>&quot;<a href="#"><span class="thumb"> </span></a></li>
-							</ul>
-						</div>
-						<h6>SUPACHOKE &nbsp; KITTIPATMETA</h6>
-
-					</div>
-				</div>
-				<div class="col-sm-3 hidden-xs team-top top-team"></div>
+				
 				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
 	<!--/index-team-->
 	<!--Award-->
-	<div id="award" class="content-team">
+	<div id="award" class="content-team ">
 		<div class="container-center team">
 			<h3 class="m_1">Award / Published</h3>
 			<p class="content-t">The BCI Asia Top 10 Awards provides an
 				overview of the regional building and construction industry by
 				recognizing the top architectural firms and developers that had the
 				greatest impact on the built environment in Southeast Asia.</p>
-			<div class="products-bottom">
-				<div class="col-md-2"></div>
-				<div class="col-md-4 work-grid">
+			<div class="products-bottom container-center">
+				<div class="col-sm-12 col-xs-12 col-md-4 work-grid">
 					<div id="nivo-lightbox-demo">
 						<a href="images/award (1).jpg" data-lightbox-gallery="gallery1"
 							id="nivo-lightbox-demo"> <img src="images/award (1).jpg"
@@ -325,7 +282,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 				</div>
-				<div class="col-md-4 work-grid">
+				<div class="col-sm-12 col-xs-12 col-md-4 work-grid">
 					<div id="nivo-lightbox-demo">
 						<a href="images/award (2).jpg" data-lightbox-gallery="gallery1"
 							id="nivo-lightbox-demo"> <img src="images/award (2)crop.jpg"
@@ -357,13 +314,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer">
 		<div class="container-center">
 
-			<div class="col-md-12 get_in_touch ftr text-center">
+			<div class="col-md-12 get_in_touch  text-center">
 				<p>
 					Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a
 						href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 				<p>
-					� 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
+					 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>
 			</div>
 			<div class="clearfix"></div>
