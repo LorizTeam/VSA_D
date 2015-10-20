@@ -98,11 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					Phayathai District, Bangkok 10400, Thailand</p>
        							<form action="notifications.do" method="post">
        								<input type="hidden" name="bu_no" value="1" >
-							    	<input type="text" class="textbox" name="cus_name" placeholder="Your Name" required> 
-							    	<input type="text" class="textbox" name="cus_email" placeholder="Your Email" required>
+							    	<input type="text" name="cus_name" placeholder="Your Name" required> 
+							    	<input type="email" name="cus_email" placeholder="Your Email" required>
 										<div class="clear"> </div>
 								    <div>
-								    	<textarea name="cus_message" class="form-control" placeholder="Your Message" required></textarea>
+								    	<textarea name="cus_message" placeholder="Your Message" required></textarea>
 								    </div>	
 								   <div class="submit"> 
 								    	<input type="submit" value="SEND " />
