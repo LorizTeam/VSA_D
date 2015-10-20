@@ -13,8 +13,9 @@
 	            <li data-flexorderorigin="2" data-flexorder="2" class="">
 	                <a href="" class="dropdown-toggle">Project</a>
 	                <ul class="d-menu" data-role="dropdown" style="display: none;">
-	                    <li><a href="createprojectStart.do">New project</a></li>
-	                    <li class="divider"></li>
+	                	<li><a href="award.jsp">Award Gallery</a></li>
+	                	<li class="divider"></li>
+	                    <li><a href="createprojectStart.do">New project</a></li>	                    
 	                    <li><a href="editprojectStart.do">Edit Project</a></li>
 	                </ul>
 	            </li>

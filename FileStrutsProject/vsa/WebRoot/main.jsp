@@ -16,50 +16,72 @@
 			<div class="row cells12">
 				<div class="cell colspan4  offset1">
 					<div class="row"><h3>Project Gallery</h3></div>	
-								
-					<div class="tile-wide bg-darkCyan" data-role="tile">
-						<div class="tile-content ">
-							<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">
-		                        
-		                        <%
-								DBProject dbproject = new DBProject();
-								List new5_project = dbproject.projectList("5");
-								Iterator iter = new5_project.iterator();
-								while(iter.hasNext()){
-									BusinessForm businssForm = (BusinessForm) iter.next();
-									//pj_no = parameter rdo
-									//example /editprojectStart.do?rdo=<%=businssForm.getPj_no()
-									businssForm.getPj_no();
-								%><form class="slide" action="editproject.do" method="POST">			
-									<button style="width:100%; padding:0; border:none;" type="submit"><img class="img-responsive" src="<%=businssForm.getPic_path() %>"/></button>
-									<input type="hidden" name="rdo" value="<%=businssForm.getPj_no() %>"/>
-									<input type="hidden" name="submit" value="<%=businssForm.getPj_no() %>"/>								
-								  </form>
-								<%
-								}
-								 %>			
-					 			
+					<div class="row">			
+						<div class="tile-wide bg-darkCyan" data-role="tile">
+							<div class="tile-content ">
+								<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">
+			                        
+			                        <%
+									DBProject dbproject = new DBProject();
+									List new5_project = dbproject.projectList("5");
+									Iterator iter = new5_project.iterator();
+									while(iter.hasNext()){
+										BusinessForm businssForm = (BusinessForm) iter.next();
+										//pj_no = parameter rdo
+										//example /editprojectStart.do?rdo=<%=businssForm.getPj_no()
+										businssForm.getPj_no();
+									%><form class="slide" action="editproject.do" method="POST">			
+										<button style="width:100%; padding:0; border:none;" type="submit"><img class="img-responsive" src="<%=businssForm.getPic_path() %>"/></button>
+										<input type="hidden" name="rdo" value="<%=businssForm.getPj_no() %>"/>
+										<input type="hidden" name="submit" value="<%=businssForm.getPj_no() %>"/>								
+									  </form>
+									<%
+									}
+									 %>			
+						 			
+		                        </div>
 	                        </div>
-                        </div>
-					</div>
-		           
-		            <a href="createprojectStart.do" class="tile-small bg-blue fg-white" data-role="tile">
-		            	<div class="tile-content iconic slide-up-2">
-		            		<span class="mif-folder-plus icon"></span>
-		            		<div class="slide-over op-cyan text-large padding10 align-center">
-		                    	Add
-		                    </div>
-		            	</div>
-		            </a>
-		            <a href="editprojectStart.do" class="tile-small bg-green fg-white" data-role="tile">
-		            	<div class="tile-content iconic slide-up-2">
-		            		<span class="mif-cog icon"></span>
-		            		<div class="slide-over op-emerald text-large padding10 align-center">
-		                    	Edit
-		                    </div>
-		            	</div>
-		            </a>
-		                  
+						</div>
+			           
+			            <a href="createprojectStart.do" class="tile-small bg-blue fg-white" data-role="tile">
+			            	<div class="tile-content iconic slide-up-2">
+			            		<span class="mif-folder-plus icon"></span>
+			            		<div class="slide-over op-cyan text-large padding10 align-center">
+			                    	Add
+			                    </div>
+			            	</div>
+			            </a>
+			            <a href="editprojectStart.do" class="tile-small bg-green fg-white" data-role="tile">
+			            	<div class="tile-content iconic slide-up-2">
+			            		<span class="mif-cog icon"></span>
+			            		<div class="slide-over op-emerald text-large padding10 align-center">
+			                    	Edit
+			                    </div>
+			            	</div>
+			            </a>
+		            </div>
+		    <!-- Award gallery-------------------------- -->
+		    
+		            <div class="row"><h3>Award Gallery</h3></div>
+		            <div class="row">			
+						<div class="tile-wide bg-darkCyan" data-role="tile">
+							<div class="tile-content ">
+								<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">			                        
+			                        <form class="slide" action="editproject.do" method="POST">			
+										<button style="width:100%; padding:0; border:none;" type="submit">
+											<img class="img-responsive" src=""/>
+										</button>
+										<input type="hidden" name="rdo" value=""/>
+										<input type="hidden" name="submit" value=""/>								
+									  </form>						 			
+		                        </div>
+	                        </div>
+						</div>
+			           
+
+		            </div>	 
+		            
+		    <!-- Award gallery-------------------------- -->     
 				</div>
 				<div class="cell colspan4">
 					<div class="row"><h3>Notification</h3></div>
