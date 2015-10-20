@@ -1,3 +1,17 @@
+<%@ include file="defaultimport.jsp" %>
+<%@ page import="com.smict.struts.form.IndexVSAForm"%>
+<%@ page import="com.smict.struts.data.DBProject"%>
+<%@ page import="com.smict.struts.form.BusinessForm"%>
+<%	
+	ListIterator<?> indexHeadIter = null;
+	ListIterator<?> indexPicIter = null;
+	ListIterator<?> typeIter = null;
+	List<?> indexList = null;	
+	if(request.getAttribute("indexList") != null){
+		indexList = (List<?>)request.getAttribute("indexList");
+	}
+	
+ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,10 +119,16 @@
 	<article class=" artic container " id="project">
 		<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
 			<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
-			<li data-uk-filter="corporate"><a href="">Corporate</a></li>
-			<li data-uk-filter="residential"><a href="">Residential</a></li>
-			<li data-uk-filter="commercial"><a href="">Commercial</a></li>
-			<form class="uk-form" action="">
+			<%	DBProject dbpjtype = new DBProject();
+						typeIter = dbpjtype.pj_typeList("2").listIterator();
+						while(typeIter.hasNext()){
+							BusinessForm buform = (BusinessForm) typeIter.next();
+			%>
+							<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
+			<%
+				}
+			%>
+			<form class="uk-form">
 
 				<select>
 					<option selected>Sort by</option>
@@ -117,110 +137,52 @@
 				</select>
 			</form>
 		</ul>
-		<section class="uk-grid "
-			data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-			<figure data-uk-filter="corporate" data-my-category="1992"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"> <img
-					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						corporate</figcaption>
-				</a>
-			</figure>
-			<figure data-uk-filter="residential" data-my-category="1995"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="commercial" data-my-category="1999"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						commercial</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="residential" data-my-category="2015"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
-
-			<figure data-uk-filter="residential" data-my-category="2015"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
-
-			<figure data-uk-filter="commercial" data-my-category="1999"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						commercial</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="residential" data-my-category="1995"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="corporate" data-my-category="1992"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						corporate</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="corporate" data-my-category="1992"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/2.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						corporate</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="residential" data-my-category="1995"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/3.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="commercial" data-my-category="1999"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/4.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						commercial</figcaption> </a>
-			</figure>
-			<figure data-uk-filter="residential" data-my-category="2015"
-				class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-				<a href="" data-uk-modal="{target:'#my-id'}"><img
-					class="uk-overlay-scale" src="wvsimages/slide/5.jpg" alt="">
-					<figcaption
-						class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-						residential</figcaption> </a>
-			</figure>
+		<section class="uk-grid " data-uk-grid="{controls: '#fillpro',gutter:0.1}">
+					<% 		DBProject dbpj = new DBProject();
+							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+							while(indexHeadIter.hasNext()){
+								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
+					%>
+					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
+						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
+						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								<%=vsaform.getPj_name() %></figcaption> </a>
+					</figure>
+					<%							
+							}
+					 %>
 		</section>
 	</article>
-
+	<!-- This is the modal -->
+	<%
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+		while(indexHeadIter.hasNext()){
+		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
+	%>
+		<div id="<%=vsaform.getPj_no() %>" class="uk-modal">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close"></a>
+				<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
+					data-loop="true"  data-ratio="16/9" data-width="100%">
+					<%
+						indexPicIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
+						while(indexPicIter.hasNext()){
+						IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
+					%>
+						<img src="<%=vsapicform.getPic_path() %>" alt="" />
+					<%
+						}
+					 %>
+				</div>
+			</div>
+		</div>
+	<%
+		}
+	 %>
+	 <!-- This is the modal -->
 	<div class=" block " id="people" style="padding-top: 50px;">
 
 		<div class="uk-text-center">
@@ -286,19 +248,7 @@
 	
 		</div>
 	</footer>
-	<!-- This is the modal -->
-	<div id="my-id" class="uk-modal">
-		<div class="uk-modal-dialog">
-			<a class="uk-modal-close uk-close"></a>
-			<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-				data-loop="true">
-				<img src="wvsimages/slide/2.jpg" alt="" /> <img
-					src="wvsimages/slide/3.jpg" alt="" /> <img src="wvsimages/slide/4.jpg"
-					alt="" /> <img src="wvsimages/slide/5.jpg" alt="" />
-			</div>
-
-		</div>
-	</div>
+	
 	<script type="text/javascript">
 		$(function() {
 			$('a[href*=#]:not([href=#])')

@@ -45,7 +45,7 @@ public class DBaward {
 		}
 	}
 	
-	public List select_award(String bu_no){
+	public List select_award(String bu_no,String limit){
 		List awardList = new ArrayList();
 		
 		try {
@@ -56,6 +56,9 @@ public class DBaward {
 				sqlQuery += "where a.bu_no ="+bu_no ;
 			}
 			
+			if(!limit.equals("")){
+				sqlQuery += " limit "+limit ;
+			}
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
 			String award_picpath="",award_name="",bu_name="";

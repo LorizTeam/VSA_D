@@ -113,7 +113,7 @@
 												
 												<%
 													DBaward dbaward = new DBaward(); 
-													List awardList = dbaward.select_award("");
+													List awardList = dbaward.select_award("","");
 													Iterator iterate = awardList.iterator();
 													int i = 0;
 													while(iterate.hasNext()){
