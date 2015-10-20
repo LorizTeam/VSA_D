@@ -2,7 +2,10 @@
 <%@page import="com.smict.struts.data.NortificationsData"%>
 <%@page import="com.smict.struts.form.NortificationsForm"%>
 <%@page import="com.smict.struts.data.DBProject"%>
-<%@page import="com.smict.struts.form.BusinessForm"%><%@ include file="defaultimport.jsp" %>
+<%@page import="com.smict.struts.form.BusinessForm"%>
+<%@page import="com.smict.struts.form.AwardForm"%>
+<%@page import="com.smict.struts.data.DBaward"%>
+<%@ include file="defaultimport.jsp" %>
 <!DOCTYPE html>
 <html> 
 	<head>
@@ -66,14 +69,25 @@
 		            <div class="row">			
 						<div class="tile-wide bg-darkCyan" data-role="tile">
 							<div class="tile-content ">
-								<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">			                        
-			                        <form class="slide" action="editproject.do" method="POST">			
+								<div class="carousel" data-role="carousel" data-controls="false" data-markers="true">
+								<%
+									DBaward dbaward = new DBaward();
+									List new5_award = dbaward.select_award("","5");
+									Iterator iter_award = new5_award.iterator();
+									while(iter_award.hasNext()){
+										AwardForm awardForm = (AwardForm) iter_award.next();
+										//pj_no = parameter rdo
+										//example /editprojectStart.do?rdo=<%=businssForm.getPj_no()
+										
+								%>			                        
+			                        <form class="slide" action="award.jsp" method="POST">			
 										<button style="width:100%; padding:0; border:none;" type="submit">
-											<img class="img-responsive" src=""/>
-										</button>
-										<input type="hidden" name="rdo" value=""/>
-										<input type="hidden" name="submit" value=""/>								
-									  </form>						 			
+											<img class="img-responsive" src="<%=awardForm.getAwardpicpath() %>"/>
+										</button>							
+									  </form>
+								<%
+									}
+								%>							 			
 		                        </div>
 	                        </div>
 						</div>
