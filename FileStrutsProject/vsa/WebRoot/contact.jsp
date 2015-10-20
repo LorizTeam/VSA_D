@@ -93,21 +93,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 		<h2>Contact</h2>
 		 <div class="contact-content">
-		 <p class="index-p">Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
-					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
-					Phayathai District, Bangkok 10400, Thailand</p>
-       							<form action="notifications.do" method="post">
-       								<input type="hidden" name="bu_no" value="1" >
-							    	<input type="text" name="cus_name" placeholder="Your Name" required> 
-							    	<input type="email" name="cus_email" placeholder="Your Email" required>
-										<div class="clear"> </div>
-								    <div>
-								    	<textarea name="cus_message" placeholder="Your Message" required></textarea>
-								    </div>	
-								   <div class="submit"> 
-								    	<input type="submit" value="SEND " />
-					              </div>
-								</form>
+		 	<p class="index-p">
+		 		Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
+				Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
+				Phayathai District, Bangkok 10400, Thailand
+			</p>
+       		<form action="notifications.do" method="post">
+       			<input type="hidden" name="bu_no" value="1" >
+				<input type="text" name="cus_name" placeholder="Your Name" required> 
+				<input type="email" name="cus_email" placeholder="Your Email" required>
+				<div class="clear"> </div>
+				<textarea name="cus_message" placeholder="Your Message" required></textarea>
+				<div class="submit"> 
+				   	<input type="submit" value="SEND " />
+				</div>
+			</form>
 							</div>
 							<iframe src="https://www.google.com/maps/d/embed?mid=zcosWbQxGNqI.kQrjPAXK9d3U" width="640" height="480"></iframe>
  						</div>	
