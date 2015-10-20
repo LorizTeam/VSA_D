@@ -155,6 +155,16 @@
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/award.jsp" />
     </action>
+    <action
+      attribute="nortificationsForm"
+      name="nortificationsForm"
+      path="/notifications"
+      scope="request"
+      type="com.smict.struts.action.NotificationsAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="vsa" path="/contact.jsp" />
+      <forward name="wvs" path="/wvs.jsp" />
+    </action>
 	
   </action-mappings>
 

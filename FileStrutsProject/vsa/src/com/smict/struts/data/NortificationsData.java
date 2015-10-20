@@ -2,6 +2,7 @@ package com.smict.struts.data;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
@@ -54,12 +55,29 @@ public class NortificationsData {
 						rs.getString("norti_message"),rs.getString("norti_s"),rs.getString("norti_sname"),rs.getString("bu_no")
 						,rs.getString("bu_name"),rs.getString("timestamp")));
 			}
+			if(conn != null)
+				conn.close();
+			if(pStmt != null)
+				pStmt.close();
+			if(rs != null)
+				rs.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			try {
+				if(conn != null)
+					conn.close();
+				if(pStmt != null)
+					pStmt.close();
+				if(rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		
@@ -97,14 +115,62 @@ public class NortificationsData {
 			while(rs.next()){
 				CountNotifications_NotRead.add(new NortificationsForm(forwhat,rs.getString("bu_no"),rs.getString("count_noti_id")));
 			}
+			if(conn != null)
+				conn.close();
+			if(pStmt != null)
+				pStmt.close();
+			if(rs != null)
+				rs.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			try {
+				if(conn != null)
+					conn.close();
+				if(pStmt != null)
+					pStmt.close();
+				if(rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		return CountNotifications_NotRead;
+	}
+	public void Insert_Notifications(String bu_no,String cus_name,String cus_email,String cus_message){
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "insert into nortifications (norti_from,norti_email,norti_message,norti_s,bu_no,timestamp) " +
+					"values ('"+cus_name+"','"+cus_email+"','"+cus_message+"','1','"+bu_no+"',now())";
+			pStmt = conn.createStatement();
+			pStmt.executeUpdate(sqlQuery);
+			
+			if(conn != null)
+				conn.close();
+			
+			if(pStmt != null)
+				pStmt.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				if(conn != null)
+					conn.close();
+				if(pStmt != null)
+					pStmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <script src="js/bootstrap.js"></script>
 	<!-- js -->
 		<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
 <!--/script-->
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -96,12 +96,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <p class="index-p">Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
 					Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
 					Phayathai District, Bangkok 10400, Thailand</p>
-       							<form>
-							    	<input type="text" class="textbox" value=" Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
-							    	<input type="text" class="textbox" value="Your E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your E-Mail';}">
+       							<form action="notifications.do" method="post">
+       								<input type="hidden" name="bu_no" value="1" >
+							    	<input type="text" class="textbox" name="cus_name" placeholder="Your Name" required> 
+							    	<input type="text" class="textbox" name="cus_email" placeholder="Your Email" required>
 										<div class="clear"> </div>
 								    <div>
-								    	<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Message ';}">Your Message</textarea>
+								    	<textarea name="cus_message" class="form-control" placeholder="Your Message" required></textarea>
 								    </div>	
 								   <div class="submit"> 
 								    	<input type="submit" value="SEND " />

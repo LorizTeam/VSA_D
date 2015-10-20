@@ -204,16 +204,17 @@
 				<br> <br> <br>
 			</div>
 			<div class="uk-width-1-2" style="margin-left: 10%;">
-				<form action="#">
-				<input id="name" type="text" placeholder="Name" class="frm-control">
+				<form action="notifications.do" method="post">
+				<input type="hidden" name="bu_no" value="2" >
+				<input id="cus_name" name="cus_name" type="text" placeholder="Name" class="frm-control">
 				<br> <br>
-				<input type="email" placeholder="E-mail" class="frm-control">
+				<input type="email" id="cus_email" name="cus_email" placeholder="E-mail" class="frm-control">
 				<br> <br>		
 				<div class="uk-form-row">
-				    <textarea class="frm-control" cols="uk-form-large" rows="" placeholder="Message" style="width: 70%;"></textarea>
+				    <textarea class="frm-control" id="cus_message" name="cus_message" cols="uk-form-large" rows="" placeholder="Message" style="width: 70%;"></textarea>
 				</div>
 				<br> <br>
-				<button class="uk-button" type="button" name="send" value="send" >Send</button>
+				<button class="uk-button" type="submit" name="send" value="send" >Send</button>
 				</form>
 				<hr width="74%" />
 				<div class="center-footpic">
