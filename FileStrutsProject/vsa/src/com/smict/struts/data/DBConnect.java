@@ -11,11 +11,16 @@ public class DBConnect {
 		try	{
 			Class.forName ("com.mysql.jdbc.Driver");
 			//Class.forName ("org.gjt.mm.mysql.Driver");
+			String dbName = "vsa_d";
+			String hostname = "panasonic.cre4njgwawzc.ap-southeast-1.rds.amazonaws.com";
+			String port = "3306";
 			String dbUserName = "root";
-			String dbPassword = "1234";
-			String url = "jdbc:mysql://localhost:3306/vsa_d";
+			String dbPassword = "12345678";
+			
+			String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
+			port + "/" + dbName + "?user=" + dbUserName + "&password=" + dbPassword;
 
-			conn = DriverManager.getConnection (url, dbUserName, dbPassword);
+			conn = DriverManager.getConnection (jdbcUrl);
 			return conn;
 		} catch(ClassNotFoundException e){
 			throw new Exception("class not found "+e);
