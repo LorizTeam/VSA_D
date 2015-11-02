@@ -1376,6 +1376,9 @@ div#nivo-lightbox-demo img {
 	}
 }
 @media (max-width: 320px) {
+	.navigation {
+		max-height: 50px;
+	}
 	#fillpro{
 		font-size:10px;
 	}
