@@ -288,36 +288,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--/index-team-->
 	<!--Award-->
-	<div id="award" class="content-team ">
+	<div id="award" class="content-team container-center">
 		<div class="container-center team">
 			<h3 class="m_1">Award / Published</h3>
 			<p class="content-t">The BCI Asia Top 10 Awards provides an
 				overview of the regional building and construction industry by
 				recognizing the top architectural firms and developers that had the
 				greatest impact on the built environment in Southeast Asia.</p>
-			<div class="products-bottom container-center">
-				<div class="col-sm-12 col-xs-12 col-md-4 work-grid">
-					<div id="nivo-lightbox-demo">
-						<a href="images/award (1).jpg" data-lightbox-gallery="gallery1"
-							id="nivo-lightbox-demo"> <img src="images/award (1).jpg"
-							class="img-responsive " alt="" />
-							<div class="rotate">
-								<i> </i>
-							</div>
+			<div class=" container-center uk-grid" data-uk-grid="{gutter:1}">
+				<div class="uk-width-1-3 work-grid" >
+					<div id="nivo-lightbox-demo" class="" >
+						<a href="images/award (1).jpg" data-lightbox-gallery="gallery1" class="uk-overlay uk-overlay-hover gallery-img"
+							id="nivo-lightbox-demo" > <img src="images/award (1).jpg"
+							class="uk-overlay-scale" style="width: 100%;height:100%;" />
+							<figcaption
+								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								asd
+							</figcaption> 
 						</a>
 					</div>
+					
 				</div>
-				<div class="col-sm-12 col-xs-12 col-md-4 work-grid">
-					<div id="nivo-lightbox-demo">
-						<a href="images/award (2).jpg" data-lightbox-gallery="gallery1"
-							id="nivo-lightbox-demo"> <img src="images/award (2)crop.jpg"
-							class="img-responsive " alt="" />
-							<div class="rotate">
-								<i> </i>
-							</div>
-						</a>
-					</div>
-				</div>
+				
 				<div class="clearfix"></div>
 			</div>
 			<!--script-->
