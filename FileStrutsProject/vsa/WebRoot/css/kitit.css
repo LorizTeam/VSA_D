@@ -284,9 +284,8 @@ img.zoom-img:hover {
 	line-height: 2em;
 	padding-top: 0em;
 	color: #999;
-	text-indent: 30px;
-	word-spacing: 3px;
-	letter-spacing: 1.5px;
+	word-spacing: 2.5px;
+	letter-spacing: 1px;
 	text-align: left;
     
 }

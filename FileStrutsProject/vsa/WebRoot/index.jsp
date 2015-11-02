@@ -12,12 +12,7 @@
 	}
 	
  %>
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link rel="stylesheet" href="css/kitit.css" />
 <link rel="stylesheet" href="css/csskit2.css" />
 <link rel="stylesheet" href="css/uikit.css" />
-
+<link rel="stylesheet" href="css/components/tooltip.min.css"/>
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,6 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/uikit.min.js" type="text/javascript"></script>
 <script src="js/components/grid.min.js" type="text/javascript"></script>
+<script src="js/components/tooltip.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="fotorama.css" />
 <script src="fotorama.js" type="text/javascript"></script>
 <!-- Bootstrap core JavaScript
@@ -91,12 +87,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="fix-social" >
 			<ul>
 				<li><a href="#"><img class="img-responsive"
-						src="images/face-icon-color.png"></a></li>
-				<li><a href="#"><img class="img-responsive"
-						src="images/google-icon-color.png"></a></li>
-				<li><a href="#"><img class="img-responsive"
-						src="images/tweet-icon-color.png"></a></li>
+						src="images/face-icon-o.png"></a></li>
+				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+						src="images/ig-icon-o.png"></a></li>
+				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+						src="images/pin-icon-o.png"></a></li>
+				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+						src="images/line-icon-o.png"></a></li>
 
+<!-- data-uk-tooltip="{pos:'left',animation:'true'}" title="ID: ITS"  -->
 			</ul>
 		</div>
 		<!-- Social icon -->
@@ -134,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	</div>
-	<div class="clearfix"></div>
+	<div id="Stage" class="clearfix"></div>
 	
 	<!--/header-->
 
@@ -144,11 +143,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<div class="welcome container-center">
 		<div class="container-center">
-			<h3>Vorrarat Supachocke Architect(VS<span class="red">a</span>)</h3>
-			<br>
-			<p>Vorrarat Supachoke Architect (VSa) was founded in 2007 by
-				Vorrat Foythong and Supachoke Kittipatmeta.</p>
-			<br>
+			<h3>Vorrarat Supachocke Architect VS<span class="red">a</span></h3>
+			<br  class="hidden-xs hidden-sm">
+			
+			<br  class="hidden-xs hidden-sm">
 			<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
 				<a href="#" class="mask"> <img src="images/wlb.jpg"
@@ -156,7 +154,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">
-
+				<p><b>Vorrarat Supachoke Architect</b> was founded in 2007 by
+					Vorrat Foythong and Supachoke Kittipatmeta.
+				</p>
 				<p>
 					The main of our Architecture concerning about site context,
 					project's character and project's requirement are combined to
@@ -173,13 +173,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
 			<h3>OUR WORK</h3>
-			<p class="index-p">Dolor nunc vule putateulr ips dol consec.Donec
-				sem ertet laciniate ultricie upie disse utes comete dolo lectus.
-				fgilla itollicil tua ludin dolor nec met quam accumsan.</p>
+<br/>
 			<!-- project and fillter -->
-			<article class=" artic container-center " id="project">
-				<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
-					<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
+			<article class=" container-center " id="project">
+				<button class="uk-button uk-visible-small container-center"  data-uk-toggle="{target:'.fillpro-m'}">
+					<span class="uk-icon-filter"></span> 
+					Filter
+				</button>
+				<ul id="fillpro1" class="fillpro uk-subnav uk-subnav-pill2 container-center fillpro-m uk-hidden uk-visible-small">
+					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
 					<%	DBProject dbpjtype = new DBProject();
 						typeIter = dbpjtype.pj_typeList("1").listIterator();
 						while(typeIter.hasNext()){
@@ -189,7 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<%
 						}
 					 %>
-					<form class="uk-form">
+					<form class="uk-form" >
 						<select>
 							<option selected>Sort by</option>
 							<option data-uk-sort="my-category:desc">YEAR</option>
@@ -197,25 +199,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</select>
 					</form>
 				</ul>
-				<section class="uk-grid"
-					data-uk-grid="{controls: '#fillpro',gutter:0.1}">
+				<ul id="fillpro2" class="fillpro uk-subnav uk-subnav-pill2 container-center uk-hidden-small">
+					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
+					<%	
+						typeIter = dbpjtype.pj_typeList("1").listIterator();
+						while(typeIter.hasNext()){
+							BusinessForm buform = (BusinessForm) typeIter.next();
+					%>
+							<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
+					<%
+						}
+					 %>
+					<form class="uk-form" >
+						<select>
+							<option selected>Sort by</option>
+							<option data-uk-sort="my-category:desc">YEAR</option>
+							<option data-uk-sort="my-category">NONE</option>
+						</select>
+					</form>
+				</ul>
+	
+					
+					<ul class="uk-grid container-center" data-uk-grid="{controls: '.fillpro',gutter:0.6}">
 					<% 		DBProject dbpj = new DBProject();
 							indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA").listIterator();
 							while(indexHeadIter.hasNext()){
 								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
 					%>
-					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
-						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
+					<li data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
+						class=" uk-width-2-6">
+						<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
+						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>" style="width: 100%;height:100%;">
 							<figcaption
 								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								<%=vsaform.getPj_name() %></figcaption> </a>
-					</figure>
+								<%=vsaform.getPj_name() %>
+							</figcaption> 
+						</a>
+					</li>
 					<%							
 							}
 					 %>
-				</section>
+					 
+					 </ul>
 			</article>
 			<!-- project and fillter -->
 		</div>
@@ -318,9 +343,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p>
 					Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a
 						href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
-				</p>
-				<p>
-					 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>
 			</div>
 			<div class="clearfix"></div>

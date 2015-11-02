@@ -1673,6 +1673,7 @@ ul.uk-nav-sub {
   background: #00a8e6;
   color: #ffffff;
 }
+
 /*
  * Sub-object: `uk-nav-header`
  */
@@ -2119,6 +2120,21 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 .uk-subnav-pill > * > * {
   padding: 3px 9px;
+}
+.uk-subnav-pill2 > * > * {
+  padding: 3px 9px;
+}
+.uk-subnav-pill2 > * > :hover,
+.uk-subnav-pill2 > * > :focus {
+  background: #eeeeee;
+  color: #444444;
+  text-decoration: none;
+  /* 2 */
+  outline: none;
+}
+.uk-subnav-pill2 > .uk-active > * {
+	 background: #eeeeee;
+  color: #444444;
 }
 /*
  * Hover
