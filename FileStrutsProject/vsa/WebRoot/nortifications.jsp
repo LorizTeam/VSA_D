@@ -211,7 +211,12 @@
 						$("#bu_no").html(obj.bu_no);
 						$("#timestamp").html(obj.timestamp);
 						$("#bu_name").html(obj.bu_name);
+						if(obj.norti_sname != "อ่านแล้ว"){
+						$("#norti_sname").html("อ่านแล้ว");
+						}else{
 						$("#norti_sname").html(obj.norti_sname);
+						}
+						
                     }
                 });
 		}
