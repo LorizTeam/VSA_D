@@ -12,7 +12,7 @@ public class DBConnect {
 			Class.forName ("com.mysql.jdbc.Driver");
 			//Class.forName ("org.gjt.mm.mysql.Driver");
 			String dbName = "vsa_d";
-			String hostname = "panasonic.cre4njgwawzc.ap-southeast-1.rds.amazonaws.com";
+			String hostname = "localhost";
 			String port = "3306";
 			String dbUserName = "root";
 			String dbPassword = "12345678";
