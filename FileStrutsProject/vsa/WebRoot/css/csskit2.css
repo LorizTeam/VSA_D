@@ -1302,7 +1302,8 @@ div#nivo-lightbox-demo img {
 }
 @media (max-width: 414px) {
 	.fix-social{
-		width: 15%;
+		min-width: 15%;
+		max-width: 16%;
 	}
 	.fix-social li{
 		margin-bottom:2px;
@@ -1338,7 +1339,8 @@ div#nivo-lightbox-demo img {
 }
 @media (max-width: 375px) {
 	.fix-social{
-		width: 17%;
+		min-width: 17%;
+		max-width: 17%;
 	}
 	.fix-social li{
 		margin-bottom:4px;
@@ -1383,7 +1385,8 @@ div#nivo-lightbox-demo img {
 		font-size:10px;
 	}
 	.fix-social{
-		width: 17%;
+		max-width: 17%;
+		min-width: 17%;
 	}
 	.fix-social li{
 		margin-bottom:5px;

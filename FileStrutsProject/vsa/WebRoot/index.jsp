@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="css/csskit2.css" />
 <link rel="stylesheet" href="css/uikit.css" />
 <link rel="stylesheet" href="css/components/tooltip.min.css"/>
+<link rel="stylesheet" href="css/tooltip.css" />
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,16 +87,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- Social icon -->
 		<div class="fix-social" >
 			<ul>
-				<li><a href="#"><img class="img-responsive"
+				<li><a ><img class="img-responsive"
 						src="images/face-icon-o.png"></a></li>
-				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+				<li><a ><img class="img-responsive"
 						src="images/ig-icon-o.png"></a></li>
-				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+				<li><a ><img class="img-responsive"
 						src="images/pin-icon-o.png"></a></li>
-				<li><a href="#" data-uk-tooltip="{pos:'left',animation:'true'}" title="VSA-GROUP"><img class="img-responsive"
+				<li><a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip"><img class="img-responsive"
 						src="images/line-icon-o.png"></a></li>
 
-<!-- data-uk-tooltip="{pos:'left',animation:'true'}" title="ID: ITS"  -->
 			</ul>
 		</div>
 		<!-- Social icon -->
@@ -378,7 +378,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 		});
 	</script>
-
+	<script src="js/tooltip.js" ></script>
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->
