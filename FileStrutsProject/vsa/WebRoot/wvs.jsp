@@ -101,7 +101,7 @@
 	<br>
 	<br>
 	<article class=" artic container " id="project">
-		<ul id="fillpro" class="uk-subnav uk-subnav-pill ">
+		<ul id="fillpro" class="uk-subnav uk-subnav-pill container-center">
 			<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
 			<%	DBProject dbpjtype = new DBProject();
 						typeIter = dbpjtype.pj_typeList("2").listIterator();
@@ -121,14 +121,14 @@
 				</select>
 			</form>
 		</ul>
-		<section class="uk-grid " data-uk-grid="{controls: '#fillpro',gutter:0.1}">
+		<section class="uk-grid container-center" data-uk-grid="{controls: '#fillpro',gutter:0.1}">
 					<% 		DBProject dbpj = new DBProject();
 							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
 							while(indexHeadIter.hasNext()){
 								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
 					%>
 					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
-						class="uk-width-small-1-2 uk-width-medium-1-3 uk-overlay uk-overlay-hover">
+						class=" uk-width-2-6 uk-overlay uk-overlay-hover">
 						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
 						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
 							<figcaption
@@ -186,7 +186,7 @@
 				<h1>Contact</h1>
 				<br> <br> <br>
 			</div>
-				<form action="notifications.do" method="post" class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+				<form action="notifications.do" method="post" class="uk-width-small-1-1 uk-width-medium-2-4 uk-width-large-1-2">
 				<input type="hidden" name="bu_no" value="2" >
 				<input id="cus_name" name="cus_name" type="text" placeholder="Name" class="frm-control">
 				<br> <br>
@@ -203,7 +203,7 @@
 					<a href="vsa new.html"><img src="wvsimages/vsa logo black.png" alt="" width="10%" height="10%"/></a>
 				</div>
 				</form>
-			<div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" >
+			<div class="uk-width-small-1-1 uk-width-medium-2-4 uk-width-large-1-3" >
 				<span class="fa fa-building-o fa-2x dropcaps opacity5"></span>
 				<label class="opacity7">
 					Soi Pradipat 10, Pradipat Road, Samsen Nai,

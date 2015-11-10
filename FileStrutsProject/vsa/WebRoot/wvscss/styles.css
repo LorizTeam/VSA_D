@@ -4,10 +4,9 @@
   font-weight: 400;
   src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
 }
-#project figure  img{ 
-	width: 100% !important;
-	height: 250px!important;
-	overflow: hidden!important;
+#project img{ 
+	width: 100%;
+	overflow: hidden;
 }
 
 .width-page{
@@ -73,7 +72,7 @@ nav a{
 }
 
 .block{
-	padding:50px;
+	padding:50px 0 35px;
 }
 #work,#project{
 	min-height: 600px;
@@ -113,10 +112,15 @@ nav a{
 .opacity7{
 	opacity:0.7;
 }
-	.icon-head img{
-		width:100%;
-		height:auto;
-	}
+.icon-head img{
+	width:100%;
+	height:auto;
+}
+.container-center{
+	margin-left: 10% !important;
+	margin-right: 10% !important;
+	width: 80% !important;
+}
 @media screen and (max-width: 1100px){
 	#map{
 		width: 350px;
@@ -164,6 +168,9 @@ hr{
 		margin-right:30%;
 		
 	}
+	#project img{ 
+		height: 204.7px;
+	}
 }
 @media (max-width:1366px){
 	
@@ -204,10 +211,16 @@ hr{
 	.uk-width-large-2-5{
 		 width:60%;
 	}
+	#project img{ 
+		height: 215.7px;
+	}
 }
 @media (max-width:1280px){
 	.icon-head{
 		padding:80px;
+	}
+	#project img{ 
+		height: 204.7px;
 	}
 	
 }
@@ -222,19 +235,29 @@ hr{
 		padding:50px 0 15px;
 	}	
 	.container{
-		width:80%;
-		margin-left: 10%;
-		margin-right: 10%;
+		width:70%;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 	.uk-width-medium-3-5{
-	 width:80%;
+	 width:70%;
+	}
+	#project img{ 
+		height: 191.3px;
 	}
 }
 @media (max-width:980px){
-
+	#project img{ 
+		height: 209px;
+	}
 }
 @media (max-width:800px){
-	
+	#map{
+		width: 100%;
+	}
+	#project img{ 
+		height: 170.65px;
+	}
 }
 @media (max-width:768px){
 	
@@ -259,6 +282,9 @@ hr{
 	.uk-width-medium-3-5{
 	 width:90%;
 	}
+	#project img{ 
+		height: 184.3px;
+	}
 }
 @media (max-width:640px){
 	#btn-location{
@@ -278,6 +304,11 @@ hr{
 		font-size:14px;
 		margin:15px 16.5px;
 	}
+	.container-center{
+		margin-left: 2% !important;
+	  	margin-right: 2% !important;
+	  	width: 96% !important; 
+	}
 }
 @media (max-width:480px){
 	h2{
@@ -292,6 +323,9 @@ hr{
 	.fixnav-bottom a{
 		font-size:13px;
 		margin:15px 12px;
+	}
+	#project img{ 
+		height: 138.2px;
 	}
 }
 @media (max-width:412px){
@@ -310,6 +344,9 @@ hr{
 	#map{
 		width: 100%;
 	}
+	#project img{ 
+		height: 119.2px;
+	}
 }
 @media (max-width:320px){
 	.block{
@@ -321,5 +358,8 @@ hr{
 	.fixnav-bottom a{
 		font-size:11px;
 		margin:15px 2.5px;
+	}
+	#project img{ 
+		height: 92px;
 	}
 }
