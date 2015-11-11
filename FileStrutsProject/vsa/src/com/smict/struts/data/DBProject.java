@@ -288,14 +288,26 @@ public class DBProject {
 		pStmt.close();
 	}
 	
-	public List Get_HeaderProjectForIndex(String bu_name) {
+	public List Get_HeaderProjectForIndex(String bu_name,int indexpage) {
 		List indexList = new ArrayList();
+		
+		int limfirst = 0;
+		int limend = 0;
+		if(indexpage > 1){
+			limfirst = (indexpage*9)-9;
+			limend = indexpage*9;
+		}else{
+			limend = 9;
+		}
+		
+		
 		try {
 			conn = dbcon.getConnectMYSql();
 			String pj_name="",pj_year="",pj_typename="",pic_path="",pj_no="";
 			String sqlQuery = "select * from `index` " +
 			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' " +
-			"group by pj_name";
+			"group by pj_name " +
+			"LIMIT "+limfirst+","+limend;
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
 			while(rs.next()){

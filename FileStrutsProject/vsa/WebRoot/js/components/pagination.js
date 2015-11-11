@@ -27,7 +27,7 @@
             itemsOnPage    : 1,
             pages          : 0,
             displayedPages : 3,
-            edges          : 3,
+            edges          : 2,
             currentPage    : 1,
             lblPrev        : false,
             lblNext        : false,

@@ -52,13 +52,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </style>
 
 <!--Adobe Edge Runtime End-->
-
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/uikit.min.js" type="text/javascript"></script>
+<script src="js/components/pagination.js" type="text/javascript"></script>
 <script src="js/components/grid.min.js" type="text/javascript"></script>
 <script src="js/components/tooltip.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="fotorama.css" />
 <script src="fotorama.js" type="text/javascript"></script>
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -219,38 +220,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 				</ul>
 	
-					
-					<ul class="uk-grid container-center" data-uk-grid="{controls: '.fillpro',gutter:0.6}">
-					<% 		DBProject dbpj = new DBProject();
-							indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA").listIterator();
-							while(indexHeadIter.hasNext()){
-								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
-					%>
-					<li data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
-						class=" uk-width-2-6">
-						<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
-						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>" style="width: 100%;height:100%;">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								<%=vsaform.getPj_name() %>
-							</figcaption> 
-						</a>
-					</li>
-					<%							
-							}
-					 %>
-					 
-					 </ul>
+					<div id="loop_projectheader">
+						<ul class="uk-grid container-center" data-uk-grid="{controls: '.fillpro',gutter:0.6}">
+						<% 		DBProject dbpj = new DBProject();
+								indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
+								while(indexHeadIter.hasNext()){
+									IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
+						%>
+						<li data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
+							class=" uk-width-2-6">
+							<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
+							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>" style="width: 100%;height:100%;">
+								<figcaption
+									class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+									<%=vsaform.getPj_name() %>
+								</figcaption> 
+							</a>
+						</li>
+						<%							
+								}
+						 %>
+						 
+						 </ul>
+					 </div>
 			</article>
+			
 			<!-- project and fillter -->
 		</div>
+		<ul class="uk-pagination" data-uk-pagination="{items:12, itemsOnPage:9, displayedPages:3}"></ul>
 	</div>
 	<!-- This is the modal -->
+	<div id="loop_projectmodal">
 	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA").listIterator();
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
 		while(indexHeadIter.hasNext()){
 		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
 	%>
+	
 		<div id="<%=vsaform.getPj_no() %>" class="uk-modal">
 			<div class="uk-modal-dialog">
 				<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
@@ -270,6 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<%
 		}
 	 %>
+	 </div>
 	<!-- This is the modal -->
 
 	<!--grid-hover-->
