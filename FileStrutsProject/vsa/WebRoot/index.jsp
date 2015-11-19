@@ -144,9 +144,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<div class="welcome container-center">
 		<div class="container-center">
-			<h3>Vorrarat Supachocke Architect VS<span class="red">a</span></h3>
+			<h3>Vorrarat Supachocke <span class="red">Architect</span> </h3>
 			<br  class="hidden-xs hidden-sm">
-			
+			<br class="hidden-md hidden-lg"/>
 			<br  class="hidden-xs hidden-sm">
 			<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
@@ -155,9 +155,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">
-				<p><b>Vorrarat Supachoke Architect</b> was founded in 2007 by
+			<br class="hidden-md hidden-lg"/>
+				<p><b>Vorrarat Supachoke Architect (VS<span class="red">a</span>)</b> was founded in 2007 by
 					Vorrat Foythong and Supachoke Kittipatmeta.
 				</p>
+				
 				<p>
 					The main of our Architecture concerning about site context,
 					project's character and project's requirement are combined to
@@ -181,7 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="uk-icon-filter"></span> 
 					Filter
 				</button>
-				<ul id="fillpro1" class="fillpro uk-subnav uk-subnav-pill2 container-center fillpro-m uk-hidden uk-visible-small">
+				<ul id="fillpro1" id="alltype" class="fillpro uk-subnav uk-subnav-pill2 container-center fillpro-m uk-hidden uk-visible-small">
 					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
 					<%	DBProject dbpjtype = new DBProject();
 						typeIter = dbpjtype.pj_typeList("1").listIterator();
@@ -201,7 +203,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 				</ul>
 				<ul id="fillpro2" class="fillpro uk-subnav uk-subnav-pill2 container-center uk-hidden-small">
-					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
+					<li id="alltype" class="b-active" data-uk-filter=""><a href="">ALL</a></li>
 					<%	
 						typeIter = dbpjtype.pj_typeList("1").listIterator();
 						while(typeIter.hasNext()){
@@ -218,41 +220,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<option data-uk-sort="my-category">NONE</option>
 						</select>
 					</form>
-				</ul>
-	
-					<div id="loop_projectheader">
-						<ul class="uk-grid container-center" data-uk-grid="{controls: '.fillpro',gutter:0.6}">
-						<% 		DBProject dbpj = new DBProject();
-								indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
-								while(indexHeadIter.hasNext()){
-									IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
-						%>
-						<li data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
-							class=" uk-width-2-6">
-							<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
-							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>" style="width: 100%;height:100%;">
-								<figcaption
-									class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-									<%=vsaform.getPj_name() %>
-								</figcaption> 
-							</a>
-						</li>
-						<%							
-								}
-						 %>
-						 
-						 </ul>
-					 </div>
+				</ul>			
+				<ul id="loop_projectheader" class="uk-grid container-center" data-uk-grid="{controls:'.fillpro',gutter:0.6}" style="position: relative; margin-left: 0px; height: 196px;">
+						<% 		DBProject dbpj = new DBProject();%>
+				</ul>	 
 			</article>
 			
 			<!-- project and fillter -->
+			
 		</div>
-		<ul class="uk-pagination" data-uk-pagination="{items:12, itemsOnPage:9, displayedPages:3}"></ul>
+		
 	</div>
 	<!-- This is the modal -->
 	<div id="loop_projectmodal">
 	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",1).listIterator();
 		while(indexHeadIter.hasNext()){
 		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
 	%>
@@ -313,6 +295,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								asd
 							</figcaption> 
 						</a>
+						
 					</div>
 					
 				</div>
@@ -344,12 +327,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 			</div>
+			<div id="testproject"></div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!--/footer-->
 	<script type="text/javascript">
 		$(document).ready(function() {
+		
 			/*
 			var defaults = {
 			container-centerID: 'toTop', // fading element id
@@ -360,6 +345,98 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 */
 			$().UItoTop({
 				easingType : 'easeOutQuart'
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var obj,objpicture;
+			$.ajax({
+                    type: "post",
+                    url: "json_indexproject.jsp", //this is my servlet
+                    data: {bu_name:"VSA"},
+                    async:true,
+                    success: function(result){
+                    	
+						obj = JSON.parse(result);
+						var out ='';
+						var projectheadercount = 0;
+						if(obj.length > 9){
+							projectheadercount = 9;
+						}else{
+							projectheadercount = obj.length;
+						}
+						for(var i = 0 ; i < projectheadercount; i++){
+							out += 
+							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6">'+
+							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
+							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+
+							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+
+							obj[i].pj_name+
+							'</figcaption>'+
+							'</a>'+
+							'</li>';
+							
+						}
+						
+						document.getElementById("loop_projectheader").innerHTML = out;
+						
+                    }
+                });
+                
+//            $.ajax({
+//            	type: "post",
+//                    url: "json_indexproject.jsp", //this is my servlet
+//                    data: {bu_name:"VSA"},
+//                    async:true,
+//                    success: function(result){
+//                    	objpicture = JSON.parse(result);
+//                 		var outsrcpicture = '';
+//                 		
+//                 		for(var i = 0; i < objpicture.length ; i++){
+//                 			var objsrcpicture = JSON.parse(objpicture[i].srcpicture);
+//                 			
+//                 		}
+//                 		alert(objsrcpicture);
+//                    }
+//            });
+                
+         	$('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){
+         		
+         		var clickpage = pageIndex+1;
+         		var startproject = 0 ;
+         		
+         		if(clickpage > 1){
+         			startproject = (clickpage *9)-9;
+         		}
+         		
+         		var endproject =  (clickpage*9);
+         		var out ='';
+         		if(endproject > obj.length){
+         			endproject = obj.length;
+         		}
+         		var $log = $("#loop_projectheader");
+				for(var i = startproject ; i < endproject; i++){
+							out += 
+							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6"> '+
+							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
+							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+
+							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+
+							obj[i].pj_name+
+							'</figcaption>'+
+							'</a>'+
+							'</li>';
+							
+						}
+				var html = $.parseHTML(out);
+				$("#loop_projectheader").empty();
+				$log.append(html);
+				$("#alltype").click();
+//						document.getElementById("loop_projectheader").innerHTML = out;
+						
+				
+			    
 			});
 		});
 	</script>

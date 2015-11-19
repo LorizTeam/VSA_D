@@ -123,7 +123,7 @@
 		</ul>
 		<section class="uk-grid container-center" data-uk-grid="{controls: '#fillpro',gutter:0.1}">
 					<% 		DBProject dbpj = new DBProject();
-							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS",1).listIterator();
 							while(indexHeadIter.hasNext()){
 								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
 					%>
@@ -142,7 +142,7 @@
 	</article>
 	<!-- This is the modal -->
 	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS").listIterator();
+		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS",1).listIterator();
 		while(indexHeadIter.hasNext()){
 		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
 	%>
