@@ -144,9 +144,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br>
 	<div class="welcome container-center">
 		<div class="container-center">
-			<h3>Vorrarat Supachocke Architect VS<span class="red">a</span></h3>
+			<h3>Vorrarat Supachocke <span class="red">Architect</span> </h3>
 			<br  class="hidden-xs hidden-sm">
-			
+			<br class="hidden-md hidden-lg"/>
 			<br  class="hidden-xs hidden-sm">
 			<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
@@ -155,9 +155,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">
-				<p><b>Vorrarat Supachoke Architect</b> was founded in 2007 by
+			<br class="hidden-md hidden-lg"/>
+				<p><b>Vorrarat Supachoke Architect (VS<span class="red">a</span>)</b> was founded in 2007 by
 					Vorrat Foythong and Supachoke Kittipatmeta.
 				</p>
+				
 				<p>
 					The main of our Architecture concerning about site context,
 					project's character and project's requirement are combined to
@@ -225,7 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</article>
 			
 			<!-- project and fillter -->
-			<ul class="uk-pagination" data-uk-pagination="{items:12, itemsOnPage:9, displayedPages:3}"></ul>
+			
 		</div>
 		
 	</div>
@@ -293,6 +295,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								asd
 							</figcaption> 
 						</a>
+						
 					</div>
 					
 				</div>
@@ -358,7 +361,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     	
 						obj = JSON.parse(result);
 						var out ='';
-						for(var i = 0 ; i < 9; i++){
+						var projectheadercount = 0;
+						if(obj.length > 9){
+							projectheadercount = 9;
+						}else{
+							projectheadercount = obj.length;
+						}
+						for(var i = 0 ; i < projectheadercount; i++){
 							out += 
 							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6">'+
 							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
