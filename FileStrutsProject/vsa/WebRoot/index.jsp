@@ -16,6 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
@@ -23,7 +24,7 @@
 <link rel="stylesheet" href="css/uikit.css" />
 <link rel="stylesheet" href="css/components/tooltip.min.css"/>
 <link rel="stylesheet" href="css/tooltip.css" />
-
+<link rel="stylesheet" href="swipe/css/swiper.min.css"/>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -58,6 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/components/grid.min.js" type="text/javascript"></script>
 <script src="js/components/tooltip.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="fotorama.css" />
+<link rel="stylesheet"href="lg/css/lightgallery.css">
 <script src="fotorama.js" type="text/javascript"></script>
 
 <!-- Bootstrap core JavaScript
@@ -80,6 +82,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
+<style>
+ 
+    .swiper-container {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: 200px;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
 </head>
 <body>
 	<!--header-->
@@ -179,7 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <br/>
 			<!-- project and fillter -->
 			<article class=" container-center " id="project">
-				<button class="uk-button uk-visible-small container-center"  data-uk-toggle="{target:'.fillpro-m'}">
+				<!--<button class="uk-button uk-visible-small container-center"  data-uk-toggle="{target:'.fillpro-m'}">
 					<span class="uk-icon-filter"></span> 
 					Filter
 				</button>
@@ -223,14 +253,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>			
 				<ul id="loop_projectheader" class="uk-grid container-center" data-uk-grid="{controls:'.fillpro',gutter:0.6}" style="position: relative; margin-left: 0px; height: 196px;">
 						<% 		DBProject dbpj = new DBProject();%>
-				</ul>	 
-			</article>
+				</ul>	
+			-->	 
 			
+	
 			<!-- project and fillter -->
-			
+			<div class="swiper-container container-center">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a id="gallery1" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								1234
+							</div>	
+							<script type="text/javascript">
+								$('#gallery1').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		    </article>
 		</div>
+		<script src="lg/js/lightgallery.min.js"></script>
 		
-	</div>
+
+		</div>
 	<!-- This is the modal -->
 	<div id="loop_projectmodal">
 	<%
@@ -259,8 +330,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	 %>
 	 </div>
+	 
+	 
 	<!-- This is the modal -->
-
+	
 	<!--grid-hover-->
 	<!--index-team-->
 	<div id="team" class="content-team">
@@ -303,6 +376,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"></div>
 			</div>
 			<!--script-->
+
+			
 			<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 			<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
 			<script type="text/javascript">
@@ -463,10 +538,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<script src="js/tooltip.js" ></script>
+	
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->
 	<div></div>
 	<!--footer-starts-->
+	<!-- Swipe -->
+	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	     pagination: '.swiper-pagination',	
+	        slidesPerView: 3,
+	        slidesPerColumn: 3,
+	        paginationClickable: true,
+	        spaceBetween: 10
+	    });
+    </script>
 </body>
 </html>

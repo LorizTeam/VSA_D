@@ -1,4 +1,6 @@
-
+.white{
+	color:white;
+}
 .blog-pagenat ul li a {
 	display: block;
 	background: #fff;
