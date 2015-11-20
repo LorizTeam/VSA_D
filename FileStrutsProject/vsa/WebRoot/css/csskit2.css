@@ -495,7 +495,8 @@ li a:focus{ -moz-outline-style: none !important; }
 	width: 100%;
 	height: auto;
 	margin-left: auto;
-	 margin-right: auto;
+	margin-right: auto;
+	z-index: 0 !important;
 }
 .swiper-slide {
 	text-align: center;
