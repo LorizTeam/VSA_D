@@ -2,20 +2,12 @@
 <%@ page import="com.smict.struts.form.IndexVSAForm"%>
 <%@ page import="com.smict.struts.data.DBProject"%>
 <%@ page import="com.smict.struts.form.BusinessForm"%>
-<%	
-	ListIterator<?> indexHeadIter = null;
-	ListIterator<?> indexPicIter = null;
-	ListIterator<?> typeIter = null;
-	List<?> indexList = null;	
-	if(request.getAttribute("indexList") != null){
-		indexList = (List<?>)request.getAttribute("indexList");
-	}
-	
- %>
+
 
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
@@ -23,7 +15,7 @@
 <link rel="stylesheet" href="css/uikit.css" />
 <link rel="stylesheet" href="css/components/tooltip.min.css"/>
 <link rel="stylesheet" href="css/tooltip.css" />
-
+<link rel="stylesheet" href="swipe/css/swiper.min.css"/>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -58,6 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/components/grid.min.js" type="text/javascript"></script>
 <script src="js/components/tooltip.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="fotorama.css" />
+<link rel="stylesheet"href="lg/css/lightgallery.css">
 <script src="fotorama.js" type="text/javascript"></script>
 
 <!-- Bootstrap core JavaScript
@@ -80,6 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
+
 </head>
 <body>
 	<!--header-->
@@ -179,88 +173,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <br/>
 			<!-- project and fillter -->
 			<article class=" container-center " id="project">
-				<button class="uk-button uk-visible-small container-center"  data-uk-toggle="{target:'.fillpro-m'}">
-					<span class="uk-icon-filter"></span> 
-					Filter
-				</button>
-				<ul id="fillpro1" id="alltype" class="fillpro uk-subnav uk-subnav-pill2 container-center fillpro-m uk-hidden uk-visible-small">
-					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
-					<%	DBProject dbpjtype = new DBProject();
-						typeIter = dbpjtype.pj_typeList("1").listIterator();
-						while(typeIter.hasNext()){
-							BusinessForm buform = (BusinessForm) typeIter.next();
-					%>
-							<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
-					<%
-						}
-					 %>
-					<form class="uk-form" >
-						<select>
-							<option selected>Sort by</option>
-							<option data-uk-sort="my-category:desc">YEAR</option>
-							<option data-uk-sort="my-category">NONE</option>
-						</select>
-					</form>
-				</ul>
-				<ul id="fillpro2" class="fillpro uk-subnav uk-subnav-pill2 container-center uk-hidden-small">
-					<li id="alltype" class="b-active" data-uk-filter=""><a href="">ALL</a></li>
-					<%	
-						typeIter = dbpjtype.pj_typeList("1").listIterator();
-						while(typeIter.hasNext()){
-							BusinessForm buform = (BusinessForm) typeIter.next();
-					%>
-							<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
-					<%
-						}
-					 %>
-					<form class="uk-form" >
-						<select>
-							<option selected>Sort by</option>
-							<option data-uk-sort="my-category:desc">YEAR</option>
-							<option data-uk-sort="my-category">NONE</option>
-						</select>
-					</form>
-				</ul>			
-				<ul id="loop_projectheader" class="uk-grid container-center" data-uk-grid="{controls:'.fillpro',gutter:0.6}" style="position: relative; margin-left: 0px; height: 196px;">
-						<% 		DBProject dbpj = new DBProject();%>
-				</ul>	 
-			</article>
-			
-			<!-- project and fillter -->
-			
+				
+			<div class="swiper-container container-center">
+		        <div class="swiper-wrapper">
+		       
+		       <%@ include file="data-test.jsp" %>    
+		           
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		    </article>
 		</div>
+		<script src="lg/js/lightgallery.min.js"></script>
 		
-	</div>
-	<!-- This is the modal -->
-	<div id="loop_projectmodal">
-	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",1).listIterator();
-		while(indexHeadIter.hasNext()){
-		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
-	%>
-	
-		<div id="<%=vsaform.getPj_no() %>" class="uk-modal">
-			<div class="uk-modal-dialog">
-				<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-					data-loop="true"  data-ratio="16/9" data-width="100%">
-					<%
-						indexPicIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
-						while(indexPicIter.hasNext()){
-						IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
-					%>
-						<img src="<%=vsapicform.getPic_path() %>" alt="" />
-					<%
-						}
-					 %>
-				</div>
-			</div>
-		</div>
-	<%
-		}
-	 %>
-	 </div>
-	<!-- This is the modal -->
 
+		</div>
+	
+	 
+	 
+	<!-- This is the modal -->
+	
 	<!--grid-hover-->
 	<!--index-team-->
 	<div id="team" class="content-team">
@@ -303,6 +236,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"></div>
 			</div>
 			<!--script-->
+
+			
 			<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 			<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
 			<script type="text/javascript">
@@ -463,10 +398,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<script src="js/tooltip.js" ></script>
+	
 	<a href="#to-top" id="toTop" style="display: block;"> <span
 		id="toTopHover" style="opacity: 1;"> </span></a>
 	<!---->
 	<div></div>
 	<!--footer-starts-->
+	<!-- Swipe -->
+	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	     pagination: '.swiper-pagination',	
+	        slidesPerView: 3,
+	        slidesPerColumn: 3,
+	        paginationClickable: true,
+	        spaceBetween: 10
+	    });
+    </script>
 </body>
 </html>
