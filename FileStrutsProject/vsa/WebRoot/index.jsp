@@ -186,8 +186,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    </article>
 		</div>
 		<script src="lg/js/lightgallery.min.js"></script>
+		<script src="lg/js/lg-fullscreen.min.js"></script>
+	
 		
-
+		<script src="lg/js/lg-zoom.min.js"></script>
 		</div>
 	
 	 
