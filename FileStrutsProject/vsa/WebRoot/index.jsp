@@ -82,34 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
-<style>
- 
-    .swiper-container {
-        width: 100%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        height: 200px;
-        
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
+
 </head>
 <body>
 	<!--header-->
@@ -215,7 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 				<ul id="fillpro1" id="alltype" class="fillpro uk-subnav uk-subnav-pill2 container-center fillpro-m uk-hidden uk-visible-small">
 					<li class="b-active" data-uk-filter=""><a href="">ALL</a></li>
-					<%	DBProject dbpjtype = new DBProject();
+					<% 	DBProject dbpjtype = new DBProject();
 						typeIter = dbpjtype.pj_typeList("1").listIterator();
 						while(typeIter.hasNext()){
 							BusinessForm buform = (BusinessForm) typeIter.next();
@@ -260,11 +233,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- project and fillter -->
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
+		        
+		        <!-- 1project -->
 		            <div class="swiper-slide">
 		            	<a id="gallery1" class=" uk-overlay uk-overlay-hover gallery-img">	        
 							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
 							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								1234
+								teach tech Office and warehouse
 							</div>	
 							<script type="text/javascript">
 								$('#gallery1').on('click', function() {
@@ -291,6 +266,206 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 						
 					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery2" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery2').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery7" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery7').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery3" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery3').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery4" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery4').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery5" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery5').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           <!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="gallery6" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="images/project/1.jpg"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#gallery6').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [{
+								            "src": 'images/project/1.jpg',
+								            
+								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+								      }, {
+								           'src': 'images/project/2.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
+								       }, {
+								           'src': 'images/project/3.jpg',
+								           
+								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
+								       }]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		           
 		           
 		        </div>
 		        <!-- Add Pagination -->
