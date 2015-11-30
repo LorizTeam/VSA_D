@@ -233,8 +233,8 @@
                         [
                             "eid566",
                             "opacity",
-                            5778,
-                            307,
+                            5615,
+                            470,
                             "linear",
                             "${wvs}",
                             '1',
@@ -323,9 +323,9 @@
                         [
                             "eid309",
                             "opacity",
-                            5842,
+                            6085,
                             671,
-                            "linear",
+                            "easeInQuad",
                             "${interior}",
                             '0',
                             '1'
@@ -361,44 +361,34 @@
                             'block'
                         ],
                         [
-                            "eid238",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${engineerin}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid240",
-                            "display",
-                            5843,
-                            0,
-                            "linear",
-                            "${engineerin}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid402",
+                            "eid312",
                             "opacity",
-                            5842,
+                            6085,
                             671,
-                            "linear",
-                            "${drawing3}",
+                            "easeInQuad",
+                            "${engineerin}",
                             '0',
                             '1'
                         ],
                         [
-                            "eid653",
-                            "opacity",
-                            6513,
-                            823,
+                            "eid500",
+                            "display",
+                            0,
+                            0,
                             "linear",
-                            "${drawing3}",
-                            '1',
-                            '0.99000000953674'
+                            "${vsalogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid631",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid524",
@@ -443,8 +433,8 @@
                         [
                             "eid568",
                             "filter.contrast",
-                            5500,
-                            278,
+                            5189,
+                            426,
                             "linear",
                             "${wvs}",
                             '1',
@@ -459,6 +449,156 @@
                             "${architect}",
                             '164px',
                             '164px'
+                        ],
+                        [
+                            "eid512",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${plzlogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid650",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${plzlogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid354",
+                            "filter.contrast",
+                            5189,
+                            476,
+                            "linear",
+                            "${vsalogo}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid636",
+                            "width",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsalogo2}",
+                            '256px',
+                            '256px'
+                        ],
+                        [
+                            "eid402",
+                            "opacity",
+                            6085,
+                            562,
+                            "easeInQuad",
+                            "${drawing3}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid653",
+                            "opacity",
+                            6647,
+                            689,
+                            "easeInQuad",
+                            "${drawing3}",
+                            '1',
+                            '0.99000000953674'
+                        ],
+                        [
+                            "eid572",
+                            "left",
+                            5006,
+                            1494,
+                            "linear",
+                            "${vsa_logo_black22}",
+                            '314px',
+                            '662px'
+                        ],
+                        [
+                            "eid214",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${architect}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid217",
+                            "display",
+                            6086,
+                            0,
+                            "linear",
+                            "${architect}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid238",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${engineerin}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid240",
+                            "display",
+                            6086,
+                            0,
+                            "linear",
+                            "${engineerin}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid532",
+                            "left",
+                            7336,
+                            0,
+                            "linear",
+                            "${architect}",
+                            '57px',
+                            '57px'
+                        ],
+                        [
+                            "eid506",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${vsctlogo2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid580",
+                            "display",
+                            7336,
+                            0,
+                            "linear",
+                            "${vsctlogo2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid310",
+                            "opacity",
+                            6085,
+                            671,
+                            "easeInQuad",
+                            "${architect}",
+                            '0',
+                            '1'
                         ],
                         [
                             "eid635",
@@ -483,7 +623,7 @@
                         [
                             "eid404",
                             "display",
-                            5843,
+                            6086,
                             0,
                             "linear",
                             "${drawing3}",
@@ -498,146 +638,6 @@
                             "linear",
                             "${drawing3}",
                             'block',
-                            'block'
-                        ],
-                        [
-                            "eid636",
-                            "width",
-                            7336,
-                            0,
-                            "linear",
-                            "${vsalogo2}",
-                            '256px',
-                            '256px'
-                        ],
-                        [
-                            "eid354",
-                            "filter.contrast",
-                            5189,
-                            476,
-                            "linear",
-                            "${vsalogo}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid572",
-                            "left",
-                            5006,
-                            1494,
-                            "linear",
-                            "${vsa_logo_black22}",
-                            '314px',
-                            '662px'
-                        ],
-                        [
-                            "eid512",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${plzlogo2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid650",
-                            "display",
-                            7336,
-                            0,
-                            "linear",
-                            "${plzlogo2}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid312",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${engineerin}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid532",
-                            "left",
-                            7336,
-                            0,
-                            "linear",
-                            "${architect}",
-                            '57px',
-                            '57px'
-                        ],
-                        [
-                            "eid310",
-                            "opacity",
-                            5842,
-                            671,
-                            "linear",
-                            "${architect}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid500",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${vsalogo2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid631",
-                            "display",
-                            7336,
-                            0,
-                            "linear",
-                            "${vsalogo2}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid506",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${vsctlogo2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid580",
-                            "display",
-                            7336,
-                            0,
-                            "linear",
-                            "${vsctlogo2}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid214",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${architect}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid217",
-                            "display",
-                            5843,
-                            0,
-                            "linear",
-                            "${architect}",
-                            'none',
                             'block'
                         ],
                         [
@@ -663,7 +663,7 @@
                         [
                             "eid232",
                             "display",
-                            5843,
+                            6086,
                             0,
                             "linear",
                             "${interior}",

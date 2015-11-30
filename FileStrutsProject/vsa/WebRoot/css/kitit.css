@@ -660,7 +660,8 @@ ul.social-icons li a:hover {
 .get_in_touch p {
 	color: #848484;
 	font-size: 1em;
-	padding: 5px 0;
+	padding: 0;
+	margin-bottom:0;
 }
 .get_in_touch a {
 	color: #848484;
