@@ -1,5 +1,5 @@
 .white{
-	color:white;
+	color:white !important;
 }
 .blog-pagenat ul li a {
 	display: block;
@@ -524,6 +524,10 @@ li a:focus{ -moz-outline-style: none !important; }
 /*--/inner-pages--*/
 /*----responsive-menu-start--*/
 @media (max-width: 1920px) {
+	.social-bottom{
+		visibility: hidden;
+		display:none;
+	}
 	#project figure img{ 
 		width: 100%;
 		height: 300px;
@@ -913,6 +917,18 @@ li a:focus{ -moz-outline-style: none !important; }
 @media (max-width: 768px) {
 	.fix-social{
 		width: 9%;
+		visibility: hidden;
+	}
+	.social-bottom{
+		display:block;
+		visibility: visible;
+		margin: 0 auto;
+	}
+	.social-bottom img,.social-bottom a{
+		width:31.8px;
+		height:31.8px;
+		float:left;
+		margin: 0 5px;
 	}
 	#project figure img{ 
 		width: 100%;
@@ -932,6 +948,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	.navigation {
 		padding: 0px;
 		width: 100%;
+		background:none;
 	}
 	.welcome h3 {
 		line-height: 100%;

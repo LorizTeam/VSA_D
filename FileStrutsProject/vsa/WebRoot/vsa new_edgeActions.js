@@ -57,7 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${vsctlogo2}", "click", function(sym, e) {
-         window.open("http://www.vsct.co.th", "_blank");
+         window.open("vsct.jsp", "_blank");
          
 
       });
@@ -105,7 +105,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 
       Symbol.bindElementAction(compId, symbolName, "${plzlogo2}", "click", function(sym, e) {
-         window.open("http://www.palidzen.co.th", "_blank");
+         window.open("plz.jsp", "_blank");
 
       });
       //Edge binding end
@@ -138,7 +138,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${wvsCopy}", "click", function(sym, e) {
-         window.open("http://www.wvs.co.th", "_blank");
+         window.open("wvs.jsp", "_blank");
          
          
 
@@ -158,7 +158,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // insert code for mouse click here
          // Navigate to a new URL in a new window
          // (replace "_blank" with appropriate target attribute)
-         window.open("index.jsp", "_blank");
+         window.open("vsa.jsp", "_blank");
          
 
       });

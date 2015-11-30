@@ -50,22 +50,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="navigation ">
 				<nav class="navbar navbar-default ">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"> </span> <span class="icon-bar"> </span> <span
-								class="icon-bar"> </span>
-						</button>
-					</div>				
 					<div class="collapse navbar-collapse nav-wil container-center"
-						id="bs-example-navbar-collapse-1" >
+						id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav  top-nav">
-							<li class="l"><a href="index.jsp">Home</a></li>
-							<li><a href="index.jsp">Work</a></li>
-							<li><a href="index.jsp">Team</a></li>
-							<li><a href="index.jsp">Award</a></li>
+							<li class="l"><a href="vsa.jsp">Home</a></li>
+							<li><a href="vsa.jsp">Work</a></li>
+							<li><a href="vsa.jsp">Team</a></li>
+							<li><a href="vsa.jsp">Award</a></li>
 							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 						<div class="clearfix"></div>
@@ -120,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-12 get_in_touch ftr text-center">
 				<p>Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a></p>						
 				<p>
-					© 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
+					 	&#xA9; 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
 				</p>
 			</div>
 			<div class="clearfix"></div>
