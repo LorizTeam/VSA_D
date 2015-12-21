@@ -159,7 +159,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
 			<h3>OUR WORK</h3>
-<br/>
+<br/><script src="lg/js/lightgallery.js"></script>
+	<script src="lg/js/lg-fullscreen.js"></script>
+	<script src="lg/js/lg-hash.js"></script>
 			<!-- project and fillter -->
 			<article class=" container-center " id="project">
 				
@@ -174,11 +176,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    </div>
 		    </article>
 		</div>
-		<script src="lg/js/lightgallery.min.js"></script>
-		<script src="lg/js/lg-fullscreen.min.js"></script>
-	
 		
-		<script src="lg/js/lg-zoom.min.js"></script>
 		</div>
 	
 	 
@@ -208,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
 		       
-		       <%@ include file="data-test.jsp" %>    
+		         
 		           
 		        </div>
 		        <!-- Add Pagination -->
@@ -255,23 +253,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--/footer-->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		
-			/*
-			var defaults = {
-			container-centerID: 'toTop', // fading element id
-			container-centerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-			 */
-			$().UItoTop({
-				easingType : 'easeOutQuart'
-			});
-			
-		});
-	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var obj,objpicture;
@@ -363,34 +344,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		});
 	</script>
-	<script>
-		$(function() {
-			$('a[href*=#]:not([href=#])')
-					.click(
-							function() {
-								if (location.pathname.replace(/^\//, '') == this.pathname
-										.replace(/^\//, '')
-										&& location.hostname == this.hostname) {
-									var target = $(this.hash);
-									target = target.length ? target
-											: $('[name=' + this.hash.slice(1)
-													+ ']');
-									if (target.length) {
-										$('html,body').animate({
-											scrollTop : target.offset().top
-										}, 1000);
-										return false;
-									}
-								}
-							});
-		});
-	</script>
+
 	<script src="js/tooltip.js" ></script>
 	
-	<a href="#to-top" id="toTop" style="display: block;"> <span
-		id="toTopHover" style="opacity: 1;"> </span></a>
-	<!---->
-	<div></div>
+	
+
 	<!--footer-starts-->
 	<!-- Swipe -->
 	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
