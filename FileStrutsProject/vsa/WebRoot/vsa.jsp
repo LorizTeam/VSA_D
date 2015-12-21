@@ -167,8 +167,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
-		       
-		       <%@ include file="data-test.jsp" %>    
+		       <%
+		       		DBProject dbpj = new DBProject();
+		       		ListIterator indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
+		       		
+		       		while(indexHeadIter.hasNext()){
+		       			IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
+		       	%>
+		       			<!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								teach tech Office and warehouse
+							</div>	
+							<script type="text/javascript">
+								$('#<%=vsaform.getPj_no() %>').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [
+								    	  <%
+								    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
+								       		
+								       		while(indexDetailIter.hasNext()){
+								       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
+								       			
+								       		%>
+								       			{
+											    	"src": '<%=vsaDetailform.getPic_path()%>'
+											    },
+								       		<%
+								       		}
+								    	  %>
+								    	  
+								    	  
+								       
+								       
+								       ]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		       	
+		       	<%		
+		       			
+		       		}
+		       		
+		       		
+		       		
+		       %>
+		           
 		           
 		        </div>
 		        <!-- Add Pagination -->
@@ -206,7 +259,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
 		       
+<<<<<<< HEAD
 		         
+=======
+		           <%@ include file="data-test.jsp" %>
+>>>>>>> origin/master
 		           
 		        </div>
 		        <!-- Add Pagination -->
@@ -255,6 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/footer-->
 	<script type="text/javascript">
 		$(document).ready(function() {
+<<<<<<< HEAD
 			var obj,objpicture;
 			$.ajax({
                     type: "post",
@@ -288,6 +346,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
                     }
                 });
+=======
+		
+			/*
+			var defaults = {
+			container-centerID: 'toTop', // fading element id
+			container-centerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			 */
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+<%--			var obj,objpicture;--%>
+<%--			$.ajax({--%>
+<%--                    type: "post",--%>
+<%--                    url: "json_indexproject.jsp", //this is my servlet--%>
+<%--                    data: {bu_name:"VSA"},--%>
+<%--                    async:true,--%>
+<%--                    success: function(result){--%>
+<%--                    	--%>
+<%--						obj = JSON.parse(result);--%>
+<%--						var out ='';--%>
+<%--						var projectheadercount = 0;--%>
+<%--						if(obj.length > 9){--%>
+<%--							projectheadercount = 9;--%>
+<%--						}else{--%>
+<%--							projectheadercount = obj.length;--%>
+<%--						}--%>
+<%--						for(var i = 0 ; i < projectheadercount; i++){--%>
+<%--							out += --%>
+<%--							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6">'+--%>
+<%--							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+--%>
+<%--							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+--%>
+<%--							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+--%>
+<%--							obj[i].pj_name+--%>
+<%--							'</figcaption>'+--%>
+<%--							'</a>'+--%>
+<%--							'</li>';--%>
+<%--							--%>
+<%--						}--%>
+<%--						--%>
+<%--						document.getElementById("loop_projectheader").innerHTML = out;--%>
+<%--						--%>
+<%--                    }--%>
+<%--                });--%>
+>>>>>>> origin/master
                 
 //            $.ajax({
 //            	type: "post",
@@ -306,42 +416,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 //                    }
 //            });
                 
-         	$('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){
-         		
-         		var clickpage = pageIndex+1;
-         		var startproject = 0 ;
-         		
-         		if(clickpage > 1){
-         			startproject = (clickpage *9)-9;
-         		}
-         		
-         		var endproject =  (clickpage*9);
-         		var out ='';
-         		if(endproject > obj.length){
-         			endproject = obj.length;
-         		}
-         		var $log = $("#loop_projectheader");
-				for(var i = startproject ; i < endproject; i++){
-							out += 
-							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6"> '+
-							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
-							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+
-							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+
-							obj[i].pj_name+
-							'</figcaption>'+
-							'</a>'+
-							'</li>';
-							
-						}
-				var html = $.parseHTML(out);
-				$("#loop_projectheader").empty();
-				$log.append(html);
-				$("#alltype").click();
+<%--         	$('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){--%>
+<%--         		--%>
+<%--         		var clickpage = pageIndex+1;--%>
+<%--         		var startproject = 0 ;--%>
+<%--         		--%>
+<%--         		if(clickpage > 1){--%>
+<%--         			startproject = (clickpage *9)-9;--%>
+<%--         		}--%>
+<%--         		--%>
+<%--         		var endproject =  (clickpage*9);--%>
+<%--         		var out ='';--%>
+<%--         		if(endproject > obj.length){--%>
+<%--         			endproject = obj.length;--%>
+<%--         		}--%>
+<%--         		var $log = $("#loop_projectheader");--%>
+<%--				for(var i = startproject ; i < endproject; i++){--%>
+<%--							out += --%>
+<%--							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6"> '+--%>
+<%--							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+--%>
+<%--							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+--%>
+<%--							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+--%>
+<%--							obj[i].pj_name+--%>
+<%--							'</figcaption>'+--%>
+<%--							'</a>'+--%>
+<%--							'</li>';--%>
+<%--							--%>
+<%--						}--%>
+<%--				var html = $.parseHTML(out);--%>
+<%--				$("#loop_projectheader").empty();--%>
+<%--				$log.append(html);--%>
+<%--				$("#alltype").click();--%>
 //						document.getElementById("loop_projectheader").innerHTML = out;
 						
 				
 			    
-			});
+<%--			});--%>
 		});
 	</script>
 
