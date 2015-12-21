@@ -327,39 +327,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var obj,objpicture;
-			$.ajax({
-                    type: "post",
-                    url: "json_indexproject.jsp", //this is my servlet
-                    data: {bu_name:"VSA"},
-                    async:true,
-                    success: function(result){
-                    	
-						obj = JSON.parse(result);
-						var out ='';
-						var projectheadercount = 0;
-						if(obj.length > 9){
-							projectheadercount = 9;
-						}else{
-							projectheadercount = obj.length;
-						}
-						for(var i = 0 ; i < projectheadercount; i++){
-							out += 
-							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6">'+
-							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
-							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+
-							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+
-							obj[i].pj_name+
-							'</figcaption>'+
-							'</a>'+
-							'</li>';
-							
-						}
-						
-						document.getElementById("loop_projectheader").innerHTML = out;
-						
-                    }
-                });
+<%--			var obj,objpicture;--%>
+<%--			$.ajax({--%>
+<%--                    type: "post",--%>
+<%--                    url: "json_indexproject.jsp", //this is my servlet--%>
+<%--                    data: {bu_name:"VSA"},--%>
+<%--                    async:true,--%>
+<%--                    success: function(result){--%>
+<%--                    	--%>
+<%--						obj = JSON.parse(result);--%>
+<%--						var out ='';--%>
+<%--						var projectheadercount = 0;--%>
+<%--						if(obj.length > 9){--%>
+<%--							projectheadercount = 9;--%>
+<%--						}else{--%>
+<%--							projectheadercount = obj.length;--%>
+<%--						}--%>
+<%--						for(var i = 0 ; i < projectheadercount; i++){--%>
+<%--							out += --%>
+<%--							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6">'+--%>
+<%--							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+--%>
+<%--							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+--%>
+<%--							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+--%>
+<%--							obj[i].pj_name+--%>
+<%--							'</figcaption>'+--%>
+<%--							'</a>'+--%>
+<%--							'</li>';--%>
+<%--							--%>
+<%--						}--%>
+<%--						--%>
+<%--						document.getElementById("loop_projectheader").innerHTML = out;--%>
+<%--						--%>
+<%--                    }--%>
+<%--                });--%>
                 
 //            $.ajax({
 //            	type: "post",
@@ -378,42 +378,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 //                    }
 //            });
                 
-         	$('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){
-         		
-         		var clickpage = pageIndex+1;
-         		var startproject = 0 ;
-         		
-         		if(clickpage > 1){
-         			startproject = (clickpage *9)-9;
-         		}
-         		
-         		var endproject =  (clickpage*9);
-         		var out ='';
-         		if(endproject > obj.length){
-         			endproject = obj.length;
-         		}
-         		var $log = $("#loop_projectheader");
-				for(var i = startproject ; i < endproject; i++){
-							out += 
-							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6"> '+
-							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+
-							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+
-							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+
-							obj[i].pj_name+
-							'</figcaption>'+
-							'</a>'+
-							'</li>';
-							
-						}
-				var html = $.parseHTML(out);
-				$("#loop_projectheader").empty();
-				$log.append(html);
-				$("#alltype").click();
+<%--         	$('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){--%>
+<%--         		--%>
+<%--         		var clickpage = pageIndex+1;--%>
+<%--         		var startproject = 0 ;--%>
+<%--         		--%>
+<%--         		if(clickpage > 1){--%>
+<%--         			startproject = (clickpage *9)-9;--%>
+<%--         		}--%>
+<%--         		--%>
+<%--         		var endproject =  (clickpage*9);--%>
+<%--         		var out ='';--%>
+<%--         		if(endproject > obj.length){--%>
+<%--         			endproject = obj.length;--%>
+<%--         		}--%>
+<%--         		var $log = $("#loop_projectheader");--%>
+<%--				for(var i = startproject ; i < endproject; i++){--%>
+<%--							out += --%>
+<%--							'<li data-uk-filter="'+obj[i].pj_typename+'" data-my-category="'+obj[i].pj_year+'" class=" uk-width-2-6"> '+--%>
+<%--							'<a href="" class="uk-overlay uk-overlay-hover gallery-img" data-uk-modal="{target:\'#'+obj[i].pj_no+'\'}">'+--%>
+<%--							'<img class="uk-overlay-scale" src="'+obj[i].pic_path+'" style="width: 100%;height:100%;">'+--%>
+<%--							'<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">'+--%>
+<%--							obj[i].pj_name+--%>
+<%--							'</figcaption>'+--%>
+<%--							'</a>'+--%>
+<%--							'</li>';--%>
+<%--							--%>
+<%--						}--%>
+<%--				var html = $.parseHTML(out);--%>
+<%--				$("#loop_projectheader").empty();--%>
+<%--				$log.append(html);--%>
+<%--				$("#alltype").click();--%>
 //						document.getElementById("loop_projectheader").innerHTML = out;
 						
 				
 			    
-			});
+<%--			});--%>
 		});
 	</script>
 	<script>
