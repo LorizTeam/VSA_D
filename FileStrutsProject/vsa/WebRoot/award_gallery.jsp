@@ -126,159 +126,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<br class="hidden-xs hidden-sm">
 	<br class="hidden-xs hidden-sm">
 	<br>
-	<div class="welcome container-center">
-		<div class="container-center">
-			<h3>Vorrarat Supachocke <span class="red">Architect</span> </h3>
-			<br  class="hidden-xs hidden-sm">
-			<br class="hidden-md hidden-lg"/>
-			<br  class="hidden-xs hidden-sm">
-			<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
-				<a href="#" class="mask"> <img src="images/wlb.jpg"
-					class="img-responsive zoom-img" alt="">
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">		
-				<p><b>Vorrarat Supachoke Architect (VS<span class="red">a</span>)</b> was founded in 2007 by
-					Vorrat Foythong and Supachoke Kittipatmeta.
-				</p>
-				
-				<p>
-					The main of our Architecture concerning about site context,
-					project's character and project's requirement are combined to
-					produce the architectural design which is able <b>BALANCE</b> the
-					client's need and environment.
-				</p>
-			</div>
-			</div>
-		</div>
-	</div>
 
-
-	<!--grid-hover-->
-	<div id="work" class="index-portfilio">
-		<div class="container-center">
-			<h3>OUR WORK</h3>
-<br/><script src="lg/js/lightgallery.js"></script>
-	<script src="lg/js/lg-fullscreen.js"></script>
-	<script src="lg/js/lg-hash.js"></script>
-			<!-- project and fillter -->
-			<article class=" container-center " id="project">
-				
-			<div class="swiper-container container-center">
-		        <div class="swiper-wrapper">
-		       <%
-		       		DBProject dbpj = new DBProject();
-		       		ListIterator indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
-		       		
-		       		while(indexHeadIter.hasNext()){
-		       			IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
-		       	%>
-		       			<!-- 1project -->
-		            <div class="swiper-slide">
-		            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
-							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
-							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								teach tech Office and warehouse
-							</div>	
-							<script type="text/javascript">
-								$('#<%=vsaform.getPj_no() %>').on('click', function() {
-								    $(this).lightGallery({
-								       dynamic: true,
-								      dynamicEl: [
-								    	  <%
-								    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
-								       		
-								       		while(indexDetailIter.hasNext()){
-								       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
-								       			
-								       		%>
-								       			{
-											    	"src": '<%=vsaDetailform.getPic_path()%>'
-											    },
-								       		<%
-								       		}
-								    	  %>
-								    	  
-								    	  
-								       
-								       
-								       ]
-								    })
-								 
-								});
-					
-							</script>				
-						</a>
-						
-					</div>
-		           <!-- 1project -->
-		       	
-		       	<%		
-		       			
-		       		}
-		       		
-		       		
-		       		
-		       %>
-		           
-		           
-		        </div>
-		        <!-- Add Pagination -->
-		        <div class="swiper-pagination"></div>
-		    </div>
-		    </article>
-		</div>
-		
-		</div>
-	
-	 
-	 
-	<!-- This is the modal -->
-	
-	<!--grid-hover-->
-	<!--index-team-->
-	<div id="team" class="content-team">
-		<div class="container-center team">
-			<h3 class="m_1">Our team</h3>
-			<p class="content-t">Dolor nunc vule putateulr ips dol
-				consec.Donec sem ertet laciniate ultricie upie disse utes comete
-				dolo lectus. fgilla itollicil tua ludin dolor nec met quam accumsan.</p>
-			<div class="team-left">
-				
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!--/index-team-->
 	<!--Award-->
 	<div id="award" class="content-team container-center">
 		<div class="container-center team">
 			<h3 class="m_1">Award / Published</h3>
 			<br/>
-			<div class="swiper-container container-center">
-		        <div class="swiper-wrapper">
-
-		           <%@ include file="data-test.jsp" %>
-
-		           
-		        </div>
-		        <!-- Add Pagination -->
-		        <div class="swiper-pagination"></div>
-		    </div>
-			<!--script-->
-
-			
 			<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-			<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#nivo-lightbox-demo a').nivoLightbox({
-						effect : 'fade'
-					});
-				});
-			</script>
-
 			<!---->
 		</div>
 	</div>
@@ -298,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 				<p>
-					 	&#xA9; 2015 VSA GROUP <a href="http://w3layouts.com/">Contact Us</a>
+					 &#xA9; 2015 VSA GROUP <a href="http://w3layouts.com/">Contact Us</a>
 				</p>
 							
 			</div>
@@ -308,23 +162,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--/footer-->
 
-
 	<script src="js/tooltip.js" ></script>
-	
-	
 
 	<!--footer-starts-->
-	<!-- Swipe -->
-	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
-	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
-	<script>
-	    var swiper = new Swiper('.swiper-container', {
-	     pagination: '.swiper-pagination',	
-	        slidesPerView: 3,
-	        slidesPerColumn: 3,
-	        paginationClickable: true,
-	        spaceBetween: 10
-	    });
-    </script>
+
 </body>
 </html>

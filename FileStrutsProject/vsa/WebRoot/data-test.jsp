@@ -38,15 +38,15 @@
 								    $(this).lightGallery({
 								       dynamic: true,
 								      dynamicEl: [{
-								            "src": 'images/project/1.jpg',
+								            "src": 'images/project/4.jpg',
 								            
 								            'subHtml': '<h4 class="white">Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
 								      }, {
-								           'src': 'images/project/2.jpg',
+								           'src': 'images/project/6.jpg',
 								           
 								           'subHtml': "<h4 class='white'>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>"
 								       }, {
-								           'src': 'images/project/3.jpg',
+								           'src': 'images/project/5.jpg',
 								           
 								           'subHtml': "<h4 class='white'>Coniston Calmness</h4><p>Beautiful morning</p>"
 								       }]
