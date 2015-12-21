@@ -28,7 +28,8 @@
 <script src="wvsjs/components/grid.min.js" type="text/javascript"></script>
 <script src="wvsjs/components/lightbox.min.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-
+<link rel="stylesheet"href="lg/css/lightgallery.css">
+<link rel="stylesheet" href="swipe/css/swiper.min.css"/>
 
 </head>
 <body id="home">
@@ -100,73 +101,75 @@
 	<br>
 	<br>
 	<br>
-	<article class=" artic container " id="project">
-		<ul id="fillpro" class="uk-subnav uk-subnav-pill container-center">
-			<li class="uk-active" data-uk-filter=""><a href="">ALL</a></li>
-			<%	DBProject dbpjtype = new DBProject();
-						typeIter = dbpjtype.pj_typeList("2").listIterator();
-						while(typeIter.hasNext()){
-							BusinessForm buform = (BusinessForm) typeIter.next();
-			%>
-			<li data-uk-filter="<%=buform.getPj_typename() %>"><a href=""><%=buform.getPj_typename() %></a></li>
-			<%
-				}
-			%>
-			<form class="uk-form">
-
-				<select>
-					<option selected>Sort by</option>
-					<option data-uk-sort="my-category:desc">YEAR</option>
-					<option data-uk-sort="my-category">NONE</option>
-				</select>
-			</form>
-		</ul>
-		<section class="uk-grid container-center" data-uk-grid="{controls: '#fillpro',gutter:0.1}">
-					<% 		DBProject dbpj = new DBProject();
-							indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS",1).listIterator();
-							while(indexHeadIter.hasNext()){
-								IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();	
-					%>
-					<figure data-uk-filter="<%=vsaform.getPj_typename() %>" data-my-category="<%=vsaform.getPj_year() %>"
-						class=" uk-width-2-6 uk-overlay uk-overlay-hover">
-						<a href="" data-uk-modal="{target:'#<%=vsaform.getPj_no() %>'}">
-						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">
-							<figcaption
-								class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								<%=vsaform.getPj_name() %></figcaption> </a>
-					</figure>
-					<%							
-							}
-					 %>
-		</section>
-	</article>
-	<!-- This is the modal -->
-	<%
-		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS",1).listIterator();
-		while(indexHeadIter.hasNext()){
-		IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();						
-	%>
-		<div id="<%=vsaform.getPj_no() %>" class="uk-modal">
-			<div class="uk-modal-dialog">
-				<a class="uk-modal-close uk-close"></a>
-				<div class="fotorama " data-nav="thumbs" data-allowfullscreen="true"
-					data-loop="true"  data-ratio="16/9" data-width="100%">
-					<%
-						indexPicIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
-						while(indexPicIter.hasNext()){
-						IndexVSAForm vsapicform = (IndexVSAForm) indexPicIter.next();
-					%>
-						<img src="<%=vsapicform.getPic_path() %>" alt="" />
-					<%
-						}
-					 %>
+	<article class=" container-center " id="project">
+		
+		<div class="swiper-container container-center">
+	        <div class="swiper-wrapper">
+	       <%
+	       		DBProject dbpj = new DBProject();
+	       		indexHeadIter = dbpj.Get_HeaderProjectForIndex("WVS",2).listIterator();
+	       		
+	       		while(indexHeadIter.hasNext()){
+	       			IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
+	       	%>
+	       			<!-- 1project -->
+	            <div class="swiper-slide">
+	            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
+						<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
+						<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+							teach tech Office and warehouse
+						</div>	
+						<script type="text/javascript">
+							$('#<%=vsaform.getPj_no() %>').on('click', function() {
+							    $(this).lightGallery({
+							       dynamic: true,
+							      dynamicEl: [
+							    	  <%
+							    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
+							       		
+							       		while(indexDetailIter.hasNext()){
+							       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
+							       			
+							       		%>
+							       			{
+										    	"src": '<%=vsaDetailform.getPic_path()%>'
+										    },
+							       		<%
+							       		}
+							    	  %>
+							    	  
+							    	  
+							       
+							       
+							       ]
+							    })
+							 
+							});
+				
+						</script>				
+					</a>
+					
 				</div>
-			</div>
-		</div>
-	<%
-		}
-	 %>
-	 <!-- This is the modal -->
+	           <!-- 1project -->
+	       	
+	       	<%		
+	       			
+	       		}
+	       		
+	       		
+	       		
+	       %>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+	    </div>
+		
+	</article>
+	
+	<script src="lg/js/lightgallery.min.js"></script>
+	<script src="lg/js/lg-fullscreen.min.js"></script>
+	<script src="lg/js/lg-zoom.min.js"></script>
+	
 	<div class=" block " id="people" style="padding-top: 50px;">
 
 		<div class="uk-text-center">
@@ -232,7 +235,8 @@
 	
 		</div>
 	</footer>
-	
+	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$('a[href*=#]:not([href=#])')
@@ -264,5 +268,14 @@
 		
 		
 </script>
+<script>
+	    var swiper = new Swiper('.swiper-container', {
+	     pagination: '.swiper-pagination',	
+	        slidesPerView: 3,
+	        slidesPerColumn: 3,
+	        paginationClickable: true,
+	        spaceBetween: 10
+	    });
+    </script>
 </body>
 </html>
