@@ -1,8 +1,9 @@
-<%@ include file="defaultimport.jsp" %>
+
+<%@page import="com.smict.struts.data.DBaward"%><%@ include file="defaultimport.jsp" %>
 <%@ page import="com.smict.struts.form.IndexVSAForm"%>
 <%@ page import="com.smict.struts.data.DBProject"%>
 <%@ page import="com.smict.struts.form.BusinessForm"%>
-
+<%@ page import="com.smict.struts.form.AwardForm"%>
 
 <!DOCTYPE html>
 <html>
@@ -179,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
 							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
 							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								teach tech Office and warehouse
+								<%=vsaform.getPj_name() %>
 							</div>	
 							<script type="text/javascript">
 								$('#<%=vsaform.getPj_no() %>').on('click', function() {
@@ -258,11 +259,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<br/>
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
-
-		           <%@ include file="data-test.jsp" %>
-
+		       <%
+		       		DBaward dbaward = new DBaward();
+		       		ListIterator awardHeadIter = dbaward.select_award("1","").listIterator();
+		       		
+		       		while(awardHeadIter.hasNext()){
+		       			AwardForm awardform = (AwardForm) awardHeadIter.next();
+		       	%>
+		       			<!-- 1project -->
+		            <div class="swiper-slide">
+		            	<a id="<%=awardform.getAward_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="<%=awardform.getAwardpicpath() %>"style="width: 100%;height:100%;">							
+							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+								<%=awardform.getAwardname() %>
+							</div>	
+							<script type="text/javascript">
+								$('#<%=awardform.getAward_no() %>').on('click', function() {
+								    $(this).lightGallery({
+								       dynamic: true,
+								      dynamicEl: [
+								    	  <%
+								    	  ListIterator awardDetailIter = dbaward.select_award("1","").listIterator();
+								       		
+								       		while(awardDetailIter.hasNext()){
+								       			AwardForm awardDetailform = (AwardForm) awardDetailIter.next();
+								       			
+								       		%>
+								       			{
+											    	"src": '<%=awardDetailform.getAwardpicpath()%>',
+								            
+								            		'subHtml': '<h4 class="white"><%=awardform.getAwardname() %></h4><p><%=awardform.getAward_description() %></p>'
+											    },
+								       		<%
+								       		}
+								    	  %>
+								    	  
+								    	  
+								       
+								       
+								       ]
+								    })
+								 
+								});
+					
+							</script>				
+						</a>
+						
+					</div>
+		           <!-- 1project -->
+		       	
+		       	<%		
+		       			
+		       		}
+		       		
+		       		
+		       		
+		       %>
+		           
 		           
 		        </div>
+		       
 		        <!-- Add Pagination -->
 		        <div class="swiper-pagination"></div>
 		    </div>
@@ -275,6 +331,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				$(document).ready(function() {
 					$('#nivo-lightbox-demo a').nivoLightbox({
 						effect : 'fade'
+					});
+					
+					
+			$('a[href*=#]:not([href=#])').click(
+					function() {
+						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')&& location.hostname == this.hostname) {
+							var target = $(this.hash);
+							target = target.length ? target: $('[name=' + this.hash.slice(1)+ ']');
+							if (target.length) {
+								$('html,body').animate({
+								scrollTop : target.offset().top
+								}, 1000);
+								return false;
+							}
+					}
+				
 					});
 				});
 			</script>

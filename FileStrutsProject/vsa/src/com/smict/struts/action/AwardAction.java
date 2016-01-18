@@ -65,10 +65,12 @@ public class AwardAction extends Action {
 			}
 			FileOutputStream outputStream = null;
 			String award_name = request.getParameter("tb_awardname"),
-			slc_bu = request.getParameter("slc_bu");
+			slc_bu = request.getParameter("slc_bu"),
+			award_description = request.getParameter("tb_awarddescription");
 			
 			try {
 				award_name=new String (award_name.getBytes("ISO-8859-1"),"UTF-8");
+				award_description = new String (award_description.getBytes("ISO-8859-1"),"UTF-8");
 			} catch (UnsupportedEncodingException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -95,7 +97,7 @@ public class AwardAction extends Action {
 			//upload image End
 			String pic_path = "upload/award/"+dateFormat.format(date)+awardForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 			if(getErrors(request) == null ||getErrors(request).size() == 0){
-				dbaward.insert_award(pic_path, slc_bu, award_name);
+				dbaward.insert_award(pic_path, slc_bu, award_name,award_description);
 			}
 			forwardText = "success";
 // --------------------- Upload Start ---------------------------

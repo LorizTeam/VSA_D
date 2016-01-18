@@ -23,12 +23,28 @@ public class AwardForm extends ActionForm {
 	 * 
 	 */
 	private FormFile uploadedFile = null;
-	private String awardpicpath,awardname,buname;
+	private String awardpicpath,awardname,buname,award_description,award_no;
+	
+	
 	public AwardForm(){}
-	public AwardForm(String awardPicpath, String buName, String awardName) {
+	public AwardForm(String awardPicpath, String buName, String awardName,String award_description,String award_no) {
 		this.awardpicpath = awardPicpath;
 		this.buname = buName;
 		this.awardname = awardName;
+		this.award_description = award_description;
+		this.award_no = award_no;
+	}
+	public String getAward_no() {
+		return award_no;
+	}
+	public void setAward_no(String awardNo) {
+		award_no = awardNo;
+	}
+	public String getAward_description() {
+		return award_description;
+	}
+	public void setAward_description(String awardDescription) {
+		award_description = awardDescription;
 	}
 	public FormFile getUploadedFile() {
 		return uploadedFile;

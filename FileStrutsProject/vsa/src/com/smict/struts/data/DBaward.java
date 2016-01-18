@@ -18,12 +18,12 @@ public class DBaward {
 	Statement pStmt = null;
 	ResultSet rs	= null;
 	
-	public void insert_award(String pic_path,String bu_no,String award_name){
+	public void insert_award(String pic_path,String bu_no,String award_name,String award_description){
 		
 		
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "insert into award values ('"+pic_path+"',"+bu_no+",'"+award_name+"',now())";
+			String sqlQuery = "insert into award values ('"+pic_path+"',"+bu_no+",'"+award_name+"','"+award_description+"',now())";
 			pStmt = conn.createStatement();
 			pStmt.executeUpdate(sqlQuery);
 			conn.close();
@@ -50,23 +50,25 @@ public class DBaward {
 		
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "SELECT a.award_picpath,b.bu_name,a.award_name,date_time FROM `award` a " +
+			String sqlQuery = "SELECT a.award_no,a.award_picpath,b.bu_name,a.award_name,award_description,date_time FROM `award` a " +
 					"inner JOIN business b on (a.bu_no = b.bu_no) ";
 			if(!bu_no.equals("")){
 				sqlQuery += "where a.bu_no ="+bu_no ;
 			}
-			sqlQuery += "order by date_time desc";
+			sqlQuery += " order by date_time desc";
 			if(!limit.equals("")){
 				sqlQuery += " limit "+limit ;
 			}
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
-			String award_picpath="",award_name="",bu_name="";
+			String award_picpath="",award_name="",bu_name="",award_description="",award_no="";
 			while(rs.next()){
 				award_picpath = rs.getString("award_picpath");
 				bu_name = rs.getString("bu_name");
 				award_name = rs.getString("award_name");
-				awardList.add(new AwardForm(award_picpath,bu_name,award_name));
+				award_description = rs.getString("award_description");
+				award_no = rs.getString("award_no");
+				awardList.add(new AwardForm(award_picpath,bu_name,award_name,award_description,award_no));
 			}
 			if(conn != null)
 				conn.close();

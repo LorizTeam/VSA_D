@@ -5,7 +5,7 @@
 		<div class="app-bar fixed-top navy grid" data-role="appbar" style="margin-top:0;">
 			<div class="row cells12">
 			<div class="cell colspan11 offset1">
-	        <a class="app-bar-element branding" href="vsa new.html">VSA Group</a>
+	        <a class="app-bar-element branding" href="index.jsp">VSA Group</a>
 	        <span class="app-bar-divider"></span>
 	        <ul class="app-bar-menu">
 	            <li data-flexorderorigin="0" data-flexorder="1"><a href="main.jsp">Main Dashboard</a></li>

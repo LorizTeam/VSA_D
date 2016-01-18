@@ -73,7 +73,7 @@ public class CreateprojectAction extends Action {
 			}
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
-			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload/"+project_name);
+			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload");
 			newFolder.mkdir();
 	//		FormFile countpic = uploadForm.getUploadedFile();
 			//Upload Pic follow folder create
@@ -101,7 +101,7 @@ public class CreateprojectAction extends Action {
 			String project_year = request.getParameter("tb_projectyear"),
 				   slc_bu = request.getParameter("slc_bu"),
 				   slc_typepj = request.getParameter("slc_typepj"),
-				   pic_path = "upload/"+project_name+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+				   pic_path = "upload/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 					
 			
 			

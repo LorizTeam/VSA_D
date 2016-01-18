@@ -52,10 +52,23 @@
 												 data-popover-position="top" 												 
 												 data-popover-text="Add name of award" 
 												 data-popover-background="bg-cyan" data-popover-color="fg-white" 
-												 data-popover-mode="focus">
+												 data-popover-mode="focus" required>
 												</div>
 											</div>
 											
+										</div>
+										<div class="row align-center row">
+											<div class ="cell">
+												<h3><small>Name award</small></h3>
+												<div class="input-control text" style="width:100%;" data-role="input">
+												<input type="text" name="tb_awarddescription" id="tb_awarddescription" 
+												placeholder="Insert award description here" data-role="popover"
+												 data-popover-position="top" 												 
+												 data-popover-text="Add description of award" 
+												 data-popover-background="bg-cyan" data-popover-color="fg-white" 
+												 data-popover-mode="focus" required/>
+												</div>
+											</div>
 										</div>
 										<div class="row align-center">
 												<h3><small>Company</small></h3>
@@ -108,6 +121,7 @@
 													<th>Picture</th>
 													<th>Business</th>
 													<th>Award name</th>
+													<th>Award description</th>
 													<th>Delete</th>
 												</tr>
 												
@@ -128,6 +142,7 @@
 					                        		</td>
 													<td><%=awardForm.getBuname() %></td>
 													<td><%=awardForm.getAwardname() %></td>
+													<td><%=awardForm.getAward_description() %></td>
 													<td>
 														<label class="input-control checkbox">
 														    <input type="checkbox" name="chkbtn<%=i %>">
