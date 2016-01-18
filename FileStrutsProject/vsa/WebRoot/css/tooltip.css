@@ -7,7 +7,8 @@
     z-index: 100;
     padding: 10px;
     margin:-0.5px;
-}
+    border-radius:5px;
+}	
  .c{
  	color: #AEAEAE ;
  }

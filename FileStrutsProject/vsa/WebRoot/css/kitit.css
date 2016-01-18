@@ -75,13 +75,6 @@ ul {
 	font-style: normal;
 	color: #fff;
 }
-.navigation {
-	float: left;
-	padding: 0px;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.95);
-	max-height: 40px;
-}
 .nav-wil {
 	padding: 0;
 }
@@ -243,13 +236,15 @@ ul.callbacks_tabs.callbacks1_tabs {
 .welcome h3 {
 	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2em;
 	margin-bottom: .6em;
 	color: #444444;
 	font-weight: 100;
+	word-spacing: 12px;
+	letter-spacing: 3px;
 }
 .wel-img {
-	padding-left: 2px;
+	margin-top: .5em;
 }
 a.mask {
 	text-decoration: none;
@@ -283,7 +278,7 @@ img.zoom-img:hover {
 	font-size: 1em;
 	line-height: 2em;
 	padding-top: 0em;
-	color: #999;
+	color: #B6B6B6;
 	word-spacing: 2.5px;
 	letter-spacing: 1px;
 	text-align: left;

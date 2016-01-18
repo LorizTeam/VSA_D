@@ -20,29 +20,18 @@
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords"
-	content="Frederick Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript">
-
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
-
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400'
 	rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro'
 	rel='stylesheet' type='text/css'>
 <!--//fonts-->
-<script type="text/javascript" charset="utf-8"
-	src="edge_includes/edge.5.0.0.min.js"></script>
-<style type="text/css">
-.edgeLoad-EDGE-1385226 {
-	visibility: hidden;
-}
-</style>
+
 
 <!--Adobe Edge Runtime End-->
 <script src="js/jquery.js" type="text/javascript"></script>
@@ -95,25 +84,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 		</div>
 		<!-- Social icon -->
-		<div class="header width-page">
+		<div class="width-page">
+				
+			
+			<nav class="navbar navbar-default ">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"> </span> <span class="icon-bar"> </span> <span
+							class="icon-bar"> </span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse nav-wil container-center"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav  top-nav">
+						<li class="l"><a href="#Stage">Home</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#award">Award</a></li>
+						<li><a href="contact.jsp">Contact</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<!-- /.navbar-collapse -->
 
-			<div class="navigation ">
-				<nav class="navbar navbar-default ">
-					<div class="collapse navbar-collapse nav-wil container-center"
-						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav  top-nav">
-							<li class="l"><a href="#Stage">Home</a></li>
-							<li><a href="#work">Work</a></li>
-							<li><a href="#team">Team</a></li>
-							<li><a href="#award">Award</a></li>
-							<li><a href="contact.jsp">Contact</a></li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-					<!-- /.navbar-collapse -->
-
-				</nav>
-			</div>
+			</nav>
+			
 			<div class="clearfix"></div>
 		</div>
 
@@ -122,17 +120,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div id="Stage" class="clearfix"></div>
 	
 	<!--/header-->
-
 	<br class="hidden-xs hidden-sm">
-	<br class="hidden-xs hidden-sm">
-	<br class="hidden-xs hidden-sm">
-	<br>
 	<div class="welcome container-center">
 		<div class="container-center">
 			<h3>Vorrarat Supachocke <span class="red">Architect</span> </h3>
 			<br  class="hidden-xs hidden-sm">
 			<br class="hidden-md hidden-lg"/>
 			<br  class="hidden-xs hidden-sm">
+			<div class="container-fluid">
 			<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wel-img">
 				<a href="#" class="mask"> <img src="images/wlb.jpg"
@@ -152,6 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</p>
 			</div>
 			</div>
+			</div>
 		</div>
 	</div>
 
@@ -159,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--grid-hover-->
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
-			<h3>OUR WORK</h3>
+			<h3>Our Work</h3>
 <br/><script src="lg/js/lightgallery.js"></script>
 	<script src="lg/js/lg-fullscreen.js"></script>
 	<script src="lg/js/lg-hash.js"></script>
@@ -259,6 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<br/>
 			<div class="swiper-container container-center">
 		        <div class="swiper-wrapper">
+
 		       <%
 		       		DBaward dbaward = new DBaward();
 		       		ListIterator awardHeadIter = dbaward.select_award("1","").listIterator();
@@ -316,7 +313,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		       		
 		       %>
 		           
-		           
 		        </div>
 		       
 		        <!-- Add Pagination -->
@@ -356,21 +352,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--/Award-->
 	<!--footer-->
+	
+	<div class="nav nav-pills social-bottom  text-center" >	
+		<a href="#"><img src="images/face-icon-o.png"></a>
+		<a href="#"><img src="images/ig-icon-o.png"></a>
+		<a href="#"><img src="images/pin-icon-o.png"></a>
+		<a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip">
+			<img src="images/line-icon-o.png"></a>								
+	</div>
+	
 	<div class="footer">
+	
 		<div class="container-center get_in_touch  text-center">
-				<div class="social-bottom">					
-					<img class="img-responsive" src="images/face-icon.png"></a>
-					<img class="img-responsive"src="images/ig-icon.png"></a>
-					<img class="img-responsive"src="images/pin-icon.png"></a>
-					<a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip">
-						<img class="img-responsive"src="images/line-icon.png"></a>
-				</div>
+			
 		
-				<p  class="white">Tel:<a>+66-2618-4316</a> Fax:<a>+66-2618-4315</a> Email:<a 
+				<p  class="white">Tel:<a>+66-2618-4316</a> Email:<a 
 							href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 				<p>
-					 	&#xA9; 2015 VSA GROUP <a href="http://w3layouts.com/">Contact Us</a>
+					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a>
 				</p>
 							
 			</div>
@@ -397,6 +397,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        paginationClickable: true,
 	        spaceBetween: 10
 	    });
+	    
+	    $(function() {
+			$('a[href*=#]:not([href=#])')
+				.click(
+					function() {
+						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')&& location.hostname == this.hostname) {
+							var target = $(this.hash);
+							target = target.length ? target: $('[name=' + this.hash.slice(1)+ ']');
+							if (target.length) {
+								$('html,body').animate({
+								scrollTop : target.offset().top
+								}, 1000);
+								return false;
+							}
+					}
+				});
+			});
     </script>
 </body>
 </html>
