@@ -40,19 +40,17 @@ public class LoginAction extends Action {
 	 * @return ActionForward
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response) {
+			HttpServletRequest request, HttpServletResponse response)throws Exception {
 		LoginForm loginForm = (LoginForm) form;
 		DBuser dbuser = new DBuser();
 		String forwardText= "";
 		HttpSession session = request.getSession();
 		EncryptandDecrypt EncAndDec = null;
-		try {
-			EncAndDec = new EncryptandDecrypt();
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		// TODO Auto-generated method stub
+		
+		
+				EncAndDec = new EncryptandDecrypt();
+		
+		
 		
 		String username = request.getParameter("InputUsername"),password = request.getParameter("InputPassword");
 		

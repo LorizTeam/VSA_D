@@ -50,7 +50,7 @@ public class CreateprojectAction extends Action {
 	 * @return ActionForward
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response) {
+			HttpServletRequest request, HttpServletResponse response)throws Exception {
 		UploadForm uploadForm = (UploadForm) form;// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		if(session.getAttribute("username") == null){
@@ -65,12 +65,7 @@ public class CreateprojectAction extends Action {
 			}
 			
 			String project_name = request.getParameter("tb_projectname");
-			try {
 				project_name=new String (project_name.getBytes("ISO-8859-1"),"UTF-8");
-			} catch (UnsupportedEncodingException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
 			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload");
@@ -82,22 +77,13 @@ public class CreateprojectAction extends Action {
 	//		picture.add(uploadForm.getUploadedFile().getFileName().length());
 			int namelength = uploadForm.getUploadedFile().getFileName().length();
 			String filePath = newFolder+"/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
-			try {
+			
 				outputStream = new FileOutputStream(new File(filePath));
-				outputStream.write(uploadForm.getUploadedFile().getFileData());			
-			} catch (Exception e) {
-				ActionErrors errors = new ActionErrors();
-				errors.add("uploadedFile",new ActionMessage("errors.file.save",uploadForm.getUploadedFile().getFileName()));
-				saveErrors(request,errors);
-			}finally{
+				outputStream.write(uploadForm.getUploadedFile().getFileData());	
+				
 				if(outputStream != null)
-					try {
-						outputStream.close();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-			}
+					outputStream.close();
+				
 			String project_year = request.getParameter("tb_projectyear"),
 				   slc_bu = request.getParameter("slc_bu"),
 				   slc_typepj = request.getParameter("slc_typepj"),
@@ -111,18 +97,12 @@ public class CreateprojectAction extends Action {
 				List<?> buList = null;
 				List<?> Listforafterchoose = null;
 				List<?> pj_typeList = null;
-				try {
+				
 					buList = dbproject.bu_nameList();
 					dbproject.insproject_todb(project_name, project_year, slc_bu, pic_path,slc_typepj);
 					Listforafterchoose = dbproject.afterchoose_edit(project_name);
 					pj_typeList = dbproject.pj_typeList(slc_bu);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
 				request.setAttribute("buList", buList);
 				request.setAttribute("slc_typepj", pj_typeList);
 				request.setAttribute("Listforafterchoose", Listforafterchoose);

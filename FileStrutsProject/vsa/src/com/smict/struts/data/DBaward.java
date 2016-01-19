@@ -23,7 +23,7 @@ public class DBaward {
 		
 		try {
 			conn = dbcon.getConnectMYSql();
-			String sqlQuery = "insert into award values ('"+pic_path+"',"+bu_no+",'"+award_name+"','"+award_description+"',now())";
+			String sqlQuery = "insert into award (award_picpath,bu_no,award_name,award_description,date_time) values ('"+pic_path+"',"+bu_no+",'"+award_name+"','"+award_description+"',now())";
 			pStmt = conn.createStatement();
 			pStmt.executeUpdate(sqlQuery);
 			conn.close();

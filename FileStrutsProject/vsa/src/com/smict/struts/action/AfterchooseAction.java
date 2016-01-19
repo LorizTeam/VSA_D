@@ -60,11 +60,11 @@ public class AfterchooseAction extends Action {
 	 * @return ActionForward
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response) {
+			HttpServletRequest request, HttpServletResponse response)throws Exception {
 		AfterchooseForm afterchooseForm = (AfterchooseForm) form;
 		DBuser dbuser = new DBuser();
 		String forwardText = "";
-		try{
+		
 			
 		
 		
@@ -80,12 +80,8 @@ public class AfterchooseAction extends Action {
 		   bu_no = request.getParameter("slc_bu"),
 		   pj_typeno = request.getParameter("slc_typepj"),
 		   pj_no = request.getParameter("pj_no");
-		try {
+		
 			project_name=new String (project_name.getBytes("ISO-8859-1"),"UTF-8");
-		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		};
 		if(!project_year.substring(0, 1).equals("y")){
 			project_year = project_year;
 		}
@@ -103,8 +99,8 @@ public class AfterchooseAction extends Action {
 			//process
 			//Click Button upload--Start
 			if(request.getParameter("upload") != null){
-				try {
-					if(afterchooseForm.getUploadedFile1().getFileName() != ""){
+					String file1 = afterchooseForm.getUploadedFile1().getFileName();
+					if(!file1.equals("")){
 						Date date = new Date();
 						
 						   
@@ -117,16 +113,11 @@ public class AfterchooseAction extends Action {
 							outputStream.close();
 						
 						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
-						try {
+						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
-							
-								
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 					}
-					if(afterchooseForm.getUploadedFile2().getFileName() != ""){
+					String file2 = afterchooseForm.getUploadedFile2().getFileName();
+					if(!file2.equals("")){
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile2().getFileName().length();
@@ -138,15 +129,11 @@ public class AfterchooseAction extends Action {
 							outputStream.close();
 						
 						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
-						try {
+						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
-							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 					}
-					if(afterchooseForm.getUploadedFile3().getFileName() != ""){
+					String file3 = afterchooseForm.getUploadedFile3().getFileName();
+					if(!file3.equals("")){
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile3().getFileName().length();
@@ -158,15 +145,11 @@ public class AfterchooseAction extends Action {
 							outputStream.close();
 						
 						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
-						try {
+						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
-							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 					}
-					if(afterchooseForm.getUploadedFile4().getFileName() != ""){
+					String file4 = afterchooseForm.getUploadedFile4().getFileName();
+					if(!file4.equals("")){
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile4().getFileName().length();
@@ -178,35 +161,17 @@ public class AfterchooseAction extends Action {
 							outputStream.close();
 						
 						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
-						try {
+						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
-							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 					}
 					
-					try {
+					
 						// ข้อมูลของ Dropdownlist Start
 						buList = dbproject.bu_nameList();
 						pj_typeList = dbproject.pj_typeList(bu_no);
 						// ข้อมูลของ Dropdownlist End
 						//ข้อมูลรายลเอียด Project และรูปภาพ Start
 						Listforafterchoose = dbproject.afterchoose_edit(project_name);
-						//ข้อมูลรายลเอียด Project และรูปภาพ End
-					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 				request.setAttribute("buList", buList);
 				request.setAttribute("slc_typepj", pj_typeList);
 				request.setAttribute("Listforafterchoose", Listforafterchoose);
@@ -226,7 +191,7 @@ public class AfterchooseAction extends Action {
 					String chk_picstatus = request.getParameter("chk_picstatus"+i);
 					String chkbtn_del = chkbtn_del = request.getParameter("chkbtn"+i);
 					
-						try {
+						
 							if(chkbtn_del != null){
 								
 								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no,getServlet().getServletContext().getRealPath("/")+"upload/");
@@ -241,17 +206,10 @@ public class AfterchooseAction extends Action {
 							}else{
 								dbproject.enable_picstatus(picpath[i].toString());
 							}
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 					
 				}
 				
-				try {
+				
 					// ข้อมูลของ Dropdownlist Start
 					String rdo = request.getParameter("rdo");
 					buList = dbproject.bu_nameList();
@@ -262,15 +220,7 @@ public class AfterchooseAction extends Action {
 					
 					Listforafterchoose = dbproject.editproject(rdo, pj_no, project_name, project_year, bu_no, pj_typeno);
 					
-					//ข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit End
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				request.setAttribute("buList", buList);
+					//ข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Endute("buList", buList);
 				request.setAttribute("slc_typepj", pj_typeList);
 				request.setAttribute("Listforafterchoose", Listforafterchoose);
 				request.setAttribute("alert", alert);
@@ -278,10 +228,6 @@ public class AfterchooseAction extends Action {
 			}
 			//Click Button Submit End
 		//End Process	
-		}
-		}catch (Exception e) {
-			// TODO: handle exception
-			return mapping.findForward("");
 		}
 		return mapping.findForward(forwardText);
 	}
