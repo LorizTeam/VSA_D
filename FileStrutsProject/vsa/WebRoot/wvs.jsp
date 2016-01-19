@@ -103,7 +103,7 @@
 	<br>
 	<article class=" container-center " id="project">
 		
-		<div class="swiper-container container-center">
+		<div class="swiper-container swiper-container-2">
 	        <div class="swiper-wrapper">
 	       <%
 		       		DBProject dbpj = new DBProject();
@@ -114,8 +114,8 @@
 		       	%>
 		       			<!-- 1project -->
 		            <div class="swiper-slide">
-		            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
-							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
+		            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
+							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">							
 							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								<%=vsaform.getPj_name() %>
 							</div>	
@@ -147,7 +147,7 @@
 								});
 					
 							</script>				
-						</a>
+						</div>
 						
 					</div>
 		           <!-- 1project -->
