@@ -991,7 +991,7 @@ li a:focus{ -moz-outline-style: none !important; }
 		margin: 9em 0 0 0;
 	}
 	.content-team {
-		padding: 0px
+		padding: 0px 0px 30px;
 	}
 	p.index-p {
 		padding-bottom: 1.4em;
