@@ -481,6 +481,10 @@ li a:focus{ -moz-outline-style: none !important; }
 .swiper-slide a{
 	padding:0;
 }
+.gallery-img img{
+	max-width: unset !important;
+	margin:0;
+}
 /*--/contact-page--*/
 /*--/inner-pages--*/
 /*----responsive-menu-start--*/

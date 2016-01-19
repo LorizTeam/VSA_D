@@ -27,11 +27,11 @@ html{
 	top:0px;
 	left:0px;
 	width: 100%;
-	z-index: 1111;
+	z-index: 900;
 	background-color: white;
 }
 .fixnav a{
-	z-index: 1111111111;
+	z-index: 901;
 }
 nav a{
 	margin:15px;
@@ -45,7 +45,7 @@ nav a{
 	width:100%;
 	bottom: 0px;
 	height:50px;
-	z-index: 1111;
+	z-index: 900;
 }
 .icon-head{
 	padding:50px;

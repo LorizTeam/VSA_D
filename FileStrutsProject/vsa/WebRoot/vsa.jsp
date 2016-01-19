@@ -16,9 +16,10 @@
 <link rel="stylesheet" href="css/uikit.css" />
 <link rel="stylesheet" href="css/components/tooltip.min.css"/>
 <link rel="stylesheet" href="css/tooltip.css" />
-<link rel="stylesheet" href="swipe/css/swiper.min.css"/>
+<link rel="stylesheet" href="swipe/css/swiper.css"/>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript">
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
@@ -173,8 +174,10 @@
 		       	%>
 		       			<!-- 1project -->
 		            <div class="swiper-slide">
-		            	<a id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
-							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style="width: 100%;height:100%;">							
+		            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
+		            		        
+							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
+												
 							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								<%=vsaform.getPj_name() %>
 							</div>	
@@ -206,7 +209,7 @@
 								});
 					
 							</script>				
-						</a>
+						</div>
 						
 					</div>
 		           <!-- 1project -->

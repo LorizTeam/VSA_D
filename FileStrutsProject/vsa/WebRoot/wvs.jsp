@@ -203,7 +203,7 @@
 				
 				<hr width="80%" />
 				<div class="center-footpic ">
-					<a href="vsa new.html"><img src="wvsimages/vsa logo black.png" alt="" width="10%" height="10%"/></a>
+					<a href="index.jsp"><img src="wvsimages/vsa logo black.png" alt="" width="10%" height="10%"/></a>
 				</div>
 				</form>
 			<div class="uk-width-small-1-1 uk-width-medium-2-4 uk-width-large-1-3" >
