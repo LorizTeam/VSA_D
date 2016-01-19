@@ -115,7 +115,7 @@
 		       			<!-- 1project -->
 		            <div class="swiper-slide">
 		            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
-							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>">							
+							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>" style="-webkit-transform:scale(1.8,1.2);">							
 							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 								<%=vsaform.getPj_name() %>
 							</div>	
