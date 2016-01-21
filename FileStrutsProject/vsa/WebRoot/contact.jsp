@@ -4,11 +4,8 @@
 <head>
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-
 <link rel="stylesheet" href="css/kitit.css" />
 <link rel="stylesheet" href="css/csskit2.css" />
-
 <link rel="stylesheet" href="css/uikit.css" />
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,8 +39,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!--header-->
-<div class="header"> 
-<!-- Social icon -->
+	<div id="header">
+
+		<!-- Social icon -->
 		<div class="fix-social" >
 			<ul>
 				<li><a ><img class="img-responsive"
@@ -58,37 +56,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 		</div>
 		<!-- Social icon -->
-	<div class="header width-page">
+		<div class="width-page">
+				
 			
-			<div class="navigation ">
-				<nav class="navbar navbar-default ">
-					<div class="collapse navbar-collapse nav-wil container-center"
-						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav  top-nav">
-							<li class="l"><a href="vsa.jsp">Home</a></li>
-							<li><a href="vsa.jsp">Work</a></li>
-							<li><a href="vsa.jsp">Team</a></li>
-							<li><a href="vsa.jsp">Award</a></li>
-							<li><a href="contact.jsp">Contact</a></li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-					<!-- /.navbar-collapse -->
+			<nav class="navbar navbar-default ">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"> </span> <span class="icon-bar"> </span> <span
+							class="icon-bar"> </span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse nav-wil container-center"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav  top-nav">
+						<li class="l"><a href="vsa.jsp">Home</a></li>
+						<li><a href="vsa.jsp#work">Work</a></li>
+						<li><a href="vsa.jsp#team">Team</a></li>
+						<li><a href="vsa.jsp#award">Award</a></li>
+						<li><a href="contact.jsp">Contact</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<!-- /.navbar-collapse -->
 
-				</nav>
-			</div>
+			</nav>
+			
 			<div class="clearfix"></div>
 		</div>
-			  <!-- script-for-menu -->
-		 <script>
-				$("span.menu").click(function(){
-					$(".top-nav ul").slideToggle("slow" , function(){
-					});
-				});
-		 </script>
-		 <div class="clearfix"> </div>
-</div>			 	
-<!--/header-->
+
+
+	</div>
+	<div id="Stage" class="clearfix"></div>
+	
+	<!--/header-->
  
 <!--contact-->
 <div class="contact">

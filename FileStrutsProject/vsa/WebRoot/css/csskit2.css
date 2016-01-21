@@ -321,7 +321,7 @@ div#nivo-lightbox-demo img {
 	text-align: center;
 	margin-top: 0.5em;
 }
-.contact-content input[type="text"], .contact-content  textarea {
+.contact-content input[type="text"], .contact-content  textarea ,.contact-content  input[type="email"]{
 	padding: 1.1em;
 	width: 100%;
 	margin: 1% 0% 0 0;
@@ -333,7 +333,7 @@ div#nivo-lightbox-demo img {
 	font-weight: 300;
 	-webkit-appearance: none;
 }
-.contact-content  input[type="text"]:nth-child(2) {
+.contact-content  input[type="text"]:nth-child(2) ,.contact-content  input[type="email"]:nth-child(2){
 	margin-right: 0em;
 }
 .contact-content form textarea {
