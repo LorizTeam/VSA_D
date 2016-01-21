@@ -1,15 +1,15 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet" href="css/kitit.css" />
+<link rel="stylesheet" href="css/csskit2.css" />
+
+<link rel="stylesheet" href="css/uikit.css" />
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +44,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--header-->
 <div class="header"> 
 <!-- Social icon -->
-		
+		<div class="fix-social" >
+			<ul>
+				<li><a ><img class="img-responsive"
+						src="images/face-icon-o.png"></a></li>
+				<li><a ><img class="img-responsive"
+						src="images/ig-icon-o.png"></a></li>
+				<li><a ><img class="img-responsive"
+						src="images/pin-icon-o.png"></a></li>
+				<li><a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip"><img class="img-responsive"
+						src="images/line-icon-o.png"></a></li>
+
+			</ul>
+		</div>
 		<!-- Social icon -->
 	<div class="header width-page">
 			
@@ -105,35 +117,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  					</div>	        	
 <!--/contact-->	 
 <!--footer-->
-<div class="footer">
-		<div class="container-center">
+	
+	<div class="nav nav-pills social-bottom  text-center" >	
+		<a href="#"><img src="images/face-icon-o.png"></a>
+		<a href="#"><img src="images/ig-icon-o.png"></a>
+		<a href="#"><img src="images/pin-icon-o.png"></a>
+		<a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip">
+			<img src="images/line-icon-o.png"></a>								
+	</div>
+	
+	<div class="footer">
+	
+		<div class="container-center get_in_touch  text-center">
 			
-			<div class="col-md-12 get_in_touch ftr text-center">
-				<p>Tel. +66 2618 4316 Fax. +66 2618 4315 Email: <a href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a></p>						
-				<p>
-					 	&#xA9; 2015 Frederick. Design by <a href="http://w3layouts.com/">W3layouts</a>
+		
+				<p  class="white">Tel:<a>+66-2618-4316</a> Email:<a 
+							href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
+				<p>
+					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a>
+				</p>
+							
 			</div>
+			<!--<div id="testproject"></div>-->
 			<div class="clearfix"></div>
-		</div>
 	</div>
+	
 	<!--/footer-->
-<script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
 <!----> 
-	</div>
+
 	<!--footer-starts-->
 </body>
 </html>

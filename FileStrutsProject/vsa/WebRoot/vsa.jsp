@@ -163,8 +163,9 @@
 			<!-- project and fillter -->
 			<article class=" container-center " id="project">
 				
-			<div class="swiper-container container-center">
+			<div class="swiper-container swiper-project container-center">
 		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide row">
 		       <%
 		       		DBProject dbpj = new DBProject();
 		       		ListIterator indexHeadIter = dbpj.Get_HeaderProjectForIndex("VSA",2).listIterator();
@@ -173,7 +174,7 @@
 		       			IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
 		       	%>
 		       			<!-- 1project -->
-		            <div class="swiper-slide">
+		            	<div class="col-md-4" >
 		            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
 		            		        
 							<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
@@ -199,10 +200,7 @@
 								       		<%
 								       		}
 								    	  %>
-								    	  
-								    	  
-								       
-								       
+
 								       ]
 								    })
 								 
@@ -210,19 +208,13 @@
 					
 							</script>				
 						</div>
-						
-					</div>
+						</div>
+					
 		           <!-- 1project -->
 		       	
-		       	<%		
-		       			
-		       		}
-		       		
-		       		
-		       		
-		       %>
+		       	<%	} %>
 		           
-		           
+		           </div>
 		        </div>
 		        <!-- Add Pagination -->
 		        <div class="swiper-pagination"></div>
@@ -256,7 +248,7 @@
 		<div class="container-center team">
 			<h3 class="m_1">Award / Published</h3>
 			<br/>
-			<div class="swiper-container container-center">
+			<div class="swiper-container swiper-award container-center">
 		        <div class="swiper-wrapper">
 
 		       <%
@@ -379,8 +371,8 @@
 			</div>
 			<!--<div id="testproject"></div>-->
 			<div class="clearfix"></div>
-		</div>
 	</div>
+	
 	<!--/footer-->
 
 
@@ -393,14 +385,20 @@
 	<script type="text/javascript" src="swipe/js/swiper.jquery.min.js"></script>
 	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
 	<script>
-	    var swiper = new Swiper('.swiper-container', {
-	     pagination: '.swiper-pagination',	
-	        slidesPerView: 3,
-	        slidesPerColumn: 3,
+	    var swiper = new Swiper('.swiper-project', {
+	     
+	     	pagination: '.swiper-pagination',	
+	        slidesPerView: 1,
 	        paginationClickable: true,
-	        spaceBetween: 10
+	        spaceBetween: 10 
 	    });
-	    
+	     var swiper = new Swiper('.swiper-award', {
+	     
+	     	pagination: '.swiper-pagination',	
+	        slidesPerView: 3,
+	        paginationClickable: true,
+	        spaceBetween: 10 
+	    });
 	    $(function() {
 			$('a[href*=#]:not([href=#])')
 				.click(
