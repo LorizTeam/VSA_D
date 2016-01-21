@@ -393,7 +393,7 @@
 	        spaceBetween: 10 
 	    });
 	     var swiper = new Swiper('.swiper-award', {
-	     
+	     	centeredSlides: true,
 	     	pagination: '.swiper-pagination',	
 	        slidesPerView: 3,
 	        paginationClickable: true,
