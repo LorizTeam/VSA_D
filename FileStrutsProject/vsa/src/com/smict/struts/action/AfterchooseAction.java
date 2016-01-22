@@ -221,6 +221,7 @@ public class AfterchooseAction extends Action {
 					Listforafterchoose = dbproject.editproject(rdo, pj_no, project_name, project_year, bu_no, pj_typeno);
 					
 					//ข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Endute("buList", buList);
+				request.setAttribute("buList", buList);
 				request.setAttribute("slc_typepj", pj_typeList);
 				request.setAttribute("Listforafterchoose", Listforafterchoose);
 				request.setAttribute("alert", alert);
