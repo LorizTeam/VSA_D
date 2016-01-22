@@ -126,7 +126,7 @@
 	       		%>
 	       		<!-- cut 9 pic -->
 		        	<div class="swiper-slide">
-		   				<div class="row" style="width:100%;">
+		   				<div class="uk-grid" style="width:100%;margin-left: 0px;">
 	       		<%
 	       			int koon = i * 9;
 	       			boolean standardloop = false;
@@ -140,7 +140,7 @@
 	       					IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
 	       		%>
 	       					<!-- 1project -->
-				            	<div class="col-md-4  col-sm-4 col-xs-4" style="padding:2px;" >
+				            	<div class="uk-width-1-3" style="padding:2px;" >
 				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
 				            		        
 									<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
@@ -187,7 +187,7 @@
 	       					IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
 	       		%>
 	       					<!-- 1project -->
-				            	<div class="col-md-4  col-sm-4 col-xs-4" style="padding:2px;" >
+				            	<div class="uk-width-1-3" style="padding:2px;" >
 				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
 				            		        
 									<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
@@ -349,11 +349,8 @@
 </script>
 <script>
 	    var swiper = new Swiper('.swiper-container', {
-	     pagination: '.swiper-pagination',	
-	        slidesPerView: 3,
-	        slidesPerColumn: 3,
-	        paginationClickable: true,
-	        spaceBetween: 10
+		    pagination: '.swiper-pagination',	
+		    paginationClickable: true
 	    });
     </script>
 </body>
