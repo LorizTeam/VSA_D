@@ -300,7 +300,7 @@
 		        %>
 		        </div>
 		        <!-- Add Pagination -->
-		        <div class="swiper-pagination"></div>
+		        <div class="swiper-pagination swiper-pagination-project"></div>
 		    </div>
 		    </article>
 		</div>
@@ -394,7 +394,7 @@
 		        </div>
 		       
 		        <!-- Add Pagination -->
-		        <div class="swiper-pagination-award"></div>
+		        <div class=" swiper-pagination swiper-pagination-award"></div>
 		    </div>
 			<!--script-->
 
@@ -469,7 +469,7 @@
 	<script type="text/javascript" src="swipe/js/swiper.min.js"></script>
 	<script>
 	    var swiper = new Swiper('.swiper-project', {
-	     	pagination: '.swiper-pagination',	
+	     	pagination: '.swiper-pagination-project',	
 	        paginationClickable: true
 	    });
 	     var swiper = new Swiper('.swiper-award', {
