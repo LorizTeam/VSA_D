@@ -160,12 +160,19 @@
 <br/><script src="lg/js/lightgallery.js"></script>
 	<script src="lg/js/lg-fullscreen.js"></script>
 	<script src="lg/js/lg-hash.js"></script>
+	
+	
+	
+	
 			<!-- project and fillter -->
 			<article class=" container-center " id="project">
 				
-			<div class="swiper-container swiper-project container-center">
+			<div class="swiper-container swiper-project container-center" >
 		        <div class="swiper-wrapper">
-		        	<%
+		        
+		        	<div class="swiper-slide">
+		   				<div class="row" style="width:100%;">
+		        <%
 		        
 		        DBProject dbpj = new DBProject();
 	       		List listcontent = dbpj.Get_HeaderProjectForIndex("VSA",2);
@@ -173,33 +180,17 @@
 	       		ListIterator indexHeadIter = listcontent.listIterator();
 		        
 	       		int indexcontent = listcontent.size();
-	       		int divcontent = indexcontent /9;
-	       		int modcontent = indexcontent %9;
-	       		int loopcontent = divcontent;
-	       		if(modcontent > 0){
-	       			loopcontent++;
-	       		}
 	       		int i = 1;
 	       		
-	       		while(i <= loopcontent){
+	       		while(indexHeadIter.hasNext()){
 	       			
-	       		%>
-	       		<!-- cut 9 pic -->
-		        	<div class="swiper-slide">
-		   				<div class="row" style="width:100%;">
-	       		<%
-	       			int koon = i * 9;
-	       			boolean standardloop = false;
-	       			if(indexcontent - koon >= 0){
-	       				standardloop = true;
-	       			}
 	       			
-	       			if(standardloop){
+	       			if(i % 9 != 0){
 	       				
-	       				for(int j = 1 ; j<=9 ; j++){
-	       					IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
-	       		%>
-	       					<!-- 1project -->
+	       				IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
+	       				
+	       			%>
+	       				<!-- 1project -->
 				            	<div class="col-md-4  col-sm-4 col-xs-4" style="padding:2px;" >
 				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
 				            		        
@@ -236,68 +227,72 @@
 								</div>
 								</div>
 							<!-- 1project -->
-	       		<%
-	       					
-	       				}
+	       			<%
 	       				
 	       			}else{
-	       				koon = koon - 9;
-	       				indexcontent = indexcontent - koon;
-	       				for(int j = 1 ; j<=indexcontent ; j++){
-	       					IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
-	       		%>
-	       					<!-- 1project -->
-				            	<div class="col-md-4  col-sm-4 col-xs-4" style="padding:2px;" >
-				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
-				            		        
-									<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
-														
-									<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-										<%=vsaform.getPj_name() %>
-									</div>	
-									<script type="text/javascript">
-										$('#<%=vsaform.getPj_no() %>').on('click', function() {
-										    $(this).lightGallery({
-										       dynamic: true,
-										      dynamicEl: [
-										    	  <%
-										    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
-										       		
-										       		while(indexDetailIter.hasNext()){
-										       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
-										       			
-										       		%>
-										       			{
-													    	"src": '<%=vsaDetailform.getPic_path()%>'
-													    },
-										       		<%
-										       		}
-										    	  %>
-		
-										       ]
-										    })
-										 
-										});
-							
-									</script>					
-								</div>
-								</div>
-							<!-- 1project -->
-	       		<%
-	       					
-	       				}
 	       				
+	       				IndexVSAForm vsaform = (IndexVSAForm) indexHeadIter.next();
 	       				
+	       				%>
+		       				<!-- 1project -->
+					            	<div class="col-md-4  col-sm-4 col-xs-4" style="padding:2px;" >
+					            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
+					            		        
+										<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
+															
+										<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
+											<%=vsaform.getPj_name() %>
+										</div>	
+										<script type="text/javascript">
+											$('#<%=vsaform.getPj_no() %>').on('click', function() {
+											    $(this).lightGallery({
+											       dynamic: true,
+											      dynamicEl: [
+											    	  <%
+											    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
+											       		
+											       		while(indexDetailIter.hasNext()){
+											       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
+											       			
+											       		%>
+											       			{
+														    	"src": '<%=vsaDetailform.getPic_path()%>'
+														    },
+											       		<%
+											       		}
+											    	  %>
+			
+											       ]
+											    })
+											 
+											});
+								
+										</script>					
+									</div>
+									</div>
+								<!-- 1project -->
+					<%
+					  if( i != indexcontent){
+						  
+					%>
+							</div>
+					        			</div>
+								<div class="swiper-slide">
+		   					<div class="row" style="width:100%;">
+					<%
+					
+					
+					  }
 	       			}
-	       			
-	       			
-	       		%>
-	       				</div>
-		        	</div>
-	       		<%
-	       		i++;
+	       		
+	       			i++;
 	       		}
+	       			
 		        %>
+		        
+		        
+		        		</div>
+		        	</div>
 		        </div>
 		        <!-- Add Pagination -->
 		        <div class="swiper-pagination"></div>
@@ -326,109 +321,7 @@
 		</div>
 	</div>
 	<!--/index-team-->
-	<!--Award-->
-	<div id="award" class="content-team container-center">
-		<div class="container-center team">
-			<h3 class="m_1">Award / Published</h3>
-			<br/>
-			<div class="swiper-container swiper-award container-center">
-		        <div class="swiper-wrapper">
-
-		       <%
-		       		DBaward dbaward = new DBaward();
-		       		ListIterator awardHeadIter = dbaward.select_award("1","").listIterator();
-		       		
-		       		while(awardHeadIter.hasNext()){
-		       			AwardForm awardform = (AwardForm) awardHeadIter.next();
-		       	%>
-		       			<!-- 1project -->
-		            <div class="swiper-slide">
-		            	<a id="<%=awardform.getAward_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">	        
-							<img class="uk-overlay-scale" src="<%=awardform.getAwardpicpath() %>"style="width: 100%;height:100%;">							
-							<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
-								<%=awardform.getAwardname() %>
-							</div>	
-							<script type="text/javascript">
-								$('#<%=awardform.getAward_no() %>').on('click', function() {
-								    $(this).lightGallery({
-								       dynamic: true,
-								      dynamicEl: [
-								    	  <%
-								    	  ListIterator awardDetailIter = dbaward.select_award("1","").listIterator();
-								       		
-								       		while(awardDetailIter.hasNext()){
-								       			AwardForm awardDetailform = (AwardForm) awardDetailIter.next();
-								       			
-								       		%>
-								       			{
-											    	"src": '<%=awardDetailform.getAwardpicpath()%>',
-								            
-								            		'subHtml': '<h4 class="white"><%=awardform.getAwardname() %></h4><p><%=awardform.getAward_description() %></p>'
-											    },
-								       		<%
-								       		}
-								    	  %>
-								    	  
-								    	  
-								       
-								       
-								       ]
-								    })
-								 
-								});
-					
-							</script>				
-						</a>
-						
-					</div>
-		           <!-- 1project -->
-		       	
-		       	<%		
-		       			
-		       		}
-		       		
-		       		
-		       		
-		       %>
-		           
-		        </div>
-		       
-		        <!-- Add Pagination -->
-		        <div class="swiper-pagination-award"></div>
-		    </div>
-			<!--script-->
-
-			
-			<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-			<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#nivo-lightbox-demo a').nivoLightbox({
-						effect : 'fade'
-					});
-					
-					
-			$('a[href*=#]:not([href=#])').click(
-					function() {
-						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')&& location.hostname == this.hostname) {
-							var target = $(this.hash);
-							target = target.length ? target: $('[name=' + this.hash.slice(1)+ ']');
-							if (target.length) {
-								$('html,body').animate({
-								scrollTop : target.offset().top
-								}, 1000);
-								return false;
-							}
-					}
-				
-					});
-				});
-			</script>
-
-			<!---->
-		</div>
-	</div>
-	<!--/Award-->
+	
 	<!--footer-->
 	
 	<div class="nav nav-pills social-bottom  text-center" >	
@@ -472,13 +365,7 @@
 	     	pagination: '.swiper-pagination',	
 	        paginationClickable: true
 	    });
-	     var swiper = new Swiper('.swiper-award', {
-	     	centeredSlides: true,
-	     	pagination: '.swiper-pagination-award',	
-	        slidesPerView: 3,
-	        paginationClickable: true,
-	        spaceBetween: 10 
-	    });
+	   
 	    $(function() {
 			$('a[href*=#]:not([href=#])')
 				.click(
