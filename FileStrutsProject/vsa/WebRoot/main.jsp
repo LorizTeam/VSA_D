@@ -181,7 +181,7 @@
 				<h5>website :</h5>
 				</div>
 				<div class="tile-area-controls cell colspan2">
-				    <a style="margin:0 5px 0 0;" href="index.jsp" target="_blank" class="square-button bg-transparent fg-white bg-hover-dark no-border">VSA</a>
+				    <a style="margin:0 5px 0 0;" href="vsa.jsp" target="_blank" class="square-button bg-transparent fg-white bg-hover-dark no-border">VSA</a>
 				    <a style="margin:0 5px 0 0;" href="wvs.jsp" target="_blank" class="square-button bg-transparent fg-white bg-hover-dark no-border">WVS</a>
 				    <a style="margin:0 5px 0 0;" href="#"  class="square-button bg-transparent fg-white bg-hover-dark no-border">VSCT</a>
 				    <a style="margin:0 5px 0 0;" href="#"  class="square-button bg-transparent fg-white bg-hover-dark no-border">PLZ</a>
