@@ -1292,9 +1292,6 @@ li a:focus{ -moz-outline-style: none !important; }
 		float: none;
 		margin-bottom: 14px;
 	}
-	.wel-text {
-		text-align: center;
-	}
 	.grid figure {
 		min-width: 269px;
 		height: 161px !important;

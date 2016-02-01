@@ -136,10 +136,9 @@
 				</a>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">		
-				<p><b>Vorrarat Supachoke Architect (VS<span class="red">a</span>)</b> was founded in 2007 by
+				<p><b>Vorrarat Supachoke Architect (VSa)</b> was founded in 2007 by
 					Vorrat Foythong and Supachoke Kittipatmeta.
 				</p>
-				
 				<p>
 					The main of our Architecture concerning about site context,
 					project's character and project's requirement are combined to
@@ -156,7 +155,7 @@
 	<!--grid-hover-->
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
-			<h3>Our Work</h3>
+			<h3>Our work</h3>
 <br/><script src="lg/js/lightgallery.js"></script>
 	<script src="lg/js/lg-fullscreen.js"></script>
 	<script src="lg/js/lg-hash.js"></script>

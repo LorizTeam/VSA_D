@@ -274,7 +274,7 @@ img.zoom-img:hover {
 	font-size: 1.1em;
 	color: #BEBEBE;
 }
-.wel-text p {
+.wel-text p,.wel-text {
 	font-size: 1em;
 	line-height: 2em;
 	padding-top: 0em;
@@ -282,7 +282,6 @@ img.zoom-img:hover {
 	word-spacing: 2.5px;
 	letter-spacing: 1px;
 	text-align: left;
-    
 }
 .index-portfilio {
 	padding: 5em 0 0;
