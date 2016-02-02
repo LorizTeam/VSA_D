@@ -136,7 +136,7 @@
 				</a>
 			</div>
 			<div class="col-xs-12 col-md-6 col-lg-6 wel-text">		
-				<p><b>Vorrarat Supachoke Architect (VSa)</b> was founded in 2007 by
+				<p><b>Vorrarat Supachoke Architect (<img class="vsa-img" src="images/o.png">)</b> was founded in 2007 by
 					Vorrat Foythong and Supachoke Kittipatmeta.
 				</p>
 				<p>

@@ -1,3 +1,8 @@
+.vsa-img{
+	width: 23px;
+	margin-top: -1px;
+	
+}
 .white{
 	color:white !important;
 }
@@ -898,7 +903,10 @@ li a:focus{ -moz-outline-style: none !important; }
 		padding: 3em 0 1.3em;
 	}
 	h3.m_1 {
-		font-size: 2.1em !important;
+		font-size: 1.4em !important;
+		line-height: 120%;
+		word-spacing: 3px;
+		letter-spacing: 2px;
 	}
 	.article-post {
 		margin-bottom: 2em;
@@ -1057,7 +1065,10 @@ li a:focus{ -moz-outline-style: none !important; }
 		letter-spacing: 2px;
 	}
 	.index-portfilio h3 {
-		font-size: 2em;
+		font-size: 1.4em;
+		line-height: 120%;
+		word-spacing: 3px;
+		letter-spacing: 2px;
 	}
 	.gallery-img{
 		height:149px; 
