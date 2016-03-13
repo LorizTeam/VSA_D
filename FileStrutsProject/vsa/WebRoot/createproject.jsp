@@ -72,7 +72,7 @@
 											</div>
 											
 										</li>
-										<li>
+										<!-- <li>
 											<h3><small>Project Type</small></h3>
 											<div class="input-control "  style="width:100%;">
 												<select name="slc_typepj" id="slc_typepj"data-popover-mode="click" data-role="popover" 
@@ -83,7 +83,7 @@
 												</select>
 											</div>
 											
-										</li>
+										</li> -->
 										<li>
 											<h3><small>Project Name</small></h3> 
 											<div class="input-control text" style="width:100%;" data-role="input">

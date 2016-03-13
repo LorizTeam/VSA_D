@@ -89,6 +89,11 @@ public class CreateprojectAction extends Action {
 				   slc_typepj = request.getParameter("slc_typepj"),
 				   pic_path = "upload/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 					
+			if(slc_bu.equals("1")){
+				slc_typepj = "2";
+			}else if (slc_bu.equals("2")){
+				slc_typepj = "1";
+			}
 			
 			
 			if(getErrors(request) == null ||getErrors(request).size() == 0){

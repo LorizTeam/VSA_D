@@ -107,7 +107,7 @@
 													</select>
 												</div>
 											</div>
-											<div class="cell">
+											<!-- <div class="cell">
 												<h3><small>Project Type</small></h3>
 												<div class="input-control select"  style="width:100%;">
 													 <select name="slc_typepj" id="slc_typepj">
@@ -133,7 +133,7 @@
 													    	
 													   </select>
 												</div>
-											</div>
+											</div> -->
 											<div class="row cells2">
 												<div class="cell">
 													<h3><small>Project Name</small></h3>

@@ -40,7 +40,7 @@
 								        <th>Business Name</th>
 								        <th>Project Year</th>
 								        <th>Project Name</th>
-								        <th>Project Type name</th>
+								        
 								        <th>Choose Edit</th>
 								    </tr>
 							    </thead>
@@ -54,7 +54,7 @@
 								        	<td><%=project.getBu_name() %></td>
 								        	<td><%=project.getPj_year().substring(1) %></td>
 								        	<td><%=project.getPj_name() %></td>
-								        	<td><%=project.getPj_typename() %></td>
+								        	
 								        	<td>
 								                <label class="input-control radio small-check">
 									                <input type="radio" name="rdo" value="<%=project.getPj_no() %>" required>
