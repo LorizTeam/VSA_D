@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="defaultimport.jsp" %>
 <%@ page import="com.smict.struts.form.IndexVSAForm"%>
 <%@ page import="com.smict.struts.data.DBProject"%>
@@ -15,9 +16,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favivsa/faviwvs.png">
 <title>WVS | Interior Design</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="WVS company limited Thailand based Interior Design experience professional designers" />
 <link rel="stylesheet" href="wvscss/uikit.css" />
 <link rel="stylesheet" href="wvscss/styles.css" />
 <script src="wvsjs/jquery.js" type="text/javascript"></script>
@@ -30,7 +32,9 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <link rel="stylesheet"href="lg/css/lightgallery.css">
 <link rel="stylesheet" href="swipe/css/swiper.min.css"/>
-
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 </head>
 <body id="home">
 
@@ -40,7 +44,7 @@
 				<li><a href="#home">HOME</a></li>
 				<li><a href="#about">ABOUT</a></li>
 				<li><a href="#project">PROJECT</a></li>
-				<li><a href="#people">PEOPLE</a></li>
+				<li><a href="#people_">PEOPLE</a></li>
 				<li><a href="#contact">CONTACT</a></li>
 			</ul>
 		</div>
@@ -54,10 +58,10 @@
 	<div class="uk-container-center uk-width-medium-3-5 uk-width-large-2-5">
 		<div class="fotorama " data-width="100%" data-nav="false"
 			data-transition="crossfade" data-autoplay="5000" data-loop="true"
-			data-autoplay="true" data-transitionduration="700">
-			<img src="wvsimages/slide/2.jpg" alt="" /> <img src="wvsimages/slide/3.jpg"
-				alt="" /> <img src="wvsimages/slide/4.jpg" alt="" /> <img
-				src="wvsimages/slide/5.jpg" alt="" />
+			data-autoplay="true"  data-fit="cover" data-transitionduration="700">
+			<img src="wvsimages/slide/2.png" alt="" /> 
+			<img src="wvsimages/slide/3.png" alt="" /> 
+			<img src="wvsimages/slide/1.png" alt="" />
 		</div>
 	</div>
 
@@ -69,31 +73,24 @@
 
 		<div class="uk-grid">
 			<div class="uk-width-medium-1-2 uk-width-small-1-1 uk-text-center">
-				<img src="wvsimages/slide/1.jpg" alt="" />
+				<img src="wvsimages/slide/4.png" alt="" />
 			</div>
 
 			<div class="uk-width-medium-1-2 uk-width-small-1-1 ">
 				<br class="uk-visible-small">
-				<h2 class="uk-text-center ">WVS</h2>
-				<h3 class="uk-text-center ">Interior Design</h3>
-				<p>A late Georgian house is always a temptation and this one
-					managed to draw Studio Hopwood all the way across town. On three
-					floors with high ceilings and nicely proportioned rooms, so no case
-					of having to turn a sows ear into a silk purse this time.This house
-					has a new angle though</p>
-				<p>The budget was generous but the house is large and so much
-					care was taken in spending it well to achieve a lived in home.
-					Sourcing from markets, trawling eBay, making our own art, updating
-					an existing kitchen a little bit of up-cycling but also building
-					bespoke pieces and only buying the best. Check out the captions in
-					the pictures for clues to our sourcing.</p>
-				<p>The budget was generous but the house is large and so much
-					care was taken in spending it well to achieve a lived in home.
-					Sourcing from markets, trawling eBay, making our own art, updating
-					an existing kitchen a little bit of up-cycling but also building
-					bespoke pieces and only buying the best. Check out the captions in
-					the pictures for clues to our sourcing.</p>
-	
+				<h2 class="uk-text-center "style="line-height: 0.7;margin-bottom:30px;">WVS company limited</h2>
+				<p>WVS is a Thailand based Interior Design firm founded in 2013, with over 18 years of 
+				diverse experience in the design, consultancy services and turnkey installations of 
+				private residences, hotels, corporate offices, government office, retail spaces, 
+				and healthcare design.</p>
+				<p>Our team is collective and collaborated from wild ranges experience professional designers
+				 lead by Mr. Wisarut Mod Wisuthakul (Founder & Principal) who has been working 
+				 in both Thailand and USA.  </p>
+				<p>WVS are known for our reliability and attention to detail on every project making the 
+				experience with us authentically different.  We lend our expertise and passion for design 
+				to each project we undertake.  With the approach of the design that encourages our clients to 
+				develop and craft their own style and taste, turning any space into a powerful expression of the 
+				client’s personality. </p>
 			</div>
 		</div>
 	</div>
@@ -249,15 +246,16 @@
 	<script src="lg/js/lg-fullscreen.min.js"></script>
 	<script src="lg/js/lg-zoom.min.js"></script>
 	
-	<div class=" block " id="people" style="padding-top: 50px;">
+	<div class=" block " id="people_" style="padding-top: 50px;">
 
 		<div class="uk-text-center">
 			<h1>People</h1>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
+			<div class="uk-grid" >
+				<div class="uk-container-center " >
+					<img class="uk-width-1-1" style="height:auto" src="images/camera2.png">
+				</div>
+				
+			</div>
 			<br>
 		</div>
 	</div>

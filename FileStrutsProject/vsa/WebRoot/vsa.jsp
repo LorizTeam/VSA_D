@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favivsa/vsa.png">
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
