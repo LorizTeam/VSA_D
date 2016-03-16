@@ -155,7 +155,7 @@
 	<!--grid-hover-->
 	<div id="work" class="index-portfilio">
 		<div class="container-center">
-			<h3>Our work</h3>
+			<h3 class="m_1">Our work</h3>
 <br/><script src="lg/js/lightgallery.js"></script>
 	<script src="lg/js/lg-fullscreen.js"></script>
 	<script src="lg/js/lg-hash.js"></script>
@@ -315,12 +315,12 @@
 	<div id="team" class="content-team">
 		<div class="container-center team">
 			<h3 class="m_1">Our team</h3>
-			<p class="content-t">Dolor nunc vule putateulr ips dol
-				consec.Donec sem ertet laciniate ultricie upie disse utes comete
-				dolo lectus. fgilla itollicil tua ludin dolor nec met quam accumsan.</p>
-			<div class="team-left">
-				<img src="images/camera2.png">
-				<div class="clearfix"></div>
+			<p class="content-t"></p>
+			<div class="uk-grid" >
+				<div class="uk-container-center " >
+					<img class="uk-width-1-1" style="height:auto" src="images/camera2.png">
+				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -476,7 +476,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 /*--/index-welcome--*/
 /*--index-team--*/
 .content-team {
-	padding: 0em 0 5em;
+	padding: 5em 0 5em;
 }
 h3.m_1 {
 	font-family: 'Source Sans Pro', sans-serif;
