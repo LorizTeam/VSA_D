@@ -4923,3 +4923,14 @@
 [0813/140007:INFO:CONSOLE(22)] "maxExposableOverlayWidth()=821maxExposableOverlayHeight()=325", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/xampp/tomcat/webapps/VSA_D/FileStrutsProject/VSA_Design/WebRoot/edge_includes/an.canvas.overlay.min.js (22)
 [0813/140008:INFO:CONSOLE(22)] "maxExposableOverlayWidth()=821maxExposableOverlayHeight()=325", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/xampp/tomcat/webapps/VSA_D/FileStrutsProject/VSA_Design/WebRoot/edge_includes/an.canvas.overlay.min.js (22)
 [0813/140008:INFO:CONSOLE(22)] "maxExposableOverlayWidth()=821maxExposableOverlayHeight()=325", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/xampp/tomcat/webapps/VSA_D/FileStrutsProject/VSA_Design/WebRoot/edge_includes/an.canvas.overlay.min.js (22)
+[0322/165407:ERROR:gl_surface_egl.cc(133)] eglInitialize failed with error UNKNOWN
+[0322/165407:ERROR:gl_surface_win.cc(97)] GLSurfaceEGL::InitializeOneOff failed.
+[0322/165418:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0322/165420:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0322/165420:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0322/165425:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0322/165425:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0322/165426:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0322/165426:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[0322/165434:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0322/165434:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
