@@ -2,7 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vorrarat Supachocke Architect | Home :: VSA</title>
+<script type="text/javascript">
+	var link = parent.document.createElement('link');
+	link.type = 'image/png';
+	link.rel = 'icon';
+	link.href = 'http://smartict.ar-bro.net:8080/vsa/images/favivsa/vsa.png';
+	parent.document.getElementsByTagName('head')[0].appendChild(link);
+	document.title = 'Vorrarat Supachocke Architect | Contact :: VSA';
+</script>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
 <link rel="stylesheet" href="css/csskit2.css" />

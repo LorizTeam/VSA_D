@@ -3,6 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<script type="text/javascript">
+	var link = parent.document.createElement('link');
+	link.type = 'image/png';
+	link.rel = 'icon';
+	link.href = 'http://smartict.ar-bro.net:8080/vsa/images/favivsa/vsa.png';
+	parent.document.getElementsByTagName('head')[0].appendChild(link);
+	document.title = 'Vorrarat Supachocke Architect | Home :: VSA';
+</script>
 	<title>Vorrarat Supachocke Architect</title>
 <!--Adobe Edge Runtime-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">

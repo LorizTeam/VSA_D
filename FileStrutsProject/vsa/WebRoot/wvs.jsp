@@ -16,6 +16,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+	var link = parent.document.createElement('link');
+	link.type = 'image/png';
+	link.rel = 'icon';
+	link.href = 'http://smartict.ar-bro.net:8080/vsa/images/favivsa/faviwvs.png';
+	parent.document.getElementsByTagName('head')[0].appendChild(link);
+	document.title = 'WVS | Interior Design';
+</script>
 <link rel="icon" type="image/png" sizes="192x192"  href="images/favivsa/faviwvs.png">
 <title>WVS | Interior Design</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">

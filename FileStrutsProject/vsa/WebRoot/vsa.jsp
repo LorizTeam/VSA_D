@@ -8,7 +8,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" type="image/png" sizes="192x192"  href="images/favivsa/vsa.png">
+<script type="text/javascript">
+	var link = parent.document.createElement('link');
+	link.type = 'image/png';
+	link.rel = 'icon';
+	link.href = 'http://smartict.ar-bro.net:8080/vsa/images/favivsa/vsa.png';
+	parent.document.getElementsByTagName('head')[0].appendChild(link);
+	document.title = 'Vorrarat Supachocke Architect | Home :: VSA';
+</script>
+<link rel="icon" type="" sizes="192x192"  href="images/favivsa/vsa.png">
 <title>Vorrarat Supachocke Architect | Home :: VSA</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
