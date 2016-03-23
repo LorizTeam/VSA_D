@@ -158,6 +158,14 @@
 		            %>
 
 				</div>
+				<% if (session.getAttribute("userList") != null) {
+					List<?> userList = (List)session.getAttribute("userList");
+					for (Iterator iter1 = userList.iterator(); iter1.hasNext();) {
+			  			UserForm detailUser = (UserForm) iter1.next();
+			  		
+			  			if(detailUser.getPosition_name().equals("Admin")){
+			  		
+			  %>
 				<div class="cell colspan3">
 					<div class="row"><h3>User Management</h3></div>	
 		            <a href="EditUser.jsp" class="tile bg-darkCyan fg-white"  data-role="tile">
@@ -174,6 +182,12 @@
 		            	</div>
 		            </a>
 				</div>
+				
+				<%	
+						}
+			  		}
+		  		}
+				%>
 			</div>
 			<br/><br/>
 			<div class="row cells12">
