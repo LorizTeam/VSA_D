@@ -323,13 +323,8 @@
 	<div id="team" class="content-team">
 		<div class="container-center team">
 			<h3 class="m_1">Our team</h3>
-			<p class="content-t"></p>
-			<div class="uk-grid" >
-				<div class="uk-container-center " >
-					<img class="uk-width-1-1" style="height:auto" src="images/camera2.png">
-				</div>
-				
-			</div>
+			<p class="content-t"><img class="uk-container-center" width="70%"  src="images/camera2.png"></p>
+			 
 		</div>
 	</div>
 	<!--/index-team-->

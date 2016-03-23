@@ -258,12 +258,7 @@
 
 		<div class="uk-text-center">
 			<h1>People</h1>
-			<div class="uk-grid" >
-				<div class="uk-container-center " >
-					<img class="uk-width-1-1" style="height:auto" src="images/camera2.png">
-				</div>
-				
-			</div>
+			<p class="container-center"><img class="uk-container-center" width="70%"  src="images/camera2.png"></p>
 			<br>
 		</div>
 	</div>
