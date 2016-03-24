@@ -206,7 +206,7 @@
 										       dynamic: true,
 										      dynamicEl: [
 										    	  <%
-										    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("VSA",vsaform.getPj_name()).listIterator();
+										    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
 										       		
 										       		while(indexDetailIter.hasNext()){
 										       			IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next();
