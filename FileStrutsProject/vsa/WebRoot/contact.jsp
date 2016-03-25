@@ -107,7 +107,7 @@
 		 <div class="contact-content">
 		 	<p class="index-p">
 		 		Vorrarat Supachoke Architect Co.,Ltd. (VSa GROUP) No.9
-				Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-Disyrict,
+				Pradiphat 10 lane, Pradiphat Road, Samsannai Sub-District,
 				Phayathai District, Bangkok 10400, Thailand
 			</p>
        		<form action="notifications.do" method="post">
