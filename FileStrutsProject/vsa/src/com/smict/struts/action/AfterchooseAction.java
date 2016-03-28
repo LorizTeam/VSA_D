@@ -218,6 +218,11 @@ public class AfterchooseAction extends Action {
 					// ข้อมูลของ Dropdownlist End
 					//อัพเดทข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Start รูปไหนที่มีการกดปุ่ม Radio button จะอัพเดทให้เป็น Head
 					
+					if(bu_no.equals("1")){
+						pj_typeno = "2";
+					}else if(bu_no.equals("1")){
+						pj_typeno = "1";
+					}
 					Listforafterchoose = dbproject.editproject(rdo, pj_no, project_name, project_year, bu_no, pj_typeno);
 					
 					//ข้อมูลรายลเอียด Project และรูปภาพ -- และนำไปแสดงที่หน้า afteredit Endute("buList", buList);
