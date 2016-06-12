@@ -17,7 +17,7 @@ public class DBConnect {
 			String port = "3306";
 			String dbUserName = "root";
 			String dbPassword = "a010103241c";
-			//String dbPassword = "1234"; // localhost
+			//String dbPassword = "1234qwer"; // localhost
 			
 			String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
 			port + "/" + dbName + "?user=" + dbUserName + "&password=" + dbPassword;
