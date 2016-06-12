@@ -65,6 +65,7 @@
       type="com.smict.struts.action.EditprojectAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/afterchoose.jsp" />
+      <forward name="delproject" path="/editprojectStart.do" />
     </action>
     <action
       attribute="afterchooseForm"

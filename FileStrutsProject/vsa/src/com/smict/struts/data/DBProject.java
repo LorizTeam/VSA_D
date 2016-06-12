@@ -1,6 +1,7 @@
 package com.smict.struts.data;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -384,5 +385,29 @@ public class DBProject {
 				}
 		}
 		return indexList;
+	}
+	
+	public void Del_Project(String pjno){
+		String sql1 = "delete from project where pj_no = ?";
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			PreparedStatement ppStmt = conn.prepareStatement(sql1);
+			ppStmt.setInt(1,Integer.parseInt(pjno));
+			ppStmt.executeUpdate();
+			
+			ppStmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

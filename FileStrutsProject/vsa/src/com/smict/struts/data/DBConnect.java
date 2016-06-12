@@ -12,12 +12,12 @@ public class DBConnect {
 			Class.forName ("com.mysql.jdbc.Driver");
 			//Class.forName ("org.gjt.mm.mysql.Driver");
 			String dbName = "vsa_d";
-			String hostname = "smartict.ar-bro.net";
-			//String hostname = "localhost"; // localhost
+			//String hostname = "smartict.ar-bro.net";
+			String hostname = "localhost"; // localhost
 			String port = "3306";
 			String dbUserName = "root";
-			String dbPassword = "a010103241c";
-			//String dbPassword = "1234"; // localhost
+			//String dbPassword = "a010103241c";
+			String dbPassword = "1234"; // localhost
 			
 			String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
 			port + "/" + dbName + "?user=" + dbUserName + "&password=" + dbPassword;

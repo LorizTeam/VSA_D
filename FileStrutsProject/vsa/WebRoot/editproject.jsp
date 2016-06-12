@@ -40,8 +40,8 @@
 								        <th>Business Name</th>
 								        <th>Project Year</th>
 								        <th>Project Name</th>
-								        
 								        <th>Choose Edit</th>
+								        <th>Delete Project</th>
 								    </tr>
 							    </thead>
 								<tbody>
@@ -57,7 +57,13 @@
 								        	
 								        	<td>
 								                <label class="input-control radio small-check">
-									                <input type="radio" name="rdo" value="<%=project.getPj_no() %>" required>
+									                <input type="radio" name="rdo" value="<%=project.getPj_no() %>" >
+													<span class="check"></span>
+												</label>
+											</td>
+											<td>
+								                <label class="input-control radio small-check">
+									                <input type="radio" name="del_pro" value="<%=project.getPj_no() %>" >
 													<span class="check"></span>
 												</label>
 											</td>

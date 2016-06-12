@@ -65,4 +65,28 @@ public class Pictures{
 		}
 		return alert;
 	}
+	public void Del_Allpicture(String pic_path,String pj_no,String locate){
+		try {
+			conn = dbcon.getConnectMYSql();
+			String 
+				sqlQuery = "delete from picpath where ";
+				
+				if(!pic_path.equals(""))
+					sqlQuery += "pic_path = '"+pic_path+"' and ";
+				
+				if(!pj_no.equals(""))
+					sqlQuery += "pj_no = '"+pj_no+"' and ";
+				
+				sqlQuery += "pic_path <> ''";
+				
+				pStmt = conn.createStatement();
+				pStmt.executeUpdate(sqlQuery);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

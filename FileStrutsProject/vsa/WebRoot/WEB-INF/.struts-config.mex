@@ -14,6 +14,7 @@
   <StrutsActivity path="/afterchoose_edituser.do" location="950,1150" dimension="312,96" />
   <StrutsActivity path="/award.do" location="650,1350" dimension="235,96" />
   <StrutsActivity path="/detailaward.do" location="1250,1350" dimension="263,96" />
+  <StrutsActivity path="/notifications.do" location="350,1550" dimension="269,96" />
   <StrutsActivity path="nologin;6" location="50,450" dimension="90,81" />
   <StrutsActivity path="/main.jsp" location="950,150" dimension="80,51" />
   <StrutsActivity path="/changepassword_byself.jsp" location="50,1050" dimension="178,51" />
@@ -28,20 +29,25 @@
   <StrutsActivity path="/afterchoose_edituser.jsp" location="50,1250" dimension="162,51" />
   <StrutsActivity path="/edituser.jsp" location="650,1150" dimension="95,51" />
   <StrutsActivity path="/award.jsp" location="950,1350" dimension="85,51" />
+  <StrutsActivity path="/wvs.jsp" location="350,750" dimension="73,51" />
+  <StrutsActivity path="/contact.jsp" location="1550,550" dimension="93,51" />
   <StrutsActivity path="/FileUpload.jsp" location="950,450" dimension="109,51" />
   <StrutsActivity path="createproject.jsp" location="495,270" dimension="117,51" />
   <StrutsActivity path="/form/createuser.jsp" location="50,850" dimension="138,51" />
   <StrutsActivity path="createuser.jsp" location="350,950" dimension="102,51" />
   <StrutsActivity path="/form/detailaward.jsp" location="50,1450" dimension="145,51" />
-  <StrutsActivity path="/wvs.jsp" location="350,750" dimension="73,51" />
-  <StrutsActivity path="/contact.jsp" location="1550,550" dimension="93,51" />
-  <StrutsActivity path="/notifications.do" location="350,1550" dimension="269,96" />
   <StrutsActivity path="/c.jsp" location="1550,750" dimension="59,51" />
   <StrutsTransition id="/detailaward.do,success,/award.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1250,1416" />
       <AbsolutePoint location="1022,1416" />
       <AbsolutePoint location="1022,1401" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editproject.do,delproject,/editprojectStart.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1074,633" />
+      <AbsolutePoint location="636,798" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/editproject.do,success,/afterchoose.jsp,1" routingType="0">
@@ -97,13 +103,6 @@
       <AbsolutePoint location="350,775" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/notifications.do,vsa,/award.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="619,1628" />
-      <AbsolutePoint location="992,1628" />
-      <AbsolutePoint location="992,1401" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
   <StrutsTransition id="/afterchoose_edituser.do,success,/EditUser.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1106,1246" />
@@ -137,21 +136,6 @@
       <AbsolutePoint location="139,1050" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/notifications.do,vsa,/index.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="619,1598" />
-      <AbsolutePoint location="900,1598" />
-      <AbsolutePoint location="900,475" />
-      <AbsolutePoint location="731,475" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/notifications.do,vsa,/c.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="619,1598" />
-      <AbsolutePoint location="1579,1598" />
-      <AbsolutePoint location="1579,801" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
   <StrutsTransition id="/notifications.do,vsa,/contact.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="619,1598" />
@@ -163,13 +147,6 @@
     <AutomaticBendpoints>
       <AbsolutePoint location="950,1375" />
       <AbsolutePoint location="885,1375" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/notifications.do,wvs,/award.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="619,1598" />
-      <AbsolutePoint location="962,1598" />
-      <AbsolutePoint location="962,1401" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/indexVSA.do,success,/index.jsp,1" routingType="0">

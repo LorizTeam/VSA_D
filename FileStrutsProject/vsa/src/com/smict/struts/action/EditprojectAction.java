@@ -15,6 +15,7 @@ import org.apache.struts.action.ActionMapping;
 import com.smict.struts.form.EditprojectForm;
 
 import com.smict.struts.data.DBProject;
+import com.smict.struts.data.Pictures;
 
 import java.io.IOException;
 import java.util.List;
@@ -47,31 +48,39 @@ public class EditprojectAction extends Action {
 			forwardText = "nologin";
 		}else{
 			if(request.getParameter("submit") != null){
-				String pj_no = (String) request.getParameter("rdo");
-				DBProject dbproject = new DBProject();
-				List<?> buList = null;
-				List<?> Listforafterchoose = null;
-				List<?> pj_typeList = null;
-				try {
-					// ข้อมูลของ Dropdownlist Start
-					buList = dbproject.bu_nameList();
-					String bu_no = dbproject.getbuno_fordetailproject(pj_no);
-					pj_typeList = dbproject.pj_typeList(bu_no);
-					// ข้อมูลของ Dropdownlist End
-					//ข้อมูลรายลเอียด Project และรูปภาพ Start
-					Listforafterchoose = dbproject.afterchoose_editbypjno(pj_no);
-					//ข้อมูลรายลเอียด Project และรูปภาพ End
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				String edit_pj_no = (String) request.getParameter("rdo");
+				String del_pj_no = (String) request.getParameter("del_pro");
+				if(edit_pj_no != null){
+					DBProject dbproject = new DBProject();
+					List<?> buList = null;
+					List<?> Listforafterchoose = null;
+					List<?> pj_typeList = null;
+					try {
+						// ข้อมูลของ Dropdownlist Start
+						buList = dbproject.bu_nameList();
+						String bu_no = dbproject.getbuno_fordetailproject(edit_pj_no);
+						pj_typeList = dbproject.pj_typeList(bu_no);
+						// ข้อมูลของ Dropdownlist End
+						//ข้อมูลรายลเอียด Project และรูปภาพ Start
+						Listforafterchoose = dbproject.afterchoose_editbypjno(edit_pj_no);
+						//ข้อมูลรายลเอียด Project และรูปภาพ End
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					request.setAttribute("buList", buList);
+					request.setAttribute("slc_typepj", pj_typeList);
+					request.setAttribute("Listforafterchoose", Listforafterchoose);
+					forwardText = "success";
+				}else if(del_pj_no != null){
+					new Pictures().Del_Allpicture("", del_pj_no, "");
+					new DBProject().Del_Project(del_pj_no);
+					forwardText = "delproject";
 				}
-				request.setAttribute("buList", buList);
-				request.setAttribute("slc_typepj", pj_typeList);
-				request.setAttribute("Listforafterchoose", Listforafterchoose);
-				forwardText = "success";
+				
 			}
 		}
 		// TODO Auto-generated method stub
