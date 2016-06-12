@@ -70,9 +70,7 @@ nav a{
 .block{
 	padding:50px 0 35px;
 }
-#work,#project{
-	min-height: 600px;
-}
+
 
 .frm-control{
 	border: 1px solid rgba(0, 0, 0, .1);

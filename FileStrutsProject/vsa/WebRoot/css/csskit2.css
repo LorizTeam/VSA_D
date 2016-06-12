@@ -566,7 +566,6 @@ li a:focus{ -moz-outline-style: none !important; }
 	}
 }
 @media (max-width: 1024px) {
-
 	.fix-social{
 		width: 7%;
 	}
@@ -668,7 +667,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	}
 }
 @media (max-width: 800px) {
-
+	
 	.fix-social{
 		width: 8%;
 	}
@@ -1075,7 +1074,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	}
 }
 @media (max-width: 480px) {
-
+	
 	.fix-social{
 		width: 13%;
 	}

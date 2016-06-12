@@ -147,16 +147,40 @@
 	       					<!-- 1project -->
 				            	<div class="uk-width-1-3" style="padding:2px;" >
 				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
-				            		        
-									<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
-														
+				            		 
+									<canvas class="uk-overlay-scale" id="canvas<%=vsaform.getPj_no() %>" style=" height:100%; -webkit-transform:scale(1.8,1.2);"></canvas>					
 									<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 										<%=vsaform.getPj_name() %>
 									</div>	
+									
 									<script type="text/javascript">
+										var canvas = document.getElementById("canvas<%=vsaform.getPj_no() %>");
+										var ctx<%=vsaform.getPj_no() %>n = canvas.getContext("2d");
+										var img<%=vsaform.getPj_no() %>n = new Image();
+										img<%=vsaform.getPj_no() %>n.onload = function () {
+										
+										    canvas.height = canvas.width * (img<%=vsaform.getPj_no() %>n.height / img<%=vsaform.getPj_no() %>n.width);
+										
+										    /// step 1
+										    var oc = document.createElement("canvas"),
+										        octx = oc.getContext('2d');
+										
+										    oc.width = img<%=vsaform.getPj_no() %>n.width * 0.5;
+										    oc.height = img<%=vsaform.getPj_no() %>n.height * 0.5;
+										    octx.drawImage(img<%=vsaform.getPj_no() %>n, 0, 0, oc.width, oc.height);
+										
+										    /// step 2
+										    octx.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5);
+										
+										    ctx<%=vsaform.getPj_no() %>n.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5,
+										    0, 0, canvas.width, canvas.height);
+										}
+										img<%=vsaform.getPj_no() %>n.src = "<%=vsaform.getPic_path()%>";
+										
 										$('#<%=vsaform.getPj_no() %>').on('click', function() {
 										    $(this).lightGallery({
 										       dynamic: true,
+										       preload: 2,
 										      dynamicEl: [
 										    	  <%
 										    	  ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex("WVS",vsaform.getPj_name()).listIterator();
@@ -195,12 +219,35 @@
 				            	<div class="uk-width-1-3" style="padding:2px;" >
 				            	<div id="<%=vsaform.getPj_no() %>" class=" uk-overlay uk-overlay-hover gallery-img">
 				            		        
-									<img class="uk-overlay-scale" src="<%=vsaform.getPic_path() %>"style=" height:100%; -webkit-transform:scale(1.8,1.2);">	
+									<canvas class="uk-overlay-scale" id="canvas<%=vsaform.getPj_no() %>" style=" height:100%; -webkit-transform:scale(1.8,1.2);"></canvas>	
 														
 									<div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-background">
 										<%=vsaform.getPj_name() %>
 									</div>	
 									<script type="text/javascript">
+										var canvas = document.getElementById("canvas<%=vsaform.getPj_no() %>");
+										var ctx<%=vsaform.getPj_no() %>n = canvas.getContext("2d");
+										var img<%=vsaform.getPj_no() %>n = new Image();
+										img<%=vsaform.getPj_no() %>n.onload = function () {
+										
+										    canvas.height = canvas.width * (img<%=vsaform.getPj_no() %>n.height / img<%=vsaform.getPj_no() %>n.width);
+										
+										    /// step 1
+										    var oc = document.createElement("canvas"),
+										        octx = oc.getContext('2d');
+										
+										    oc.width = img<%=vsaform.getPj_no() %>n.width * 0.5;
+										    oc.height = img<%=vsaform.getPj_no() %>n.height * 0.5;
+										    octx.drawImage(img<%=vsaform.getPj_no() %>n, 0, 0, oc.width, oc.height);
+										
+										    /// step 2
+										    octx.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5);
+										
+										    ctx<%=vsaform.getPj_no() %>n.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5,
+										    0, 0, canvas.width, canvas.height);
+										}
+										img<%=vsaform.getPj_no() %>n.src = "<%=vsaform.getPic_path()%>";
+										
 										$('#<%=vsaform.getPj_no() %>').on('click', function() {
 										    $(this).lightGallery({
 										       dynamic: true,
