@@ -41,7 +41,7 @@ public class Pictures{
 				pStmt.executeUpdate(sqlQuery);
 				
 				String[] picpath = pic_path.split("/");
-				String path_delete_file = locate+"\\"+picpath[1];
+				String path_delete_file = locate+picpath[2];
 				System.out.println(path_delete_file);
 				File delete_pic = new File (path_delete_file);
 				

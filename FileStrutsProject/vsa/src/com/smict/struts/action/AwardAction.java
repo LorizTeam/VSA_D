@@ -59,7 +59,7 @@ public class AwardAction extends Action {
 		Date date = new Date();
 		if(request.getParameter("upload") != null){
 		// --------------------- Upload Start ---------------------------
-			File folderaward = new File(getServlet().getServletContext().getRealPath("/")+"upload/award");
+			File folderaward = new File(getServlet().getServletContext().getRealPath("/")+"../upload/award");
 			if(!folderaward.exists()){
 				folderaward.mkdir();
 			}
@@ -95,7 +95,7 @@ public class AwardAction extends Action {
 					}
 			}
 			//upload image End
-			String pic_path = "upload/award/"+dateFormat.format(date)+awardForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+			String pic_path = "../upload/award/"+dateFormat.format(date)+awardForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 			if(getErrors(request) == null ||getErrors(request).size() == 0){
 				dbaward.insert_award(pic_path, slc_bu, award_name,award_description);
 			}
@@ -108,7 +108,7 @@ public class AwardAction extends Action {
 			for(int i = 0 ; i <pic_path.length;i++){
 				String chkbtn = request.getParameter("chkbtn"+i);
 				if(chkbtn != null){
-					if(!dbaward.delete_award(pic_path[i],getServlet().getServletContext().getRealPath("/")+"upload/award")){
+					if(!dbaward.delete_award(pic_path[i],getServlet().getServletContext().getRealPath("/")+"../upload/award")){
 						request.setAttribute("alert", "ไม่สามารถลบรูปภาพที่เลือกได้");
 						
 					}

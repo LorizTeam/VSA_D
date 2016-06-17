@@ -307,7 +307,8 @@ public class DBProject {
 			String pj_name="",pj_year="",pj_typename="",pic_path="",pj_no="";
 			String sqlQuery = "select * from `index` " +
 			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' " +
-			"group by pj_name ";
+			"group by pj_name " +
+			"ORDER BY pj_no DESC ";
 			pStmt = conn.createStatement();
 			rs = pStmt.executeQuery(sqlQuery);
 			while(rs.next()){

@@ -105,14 +105,14 @@ public class AfterchooseAction extends Action {
 						
 						   
 						int namelength = afterchooseForm.getUploadedFile1().getFileName().length();
-						String filePath = getServlet().getServletContext().getRealPath("/")+"upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
+						String filePath = getServlet().getServletContext().getRealPath("/")+"../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile1().getFileData());
 						
 						if(outputStream != null)
 							outputStream.close();
 						
-						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
+						String pic_path = "../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile1().getFileName().substring(namelength-4, namelength);
 						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
 					}
@@ -121,14 +121,14 @@ public class AfterchooseAction extends Action {
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile2().getFileName().length();
-						String filePath = getServlet().getServletContext().getRealPath("/")+"upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
+						String filePath = getServlet().getServletContext().getRealPath("/")+"../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile2().getFileData());
 						
 						if(outputStream != null)
 							outputStream.close();
 						
-						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
+						String pic_path = "../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile2().getFileName().substring(namelength-4, namelength);
 						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
 					}
@@ -137,14 +137,14 @@ public class AfterchooseAction extends Action {
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile3().getFileName().length();
-						String filePath = getServlet().getServletContext().getRealPath("/")+"upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
+						String filePath = getServlet().getServletContext().getRealPath("/")+"../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile3().getFileData());
 						
 						if(outputStream != null)
 							outputStream.close();
 						
-						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
+						String pic_path = "../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile3().getFileName().substring(namelength-4, namelength);
 						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
 					}
@@ -153,14 +153,14 @@ public class AfterchooseAction extends Action {
 						Date date = new Date();
 						
 						int namelength = afterchooseForm.getUploadedFile4().getFileName().length();
-						String filePath = getServlet().getServletContext().getRealPath("/")+"upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
+						String filePath = getServlet().getServletContext().getRealPath("/")+"../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
 						outputStream = new FileOutputStream(new File(filePath));
 						outputStream.write(afterchooseForm.getUploadedFile4().getFileData());
 						
 						if(outputStream != null)
 							outputStream.close();
 						
-						String pic_path = "upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
+						String pic_path = "../upload/"+dateFormat.format(date)+afterchooseForm.getUploadedFile4().getFileName().substring(namelength-4, namelength);
 						
 							dbproject.insdetailpicpath_todb(pj_no, pic_path);
 					}
@@ -194,7 +194,7 @@ public class AfterchooseAction extends Action {
 						
 							if(chkbtn_del != null){
 								
-								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no,getServlet().getServletContext().getRealPath("/")+"upload/");
+								String keep_alert = cls_pic.Del_picture(picpath[i],pj_no,getServlet().getServletContext().getRealPath("/")+"../upload/");
 								
 								if(keep_alert != null){
 									alert = keep_alert;

@@ -59,7 +59,7 @@ public class CreateprojectAction extends Action {
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 			Date date = new Date();	
 			
-			File folderupload = new File(getServlet().getServletContext().getRealPath("/")+"upload");
+			File folderupload = new File(getServlet().getServletContext().getRealPath("/")+"../upload");
 			if(!folderupload.exists()){
 				folderupload.mkdir();
 			}
@@ -68,7 +68,7 @@ public class CreateprojectAction extends Action {
 				project_name=new String (project_name.getBytes("ISO-8859-1"),"UTF-8");
 			//Create Folder By Projectname
 			FileOutputStream outputStream = null;
-			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"upload");
+			File newFolder = new File(getServlet().getServletContext().getRealPath("/")+"../upload");
 			newFolder.mkdir();
 	//		FormFile countpic = uploadForm.getUploadedFile();
 			//Upload Pic follow folder create
@@ -87,7 +87,7 @@ public class CreateprojectAction extends Action {
 			String project_year = request.getParameter("tb_projectyear"),
 				   slc_bu = request.getParameter("slc_bu"),
 				   slc_typepj = request.getParameter("slc_typepj"),
-				   pic_path = "upload/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
+				   pic_path = "../upload/"+dateFormat.format(date)+uploadForm.getUploadedFile().getFileName().substring(namelength-4, namelength);
 					
 			if(slc_bu.equals("1")){
 				slc_typepj = "2";
