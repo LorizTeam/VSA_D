@@ -98,6 +98,13 @@
 								<span class="caption">Reset Password to 12345</span>				
 							</label>
 	           		 	</div>
+	           		 	<div class="row align-center" style="margin-bottom:0;">	           		 		
+	           		 		<label class="input-control checkbox small-check">
+								<input type="checkbox" name="delete_user">
+								<span class="check"></span>
+								<span class="caption">Delete User</span>				
+							</label>
+	           		 	</div>
 		           		<div class="row align-center ">		           			
 							<button type="submit" name="submit" id="submit" class="button success"><span class="mif-floppy-disk"></span> SAVE</button>
 							<a href="EditUser.jsp" class="button danger"><span class="mif-cross"></span> Cancel</a>

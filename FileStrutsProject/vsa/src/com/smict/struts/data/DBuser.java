@@ -7,6 +7,7 @@ import java.security.Key;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -271,5 +272,32 @@ public class DBuser {
 			}
 		}
 		return ChangePasswordEasy;
+	}
+	
+	public void Delete_user(String username) throws Exception{
+		try {
+			conn = dbcon.getConnectMYSql();
+			String sqlQuery = "delete from member where username = ?";
+			PreparedStatement ppstmt = conn.prepareStatement(sqlQuery);
+			ppstmt.setString(1, username);
+			ppstmt.executeUpdate();
+			rs.close();
+			conn.close();
+			pStmt.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				rs.close();
+				conn.close();
+				pStmt.close();
+			} catch (SQLException e) {
+				e.getMessage();
+			}
+		}
 	}
 }
