@@ -81,7 +81,7 @@
 		<!-- Social icon -->
 		<div class="fix-social" >
 			<ul>
-				<li><a target="_blank" href="https://www.facebook.com/VSa-Group-361013917413488/"><img class="img-responsive"
+				<li><a ><img class="img-responsive"
 						src="images/face-icon-o.png"></a></li>
 				<li><a ><img class="img-responsive"
 						src="images/ig-icon-o.png"></a></li>
@@ -478,7 +478,7 @@
 	<!--footer-->
 	
 	<div class="nav nav-pills social-bottom  text-center" >	
-		<a target="_blank" href="https://www.facebook.com/VSa-Group-361013917413488/"><img src="images/face-icon-o.png"></a>
+		<a href="#"><img src="images/face-icon-o.png"></a>
 		<a href="#"><img src="images/ig-icon-o.png"></a>
 		<a href="#"><img src="images/pin-icon-o.png"></a>
 		<a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip">
@@ -494,7 +494,7 @@
 							href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 				<p>
-					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a> / <a href="login.jsp">Staff Only</a>
+					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a>
 				</p>
 							
 			</div>
