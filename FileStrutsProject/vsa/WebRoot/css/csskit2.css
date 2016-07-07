@@ -512,7 +512,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 12% !important;
 	  	width: 76% !important; 
 	}
-	.gallery-img{		
+	.gallery-img,.gallery-img2{		
 		height:274.3px; 	
 	}
 
@@ -527,7 +527,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 10% !important;
 	  	width: 80% !important; 
 	}
-	.gallery-img{
+	.gallery-img,.gallery-img2{
 		height:239px; 
 	}
 }
@@ -544,7 +544,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 12% !important;
 	  	width: 76% !important; 
 	}
-	.gallery-img{ 
+	.gallery-img,.gallery-img2{ 
 		height:190px; 
 	}
 }
@@ -558,7 +558,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 10% !important;
 	  	width: 80% !important; 
 	}
-	.gallery-img{
+	.gallery-img,.gallery-img2{
 		height:211.4px; 
 	}
 	.swiper-slide {
@@ -662,7 +662,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 8% !important;
 	  	width: 84% !important; 
 	}
-	.gallery-img{
+	.gallery-img,.gallery-img2{
 		height:195.67px; 
 	}
 }
@@ -793,7 +793,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	ul.social-share li i {
 		vertical-align: text-bottom;
 	}
-	.gallery-img{
+	.gallery-img,.gallery-img2{
 		height:151.3px; 
 	}
 	.swiper-slide {
@@ -944,9 +944,10 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 5% !important;
 	  	width: 90% !important; 
 	}
-	.gallery-img{
+	.gallery-img,.gallery-img2{
 		height:180px; 
 	}
+	
 	.top-nav {
 		background-color:white;
 	}
@@ -1071,6 +1072,9 @@ li a:focus{ -moz-outline-style: none !important; }
 	}
 	.gallery-img{
 		height:149px; 
+	}
+	.gallery-img2{
+		height:auto; 
 	}
 }
 @media (max-width: 480px) {
@@ -1212,6 +1216,9 @@ li a:focus{ -moz-outline-style: none !important; }
 	.swiper-slide {
 		font-size: 11px;
 	}
+	.gallery-img2{
+		height:auto; 
+	}
 }
 @media (max-width: 375px) {
 
@@ -1238,6 +1245,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	.gallery-img{
 		height:99.3px; 
 	}
+	
 	.swiper-slide {
 		font-size: 11px;
 	}

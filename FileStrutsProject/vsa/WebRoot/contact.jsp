@@ -121,7 +121,8 @@
 				</div>
 			</form>
 							</div>
-							<iframe src="https://www.google.com/maps/d/embed?mid=zcosWbQxGNqI.kQrjPAXK9d3U" width="640" height="480"></iframe>
+						<!-- 	<iframe src="https://www.google.com/maps/d/embed?mid=zcosWbQxGNqI.kQrjPAXK9d3U" width="640" height="480"></iframe> -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.4115350375366!2d100.54176740259473!3d13.789537078948653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a86ae2fbef467e6!2sPisit+Building!5e0!3m2!1sen!2sus!4v1467615913256" width="640" height="480"></iframe>
  						</div>	
  					</div>	        	
 <!--/contact-->	 

@@ -352,7 +352,8 @@
 				<br/><br/>
 				
 				<a id="btn-location" class="uk-button uk-width-1-1"  data-uk-toggle="{target:'#map'}"><span class="fa fa-map-marker fa-2x"></span> Click Here for Map</a>				
-				<div id="map" class="uk-hidden"></div>
+				
+				<iframe id="map" class="uk-hidden" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.4115350375366!2d100.54176740259473!3d13.789537078948653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a86ae2fbef467e6!2sPisit+Building!5e0!3m2!1sen!2sus!4v1467615913256" ></iframe>
 			</div>
 		</div>
 

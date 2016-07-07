@@ -81,7 +81,7 @@
 		<!-- Social icon -->
 		<div class="fix-social" >
 			<ul>
-				<li><a ><img class="img-responsive"
+				<li><a target="_blank" href="https://www.facebook.com/VSa-Group-361013917413488/?ref=ts&fref=ts"><img class="img-responsive"
 						src="images/face-icon-o.png"></a></li>
 				<li><a ><img class="img-responsive"
 						src="images/ig-icon-o.png"></a></li>
@@ -478,7 +478,7 @@
 	<!--footer-->
 	
 	<div class="nav nav-pills social-bottom  text-center" >	
-		<a href="#"><img src="images/face-icon-o.png"></a>
+		<a  target="_blank"  href="https://www.facebook.com/VSa-Group-361013917413488/?ref=ts&fref=ts"><img src="images/face-icon-o.png"></a>
 		<a href="#"><img src="images/ig-icon-o.png"></a>
 		<a href="#"><img src="images/pin-icon-o.png"></a>
 		<a title="ID:SMICT <small class='visible-xs c'>(tab to close)</small>" rel="tooltip">
