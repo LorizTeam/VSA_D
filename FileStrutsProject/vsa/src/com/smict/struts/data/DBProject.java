@@ -344,6 +344,61 @@ public class DBProject {
 		}
 		return indexList;
 	}
+	public List Get_HeaderProjectForIndex(String bu_name,String project_name) {
+		List indexList = new ArrayList();
+//		
+//		int limfirst = 0;
+//		int limend = 0;
+//		if(indexpage > 1){
+//			limfirst = (indexpage*9)-9;
+//			limend = indexpage*9;
+//		}else{
+//			limend = 9;
+//		}
+		
+		
+		try {
+			conn = dbcon.getConnectMYSql();
+			String pj_name="",pj_year="",pj_typename="",pic_path="",pj_no="";
+			String sqlQuery = "select * from `index` " +
+			"where bu_name = '"+bu_name+"' and picstatus = '1' and pic_typeno = '2' and pj_name = '"+project_name+"' " +
+			"group by pj_name " +
+			"ORDER BY pj_no DESC ";
+			pStmt = conn.createStatement();
+			rs = pStmt.executeQuery(sqlQuery);
+			while(rs.next()){
+				pj_name = rs.getString("pj_name");
+				pj_year = rs.getString("pj_year");
+				pj_typename = rs.getString("pj_typename");
+				pic_path = rs.getString("pic_path");
+				pj_no = rs.getString("pj_no");
+				indexList.add(new IndexVSAForm(pj_name,pj_year,pj_typename,pic_path,pj_no));
+			}
+			conn.close();
+			pStmt.close();
+			rs.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			
+			try {
+				if(conn != null)
+					conn.close();
+				if(pStmt != null)
+					pStmt.close();
+				if(rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return indexList;
+	}
 	public List Get_PictureProjectForIndex(String bu_name,String pj_name) {
 		List indexList = new ArrayList();
 		try {

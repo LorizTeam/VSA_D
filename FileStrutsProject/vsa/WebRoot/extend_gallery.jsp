@@ -4,7 +4,19 @@
 <%@ page import="com.smict.struts.data.DBProject"%>
 <%@ page import="com.smict.struts.form.BusinessForm"%>
 <%@ page import="com.smict.struts.form.AwardForm"%>
-
+<% 
+String ProjectName = request.getParameter("p").toString(),
+		CoperateName = request.getParameter("c").toString(),head_picture = "";
+		
+	
+		DBProject dbpj = new DBProject();
+	       		ListIterator indexDetailIter1 = dbpj.Get_HeaderProjectForIndex(CoperateName,ProjectName).listIterator();
+	       		
+		        while(indexDetailIter1.hasNext()){ 
+		        	IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter1.next();
+		        		head_picture = vsaDetailform.getPic_path().substring(2);
+		        	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +26,10 @@
 	link.rel = 'icon';
 	link.href = 'http://smartict.ar-bro.net:8080/vsa/images/favivsa/vsa.png';
 	parent.document.getElementsByTagName('head')[0].appendChild(link);
-	document.title = 'Vorrarat Supachocke Architect | Home :: VSA';
+	document.title = '<%=CoperateName %> :: <%=ProjectName %>';
 </script>
 <link rel="icon" type="" sizes="192x192"  href="images/favivsa/vsa.png">
-<title>Vorrarat Supachocke Architect | Home :: VSA</title>
+<title><%=CoperateName %> :: <%=ProjectName %></title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="css/kitit.css" />
 <link rel="stylesheet" href="css/csskit2.css" />
@@ -29,6 +41,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Vorrarat Supachocke Architect vsa The main of our Architecture " />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:url"                content="http://smartict.ar-bro.net:8080/vsa/extend_gallery.jsp?c=<%=CoperateName %>&p=<%=ProjectName %>" />
+<meta property="og:title"              content="<%=CoperateName %> :: <%=ProjectName %>" />
+<meta property="og:description"        content="Work gallery of project " />
+<meta property="og:image"              content="http://smartict.ar-bro.net:8080/upload/<%=head_picture %>" />
 <script type="application/x-javascript">
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
@@ -90,10 +106,7 @@
 		</div>
 		<!-- Social icon -->
 		<div class="width-page">
-				<% 
-					String ProjectName = request.getParameter("p").toString(),
-							CoperateName = request.getParameter("c").toString();
-				 %>
+				
 			
 			<nav class="navbar navbar-default ">
 				<div class="navbar-header">
@@ -141,7 +154,6 @@
 			<div class="uk-grid uk-grid-collapse" id="gallery" data-uk-grid>
 			<%
 		        
-		        DBProject dbpj = new DBProject();
 	       		ListIterator indexDetailIter = dbpj.Get_PictureProjectForIndex(CoperateName,ProjectName).listIterator();
 	       		
 		        while(indexDetailIter.hasNext()){ 
