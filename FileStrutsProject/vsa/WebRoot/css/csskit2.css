@@ -490,6 +490,9 @@ li a:focus{ -moz-outline-style: none !important; }
 	max-width: unset !important;
 	margin:0;
 }
+.gallery-img2{
+	overflow: hidden;
+}
 /*--/contact-page--*/
 /*--/inner-pages--*/
 /*----responsive-menu-start--*/
