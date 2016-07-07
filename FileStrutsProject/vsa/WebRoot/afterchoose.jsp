@@ -150,10 +150,12 @@
 													</div>
 												</div>
 											</div>
-												
+											<div class="row align-center"><iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fsmartict.ar-bro.net%3A8080%2Fvsa%2Fextend_gallery.jsp%3Fc%3D<%=createproject1.getBu_name()%>%26p%3D<%=createproject1.getPj_name() %>&layout=box_count&mobile_iframe=true&width=64&height=58&appId" 
+												width="64" height="58" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
 											<div class="row align-center">
 												<button type="submit" name="submit" id="submit" class="button success"><span class="mif-floppy-disk"></span> SAVE</button>
 											</div>
+											
 											<hr class="bg-brown"/>
 										</div>
 									</div>

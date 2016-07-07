@@ -494,7 +494,7 @@
 							href="mailto:vsagroup2007@yahoo.co.th">vsagroup2007@yahoo.co.th</a>
 				</p>
 				<p>
-					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a>
+					 	&#xA9; 2015 VSA GROUP <a href="contact.jsp">Contact Us</a> / <a href="login.jsp">Staff Only</a>
 				</p>
 							
 			</div>
