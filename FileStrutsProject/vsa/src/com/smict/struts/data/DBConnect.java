@@ -19,7 +19,7 @@ public class DBConnect {
 			String dbUserName = "root";
 			//String dbPassword = "root1234"; //AWS
 			String dbPassword = "a010103241c";
-			//String dbPassword = "1234qwer"; // localhost
+			//String dbPassword = "1234"; // localhost
 			
 			String jdbcUrl = "jdbc:mysql://" + hostname + ":" +
 			port + "/" + dbName + "?user=" + dbUserName + "&password=" + dbPassword;

@@ -43,8 +43,8 @@ String ProjectName = request.getParameter("p").toString(),
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:url"                content="http://smartict.ar-bro.net:8080/vsa/extend_gallery.jsp?c=<%=CoperateName %>&p=<%=ProjectName %>" />
 <meta property="og:title"              content="<%=CoperateName %> :: <%=ProjectName %>" />
-<meta property="og:description"        content="Work gallery of project " />
-<meta property="og:image"              content="http://smartict.ar-bro.net:8080/upload/<%=head_picture %>" />
+<meta property="og:description"        content="Work gallery of project <%=ProjectName %>" />
+<meta property="og:image"              content="http://smartict.ar-bro.net:8080<%=head_picture %>" />
 <script type="application/x-javascript">
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>

@@ -70,7 +70,7 @@ public class AfterchooseAction extends Action {
 		
 		
 		String alert = null;
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss-SSS");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
 		FileOutputStream outputStream = null;
 		DBProject dbproject = new DBProject();
 		Pictures cls_pic = new Pictures();

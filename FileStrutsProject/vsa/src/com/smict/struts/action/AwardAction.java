@@ -55,7 +55,7 @@ public class AwardAction extends Action {
 			return mapping.findForward("nologin");
 		}
 		DBaward dbaward = new DBaward();
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 		Date date = new Date();
 		if(request.getParameter("upload") != null){
 		// --------------------- Upload Start ---------------------------

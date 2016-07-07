@@ -56,7 +56,7 @@ public class CreateprojectAction extends Action {
 		if(session.getAttribute("username") == null){
 			return mapping.findForward("nologin");
 		}else{
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 			Date date = new Date();	
 			
 			File folderupload = new File(getServlet().getServletContext().getRealPath("/")+"../upload");
