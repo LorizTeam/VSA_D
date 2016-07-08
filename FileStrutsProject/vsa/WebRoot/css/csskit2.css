@@ -947,12 +947,16 @@ li a:focus{ -moz-outline-style: none !important; }
 	  	margin-right: 5% !important;
 	  	width: 90% !important; 
 	}
-	.gallery-img,.gallery-img2{
+	.gallery-img{
 		height:180px; 
 	}
 	
 	.top-nav {
 		background-color:white;
+	}
+	.gallery-img2{
+		height:auto; 
+		padding: 10px;
 	}
 }
 @media (max-width: 640px) {
@@ -1076,9 +1080,7 @@ li a:focus{ -moz-outline-style: none !important; }
 	.gallery-img{
 		height:149px; 
 	}
-	.gallery-img2{
-		height:auto; 
-	}
+	
 }
 @media (max-width: 480px) {
 	
