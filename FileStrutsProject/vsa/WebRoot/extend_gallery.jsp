@@ -72,7 +72,7 @@ String ProjectName = request.getParameter("p").toString(),
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- js -->
-
+<script src="js/bootstrap.js" type="text/javascript"></script>
 <!--/script-->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -160,7 +160,7 @@ String ProjectName = request.getParameter("p").toString(),
 		        	IndexVSAForm vsaDetailform = (IndexVSAForm) indexDetailIter.next(); %>
 		        	<div class="uk-width-medium-1-4 uk-width-small-1-1 gallery-img2"  href="<%=vsaDetailform.getPic_path()%>">
 	        		
-	        			<img class="uk-width-1-1" src="<%=vsaDetailform.getPic_path()%>"style=" height:100%; -webkit-transform:scale(1.8,1.2);"/>
+	        			<img class="uk-width-1-1" src="<%=vsaDetailform.getPic_path()%>"style=" height:100%; "/>
 	        		
 	        		</div>
 		        	
